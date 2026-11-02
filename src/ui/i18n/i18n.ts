@@ -66,18 +66,16 @@ export function normalizeLanguageCode(language?: string | null): string {
   if (supportedLngs.includes(baseLanguage)) return baseLanguage;
 
   // Regional variants we don't ship (es-MX, pt, sv) use the closest one we do.
-  // An alias only counts if its target ships; with English only, all land on "en".
-  const alias = (() => {
-    if (baseLanguage === "zh") {
-      return /-(tw|hk|mo|hant)\b/i.test(normalized) ? "zh-TW" : "zh-CN";
-    }
-    if (baseLanguage === "nb" || baseLanguage === "nn") return "no";
-    if (baseLanguage === "pt") return "pt-BR";
-    return supportedLngs.find((supported) =>
+  if (baseLanguage === "zh") {
+    return /-(tw|hk|mo|hant)\b/i.test(normalized) ? "zh-TW" : "zh-CN";
+  }
+  if (baseLanguage === "nb" || baseLanguage === "nn") return "no";
+  if (baseLanguage === "pt") return "pt-BR";
+  return (
+    supportedLngs.find((supported) =>
       supported.toLowerCase().startsWith(`${baseLanguage}-`),
-    );
-  })();
-  return alias && supportedLngs.includes(alias) ? alias : "en";
+    ) ?? "en"
+  );
 }
 
 const localeBackend: BackendModule = {
