@@ -1,0 +1,72 @@
+{
+  "id": "dexter-ops",
+  "name": "Dexter Ops",
+  "version": "0.1.0",
+  "description": "See and restrict what the Dexter Ops Telegram bot may do, and acknowledge its alerts.",
+  "author": {
+    "name": "nicolaseliasx"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/nicolaseliasx/dexter/tree/main/plugins/dexter-ops",
+  "category": "Monitoring",
+  "icon": "Bot",
+  "features": [
+    "Bot status, hosts and active alerts in one panel",
+    "Turn registered operations off or on, and mute notifications",
+    "Request an operation: destructive ones still wait for the Telegram confirmation",
+    "Read-only view of what the bot is allowed to read and restart"
+  ],
+  "engine": {
+    "termix": ">=26.10.6",
+    "api": "^1.11"
+  },
+  "capabilities": [
+    "network:outbound",
+    "network:serve",
+    "ui:surface"
+  ],
+  "contributes": {
+    "panels": [
+      {
+        "id": "dexter-ops",
+        "titleKey": "panel.title",
+        "icon": "Bot"
+      }
+    ],
+    "permissions": [
+      {
+        "name": "manage",
+        "titleKey": "permissions.manage.title",
+        "descriptionKey": "permissions.manage.description",
+        "defaultRoles": [
+          "admin"
+        ]
+      }
+    ],
+    "settings": {
+      "admin": [
+        {
+          "key": "botUrl",
+          "type": "string",
+          "labelKey": "settings.botUrl.label",
+          "descriptionKey": "settings.botUrl.description",
+          "placeholderKey": "settings.botUrl.placeholder",
+          "default": ""
+        },
+        {
+          "key": "token",
+          "type": "secret",
+          "labelKey": "settings.token.label",
+          "descriptionKey": "settings.token.description",
+          "default": ""
+        }
+      ]
+    }
+  },
+  "locales": "locales",
+  "platforms": [
+    "linux",
+    "darwin",
+    "win32"
+  ]
+}

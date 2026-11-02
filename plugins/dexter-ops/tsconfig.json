@@ -1,0 +1,4 @@
+{
+  "extends": "./node_modules/@termix-ssh/plugin-sdk/tsconfig.plugin.json",
+  "include": ["src", "tests", "*.d.ts"]
+}
