@@ -1,38 +1,39 @@
-# D.EX.T.E.R. (fork do Termix, uso pessoal)
+# D.EX.T.E.R. (personal fork of Termix)
 
-Este fork é o upstream Termix **v26.10.6** com a marca D.EX.T.E.R. e sem patch funcional no núcleo, mais configuração de deploy e documentação. Instruções globais do usuário ficam em `~/.claude/CLAUDE.md`; estas regras são do projeto e prevalecem.
+This fork is upstream Termix **v26.10.6** with the D.EX.T.E.R. brand, English only, and no functional patch in the core, plus deploy configuration and documentation. The user's global instructions live in `~/.claude/CLAUDE.md`; these project rules take precedence. Everything in this repository is written in English.
 
-## Diretriz principal: evolução de módulo = plugin
+## Main rule: module work ships as a plugin
 
-- Qualquer funcionalidade nova ou mudança de comportamento de módulo (terminal, sessões, colar imagem, painéis, abas, integrações) **vira plugin**, em repositório próprio, no formato de `termix-plugin-sessions` (`/home/admin/termix-plugin-sessions`). Não editar `src/` do núcleo para isso.
-- Plugin em TypeScript com `@termix-ssh/plugin-sdk` (backend `activate(ctx)`, frontend `activate(app)`). Rust só via WebAssembly em worker, e só se houver trabalho pesado; hoje não há.
-- Reaproveite o que o Termix já tem antes de escrever código: o `ssh-terminal` oficial já cola imagem (Ctrl+V, SFTP) e abre `terminal` anexado a tmux com `openTab(host, "terminal", { data: { tmuxSession } })`. Colar imagem dentro do Claude/Codex roda sobre isso.
-- Instalar por **Install from file** do `.tmxplug`, com o Plugin developer mode ligado. Não assinar nem submeter ao registry. Mudou o plugin: suba a versão em `manifest.json`, `package.json` e `CHANGELOG.md` (seção com `### Fixed/Added`).
-- Alterar o núcleo só se o SDK não permitir de jeito nenhum, com decisão explícita do usuário, registrada aqui.
+- Any new feature or behavior change of a module (terminal, sessions, panels, tabs, integrations) **becomes a plugin** in its own repository, in the shape of `termix-plugin-sessions` (`/home/admin/termix-plugin-sessions`). Do not edit the core `src/` for that.
+- Plugins are TypeScript on `@termix-ssh/plugin-sdk` (backend `activate(ctx)`, frontend `activate(app)`). Rust only as WebAssembly in a worker, and only for heavy work; there is none today.
+- Reuse what Termix already has before writing code: the official `ssh-terminal` already pastes images (Ctrl+V, SFTP) and opens `terminal` attached to tmux with `openTab(host, "terminal", { data: { tmuxSession } })`. Pasting images into Claude/Codex running on a host builds on that.
+- Install with **Install from file** of the `.tmxplug`, with Plugin developer mode on. No signing, no registry submission. When a plugin changes, bump the version in `manifest.json`, `package.json` and `CHANGELOG.md` (a section with `### Fixed/Added`).
+- Change the core only if the SDK cannot do it at all, with an explicit decision from the user recorded here.
 
-## Marca e licença
+## Brand and license
 
-- Produto: **D.EX.T.E.R.** (Distributed EXtensible Terminal, Environment & Resource Manager). Texto visível ao usuário usa "D.EX.T.E.R."; "Termix" só aparece como atribuição ao projeto original.
-- **Não renomear identificadores de compatibilidade:** `@termix-ssh/*`, variáveis `TERMIX_*`, chaves de localStorage, user agents e cabeçalhos `X-Termix-*`, caminhos de API, tabelas/migrações, ids de plugins, `appId`/`productName`/`executableName` do Electron, nomes de contêiner/volume/rede, e o repositório do upstream usado na checagem de atualização (`REPO_NAME`). O auto-updater desktop depende de `Termix.exe`.
-- **Licença Apache 2.0:** manter `LICENSE` intacto, `NOTICE` e o README original em `docs/TERMIX_README.md`. Toda mudança de arquivo do upstream entra em `MODIFICATIONS.md` (regenerar a lista com `git diff --name-only v26.10.6`). Não usar o nome ou o logotipo do Termix como se fossem do D.EX.T.E.R.
-- Ao trazer uma versão nova do upstream, rode a substituição de marca só em valores de tradução e strings visíveis, nunca em identificadores, e rode a suíte.
+- Product: **D.EX.T.E.R.** (Distributed EXtensible Terminal, Environment & Resource Manager). User-visible text says "D.EX.T.E.R."; "Termix" appears only as credit to the original project.
+- **English only.** `src/ui/locales/` has only `en.json`; `languages.json` is empty and the upstream translations were removed. Do not add other languages.
+- **Do not rename compatibility identifiers:** `@termix-ssh/*`, `TERMIX_*` variables, localStorage keys, user agents and `X-Termix-*` headers, API paths, tables and migrations, plugin ids, Electron `appId`/`productName`/`executableName`, container, volume and network names, and the upstream repository used by the update check (`REPO_NAME`). The desktop auto-updater depends on `Termix.exe`.
+- **Apache 2.0:** keep `LICENSE` untouched, plus `NOTICE` and the original README in `docs/TERMIX_README.md`. Every change to an upstream file goes in `MODIFICATIONS.md` (regenerate the list with `git diff --name-only v26.10.6`). Do not use the Termix name or logo as if they were D.EX.T.E.R.'s.
+- When bringing in a newer upstream version, apply the brand replacement only to visible strings, never to identifiers, and run the suite.
 
-## Plugins e estado
+## Plugins and state
 
-- Quais plugins estão ligados é estado do **banco** de cada instância, não da imagem. Instância nova: repetir o onboarding. Política atual: **Off**, nunca Remove, até o período de uso; ver `docs/modernizacao/04-remocao-futura-plugins-off.md`.
-- Ligados hoje: SSH Terminal, Proxmox (sem configuração), Host Status, TOTP, Workspaces, Classic Layout, Classic Themes, mais `sessions` (plugin próprio).
-- O `ssh-terminal` já vem na imagem. Não instale outra cópia em `data/plugins` (gera "update ... not newer than the bundled").
+- Which plugins are on is **database** state of each instance, not part of the image. On a new instance repeat the onboarding. Current policy: **Off**, never Remove, until a period of use; see `docs/modernizacao/04-remocao-futura-plugins-off.md`.
+- On today: SSH Terminal, Proxmox (not configured), Host Status, TOTP, Workspaces, Classic Layout, Classic Themes, plus `sessions` (own plugin).
+- `ssh-terminal` ships in the image. Do not install another copy in `data/plugins` (it logs "update ... not newer than the bundled").
 
-## Testar sem tocar na produção
+## Testing without touching production
 
-- Subir a imagem numa rede Docker `--internal`, com **cópia** do volume (`PUID=0 PGID=0`), e um sshd/tmux descartável (`ListenAddress` fora do loopback ou mesmo namespace de rede). Nunca apontar para `termix.ncls.cc` nem para os hosts reais.
-- Browser: `playwright-core` com `/usr/bin/chromium` em diretório fora do repositório. Seletores: itens da barra lateral por `button:has(span:text-is("Sessions"))`.
-- Produção atual é `termix:ncls-mobile` com o volume `termix-data`; promover só com autorização, backup com o serviço parado e rollback documentado em `docs/modernizacao/STATUS.md`.
+- Run the image on an `--internal` Docker network with a **copy** of the volume (`PUID=0 PGID=0`) and a throwaway sshd/tmux (`ListenAddress` off loopback, or share the network namespace). Never point it at `termix.ncls.cc` or at real hosts.
+- Browser: `playwright-core` with `/usr/bin/chromium`, in a directory outside the repository. Rail items: `button:has(span:text-is("Sessions"))`.
+- Production today is `termix:ncls-mobile` with the `termix-data` volume. Promote only with authorization, a backup taken with the service stopped, and the rollback documented in `docs/modernizacao/STATUS.md`.
 
-## Armadilhas
+## Gotchas
 
-- O núcleo não deixa plugin ler tabela legada do core (`ctx.db` só vê tabelas próprias): migre dados por rota de importação (`POST /plugin-api/sessions/import`), não por SQL.
-- `ctx.db` não tem índice parcial: unicidade condicional vai no código.
-- Trabalho em timer precisa de `ctx.asUser(userId, fn)`; dentro de rota o ator já é o chamador.
-- Testes do plugin precisam do binário nativo do `better-sqlite3` (`npm rebuild better-sqlite3`); `termix-plugin validate` rejeita `$schema` e `CHANGELOG` sem seção de tipo.
-- `useShell().split.handleAction` age sobre a aba pelo id no estado interno do shell: depois de `openTab`, espere um instante antes de dividir.
+- Plugins cannot read legacy core tables (`ctx.db` only sees its own tables): migrate data through an import route (`POST /plugin-api/sessions/import`), not SQL.
+- `ctx.db` has no partial indexes: enforce conditional uniqueness in code.
+- Timer work needs `ctx.asUser(userId, fn)`; inside a route the actor is already the caller.
+- Plugin tests need the native `better-sqlite3` binary (`npm rebuild better-sqlite3`); `termix-plugin validate` rejects `$schema` and a `CHANGELOG` section without a type heading.
+- `useShell().split.handleAction` acts on a tab by id in the shell's internal state: after `openTab`, wait a moment before splitting.

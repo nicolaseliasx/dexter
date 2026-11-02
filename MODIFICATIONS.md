@@ -4,10 +4,11 @@ D.EX.T.E.R. is a derivative work of [Termix](https://github.com/Termix-SSH/Termi
 
 ## Summary of changes
 
-1. **Rebranding of user-visible text.** The product name "Termix" was replaced by "D.EX.T.E.R." in the UI strings, server messages and log lines meant for people, the default branding name, the page title and PWA manifest, installer display labels, and the values of every translation file (keys untouched).
-2. **Documentation.** New `README.md`, `NOTICE`, this file and `AGENTS.md`. The original README was moved, unmodified apart from a note at the top, to `docs/TERMIX_README.md`.
-3. **Package description** in `package.json`.
-4. **No functional change** to the core. Product behavior is the same as Termix v26.10.6.
+1. **Rebranding of user-visible text.** The product name "Termix" was replaced by "D.EX.T.E.R." in the UI strings (`src/ui/locales/en.json`), server messages and log lines meant for people, the default branding name, the page title and PWA manifest, and installer display labels.
+2. **English only.** The upstream translations (`src/ui/locales/translated/`) and `translations-lock.json` were removed, `languages.json` is now an empty list, and the language alias table in `src/ui/i18n/i18n.ts` only returns languages that ship. The language pickers show English only. The upstream translation workflow in `.github/workflows` is left untouched and has nothing to translate.
+3. **Documentation.** New `README.md`, `NOTICE`, this file and `AGENTS.md`. The original README was moved, unmodified apart from a note at the top, to `docs/TERMIX_README.md`.
+4. **Package description** in `package.json`.
+5. **No functional change** to the core, apart from the language handling above. Product behavior is otherwise the same as Termix v26.10.6.
 
 ## Kept as in the original (compatibility)
 
@@ -15,13 +16,12 @@ Package and SDK names (`@termix-ssh/*`), `TERMIX_*` environment variables, brows
 
 ## Known limitations
 
-- Six translations (Czech, Estonian, Croatian, Finnish, Slovenian, Slovak) inflect the product name (for example "Termixin"). Those forms were left as in the original rather than guessed, so a few sentences in those languages still say "Termix".
 - Plugins signed and published by the Termix project (SSH Terminal, Proxmox and others) keep their own text and authorship; their strings may still say "Termix".
 - References to upstream releases ("Termix 2.8", "Termix 2.9.1") and to the Termix registry are intentional.
 
 ## Files changed
 
-77 files differ from the original at the time this file was generated. Regenerate with `git diff --name-only v26.10.6`. Full patch: `git diff v26.10.6`.
+82 files differ from the original at the time this file was generated (deleted files included). Regenerate with `git diff --name-only v26.10.6`. Full patch: `git diff v26.10.6`.
 
 ```
 AGENTS.md
@@ -57,7 +57,10 @@ src/backend/updates/desktop-update-check.ts
 src/backend/utils/auth-manager.ts
 src/backend/utils/user-agent-parser.ts
 src/ui/contexts/BrandingContext.tsx
+src/ui/i18n/i18n.ts
+src/ui/locales/README.md
 src/ui/locales/en.json
+src/ui/locales/languages.json
 src/ui/locales/translated/af_ZA.json
 src/ui/locales/translated/ar_SA.json
 src/ui/locales/translated/bg_BG.json
@@ -99,6 +102,8 @@ src/ui/locales/translated/uk_UA.json
 src/ui/locales/translated/vi_VN.json
 src/ui/locales/translated/zh_CN.json
 src/ui/locales/translated/zh_TW.json
+src/ui/locales/translations-lock.json
 src/ui/main-axios.ts
+src/ui/tests/i18n/i18n.test.ts
 src/ui/tests/plugins/PluginsTab.test.tsx
 ```
