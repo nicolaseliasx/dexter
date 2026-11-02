@@ -233,7 +233,7 @@
     "available": "D.EX.T.E.R. {{version}} זמין",
     "manualHint": "הורד אותו מדף השחרור והתקן אותו מעל זה.",
     "ready": "D.EX.T.E.R. {{version}} מוכן להתקנה",
-    "readyHint": "הוא מותקן בפעם הבאה ש-D.EX.T.E.R. מופעל מחדש."
+    "readyHint": "הוא מותקן בפעם הבאה ש-Termix מופעל מחדש."
   },
   "safeMode": {
     "title": "מצב בטוח",
@@ -391,7 +391,7 @@
     "sshPort": "פורט SSH",
     "authMethod": "שיטת אימות",
     "authenticationMethod": "שיטת אימות",
-    "authenticationMethodDesc": "בחר את השיטה היחידה ש-D.EX.T.E.R. תשתמש בה לאימות חיבור SSH זה. שיטות אחרות לא יונסו באופן אוטומטי.",
+    "authenticationMethodDesc": "בחר את השיטה היחידה ש-Termix תשתמש בה לאימות חיבור SSH זה. שיטות אחרות לא יונסו באופן אוטומטי.",
     "storedCredential": "אישור זהות שמור",
     "selectACredential": "בחר אישור זהות...",
     "keyTypeLabel": "סוג מפתח",
@@ -817,7 +817,7 @@
     "dragToRearrange": "גרור לסידור מחדש",
     "arrangeUnlocked": "בטל נעילה לגרירה לסידור מחדש",
     "webUiBindHostUnreachable": "הדפדפן שלך אינו יכול להגיע ל-127.0.0.1 במכונה הרצה את D.EX.T.E.R., ולכן נקודת הקצה הזו לא תטען. השתמש בכתובת שהמכונה עונה עליה, כמו 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "מדפדפן זה, ההפניה תהיה נגישה באותו שם מארח שבו D.EX.T.E.R. מוגש, ולכן השירות המנהור יקבל את הפגישה שלך ב-D.EX.T.E.R.. עוגיות מתעלמות מהפורט. נקודת קצה זו תסרב להיפתח כאן; היא עובדת מאפליקציית הדסקטופ של D.EX.T.E.R., או כאשר D.EX.T.E.R. נפתח ב-localhost.",
+    "webUiBindHostSharesSessionCookie": "מדפדפן זה, ההפניה תהיה נגישה באותו שם מארח שבו D.EX.T.E.R. מוגש, ולכן השירות המנהור יקבל את הפגישה שלך ב-Termix. עוגיות מתעלמות מהפורט. נקודת קצה זו תסרב להיפתח כאן; היא עובדת מאפליקציית הדסקטופ של D.EX.T.E.R., או כאשר D.EX.T.E.R. נפתח ב-localhost.",
     "webUiErrorLabelRequired": "נקודת הקצה {{row}} צריכה תווית.",
     "webUiErrorLabelDuplicate": "לכל נקודת קצה צריך שם שונה.",
     "webUiErrorPortRange": "נקודת הקצה {{row}} צריכה פורט בין 1 ל-65535.",
@@ -1009,12 +1009,12 @@
     "sessionExpiredLogin": "ההתחברות פגה. אנא היכנס שוב."
   },
   "messages": {
-    "registrationDisabled": "אין לך עדיין חשבון ב-D.EX.T.E.R.. בקש ממנהל מערכת להפעיל את האפשרות 'צור חשבונות חיצוניים אוטומטית'.",
+    "registrationDisabled": "אין לך עדיין חשבון ב-Termix. בקש ממנהל מערכת להפעיל את האפשרות 'צור חשבונות חיצוניים אוטומטית'.",
     "userNotAllowed": "החשבון שלך אינו מורשה להרשמה. אנא פנה למנהל המערכת.",
     "databaseConnectionFailed": "ייתכן שהוא עדיין מתחיל להפעיל, או שהופסק. דף זה ממשיך לנסות וממשיך באופן אוטומטי ברגע שהשרת חוזר.",
     "embeddedServerPortInUse": "הפורט {{port}} כבר בשימוש על ידי תוכנית אחרת. לרוב מדובר במיכל Docker של D.EX.T.E.R. או בתהליך D.EX.T.E.R. שנותר מהפעלה קודמת. סגור אותו, ואז הפעל מחדש את D.EX.T.E.R.",
-    "embeddedServerPortInUseUnknownPort": "אחד מהפורטים ש-D.EX.T.E.R. זקוק להם כבר בשימוש על ידי תוכנית אחרת. סגור את מה שמשתמש בו, ואז הפעל מחדש את D.EX.T.E.R.",
-    "embeddedServerOldDatabase": "הנתונים המקומיים שלך הם מ-D.EX.T.E.R. 2.8 או קודם יותר, ועליהם לעבור דרך גרסה 2.9 תחילה. התקן את Termix 2.9.1, פתח אותו פעם אחת כדי שיוכל להעביר את הנתונים שלך, ואז עדכן שוב לגרסה זו.",
+    "embeddedServerPortInUseUnknownPort": "אחד מהפורטים ש-Termix זקוק להם כבר בשימוש על ידי תוכנית אחרת. סגור את מה שמשתמש בו, ואז הפעל מחדש את D.EX.T.E.R.",
+    "embeddedServerOldDatabase": "הנתונים המקומיים שלך הם מ-Termix 2.8 או קודם יותר, ועליהם לעבור דרך גרסה 2.9 תחילה. התקן את Termix 2.9.1, פתח אותו פעם אחת כדי שיוכל להעביר את הנתונים שלך, ואז עדכן שוב לגרסה זו.",
     "embeddedServerCrashed": "השרת המקומי הופסק באופן בלתי צפוי. הפעל מחדש את D.EX.T.E.R., ובדוק את יומן השולחן העבודה אם זה ממשיך לקרות.",
     "resetCodeSent": "קוד איפוס נשלח ליומני Docker",
     "codeVerified": "הקוד אומת בהצלחה",
@@ -1161,7 +1161,7 @@
       },
       "process:spawn": {
         "title": "הפעלת תוכניות במכשיר זה",
-        "consequence": "התוכניות מופעלות על שרת ה-D.EX.T.E.R. עצמו, ולא על השרתים שלך."
+        "consequence": "התוכניות מופעלות על שרת ה-Termix עצמו, ולא על השרתים שלך."
       },
       "users:write": {
         "title": "יצירה ושינוי של חשבונות משתמשים",
@@ -1213,7 +1213,7 @@
       },
       "network:serve": {
         "title": "קבלת חיבורים",
-        "consequence": "התוסף פותח פורט בשרת ה-D.EX.T.E.R.."
+        "consequence": "התוסף פותח פורט בשרת ה-Termix."
       },
       "network:broadcast": {
         "title": "שליחת שידורים ברשת",
@@ -1516,7 +1516,7 @@
       "incompatible": "דורש D.EX.T.E.R. חדש יותר",
       "features": "תכונות",
       "whatItCanDo": "מה שהוא יכול לעשות",
-      "addsToTermix": "מוסיף ל-D.EX.T.E.R.",
+      "addsToTermix": "מוסיף ל-Termix",
       "addsToTermixHint": "הסרת התקנה תסיר כל אחד מהם.",
       "noServerAccess": "אין גישה לשרתים שלך",
       "searchInstalled": "חפש בהתקנים",

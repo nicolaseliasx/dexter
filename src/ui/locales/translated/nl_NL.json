@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Stap {{current}} van {{total}}",
-    "stageLabel": "D.EX.T.E.R.-instellingen",
+    "stageLabel": "Termix-instellingen",
     "setupHeading": "Stel je werkruimte in",
     "partialHeading": "Er zijn nog een paar dingen in te stellen",
     "signOut": "Afmelden",
@@ -403,7 +403,7 @@
     "replaceKey": "Sleutel vervangen",
     "docsLink": "Bekijk documentatie",
     "agentLabel": "SSH-agent",
-    "agentDesc": "Verifieer met behulp van een SSH-agent die op de D.EX.T.E.R.-server draait (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). De agent moet draaien op de machine waar D.EX.T.E.R. op gehost wordt.",
+    "agentDesc": "Verifieer met behulp van een SSH-agent die op de Termix-server draait (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). De agent moet draaien op de machine waar D.EX.T.E.R. op gehost wordt.",
     "agentAuthenticationDesc": "Gebruik sleutels van een SSH-agent om deze verbinding te verifiëren. Laat het socket-pad leeg om SSH_AUTH_SOCK te gebruiken.",
     "agentSocketPathLabel": "Agent-socketpad",
     "agentSocketPathPlaceholder": "Laat leeg om SSH_AUTH_SOCK te gebruiken",
@@ -805,7 +805,7 @@
     "dragToRearrange": "Slepen om opnieuw te rangschikken",
     "arrangeUnlocked": "Ontgrendelen om te slepen en opnieuw te rangschikken",
     "webUiBindHostUnreachable": "Je browser kan geen verbinding maken met 127.0.0.1 op de machine waarop D.EX.T.E.R. draait, dus dit eindpunt wordt niet geladen. Gebruik een adres waarop die machine luistert, zoals 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Vanuit deze browser zou de doorsturing bereikt worden via dezelfde hostnaam als waar D.EX.T.E.R. vanaf wordt geserveerd, dus de getunneld service zou je D.EX.T.E.R.-sessie ontvangen. Cookies negeren de poort. Dit eindpunt weigert hier te openen; het werkt vanuit de D.EX.T.E.R.-desktopapp, of wanneer D.EX.T.E.R. op localhost wordt geopend.",
+    "webUiBindHostSharesSessionCookie": "Vanuit deze browser zou de doorsturing bereikt worden via dezelfde hostnaam als waar D.EX.T.E.R. vanaf wordt geserveerd, dus de getunneld service zou je Termix-sessie ontvangen. Cookies negeren de poort. Dit eindpunt weigert hier te openen; het werkt vanuit de Termix-desktopapp, of wanneer D.EX.T.E.R. op localhost wordt geopend.",
     "webUiErrorLabelRequired": "Eindpunt {{row}} heeft een label nodig.",
     "webUiErrorLabelDuplicate": "Elk eindpunt moet een unieke naam hebben.",
     "webUiErrorPortRange": "Eindpunt {{row}} heeft een poort nodig tussen 1 en 65535.",
@@ -951,7 +951,7 @@
     "retrySecondFactorUI": "Verificatiemethoden herladen",
     "localDesktopSignedOut": "Lokaal bureaublad afgemeld",
     "localDesktopUnavailable": "Lokale bureaubladsessie niet beschikbaar",
-    "localDesktopSignedOutDesc": "Je bent afgemeld van de lokale bureaubladsessie. Ga lokaal verder om de ingebouwde D.EX.T.E.R.-server van dit apparaat opnieuw te gebruiken.",
+    "localDesktopSignedOutDesc": "Je bent afgemeld van de lokale bureaubladsessie. Ga lokaal verder om de ingebouwde Termix-server van dit apparaat opnieuw te gebruiken.",
     "localDesktopUnavailableDesc": "D.EX.T.E.R. kon geen lokale bureaubladsessie starten. Probeer het opnieuw in plaats van een nieuw account te registreren.",
     "continueLocalDesktop": "Doorgaan met lokaal bureaublad",
     "retryLocalDesktop": "Lokale bureaubladsessie opnieuw proberen"
@@ -971,7 +971,7 @@
     "acceptNewKey": "Nieuwe sleutel accepteren & Doorgaan"
   },
   "errors": {
-    "databaseConnection": "De D.EX.T.E.R.-server reageert niet",
+    "databaseConnection": "De Termix-server reageert niet",
     "embeddedServerFailed": "De lokale server van D.EX.T.E.R. kon niet worden gestart",
     "unknownError": "Onbekende fout",
     "syncedHostMissing": "De gesynchroniseerde host bestaat niet op de gekoppelde server",
@@ -996,10 +996,10 @@
     "sessionExpiredLogin": "Sessie verlopen. Meld u opnieuw aan."
   },
   "messages": {
-    "registrationDisabled": "U heeft nog geen D.EX.T.E.R.-account. Vraag een beheerder om 'Automatisch externe accounts aanmaken' in te schakelen.",
+    "registrationDisabled": "U heeft nog geen Termix-account. Vraag een beheerder om 'Automatisch externe accounts aanmaken' in te schakelen.",
     "userNotAllowed": "Uw account is niet gemachtigd om zich te registreren. Neem contact op met een beheerder.",
     "databaseConnectionFailed": "De server start mogelijk nog op of is gestopt. Deze pagina blijft proberen en gaat automatisch verder zodra de server weer beschikbaar is.",
-    "embeddedServerPortInUse": "Poort {{port}} wordt al gebruikt door een ander programma. Dit is meestal een D.EX.T.E.R. Docker-container of een overgebleven D.EX.T.E.R.-proces van een eerdere sessie. Sluit deze af en start D.EX.T.E.R. opnieuw op.",
+    "embeddedServerPortInUse": "Poort {{port}} wordt al gebruikt door een ander programma. Dit is meestal een D.EX.T.E.R. Docker-container of een overgebleven Termix-proces van een eerdere sessie. Sluit deze af en start D.EX.T.E.R. opnieuw op.",
     "embeddedServerPortInUseUnknownPort": "Een van de poorten die D.EX.T.E.R. nodig heeft, wordt al gebruikt door een ander programma. Sluit het programma dat deze gebruikt en start D.EX.T.E.R. opnieuw op.",
     "embeddedServerOldDatabase": "Je lokale gegevens zijn afkomstig van Termix 2.8 of ouder en moeten eerst door versie 2.9 worden verwerkt. Installeer Termix 2.9.1, open het een keer zodat je gegevens kunnen worden gemigreerd en update daarna opnieuw naar deze versie.",
     "embeddedServerCrashed": "De lokale server is onverwacht gestopt. Start D.EX.T.E.R. opnieuw op en controleer het bureaubladlogboek als dit blijft gebeuren.",
@@ -1144,7 +1144,7 @@
       },
       "process:spawn": {
         "title": "Voer programma's uit op deze machine",
-        "consequence": "Programma's worden uitgevoerd op de D.EX.T.E.R.-server zelf, niet op je hosts."
+        "consequence": "Programma's worden uitgevoerd op de Termix-server zelf, niet op je hosts."
       },
       "users:write": {
         "title": "Maak gebruikersaccounts aan en wijzig ze",
@@ -1196,7 +1196,7 @@
       },
       "network:serve": {
         "title": "Accepteer verbindingen",
-        "consequence": "Het opent een poort op de D.EX.T.E.R.-server."
+        "consequence": "Het opent een poort op de Termix-server."
       },
       "network:broadcast": {
         "title": "Verstuur netwerkuitzendingen",
@@ -1240,11 +1240,11 @@
       },
       "desktop:window": {
         "title": "Open desktopvensters",
-        "consequence": "Alleen in de D.EX.T.E.R.-desktopapp."
+        "consequence": "Alleen in de Termix-desktopapp."
       },
       "desktop:local": {
         "title": "Deze computer gebruiken",
-        "consequence": "Kan bestanden lezen en wijzigen, een shell uitvoeren en lokale poorten openen op deze computer. Alleen in de D.EX.T.E.R.-desktopapp."
+        "consequence": "Kan bestanden lezen en wijzigen, een shell uitvoeren en lokale poorten openen op deze computer. Alleen in de Termix-desktopapp."
       },
       "users:impersonate": {
         "title": "Handel namens andere gebruikers",
@@ -1275,7 +1275,7 @@
         "consequence": "Versleuteld door D.EX.T.E.R. De plugin heeft nooit toegang tot de sleutel."
       },
       "settings:read-core": {
-        "title": "D.EX.T.E.R.-instellingen lezen",
+        "title": "Termix-instellingen lezen",
         "consequence": "Serverinstellingen, niet je hosts of referenties."
       },
       "plugins:read": {
@@ -1382,7 +1382,7 @@
         "minor": "Het voegt ook eigen schermen toe en slaat eigen gegevens op, gescheiden van andere plugins.",
         "none": "Het vraagt om geen speciale toegang.",
         "uploadTitle": "{{name}} installeren vanuit een bestand",
-        "uploadWarning": "Dit bestand is niet gecontroleerd of ondertekend door het D.EX.T.E.R.-register. Installeer het alleen als je het zelf hebt gemaakt of de maker vertrouwt."
+        "uploadWarning": "Dit bestand is niet gecontroleerd of ondertekend door het Termix-register. Installeer het alleen als je het zelf hebt gemaakt of de maker vertrouwt."
       },
       "confirm": {
         "uninstallTitle": "{{name}} verwijderen?",
@@ -1506,7 +1506,7 @@
         "check": "Controleren",
         "addConfirm": "Vertrouwen en toevoegen",
         "added": "{{name}} toegevoegd",
-        "customWarning": "Plugins uit deze registrar worden niet beoordeeld door het D.EX.T.E.R.-team. Alleen de eigenaar van de registrar bepaalt wat erin staat. Elke download moet worden ondertekend met de bovenstaande sleutel.",
+        "customWarning": "Plugins uit deze registrar worden niet beoordeeld door het Termix-team. Alleen de eigenaar van de registrar bepaalt wat erin staat. Elke download moet worden ondertekend met de bovenstaande sleutel.",
         "keyFingerprint": "Sleutel {{keyId}}",
         "pluginCount_one": "{{count}} plugin",
         "pluginCount_other": "{{count}} plugins",
@@ -1515,12 +1515,12 @@
         "alwaysOn": "Altijd aan",
         "communityHint": "Plugins gemaakt door anderen. Elke versie wordt door een persoon en door geautomatiseerde controles gecontroleerd voordat hij wordt opgenomen.",
         "communityConfirmTitle": "Community-plugins aanzetten?",
-        "communityConfirmBody": "Community-plugins worden gemaakt door anderen, niet door het D.EX.T.E.R.-team. Elke versie wordt door een persoon en door geautomatiseerde controles gecontroleerd voordat hij wordt opgenomen, maar er kunnen nog steeds fouten insluipen. Installeer alleen plugins die je vertrouwt en controleer wat elke plugin vraagt.",
+        "communityConfirmBody": "Community-plugins worden gemaakt door anderen, niet door het Termix-team. Elke versie wordt door een persoon en door geautomatiseerde controles gecontroleerd voordat hij wordt opgenomen, maar er kunnen nog steeds fouten insluipen. Installeer alleen plugins die je vertrouwt en controleer wat elke plugin vraagt.",
         "communityConfirm": "Aanzetten",
         "communityBadge": "Community",
         "communityBadgeHint": "Uit de community-registrar. Gemaakt door anderen en beoordeeld voordat hij werd opgenomen.",
         "customBadge": "Aangepast",
-        "customBadgeHint": "Uit {{name}}, een registrar die een beheerder heeft toegevoegd. Niet beoordeeld door het D.EX.T.E.R.-team.",
+        "customBadgeHint": "Uit {{name}}, een registrar die een beheerder heeft toegevoegd. Niet beoordeeld door het Termix-team.",
         "remove": "Verwijderen",
         "removeTitle": "{{name}} verwijderen?",
         "removeBody": "De plugins ervan worden niet langer weergegeven in Bladeren. Je kunt het later opnieuw toevoegen.",
