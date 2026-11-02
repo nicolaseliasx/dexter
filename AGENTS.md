@@ -28,7 +28,7 @@ This fork is upstream Termix **v26.10.6** with the D.EX.T.E.R. brand, English on
 
 - Run the image on an `--internal` Docker network with a **copy** of the volume (`PUID=0 PGID=0`) and a throwaway sshd/tmux (`ListenAddress` off loopback, or share the network namespace). Never point it at `termix.ncls.cc` or at real hosts.
 - Browser: `playwright-core` with `/usr/bin/chromium`, in a directory outside the repository. Rail items: `button:has(span:text-is("Sessions"))`.
-- Production today is `termix:ncls-mobile` with the `termix-data` volume. Promote only with authorization, a backup taken with the service stopped, and the rollback documented in `docs/modernizacao/STATUS.md`.
+- Production today is `termix:ncls-mobile` with the `termix-data` volume. Promote only with authorization, a backup taken with the service stopped, and the steps and rollback in `docs/modernizacao/PRODUCTION.md`.
 
 ## Gotchas
 
