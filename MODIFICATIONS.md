@@ -8,7 +8,8 @@ D.EX.T.E.R. is a derivative work of [Termix](https://github.com/Termix-SSH/Termi
 2. **English only.** The upstream translations (`src/ui/locales/translated/`) and `translations-lock.json` were removed, `languages.json` is now an empty list, and the language alias table in `src/ui/i18n/i18n.ts` only returns languages that ship. The language pickers show English only. The upstream translation workflow in `.github/workflows` is left untouched and has nothing to translate.
 3. **Documentation.** New `README.md`, `NOTICE`, this file and `AGENTS.md`. The original README was moved, unmodified apart from a note at the top, to `docs/TERMIX_README.md`.
 4. **Package description** in `package.json`.
-5. **No functional change** to the core, apart from the language handling above. Product behavior is otherwise the same as Termix v26.10.6.
+5. **Branding resolution.** `src/backend/database/routes/branding-settings.ts` shows the D.EX.T.E.R. name when the bundled default-look plugin reports the upstream default name "Termix"; any name chosen by an admin is kept.
+6. **No functional change** to the core, apart from the language and branding handling above. Product behavior is otherwise the same as Termix v26.10.6.
 
 ## Kept as in the original (compatibility)
 
@@ -21,7 +22,7 @@ Package and SDK names (`@termix-ssh/*`), `TERMIX_*` environment variables, brows
 
 ## Files changed
 
-82 files differ from the original at the time this file was generated (deleted files included). Regenerate with `git diff --name-only v26.10.6`. Full patch: `git diff v26.10.6`.
+83 files differ from the original at the time this file was generated (deleted files included). Regenerate with `git diff --name-only v26.10.6`. Full patch: `git diff v26.10.6`.
 
 ```
 AGENTS.md
@@ -48,6 +49,7 @@ src/backend/sync/client/device.ts
 src/backend/sync/client/http.ts
 src/backend/sync/host.ts
 src/backend/tests/database/routes/branding-routes.test.ts
+src/backend/tests/database/routes/branding-settings.test.ts
 src/backend/tests/plugins/loader.test.ts
 src/backend/tests/updates/desktop-update-check.test.ts
 src/backend/tests/utils/user-agent-parser.test.ts

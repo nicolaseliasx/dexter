@@ -20,6 +20,12 @@ export const BRANDING_KEYS = {
 
 export const BRANDING_DEFAULT_APP_NAME = "D.EX.T.E.R.";
 
+/**
+ * The name the upstream default-look plugin reports when nobody set one. It is
+ * a signed plugin we cannot edit, so the core shows this fork's name instead.
+ */
+const UPSTREAM_DEFAULT_APP_NAME = "Termix";
+
 interface SettingSource {
   get(key: string): Promise<string | null>;
 }
@@ -30,6 +36,13 @@ export const BRANDING_PROVIDER_NAME = "brandingProvider";
 export type BrandingProvider = () =>
   Promise<BrandingSettings> | BrandingSettings;
 
+function providedAppName(name: string | undefined): string {
+  const trimmed = name?.trim();
+  return !trimmed || trimmed === UPSTREAM_DEFAULT_APP_NAME
+    ? BRANDING_DEFAULT_APP_NAME
+    : trimmed;
+}
+
 export async function resolveBrandingSettings(
   settings: SettingSource,
 ): Promise<BrandingSettings> {
@@ -38,7 +51,7 @@ export async function resolveBrandingSettings(
     try {
       const provided = await provider();
       return {
-        appName: provided.appName?.trim() || BRANDING_DEFAULT_APP_NAME,
+        appName: providedAppName(provided.appName),
         tagline: provided.tagline ?? "",
         logo: provided.logo || null,
       };
