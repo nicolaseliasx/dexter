@@ -28,4 +28,4 @@ The 26.10.6 image refuses a database from 2.8 or older ("Upgrade to Termix 2.9.1
 
 ## State after the 2026-11-02 cutover
 
-Production runs `termix:26.10.6-ncls.1`. The cold backup of the 2.8 data and the saved 2.8 image are kept outside the repository (`~/_tmp/20261102-cutover`). Because the migration is one-way, a rollback means restoring that backup into the volume and loading the saved image.
+Production runs `termix:26.10.6-ncls.1` in the Proxmox LXC 101; the old devhub containers are stopped. The cold backup of the 2.8 data and the saved 2.8 image are kept outside the repository (`~/_tmp/20261102-cutover`). Because the migration is one-way, a rollback means restoring that backup into the volume and loading the saved image.
