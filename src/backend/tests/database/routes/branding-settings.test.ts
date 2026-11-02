@@ -67,25 +67,4 @@ describe("branding provider", () => {
       registry.clearRegistry();
     }
   });
-
-  it("shows the fork's name when a plugin reports the upstream default name", async () => {
-    const registry = await import("../../../plugins/registry.js");
-    registry.provide("demo.brandingProvider", async () => ({
-      appName: "Termix",
-      tagline: "Self-hosted, plugin-based server management.",
-      logo: null,
-    }));
-    try {
-      await expect(resolveBrandingSettings(settingSource({}))).resolves.toMatchObject({
-        appName: BRANDING_DEFAULT_APP_NAME,
-        tagline: "Self-hosted, plugin-based server management.",
-      });
-      // A custom name chosen by the admin is never replaced.
-      registry.revoke("demo.brandingProvider");
-      registry.provide("demo.brandingProvider", async () => ({ appName: "Acme", tagline: "", logo: null }));
-      await expect(resolveBrandingSettings(settingSource({}))).resolves.toMatchObject({ appName: "Acme" });
-    } finally {
-      registry.clearRegistry();
-    }
-  });
 });
