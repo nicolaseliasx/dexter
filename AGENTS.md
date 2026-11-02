@@ -27,7 +27,7 @@ This fork is upstream Termix **v26.10.6** with no patch in the core, plus own pl
 
 - Run the image on an `--internal` Docker network with a **copy** of the volume (`PUID=0 PGID=0`) and a throwaway sshd/tmux (`ListenAddress` off loopback, or share the network namespace). Never point it at `termix.ncls.cc` or at real hosts.
 - Browser: `playwright-core` with `/usr/bin/chromium`, in a directory outside the repository. Rail items: `button:has(span:text-is("Sessions"))`.
-- Production today is `termix:ncls-mobile` with the `termix-data` volume. Promote only with authorization, a backup taken with the service stopped, and the steps and rollback in `docs/modernizacao/PRODUCTION.md`.
+- Production today is `termix:26.10.6-ncls.1` (built from this repository's `docker/Dockerfile`) with the `termix-data` volume, started by `/srv/apps/termix/docker-compose.yml`; the container listens on `127.0.0.1:8443` in the `termix-net` network next to `termix-guacd`. Promote only with authorization, a backup taken with the service stopped, and the steps and rollback in `docs/modernizacao/PRODUCTION.md`.
 
 ## Gotchas
 
