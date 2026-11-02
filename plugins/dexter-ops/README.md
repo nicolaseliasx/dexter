@@ -1,6 +1,6 @@
 # Dexter Ops (plugin)
 
-Control panel for the [Dexter Ops](https://github.com/nicolaseliasx/dexter-ops) Telegram bot, inside D.EX.T.E.R.
+Control panel for the [Dexter Ops](https://github.com/nicolaseliasx/dexter-ops) Telegram bot, inside Termix.
 
 The bot stays a separate Rust service. This plugin only talks to its optional local API (`[api]`, bot v0.6.1+):
 
@@ -11,7 +11,7 @@ The bot stays a separate Rust service. This plugin only talks to its optional lo
 ## Set up
 
 1. In the bot's config enable the API: `[api] enabled = true`, `bind = "127.0.0.1:8787"`, `token_file = "/run/credentials/dexter-ops.service/api-token"` with `LoadCredential=api-token:/etc/dexter-ops/api-token` in the service (a random token of 32+ characters; see the bot's `docs/SECURITY.md`). Restart the bot.
-2. If D.EX.T.E.R. runs in a container, bind the bot to the Docker bridge IP instead and allow only that network in the firewall.
+2. If Termix runs in a container, bind the bot to the Docker bridge IP instead and allow only that network in the firewall.
 3. Install the `.tmxplug` (Plugins → Install from file, Plugin developer mode on), then open Plugins → Dexter Ops → Settings and set **Bot address** and **API token**.
 4. Only admins get the `dexter-ops.manage` permission by default.
 

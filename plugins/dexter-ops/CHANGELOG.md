@@ -13,7 +13,7 @@ Needs the bot v0.6.1 or newer; an older bot is shown as not compatible.
 ### Added
 
 - Saving the settings checks the bot address and the token length, with a message on the field.
-- The bot's audit log now records which D.EX.T.E.R. user made each change.
+- The bot's audit log now records which Termix user made each change.
 - The bot's rate limit on repeated requests is reported as a clear error.
 
 ## 0.1.0

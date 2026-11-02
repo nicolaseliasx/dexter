@@ -1,6 +1,6 @@
-# D.EX.T.E.R. (personal fork of Termix)
+# Termix (ncls) (personal fork of Termix)
 
-This fork is upstream Termix **v26.10.6** with the D.EX.T.E.R. brand, English only, and no functional patch in the core, plus deploy configuration and documentation. The user's global instructions live in `~/.claude/CLAUDE.md`; these project rules take precedence. Everything in this repository is written in English.
+This fork is upstream Termix **v26.10.6** with no patch in the core, plus own plugins in `plugins/`, deploy configuration and documentation. The user's global instructions live in `~/.claude/CLAUDE.md`; these project rules take precedence.
 
 ## Main rule: module work ships as a plugin
 
@@ -12,11 +12,10 @@ This fork is upstream Termix **v26.10.6** with the D.EX.T.E.R. brand, English on
 
 ## Brand and license
 
-- Product: **D.EX.T.E.R.** (Distributed EXtensible Terminal, Environment & Resource Manager). User-visible text says "D.EX.T.E.R."; "Termix" appears only as credit to the original project.
-- **English only.** `src/ui/locales/` has only `en.json`; `languages.json` is empty and the upstream translations were removed. Do not add other languages.
-- **Do not rename compatibility identifiers:** `@termix-ssh/*`, `TERMIX_*` variables, localStorage keys, user agents and `X-Termix-*` headers, API paths, tables and migrations, plugin ids, Electron `appId`/`productName`/`executableName`, container, volume and network names, and the upstream repository used by the update check (`REPO_NAME`). The desktop auto-updater depends on `Termix.exe`.
-- **Apache 2.0:** keep `LICENSE` untouched, plus `NOTICE` and the original README in `docs/TERMIX_README.md`. Every change to an upstream file goes in `MODIFICATIONS.md` (regenerate the list with `git diff --name-only v26.10.6`). Do not use the Termix name or logo as if they were D.EX.T.E.R.'s.
-- When bringing in a newer upstream version, apply the brand replacement only to visible strings, never to identifiers, and run the suite.
+- Product: **Termix** (this fork is called "Termix (ncls)"). Upstream branding, translations and identifiers are kept as shipped; do not rebrand or rename anything.
+- Keep upstream translations (`src/ui/locales/`) untouched.
+- **Apache 2.0:** keep `LICENSE` untouched and the original credits. Every change to an upstream file goes in `MODIFICATIONS.md` (list with `git diff --name-only v26.10.6 -- . ':!plugins'`).
+- When bringing in a newer upstream version, merge it as is and run the suite.
 
 ## Plugins and state
 
