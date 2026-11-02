@@ -1,6 +1,6 @@
-# Fork do Termix (uso pessoal)
+# D.EX.T.E.R. (fork do Termix, uso pessoal)
 
-Este fork é o upstream Termix **v26.10.6** sem patch no núcleo, mais só configuração de deploy e documentação. Instruções globais do usuário ficam em `~/.claude/CLAUDE.md`; estas regras são do projeto e prevalecem.
+Este fork é o upstream Termix **v26.10.6** com a marca D.EX.T.E.R. e sem patch funcional no núcleo, mais configuração de deploy e documentação. Instruções globais do usuário ficam em `~/.claude/CLAUDE.md`; estas regras são do projeto e prevalecem.
 
 ## Diretriz principal: evolução de módulo = plugin
 
@@ -9,6 +9,13 @@ Este fork é o upstream Termix **v26.10.6** sem patch no núcleo, mais só confi
 - Reaproveite o que o Termix já tem antes de escrever código: o `ssh-terminal` oficial já cola imagem (Ctrl+V, SFTP) e abre `terminal` anexado a tmux com `openTab(host, "terminal", { data: { tmuxSession } })`. Colar imagem dentro do Claude/Codex roda sobre isso.
 - Instalar por **Install from file** do `.tmxplug`, com o Plugin developer mode ligado. Não assinar nem submeter ao registry. Mudou o plugin: suba a versão em `manifest.json`, `package.json` e `CHANGELOG.md` (seção com `### Fixed/Added`).
 - Alterar o núcleo só se o SDK não permitir de jeito nenhum, com decisão explícita do usuário, registrada aqui.
+
+## Marca e licença
+
+- Produto: **D.EX.T.E.R.** (Distributed EXtensible Terminal, Environment & Resource Manager). Texto visível ao usuário usa "D.EX.T.E.R."; "Termix" só aparece como atribuição ao projeto original.
+- **Não renomear identificadores de compatibilidade:** `@termix-ssh/*`, variáveis `TERMIX_*`, chaves de localStorage, user agents e cabeçalhos `X-Termix-*`, caminhos de API, tabelas/migrações, ids de plugins, `appId`/`productName`/`executableName` do Electron, nomes de contêiner/volume/rede, e o repositório do upstream usado na checagem de atualização (`REPO_NAME`). O auto-updater desktop depende de `Termix.exe`.
+- **Licença Apache 2.0:** manter `LICENSE` intacto, `NOTICE` e o README original em `docs/TERMIX_README.md`. Toda mudança de arquivo do upstream entra em `MODIFICATIONS.md` (regenerar a lista com `git diff --name-only v26.10.6`). Não usar o nome ou o logotipo do Termix como se fossem do D.EX.T.E.R.
+- Ao trazer uma versão nova do upstream, rode a substituição de marca só em valores de tradução e strings visíveis, nunca em identificadores, e rode a suíte.
 
 ## Plugins e estado
 

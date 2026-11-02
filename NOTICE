@@ -1,0 +1,18 @@
+D.EX.T.E.R. (Distributed EXtensible Terminal, Environment & Resource Manager)
+Copyright 2026 nicolaseliasx (modifications)
+
+This product is a derivative work of Termix, which is licensed under the
+Apache License, Version 2.0 (see LICENSE).
+
+Termix
+Copyright 2026 Luke Gustafson and contributors
+https://github.com/Termix-SSH/Termix
+
+Both the original work and the modifications are distributed under the
+Apache License, Version 2.0. The modifications are described in
+MODIFICATIONS.md. The names "Termix" and "Karmaa" and the Termix logo belong to
+their respective owners and are used here only to identify the origin of this
+work; D.EX.T.E.R. is not affiliated with or endorsed by the Termix project.
+
+Third-party components keep their own licenses and notices; see
+package.json, package-lock.json and the notices shipped with each dependency.

@@ -64,8 +64,8 @@
     "createStartMenuShortcut": true,
     "installerIcon": "public/icon.ico",
     "uninstallerIcon": "public/icon.ico",
-    "shortcutName": "Termix",
-    "uninstallDisplayName": "Termix",
+    "shortcutName": "D.EX.T.E.R.",
+    "uninstallDisplayName": "D.EX.T.E.R.",
     "include": "electron/installer.nsh"
   },
   "msi": {
@@ -95,7 +95,7 @@
     "maintainer": "Termix <mail@termix.site>",
     "desktop": {
       "entry": {
-        "Name": "Termix",
+        "Name": "D.EX.T.E.R.",
         "Comment": "Self-hosted, plugin-based server management.",
         "Keywords": "docker;ssh;terminal;telnet;self-hosted;rdp;file-management;vnc;ssh-tunnel;server-stats;termix",
         "StartupWMClass": "termix"
@@ -129,7 +129,7 @@
     "hardenedRuntime": true,
     "gatekeeperAssess": false,
     "extendInfo": {
-      "NSLocalNetworkUsageDescription": "Termix connects to servers and hosts on your local network.",
+      "NSLocalNetworkUsageDescription": "D.EX.T.E.R. connects to servers and hosts on your local network.",
       "NSBonjourServices": ["_http._tcp", "_https._tcp", "_ssh._tcp"]
     },
     "entitlements": "packaging/build/entitlements.mac.plist",
@@ -157,9 +157,9 @@
     "artifactName": "termix_macos_${arch}_mas.${ext}",
     "extendInfo": {
       "ITSAppUsesNonExemptEncryption": false,
-      "NSLocalNetworkUsageDescription": "Termix connects to servers and hosts on your local network.",
+      "NSLocalNetworkUsageDescription": "D.EX.T.E.R. connects to servers and hosts on your local network.",
       "NSBonjourServices": ["_http._tcp", "_https._tcp", "_ssh._tcp"],
-      "NSAppleEventsUsageDescription": "Termix needs access to control other applications for terminal operations."
+      "NSAppleEventsUsageDescription": "D.EX.T.E.R. needs access to control other applications for terminal operations."
     }
   },
   "generateUpdatesFilesForAllChannels": false,

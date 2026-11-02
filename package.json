@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "version": "26.10.6",
-  "description": "Self-hosted, plugin-based server management.",
+  "description": "D.EX.T.E.R. (Distributed EXtensible Terminal, Environment & Resource Manager): a personal fork of Termix, self-hosted and plugin-based.",
   "author": "Karmaa",
   "main": "electron/main.cjs",
   "engines": {
