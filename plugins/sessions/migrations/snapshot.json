@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "tables": {
+    "sessions": {
+      "columns": {
+        "id": {
+          "type": "varchar",
+          "length": 36,
+          "primaryKey": true,
+          "notNull": true
+        },
+        "userId": {
+          "type": "refUser",
+          "length": 255,
+          "notNull": true
+        },
+        "hostId": {
+          "type": "refHost",
+          "notNull": true
+        },
+        "displayName": {
+          "type": "varchar",
+          "length": 128,
+          "notNull": true
+        },
+        "tmuxSessionName": {
+          "type": "varchar",
+          "length": 64,
+          "notNull": true
+        },
+        "managementState": {
+          "type": "varchar",
+          "length": 16,
+          "notNull": true,
+          "defaultValue": "managed"
+        },
+        "expiryMode": {
+          "type": "varchar",
+          "length": 16,
+          "notNull": true,
+          "defaultValue": "manual"
+        },
+        "expirySeconds": {
+          "type": "integer"
+        },
+        "remoteCreatedAt": {
+          "type": "varchar",
+          "length": 40
+        },
+        "createdAt": {
+          "type": "timestamp",
+          "notNull": true,
+          "defaultNow": true
+        },
+        "lastAttachedAt": {
+          "type": "varchar",
+          "length": 40
+        },
+        "lastDetachedAt": {
+          "type": "varchar",
+          "length": 40
+        },
+        "expiresAt": {
+          "type": "varchar",
+          "length": 40
+        },
+        "lastObservedAt": {
+          "type": "varchar",
+          "length": 40
+        },
+        "hibernatedAt": {
+          "type": "varchar",
+          "length": 40
+        },
+        "endedAt": {
+          "type": "varchar",
+          "length": 40
+        },
+        "endReason": {
+          "type": "varchar",
+          "length": 64
+        }
+      },
+      "indexes": [
+        {
+          "name": "idx_p_sessions_sessions_user_ended",
+          "columns": [
+            "userId",
+            "endedAt"
+          ]
+        },
+        {
+          "name": "idx_p_sessions_sessions_host_ended",
+          "columns": [
+            "hostId",
+            "endedAt"
+          ]
+        },
+        {
+          "name": "idx_p_sessions_sessions_host_tmux",
+          "columns": [
+            "hostId",
+            "tmuxSessionName"
+          ]
+        }
+      ]
+    }
+  }
+}

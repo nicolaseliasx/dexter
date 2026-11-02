@@ -1,0 +1,57 @@
+{
+  "plugin": {
+    "name": "Sessions",
+    "description": "Persistent tmux sessions per host: create, rename, hibernate and reattach from one list."
+  },
+  "panel": {
+    "title": "Sessions"
+  },
+  "permissions": {
+    "use": {
+      "title": "Use persistent sessions",
+      "description": "Create, rename, attach and terminate your own persistent tmux sessions."
+    }
+  },
+  "settings": {
+    "hibernateIdleHours": {
+      "label": "Hibernate idle sessions after (hours)",
+      "description": "Freeze the processes of a session with no attached client after this many idle hours. 0 turns hibernation off."
+    }
+  },
+  "attach": "Attach",
+  "split": "Split",
+  "splitHint": "Attach in a split next to the current tab",
+  "standby": "standby",
+  "created": "Session created",
+  "empty": "No persistent sessions yet",
+  "create": {
+    "host": "Host",
+    "name": "Name",
+    "button": "Create session"
+  },
+  "rename": {
+    "title": "Rename session",
+    "label": "Session name",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "terminate": {
+    "title": "Terminate {{name}}?",
+    "description": "The remote tmux process will be stopped.",
+    "confirm": "Terminate"
+  },
+  "force": {
+    "title": "Force remove?",
+    "unreachable": "The host did not answer. Force remove deletes only this card and leaves any remote tmux process running.",
+    "mismatch": "This remote session belongs to another record. Force remove clears only this card.",
+    "confirm": "Force remove"
+  },
+  "errors": {
+    "load": "Could not load sessions",
+    "invalidName": "Use letters, numbers, dot, dash or underscore (max 64).",
+    "conflict": "A session with this name already exists.",
+    "create": "Could not create the session",
+    "rename": "Could not rename the session",
+    "terminate": "Could not terminate the session"
+  }
+}
