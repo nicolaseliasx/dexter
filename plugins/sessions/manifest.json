@@ -1,0 +1,73 @@
+{
+  "id": "sessions",
+  "name": "Sessions",
+  "version": "0.1.3",
+  "description": "Persistent tmux sessions per host: create, rename, hibernate and reattach from one list.",
+  "author": {
+    "name": "nicolaseliasx"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/nicolaseliasx/dexter/tree/main/plugins/sessions",
+  "category": "Terminal",
+  "icon": "SquareTerminal",
+  "features": [
+    "A list of persistent tmux sessions across your hosts",
+    "Create, rename and terminate sessions, with a force option for unreachable hosts",
+    "Attach opens the official SSH Terminal inside the tmux session, alone or in a split",
+    "Idle sessions can be hibernated and woken again"
+  ],
+  "engine": {
+    "termix": ">=26.10.6",
+    "api": "^1.11"
+  },
+  "capabilities": [
+    "db:own",
+    "hosts:read",
+    "ssh:connect",
+    "credentials:use",
+    "network:serve",
+    "ui:surface"
+  ],
+  "dependencies": {
+    "ssh-terminal": ">=1.2.0"
+  },
+  "contributes": {
+    "panels": [
+      {
+        "id": "sessions",
+        "titleKey": "panel.title",
+        "icon": "SquareTerminal"
+      }
+    ],
+    "permissions": [
+      {
+        "name": "use",
+        "titleKey": "permissions.use.title",
+        "descriptionKey": "permissions.use.description",
+        "defaultRoles": [
+          "admin",
+          "user"
+        ]
+      }
+    ],
+    "settings": {
+      "admin": [
+        {
+          "key": "hibernateIdleHours",
+          "type": "number",
+          "labelKey": "settings.hibernateIdleHours.label",
+          "descriptionKey": "settings.hibernateIdleHours.description",
+          "default": 0,
+          "min": 0,
+          "max": 8760
+        }
+      ]
+    }
+  },
+  "locales": "locales",
+  "platforms": [
+    "linux",
+    "darwin",
+    "win32"
+  ]
+}

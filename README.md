@@ -18,14 +18,14 @@ Termix is the engine. D.EX.T.E.R. is Termix **v26.10.6** with a new name, Englis
 
 | Focus | What it is | Status |
 | --- | --- | --- |
-| **Sessions** | Persistent tmux sessions per host: create, rename, terminate, reattach, open side by side in a split, optional hibernation of idle sessions. Implemented as its own plugin, [`termix-plugin-sessions`](https://github.com/nicolaseliasx/termix-plugin-sessions), that opens the official SSH Terminal inside the tmux session. | Available |
+| **Sessions** | Persistent tmux sessions per host: create, rename, terminate, reattach, open side by side in a split, optional hibernation of idle sessions. Implemented as its own plugin, [`plugins/sessions`](plugins/sessions), that opens the official SSH Terminal inside the tmux session. | Available |
 | **VMs and resources** | Managing virtual machines and infrastructure (Proxmox first) from the same place as your terminals. The official Termix Proxmox plugin is part of the stack, installed but **not configured** by default. | Planned, not built yet |
 
 Everything else (hosts, credentials, SSH terminal, split screen, pasting images into the terminal, users and permissions) is **unchanged Termix**.
 
 ### Principles
 
-- **Lean core.** No functional patch to the Termix core. Features that D.EX.T.E.R. adds ship as plugins in their own repositories, installable from a file. The rules are in [AGENTS.md](AGENTS.md).
+- **Lean core.** No functional patch to the Termix core. Features that D.EX.T.E.R. adds ship as plugins in [`plugins/`](plugins), installable from a file. The rules are in [AGENTS.md](AGENTS.md).
 - **Only what you use.** Most Termix plugins are available but left **off** on this installation; you turn on what you need.
 - **English only.** The interface and docs are in English. The upstream translations were removed.
 - **Branded.** The interface, server messages and metadata say "D.EX.T.E.R.".

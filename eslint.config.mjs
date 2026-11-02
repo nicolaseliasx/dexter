@@ -12,6 +12,7 @@ export default tseslint.config([
     "release",
     "Mobile",
     "src/mcp-server/node_modules",
+    "plugins/**",
   ]),
   {
     files: ["**/*.{ts,tsx}"],
