@@ -1,0 +1,193 @@
+import type {
+  PersistentSessionExpiryMode,
+  PersistentSessionMarker,
+  RemotePersistentSession,
+} from "./types.js";
+import { validatePersistentSessionName } from "./types.js";
+
+/** Quote exactly once at the SSH shell boundary. */
+export function shellQuote(value: string): string {
+  return "'" + value.replace(/'/g, "'\\''") + "'";
+}
+
+function target(name: string): string {
+  if (!validatePersistentSessionName(name))
+    throw new Error("PERSISTENT_SESSION_INVALID_NAME");
+  return shellQuote(name);
+}
+
+/** This command never appends `exit`; PTY closure must not terminate tmux. */
+export function buildPersistentTmuxCreateCommand(input: {
+  name: string;
+  id: string;
+  createdAt: string;
+  expiryMode: PersistentSessionExpiryMode;
+  expirySeconds?: number;
+}): string {
+  if (!validatePersistentSessionName(input.name))
+    throw new Error("PERSISTENT_SESSION_INVALID_NAME");
+  const set = (key: string, value: string) =>
+    `tmux set-option -t ${target(input.name)} -q ${shellQuote(key)} ${shellQuote(value)}`;
+  const commands = [
+    `tmux new-session -d -s ${shellQuote(input.name)}`,
+    set("@termix_session_id", input.id),
+    set("@termix_created_at", input.createdAt),
+    set("@termix_expiry_mode", input.expiryMode),
+  ];
+  if (input.expirySeconds !== undefined)
+    commands.push(set("@termix_expiry_seconds", String(input.expirySeconds)));
+  return commands.join(" && ");
+}
+
+/**
+ * Hibernation freezes every live pane (SIGSTOP); the tmux server itself is
+ * never signalled, so listing and attaching keep working while the payload
+ * processes (shells, agents) consume no CPU. A pane leader is a session
+ * leader, so sweeping the leader's session id also reaches interactive jobs,
+ * which the shell places in their own process groups. Dead panes yield an
+ * empty pid and are skipped by the loop.
+ */
+function buildPersistentTmuxPaneSignalScript(
+  name: string,
+  signal: string,
+): string {
+  if (!validatePersistentSessionName(name))
+    throw new Error("PERSISTENT_SESSION_INVALID_NAME");
+  return (
+    `tmux list-panes -s -t ${target(name)} -F '#{?pane_dead,,#{pane_pid}}' 2>/dev/null | ` +
+    `while read -r pid; do [ -n "$pid" ] || continue; ` +
+    `pgid=$(ps -o pgid= -p "$pid" 2>/dev/null | tr -d ' '); ` +
+    `[ -n "$pgid" ] && kill -${signal} "-$pgid" 2>/dev/null; ` +
+    `for pg in $(ps -eo sid=,pgid= 2>/dev/null | awk -v s="$pid" '$1==s {print $2}' | sort -u); do ` +
+    `kill -${signal} "-$pg" 2>/dev/null; done; done; true`
+  );
+}
+
+export function buildPersistentTmuxFreezeCommand(name: string): string {
+  return buildPersistentTmuxPaneSignalScript(name, "STOP");
+}
+
+export function buildPersistentTmuxThawCommand(name: string): string {
+  return buildPersistentTmuxPaneSignalScript(name, "CONT");
+}
+
+export function buildPersistentTmuxAttachCommand(
+  name: string,
+  readOnly: boolean,
+): string {
+  // A frozen session is revived inline before the attach: SIGCONT on every
+  // pane process group is idempotent and silent when nothing is frozen.
+  // A TUI terminated without disabling mouse tracking can leave its tmux pane
+  // sending mouse reports to the shell. Reset that state only when the pane's
+  // foreground process is a shell; live TUIs keep their mouse mode.
+  const resetShellMouse =
+    `tmux list-panes -s -t ${target(name)} -F '#{pane_id}|#{pane_current_command}|#{mouse_any_flag}' 2>/dev/null | ` +
+    `while IFS='|' read -r pane command mouse; do ` +
+    `case "$command:$mouse" in ` +
+    `sh:1|bash:1|dash:1|zsh:1|fish:1|ksh:1) tmux send-keys -R -t "$pane" 2>/dev/null;; ` +
+    `esac; done`;
+  return `${buildPersistentTmuxPaneSignalScript(name, "CONT")}; ${resetShellMouse}; tmux -u attach-session ${readOnly ? "-r " : ""}-t ${target(name)}`;
+}
+
+export function buildPersistentTmuxHasSessionCommand(name: string): string {
+  return `tmux has-session -t ${target(name)}`;
+}
+
+export function buildPersistentTmuxKillCommand(
+  name: string,
+  id: string,
+): string {
+  return `test "$(tmux show-option -t ${target(name)} -qv @termix_session_id)" = ${shellQuote(id)} && tmux kill-session -t ${target(name)} && ! tmux has-session -t ${target(name)}`;
+}
+
+/**
+ * Marker-free fallback: a tmux server restart can recreate sessions without
+ * their termix markers, leaving the session name as the only identity. Check
+ * the marker again at execution time so a concurrent owner cannot be killed.
+ */
+export function buildPersistentTmuxKillByNameCommand(name: string): string {
+  if (!validatePersistentSessionName(name))
+    throw new Error("PERSISTENT_SESSION_INVALID_NAME");
+  return `test -z "$(tmux show-option -t ${target(name)} -qv @termix_session_id)" && tmux kill-session -t ${target(name)} && ! tmux has-session -t ${target(name)}`;
+}
+
+export function buildPersistentTmuxMarkCommand(input: {
+  name: string;
+  id: string;
+  createdAt: string;
+  expiryMode: PersistentSessionExpiryMode;
+  expirySeconds?: number;
+}): string {
+  if (!validatePersistentSessionName(input.name))
+    throw new Error("PERSISTENT_SESSION_INVALID_NAME");
+  const set = (key: string, value: string) =>
+    `tmux set-option -t ${target(input.name)} -q ${shellQuote(key)} ${shellQuote(value)}`;
+  const commands = [
+    `tmux has-session -t ${target(input.name)}`,
+    set("@termix_session_id", input.id),
+    set("@termix_created_at", input.createdAt),
+    set("@termix_expiry_mode", input.expiryMode),
+  ];
+  if (input.expirySeconds !== undefined)
+    commands.push(set("@termix_expiry_seconds", String(input.expirySeconds)));
+  return commands.join(" && ");
+}
+
+export function buildPersistentTmuxRenameCommand(input: {
+  oldName: string;
+  newName: string;
+  id: string;
+}): string {
+  if (
+    !validatePersistentSessionName(input.oldName) ||
+    !validatePersistentSessionName(input.newName)
+  )
+    throw new Error("PERSISTENT_SESSION_INVALID_NAME");
+  return `test "$(tmux show-option -t ${target(input.oldName)} -qv @termix_session_id)" = ${shellQuote(input.id)} && tmux rename-session -t ${target(input.oldName)} ${shellQuote(input.newName)} && test "$(tmux show-option -t ${target(input.newName)} -qv @termix_session_id)" = ${shellQuote(input.id)}`;
+}
+
+export function buildPersistentTmuxListCommand(): string {
+  return "command -v tmux >/dev/null 2>&1 || exit 127; tmux -u list-sessions -F '#{session_name}\t#{session_created}\t#{session_activity}\t#{session_attached}\t#{@termix_session_id}\t#{@termix_created_at}\t#{@termix_expiry_mode}\t#{@termix_expiry_seconds}' 2>/dev/null || true";
+}
+
+export function parsePersistentTmuxList(
+  output: string,
+): RemotePersistentSession[] {
+  const names = new Set<string>();
+  return output.split(/\r?\n/).flatMap((line) => {
+    if (!line) return [];
+    const [
+      name,
+      createdAt,
+      activityAt,
+      attached,
+      id,
+      markedAt,
+      expiryMode,
+      expirySeconds,
+    ] = line.split("\t");
+    if (!validatePersistentSessionName(name) || names.has(name)) return [];
+    names.add(name);
+    const count = Number(attached);
+    const marker =
+      id && markedAt && (expiryMode === "manual" || expiryMode === "idle")
+        ? ({
+            id,
+            createdAt: markedAt,
+            expiryMode,
+            ...(expirySeconds && Number.isFinite(Number(expirySeconds))
+              ? { expirySeconds: Number(expirySeconds) }
+              : {}),
+          } as PersistentSessionMarker)
+        : undefined;
+    return [
+      {
+        name,
+        createdAt: createdAt || undefined,
+        activityAt: activityAt || undefined,
+        attachedClients: Number.isInteger(count) && count >= 0 ? count : 0,
+        marker,
+      },
+    ];
+  });
+}
