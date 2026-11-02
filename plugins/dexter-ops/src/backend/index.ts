@@ -1,6 +1,6 @@
 import type { Router } from "express";
 import type { PluginContext } from "@termix-ssh/plugin-sdk/backend";
-import { createBotClient } from "./client.js";
+import { createBotClient, validateBotSettings } from "./client.js";
 import { registerRoutes } from "./routes.js";
 
 export async function activate(ctx: PluginContext): Promise<void> {
@@ -16,7 +16,10 @@ export async function activate(ctx: PluginContext): Promise<void> {
     bot: bot.request,
     audit: (entry) => ctx.audit.record(entry),
     guard: () => ctx.rbac.require("dexter-ops.manage") as never,
+    actor: () => ctx.currentActor(),
   });
+
+  ctx.settings.onValidate("admin", (values) => validateBotSettings(values));
 }
 
 export async function deactivate(): Promise<void> {

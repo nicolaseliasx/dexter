@@ -5,6 +5,7 @@ export interface BotStatus {
   uptime_secs: number;
   watch_enabled: boolean;
   notifications_muted: boolean;
+  muted_until: number | null;
   last_collect_at: number | null;
   hosts_total: number;
   hosts_down: number;

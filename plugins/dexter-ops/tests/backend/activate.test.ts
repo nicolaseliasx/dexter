@@ -18,7 +18,7 @@ async function boot(settings: Record<string, unknown>) {
     router: () => (router = express.Router()),
     permissions: ["dexter-ops.manage"],
     settings,
-    fetch: async () => Response.json({ api_version: 1, bot_version: "0.6.0" }),
+    fetch: async () => Response.json({ api_version: 1, api_revision: 2, bot_version: "0.6.1" }),
   });
   await activate(mock.ctx);
   const app = express();
@@ -41,7 +41,7 @@ describe("activate", () => {
   it("serves the proxy behind manage and reaches only the configured host", async () => {
     const { mock, base } = await boot({ botUrl: "http://172.17.0.1:8787", token: TOKEN });
     const res = await fetch(`${base}/status`);
-    expect(await res.json()).toMatchObject({ compatible: true, bot_version: "0.6.0" });
+    expect(await res.json()).toMatchObject({ compatible: true, bot_version: "0.6.1" });
     expect(mock.fetches).toHaveLength(1);
     expect(mock.fetches[0].url).toBe("http://172.17.0.1:8787/v1/status");
     expect(mock.fetches[0].init?.allowPrivateHosts).toEqual(["172.17.0.1"]);
@@ -57,6 +57,17 @@ describe("activate", () => {
     });
     expect(mock.audits).toEqual([expect.objectContaining({ action: "dexter-ops.op.disable", resourceId: "restart-nginx", success: true })]);
     expect(JSON.stringify(mock.audits)).not.toContain(TOKEN);
+  });
+
+  it("checks the address and the token when settings are saved", async () => {
+    const { mock } = await boot({});
+    expect(await mock.validateSettings("admin", { botUrl: "http://127.0.0.1:8787", token: TOKEN })).toEqual({});
+    expect(await mock.validateSettings("admin", { botUrl: "ftp://x" })).toHaveProperty("botUrl");
+    expect(await mock.validateSettings("admin", { botUrl: "http://x/v1" })).toHaveProperty("botUrl");
+    expect(await mock.validateSettings("admin", { token: "short" })).toHaveProperty("token");
+    // an untouched secret comes back as { set: true } and must not fail the save
+    expect(await mock.validateSettings("admin", { botUrl: "http://127.0.0.1:8787", token: { set: true } })).toEqual({});
+    expect(await mock.validateSettings("admin", { botUrl: "", token: "" })).toEqual({});
   });
 
   it("answers 409 until the bot is configured", async () => {

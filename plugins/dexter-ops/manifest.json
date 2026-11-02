@@ -1,7 +1,7 @@
 {
   "id": "dexter-ops",
   "name": "Dexter Ops",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "See and restrict what the Dexter Ops Telegram bot may do, and acknowledge its alerts.",
   "author": {
     "name": "nicolaseliasx"

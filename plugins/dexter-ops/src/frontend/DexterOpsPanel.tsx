@@ -1,10 +1,15 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Bot } from "lucide-react";
 import { usePluginApi, useToast, useTranslation } from "@termix-ssh/plugin-sdk/frontend";
 import { Button, EmptyState, ListBadge, ListRow, PanelShell, Switch } from "@termix-ssh/plugin-sdk/ui";
 import { errorCode, type BotOp, type Snapshot } from "./types.js";
 
 const POLL_MS = 15_000;
+const MUTE_CHOICES = [
+  { minutes: 60, key: "mute.hour" },
+  { minutes: 480, key: "mute.hours8" },
+  { minutes: 1440, key: "mute.day" },
+] as const;
 
 function uptime(secs: number): string {
   const d = Math.floor(secs / 86400);
@@ -29,6 +34,9 @@ export function DexterOpsPanel() {
   const [snap, setSnap] = useState<Snapshot | null>(null);
   const [problem, setProblem] = useState<string | null>(null);
   const [asking, setAsking] = useState<string | null>(null);
+  // A synchronous guard (a ref) so a double click cannot start the same action twice.
+  const inFlight = useRef(new Set<string>());
+  const [pending, setPending] = useState<string[]>([]);
 
   const refresh = useCallback(async () => {
     try {
@@ -55,7 +63,8 @@ export function DexterOpsPanel() {
 
   useEffect(() => {
     void refresh();
-    const timer = setInterval(() => void refresh(), POLL_MS);
+    // A hidden tab does not need fresh data; it refreshes when it becomes visible again.
+    const timer = setInterval(() => document.visibilityState === "visible" && void refresh(), POLL_MS);
     const onVisible = () => document.visibilityState === "visible" && void refresh();
     document.addEventListener("visibilitychange", onVisible);
     return () => {
@@ -64,21 +73,32 @@ export function DexterOpsPanel() {
     };
   }, [refresh]);
 
-  const run = async (action: () => Promise<unknown>, okKey: string) => {
+  const run = async (action: () => Promise<unknown>, okKey: string, key?: string) => {
+    if (key) {
+      if (inFlight.current.has(key)) return;
+      inFlight.current.add(key);
+      setPending([...inFlight.current]);
+    }
     try {
       await action();
       toast.success(t(okKey));
     } catch (error) {
       toast.error(t(`errors.${errorCode(error) ?? "BOT_UNREACHABLE"}`, { defaultValue: t("errors.BOT_UNREACHABLE") }));
+    } finally {
+      if (key) {
+        inFlight.current.delete(key);
+        setPending([...inFlight.current]);
+      }
     }
     await refresh();
   };
+  const busy = (key: string) => pending.includes(key);
 
   const toggle = (op: BotOp, enabled: boolean) =>
-    run(() => api.put(`/ops/${op.id}`, { enabled }), enabled ? "toast.enabled" : "toast.disabled");
+    run(() => api.put(`/ops/${op.id}`, { enabled }), enabled ? "toast.enabled" : "toast.disabled", `toggle:${op.id}`);
   const request = (op: BotOp) => {
     setAsking(null);
-    return run(() => api.post(`/ops/${op.id}/request`), op.destructive ? "toast.awaiting" : "toast.started");
+    return run(() => api.post(`/ops/${op.id}/request`), op.destructive ? "toast.awaiting" : "toast.started", `request:${op.id}`);
   };
 
   const title = t("panel.title");
@@ -115,18 +135,40 @@ export function DexterOpsPanel() {
           <ListBadge tone={status.hosts_down ? "destructive" : "success"}>{t("status.hosts", { down: status.hosts_down, total: status.hosts_total })}</ListBadge>
           <ListBadge tone={status.active_alerts ? "warning" : "muted"}>{t("status.alerts", { count: status.active_alerts })}</ListBadge>
         </div>
-        <div className="flex items-center justify-between gap-3 py-1">
-          <div className="flex flex-col">
-            <span className="text-sm">{t("mute.label")}</span>
-            <span className="text-xs text-muted-foreground">{t("mute.description")}</span>
-          </div>
-          <Switch
-            aria-label={t("mute.label")}
-            checked={status.notifications_muted}
-            onCheckedChange={(muted: boolean) =>
-              void run(() => api.put("/notifications", { muted }), muted ? "toast.muted" : "toast.unmuted")
-            }
-          />
+        <div className="flex flex-col gap-1 py-1">
+          <span className="text-sm">{t("mute.label")}</span>
+          {status.muted_until ? (
+            <div className="flex flex-wrap items-center gap-2 text-xs">
+              <ListBadge tone="warning">{t("mute.until", { time: new Date(status.muted_until * 1000).toLocaleString() })}</ListBadge>
+              <Button
+                size="sm"
+                variant="outline"
+                disabled={busy("mute")}
+                onClick={() => void run(() => api.put("/notifications", { muted: false }), "toast.unmuted", "mute")}
+              >
+                {t("mute.end")}
+              </Button>
+            </div>
+          ) : (
+            <>
+              <span className="text-xs text-muted-foreground">{t("mute.description")}</span>
+              <div className="flex flex-wrap gap-2">
+                {MUTE_CHOICES.map((c) => (
+                  <Button
+                    key={c.minutes}
+                    size="sm"
+                    variant="outline"
+                    disabled={busy("mute")}
+                    onClick={() =>
+                      void run(() => api.put("/notifications", { muted: true, minutes: c.minutes }), "toast.muted", "mute")
+                    }
+                  >
+                    {t(c.key)}
+                  </Button>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </Section>
 
@@ -144,7 +186,7 @@ export function DexterOpsPanel() {
                   <Button
                     size="sm"
                     variant="outline"
-                    disabled={!op.enabled}
+                    disabled={!op.enabled || busy(`request:${op.id}`)}
                     aria-label={t("ops.requestLabel", { name: op.name })}
                     onClick={() => (op.destructive ? setAsking(op.id) : void request(op))}
                   >
@@ -186,7 +228,12 @@ export function DexterOpsPanel() {
                 a.acked ? (
                   <span className="text-xs text-muted-foreground">{t("alerts.acked")}</span>
                 ) : (
-                  <Button size="sm" variant="outline" onClick={() => void run(() => api.post(`/alerts/${a.id}/ack`), "toast.acked")}>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    disabled={busy(`ack:${a.id}`)}
+                    onClick={() => void run(() => api.post(`/alerts/${a.id}/ack`), "toast.acked", `ack:${a.id}`)}
+                  >
                     {t("alerts.ack")}
                   </Button>
                 )

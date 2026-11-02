@@ -46,6 +46,25 @@ describe("bot client", () => {
     expect(init.method).toBe("GET");
   });
 
+  it("allows an IPv6 bot by its bare address, the way core compares hosts", async () => {
+    const { client, calls } = make({ botUrl: "http://[::1]:8787" });
+    await client.request("GET", "/v1/status");
+    expect((calls[0].init as { allowPrivateHosts: string[] }).allowPrivateHosts).toEqual(["::1"]);
+  });
+
+  it("tells the bot who is acting, only when known", async () => {
+    const { client, calls } = make({});
+    await client.request("PUT", "/v1/ops/x", { enabled: false }, "alice");
+    await client.request("GET", "/v1/status");
+    expect((calls[0].init as { headers: Record<string, string> }).headers["x-actor"]).toBe("alice");
+    expect((calls[1].init as { headers: Record<string, string> }).headers["x-actor"]).toBeUndefined();
+  });
+
+  it("reports the bot's rate limit", async () => {
+    const { client } = make({ reply: () => Response.json({ error: "too_many_requests" }, { status: 429 }) });
+    await expect(client.request("POST", "/v1/ops/x/request")).rejects.toMatchObject({ code: "TOO_MANY_REQUESTS", status: 429 });
+  });
+
   it("sends JSON bodies", async () => {
     const { client, calls } = make({});
     await client.request("PUT", "/v1/ops/restart-nginx", { enabled: false });
