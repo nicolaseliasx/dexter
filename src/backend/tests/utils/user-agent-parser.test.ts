@@ -82,7 +82,7 @@ describe("parseUserAgent", () => {
       reqWith({ "user-agent": "Termix-Desktop/2.3.1 (macOS; arm64)" }),
     );
     expect(info.type).toBe("desktop");
-    expect(info.browser).toBe("D.EX.T.E.R. Desktop");
+    expect(info.browser).toBe("Termix Desktop");
     expect(info.version).toBe("2.3.1");
     expect(info.os).toBe("macOS");
   });

@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Step {{current}} of {{total}}",
-    "stageLabel": "D.EX.T.E.R. setup",
+    "stageLabel": "Termix setup",
     "setupHeading": "Set up your workspace",
     "partialHeading": "A few new things to set up",
     "signOut": "Sign out",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "On",
     "pluginsChoice_disabled": "Off",
     "pluginsChoice_remove": "Remove",
-    "pluginsConsentTitle": "Help improve D.EX.T.E.R.",
+    "pluginsConsentTitle": "Help improve Termix",
     "pluginsConsentNote": "You can turn this off at any time from the Plugins tab.",
     "pluginsApplying": "Applying your choices",
     "pluginsSomeFailed": "Some plugins could not be changed. You can fix them later from the Plugins tab. Press Next to continue.",
@@ -226,14 +226,14 @@
     "neverBody": "Do not check for updates. You can still check by hand in Settings.",
     "onboardingTitle": "App updates",
     "onboardingBody": "The desktop app can now update itself. Pick how you want new versions to arrive. You can change this later in Settings, Updates.",
-    "onboardingManual": "This copy of the app was installed in a way that can not update itself, so D.EX.T.E.R. will tell you when a new version is out with a link to download it.",
+    "onboardingManual": "This copy of the app was installed in a way that can not update itself, so Termix will tell you when a new version is out with a link to download it.",
     "download": "Download",
     "restart": "Restart now",
     "later": "Later",
-    "available": "D.EX.T.E.R. {{version}} is available",
+    "available": "Termix {{version}} is available",
     "manualHint": "Download it from the release page and install it over this one.",
-    "ready": "D.EX.T.E.R. {{version}} is ready to install",
-    "readyHint": "It installs the next time D.EX.T.E.R. restarts."
+    "ready": "Termix {{version}} is ready to install",
+    "readyHint": "It installs the next time Termix restarts."
   },
   "safeMode": {
     "title": "Safe mode",
@@ -387,7 +387,7 @@
     "sshPort": "SSH Port",
     "authMethod": "Auth Method",
     "authenticationMethod": "Authentication Method",
-    "authenticationMethodDesc": "Select the one method D.EX.T.E.R. will use to authenticate this SSH connection. Other methods are not tried automatically.",
+    "authenticationMethodDesc": "Select the one method Termix will use to authenticate this SSH connection. Other methods are not tried automatically.",
     "storedCredential": "Stored Credential",
     "selectACredential": "Select a credential...",
     "keyTypeLabel": "Key Type",
@@ -403,7 +403,7 @@
     "replaceKey": "Replace key",
     "docsLink": "View docs",
     "agentLabel": "SSH Agent",
-    "agentDesc": "Authenticate using an SSH agent running on the D.EX.T.E.R. server (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). The agent must be running on the machine where D.EX.T.E.R. is hosted.",
+    "agentDesc": "Authenticate using an SSH agent running on the Termix server (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). The agent must be running on the machine where Termix is hosted.",
     "agentAuthenticationDesc": "Use keys from an SSH agent to authenticate this connection. Leave the socket path empty to use SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Agent Socket Path",
     "agentSocketPathPlaceholder": "Leave empty to use SSH_AUTH_SOCK",
@@ -804,8 +804,8 @@
     "arrangeUnlockedSwitchedToManual": "Switched to manual sort so your order sticks",
     "dragToRearrange": "Drag to rearrange",
     "arrangeUnlocked": "Unlock drag to rearrange",
-    "webUiBindHostUnreachable": "Your browser cannot reach 127.0.0.1 on the machine running D.EX.T.E.R., so this endpoint will not load. Use an address that machine answers on, such as 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "From this browser, the forward would be reached at the same hostname D.EX.T.E.R. is served from, so the tunnelled service would receive your D.EX.T.E.R. session. Cookies ignore the port. This endpoint will refuse to open here; it works from the D.EX.T.E.R. desktop app, or when D.EX.T.E.R. is opened at localhost.",
+    "webUiBindHostUnreachable": "Your browser cannot reach 127.0.0.1 on the machine running Termix, so this endpoint will not load. Use an address that machine answers on, such as 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "From this browser, the forward would be reached at the same hostname Termix is served from, so the tunnelled service would receive your Termix session. Cookies ignore the port. This endpoint will refuse to open here; it works from the Termix desktop app, or when Termix is opened at localhost.",
     "webUiErrorLabelRequired": "Endpoint {{row}} needs a label.",
     "webUiErrorLabelDuplicate": "Each endpoint needs a different name.",
     "webUiErrorPortRange": "Endpoint {{row}} needs a port between 1 and 65535.",
@@ -951,8 +951,8 @@
     "retrySecondFactorUI": "Reload verification methods",
     "localDesktopSignedOut": "Local desktop signed out",
     "localDesktopUnavailable": "Local desktop session unavailable",
-    "localDesktopSignedOutDesc": "You signed out of the local desktop session. Continue locally to use this device's built-in D.EX.T.E.R. server again.",
-    "localDesktopUnavailableDesc": "D.EX.T.E.R. could not start a local desktop session. Retry it instead of registering a new account.",
+    "localDesktopSignedOutDesc": "You signed out of the local desktop session. Continue locally to use this device's built-in Termix server again.",
+    "localDesktopUnavailableDesc": "Termix could not start a local desktop session. Retry it instead of registering a new account.",
     "continueLocalDesktop": "Continue with local desktop",
     "retryLocalDesktop": "Retry local desktop session"
   },
@@ -971,8 +971,8 @@
     "acceptNewKey": "Accept New Key & Continue"
   },
   "errors": {
-    "databaseConnection": "The D.EX.T.E.R. server is not responding",
-    "embeddedServerFailed": "D.EX.T.E.R.'s local server could not start",
+    "databaseConnection": "The Termix server is not responding",
+    "embeddedServerFailed": "Termix's local server could not start",
     "unknownError": "Unknown error",
     "syncedHostMissing": "The synced host does not exist on the linked server",
     "linkedServerUnreachable": "The linked server is not reachable",
@@ -996,13 +996,13 @@
     "sessionExpiredLogin": "Session expired. Please log in again."
   },
   "messages": {
-    "registrationDisabled": "You have no D.EX.T.E.R. account yet. Ask an admin to turn on Auto-create external accounts.",
+    "registrationDisabled": "You have no Termix account yet. Ask an admin to turn on Auto-create external accounts.",
     "userNotAllowed": "Your account is not authorized to register. Please contact an administrator.",
     "databaseConnectionFailed": "It may still be starting, or it stopped. This page keeps trying and continues on its own once the server is back.",
-    "embeddedServerPortInUse": "Port {{port}} is already in use by another program. This is usually a D.EX.T.E.R. Docker container or a leftover D.EX.T.E.R. process from a previous session. Close it, then restart D.EX.T.E.R.",
-    "embeddedServerPortInUseUnknownPort": "One of the ports D.EX.T.E.R. needs is already in use by another program. Close whatever is using it, then restart D.EX.T.E.R.",
+    "embeddedServerPortInUse": "Port {{port}} is already in use by another program. This is usually a Termix Docker container or a leftover Termix process from a previous session. Close it, then restart Termix.",
+    "embeddedServerPortInUseUnknownPort": "One of the ports Termix needs is already in use by another program. Close whatever is using it, then restart Termix.",
     "embeddedServerOldDatabase": "Your local data is from Termix 2.8 or older and has to pass through 2.9 first. Install Termix 2.9.1, open it once so it can move your data, then update to this version again.",
-    "embeddedServerCrashed": "The local server stopped unexpectedly. Restart D.EX.T.E.R., and check the desktop log if this keeps happening.",
+    "embeddedServerCrashed": "The local server stopped unexpectedly. Restart Termix, and check the desktop log if this keeps happening.",
     "resetCodeSent": "Reset code sent to Docker logs",
     "codeVerified": "Code verified successfully",
     "passwordResetSuccess": "Password reset successfully",
@@ -1123,7 +1123,7 @@
         "missing": "No installed plugin provides this layout.",
         "disabled": "The plugin that provides this layout is turned off.",
         "blocked": "The plugin that provides this layout is waiting on something it needs.",
-        "incompatible": "The plugin that provides this layout does not work with this version of D.EX.T.E.R.",
+        "incompatible": "The plugin that provides this layout does not work with this version of Termix.",
         "failed": "The layout failed to start.",
         "crashed": "The layout crashed twice while drawing the app."
       },
@@ -1144,7 +1144,7 @@
       },
       "process:spawn": {
         "title": "Run programs on this machine",
-        "consequence": "Programs run on the D.EX.T.E.R. server itself, not on your hosts."
+        "consequence": "Programs run on the Termix server itself, not on your hosts."
       },
       "users:write": {
         "title": "Create and change user accounts",
@@ -1168,11 +1168,11 @@
       },
       "system:tls": {
         "title": "Manage certificates",
-        "consequence": "It can replace the certificate D.EX.T.E.R. serves over HTTPS and answer domain checks from certificate authorities."
+        "consequence": "It can replace the certificate Termix serves over HTTPS and answer domain checks from certificate authorities."
       },
       "device:serial": {
         "title": "Access serial and USB devices",
-        "consequence": "It can open a physical serial port on the machine running D.EX.T.E.R."
+        "consequence": "It can open a physical serial port on the machine running Termix."
       },
       "hosts:export": {
         "title": "Export hosts with their secrets",
@@ -1196,7 +1196,7 @@
       },
       "network:serve": {
         "title": "Accept connections",
-        "consequence": "It opens a port on the D.EX.T.E.R. server."
+        "consequence": "It opens a port on the Termix server."
       },
       "network:broadcast": {
         "title": "Send network broadcasts",
@@ -1240,11 +1240,11 @@
       },
       "desktop:window": {
         "title": "Open desktop windows",
-        "consequence": "Only in the D.EX.T.E.R. desktop app."
+        "consequence": "Only in the Termix desktop app."
       },
       "desktop:local": {
         "title": "Use this computer",
-        "consequence": "Can read and change files, run a shell and open local ports on this computer. Only in the D.EX.T.E.R. desktop app."
+        "consequence": "Can read and change files, run a shell and open local ports on this computer. Only in the Termix desktop app."
       },
       "users:impersonate": {
         "title": "Act as other users",
@@ -1272,10 +1272,10 @@
       },
       "secrets:own": {
         "title": "Store its own secrets",
-        "consequence": "Encrypted by D.EX.T.E.R. The plugin never holds the key."
+        "consequence": "Encrypted by Termix. The plugin never holds the key."
       },
       "settings:read-core": {
-        "title": "Read D.EX.T.E.R. settings",
+        "title": "Read Termix settings",
         "consequence": "Server settings, not your hosts or credentials."
       },
       "plugins:read": {
@@ -1480,10 +1480,10 @@
         "security": "Security"
       },
       "installedBadge": "Installed",
-      "incompatible": "Needs a newer D.EX.T.E.R.",
+      "incompatible": "Needs a newer Termix",
       "features": "Features",
       "whatItCanDo": "What it can do",
-      "addsToTermix": "Adds to D.EX.T.E.R.",
+      "addsToTermix": "Adds to Termix",
       "addsToTermixHint": "Uninstall and every one of these goes away.",
       "noServerAccess": "No access to your servers",
       "searchInstalled": "Search installed",
@@ -1501,12 +1501,12 @@
         "hostYourOwn": "Host your own registry",
         "add": "Add registry",
         "addTitle": "Add a registry",
-        "addHint": "Paste the link to the registry's index.json. D.EX.T.E.R. reads it and shows the key it signs plugins with. Only add registries from people you trust.",
+        "addHint": "Paste the link to the registry's index.json. Termix reads it and shows the key it signs plugins with. Only add registries from people you trust.",
         "urlLabel": "Index URL",
         "check": "Check",
         "addConfirm": "Trust and add",
         "added": "Added {{name}}",
-        "customWarning": "Plugins from this registry are not reviewed by the D.EX.T.E.R. team. Only the owner of the registry decides what is in it. Every download must be signed by the key above.",
+        "customWarning": "Plugins from this registry are not reviewed by the Termix team. Only the owner of the registry decides what is in it. Every download must be signed by the key above.",
         "keyFingerprint": "Key {{keyId}}",
         "pluginCount_one": "{{count}} plugin",
         "pluginCount_other": "{{count}} plugins",
@@ -1515,12 +1515,12 @@
         "alwaysOn": "Always on",
         "communityHint": "Plugins made by other people. Each version is checked by a person and by automated checks before it is listed.",
         "communityConfirmTitle": "Turn on community plugins?",
-        "communityConfirmBody": "Community plugins are made by other people, not the D.EX.T.E.R. team. Every version is checked by a person and by automated checks before it is listed, but mistakes can still get through. Only install plugins you trust and check what each one asks for.",
+        "communityConfirmBody": "Community plugins are made by other people, not the Termix team. Every version is checked by a person and by automated checks before it is listed, but mistakes can still get through. Only install plugins you trust and check what each one asks for.",
         "communityConfirm": "Turn on",
         "communityBadge": "Community",
         "communityBadgeHint": "From the community registry. Made by other people and reviewed before it was listed.",
         "customBadge": "Custom",
-        "customBadgeHint": "From {{name}}, a registry an admin added. Not reviewed by the D.EX.T.E.R. team.",
+        "customBadgeHint": "From {{name}}, a registry an admin added. Not reviewed by the Termix team.",
         "remove": "Remove",
         "removeTitle": "Remove {{name}}?",
         "removeBody": "Its plugins will no longer show in Browse. You can add it again later.",
@@ -1554,7 +1554,7 @@
         "downloadsHint": "How many times a release was downloaded. This is not the number of installs."
       },
       "unverified": "Unverified",
-      "unverifiedHint": "Installed from a file. D.EX.T.E.R. did not check or sign it.",
+      "unverifiedHint": "Installed from a file. Termix did not check or sign it.",
       "reportIssue": "Report an issue",
       "reportTo": "Report to {{author}}",
       "requestFeature": "Request a feature",
@@ -1609,10 +1609,10 @@
         "perPage": "{{count}} per page",
         "perPageLabel": "Plugins per page"
       },
-      "showUnsupportedHint": "These are listed but no release runs on this version yet. Update D.EX.T.E.R. to install them.",
-      "unsupported": "Needs a newer D.EX.T.E.R.",
-      "unsupportedHint": "No release of this plugin runs on this version of D.EX.T.E.R. Update D.EX.T.E.R. to install it.",
-      "needsTermix": "Needs D.EX.T.E.R. {{range}}",
+      "showUnsupportedHint": "These are listed but no release runs on this version yet. Update Termix to install them.",
+      "unsupported": "Needs a newer Termix",
+      "unsupportedHint": "No release of this plugin runs on this version of Termix. Update Termix to install it.",
+      "needsTermix": "Needs Termix {{range}}",
       "showUnsupported": "Show unsupported ({{count}})",
       "showMore": "Show {{count}} more ({{total}} left)"
     }

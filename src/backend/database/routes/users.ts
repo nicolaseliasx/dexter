@@ -749,7 +749,7 @@ router.post("/internal/auto-session", async (req, res) => {
 
     const token = await authManager.generateJWTToken(userRecord.id, {
       deviceType: "desktop",
-      deviceInfo: "D.EX.T.E.R. Desktop (local)",
+      deviceInfo: "Termix Desktop (local)",
       rememberMe: true,
     });
 

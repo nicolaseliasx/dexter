@@ -156,7 +156,7 @@ describe("PluginsTab", () => {
     );
 
     expect(screen.getByText("Listed later")).toBeTruthy();
-    expect(screen.getByText("Needs D.EX.T.E.R. >=26.11.0")).toBeTruthy();
+    expect(screen.getByText("Needs Termix >=26.11.0")).toBeTruthy();
     expect(
       screen.queryByRole("button", { name: en.plugins.manager.install }),
     ).toBeNull();

@@ -207,7 +207,7 @@ describe("PluginLoader themes and skipped looks", () => {
       layouts: ["fancy"],
       themes: ["paper"],
     });
-    expect(skipped.error).toMatch(/needs D\.EX\.T\.E\.R\. >=99.0.0/);
+    expect(skipped.error).toMatch(/needs Termix >=99.0.0/);
   });
 });
 

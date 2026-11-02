@@ -257,7 +257,7 @@ export function createSyncHost(): PluginSyncHost {
             await resolveBrandingSettings(createCurrentSettingsRepository())
           ).appName;
         } catch {
-          return "D.EX.T.E.R.";
+          return "Termix";
         }
       },
       version: () => getLocalVersion(),

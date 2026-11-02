@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.4
+
+### Changed
+
+- The repository link points to nicolaseliasx/termix.
+
 ## 0.1.3
 
 ### Fixed

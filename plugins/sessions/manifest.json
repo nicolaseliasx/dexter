@@ -1,13 +1,13 @@
 {
   "id": "sessions",
   "name": "Sessions",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Persistent tmux sessions per host: create, rename, hibernate and reattach from one list.",
   "author": {
     "name": "nicolaseliasx"
   },
   "license": "Apache-2.0",
-  "repository": "https://github.com/nicolaseliasx/dexter/tree/main/plugins/sessions",
+  "repository": "https://github.com/nicolaseliasx/termix/tree/main/plugins/sessions",
   "category": "Terminal",
   "icon": "SquareTerminal",
   "features": [
@@ -44,10 +44,7 @@
         "name": "use",
         "titleKey": "permissions.use.title",
         "descriptionKey": "permissions.use.description",
-        "defaultRoles": [
-          "admin",
-          "user"
-        ]
+        "defaultRoles": ["admin", "user"]
       }
     ],
     "settings": {
@@ -65,9 +62,5 @@
     }
   },
   "locales": "locales",
-  "platforms": [
-    "linux",
-    "darwin",
-    "win32"
-  ]
+  "platforms": ["linux", "darwin", "win32"]
 }
