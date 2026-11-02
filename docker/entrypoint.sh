@@ -123,7 +123,7 @@ if [ "$ENABLE_SSL" = "true" ]; then
                 echo "Self-signed SSL certificate is expired or expiring soon, regenerating..."
                 rm -f /app/data/ssl/termix.crt /app/data/ssl/termix.key
             else
-                echo "WARNING: SSL certificate expires within 30 days and was not issued by Termix. Renew it."
+                echo "WARNING: SSL certificate expires within 30 days and was not issued by D.EX.T.E.R. Renew it."
             fi
         fi
     else

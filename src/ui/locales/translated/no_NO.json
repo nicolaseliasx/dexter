@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "På",
     "pluginsChoice_disabled": "Av",
     "pluginsChoice_remove": "Fjern",
-    "pluginsConsentTitle": "Hjelp med å forbedre Termix",
+    "pluginsConsentTitle": "Hjelp med å forbedre D.EX.T.E.R.",
     "pluginsConsentNote": "Du kan slå dette av når som helst fra fanen Utvidelser.",
     "pluginsApplying": "Bruker valgene dine",
     "pluginsSomeFailed": "Noen utvidelser kunne ikke endres. Du kan fikse dem senere fra fanen Utvidelser. Trykk Neste for å fortsette.",
@@ -226,14 +226,14 @@
     "neverBody": "Ikke sjekk etter oppdateringer. Du kan fortsatt sjekke manuelt i Innstillinger.",
     "onboardingTitle": "Appoppdateringer",
     "onboardingBody": "Skrivebordsappen kan nå oppdatere seg selv. Velg hvordan du vil at nye versjoner skal ankomme. Du kan endre dette senere i Innstillinger, Oppdateringer.",
-    "onboardingManual": "Denne kopien av appen ble installert på en måte som ikke tillater selvoppdatering, så Termix vil varsle deg når en ny versjon er tilgjengelig med en lenke for nedlasting.",
+    "onboardingManual": "Denne kopien av appen ble installert på en måte som ikke tillater selvoppdatering, så D.EX.T.E.R. vil varsle deg når en ny versjon er tilgjengelig med en lenke for nedlasting.",
     "download": "Last ned",
     "restart": "Start på nytt nå",
     "later": "Senere",
-    "available": "Termix {{version}} er tilgjengelig",
+    "available": "D.EX.T.E.R. {{version}} er tilgjengelig",
     "manualHint": "Last den ned fra utgivelsessiden og installer den over den nåværende.",
-    "ready": "Termix {{version}} er klar til installasjon",
-    "readyHint": "Den installeres neste gang Termix starter på nytt."
+    "ready": "D.EX.T.E.R. {{version}} er klar til installasjon",
+    "readyHint": "Den installeres neste gang D.EX.T.E.R. starter på nytt."
   },
   "safeMode": {
     "title": "Sikker modus",
@@ -387,7 +387,7 @@
     "sshPort": "SSH-port",
     "authMethod": "Autentiseringsmetode",
     "authenticationMethod": "Autentiseringsmetode",
-    "authenticationMethodDesc": "Velg den metoden Termix skal bruke for å autentisere denne SSH-tilkoblingen. Andre metoder prøves ikke automatisk.",
+    "authenticationMethodDesc": "Velg den metoden D.EX.T.E.R. skal bruke for å autentisere denne SSH-tilkoblingen. Andre metoder prøves ikke automatisk.",
     "storedCredential": "Lagret legitimasjon",
     "selectACredential": "Velg en legitimasjon...",
     "keyTypeLabel": "Nøkkeltype",
@@ -403,7 +403,7 @@
     "replaceKey": "Erstatt nøkkel",
     "docsLink": "Se dokumentasjon",
     "agentLabel": "SSH-agent",
-    "agentDesc": "Autentiser med en SSH-agent som kjører på Termix-serveren (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agenten må kjøre på maskinen der Termix er vert for.",
+    "agentDesc": "Autentiser med en SSH-agent som kjører på Termix-serveren (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agenten må kjøre på maskinen der D.EX.T.E.R. er vert for.",
     "agentAuthenticationDesc": "Bruk nøkler fra en SSH-agent for å autentisere denne tilkoblingen. La socket-stien stå tom for å bruke SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Agent socket-sti",
     "agentSocketPathPlaceholder": "La stå tom for å bruke SSH_AUTH_SOCK",
@@ -804,8 +804,8 @@
     "arrangeUnlockedSwitchedToManual": "Byttet til manuell sortering slik at rekkefølgen din beholdes",
     "dragToRearrange": "Dra for å omorganisere",
     "arrangeUnlocked": "Lås opp dra for å omorganisere",
-    "webUiBindHostUnreachable": "Nettleseren din kan ikke nå 127.0.0.1 på maskinen som kjører Termix, så denne endepunktet vil ikke lastes. Bruk en adresse som maskinen svarer på, for eksempel 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Fra denne nettleseren ville videresendingen blitt nådd på samme vertsnavn som Termix serveres fra, så den tunnelerte tjenesten ville mottatt Termix-sesjonen din. Cookies ignorerer porten. Dette endepunktet vil nekte å åpnes her; det fungerer fra Termix-skrivebordsappen, eller når Termix åpnes på localhost.",
+    "webUiBindHostUnreachable": "Nettleseren din kan ikke nå 127.0.0.1 på maskinen som kjører D.EX.T.E.R., så denne endepunktet vil ikke lastes. Bruk en adresse som maskinen svarer på, for eksempel 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Fra denne nettleseren ville videresendingen blitt nådd på samme vertsnavn som D.EX.T.E.R. serveres fra, så den tunnelerte tjenesten ville mottatt Termix-sesjonen din. Cookies ignorerer porten. Dette endepunktet vil nekte å åpnes her; det fungerer fra Termix-skrivebordsappen, eller når D.EX.T.E.R. åpnes på localhost.",
     "webUiErrorLabelRequired": "Endepunkt {{row}} trenger en etikett.",
     "webUiErrorLabelDuplicate": "Hvert endepunkt trenger et unikt navn.",
     "webUiErrorPortRange": "Endepunkt {{row}} trenger en port mellom 1 og 65535.",
@@ -952,7 +952,7 @@
     "localDesktopSignedOut": "Lokal skrivebordssesjon logget ut",
     "localDesktopUnavailable": "Lokal skrivebordssesjon utilgjengelig",
     "localDesktopSignedOutDesc": "Du logget ut av den lokale skrivebordssesjonen. Fortsett lokalt for å bruke denne enhetens innebygde Termix-server igjen.",
-    "localDesktopUnavailableDesc": "Termix klarte ikke å starte en lokal skrivebordssesjon. Prøv igjen i stedet for å registrere en ny konto.",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R. klarte ikke å starte en lokal skrivebordssesjon. Prøv igjen i stedet for å registrere en ny konto.",
     "continueLocalDesktop": "Fortsett med lokalt skrivebord",
     "retryLocalDesktop": "Prøv lokal skrivebordssesjon igjen"
   },
@@ -972,7 +972,7 @@
   },
   "errors": {
     "databaseConnection": "Termix-serveren svarer ikke",
-    "embeddedServerFailed": "Termix' lokale server kunne ikke startes",
+    "embeddedServerFailed": "D.EX.T.E.R.' lokale server kunne ikke startes",
     "unknownError": "Ukjent feil",
     "syncedHostMissing": "Den synkroniserte verten finnes ikke på den lenkede serveren",
     "linkedServerUnreachable": "Den lenkede serveren er ikke tilgjengelig",
@@ -999,10 +999,10 @@
     "registrationDisabled": "Du har ikke en Termix-konto ennå. Be en administrator om å skru på «Auto-create external accounts».",
     "userNotAllowed": "Kontoen din er ikke autorisert til å registrere seg. Vennligst kontakt en administrator.",
     "databaseConnectionFailed": "Den kan fortsatt starte, eller den har stoppet. Denne siden prøver igjen og fortsetter automatisk når serveren er tilbake.",
-    "embeddedServerPortInUse": "Port {{port}} er allerede i bruk av et annet program. Dette er vanligvis en Termix Docker-container eller en etterlatt Termix-prosess fra en tidligere økt. Lukk den, og start deretter Termix på nytt.",
-    "embeddedServerPortInUseUnknownPort": "En av portene Termix trenger er allerede i bruk av et annet program. Lukk det som bruker den, og start deretter Termix på nytt.",
+    "embeddedServerPortInUse": "Port {{port}} er allerede i bruk av et annet program. Dette er vanligvis en D.EX.T.E.R. Docker-container eller en etterlatt Termix-prosess fra en tidligere økt. Lukk den, og start deretter D.EX.T.E.R. på nytt.",
+    "embeddedServerPortInUseUnknownPort": "En av portene D.EX.T.E.R. trenger er allerede i bruk av et annet program. Lukk det som bruker den, og start deretter D.EX.T.E.R. på nytt.",
     "embeddedServerOldDatabase": "De lokale dataene dine er fra Termix 2.8 eller eldre og må først oppgraderes gjennom versjon 2.9. Installer Termix 2.9.1, åpne den én gang slik at den kan flytte dataene dine, og oppgrader deretter til denne versjonen igjen.",
-    "embeddedServerCrashed": "Den lokale serveren stoppet uventet. Start Termix på nytt, og sjekk skrivebordsloggen hvis dette fortsetter å skje.",
+    "embeddedServerCrashed": "Den lokale serveren stoppet uventet. Start D.EX.T.E.R. på nytt, og sjekk skrivebordsloggen hvis dette fortsetter å skje.",
     "resetCodeSent": "Tilbakestillingskode sendt til Docker-logger",
     "codeVerified": "Koden ble verifisert",
     "passwordResetSuccess": "Passordet ble tilbakestilt",
@@ -1123,7 +1123,7 @@
         "missing": "Ingen installert plugin tilbyr dette oppsettet.",
         "disabled": "Pluginen som tilbyr dette oppsettet er slått av.",
         "blocked": "Pluginen som tilbyr dette oppsettet venter på noe den trenger.",
-        "incompatible": "Pluginen som tilbyr dette oppsettet fungerer ikke med denne versjonen av Termix.",
+        "incompatible": "Pluginen som tilbyr dette oppsettet fungerer ikke med denne versjonen av D.EX.T.E.R.",
         "failed": "Oppsettet kunne ikke startes.",
         "crashed": "Oppsettet krasjet to ganger mens appen ble tegnet."
       },
@@ -1168,11 +1168,11 @@
       },
       "system:tls": {
         "title": "Administrer sertifikater",
-        "consequence": "Den kan erstatte sertifikatet Termix serverer over HTTPS og svare på domenetjekker fra sertifikatmyndigheter."
+        "consequence": "Den kan erstatte sertifikatet D.EX.T.E.R. serverer over HTTPS og svare på domenetjekker fra sertifikatmyndigheter."
       },
       "device:serial": {
         "title": "Tilgang til serielle og USB-enheter",
-        "consequence": "Den kan åpne en fysisk seriell port på maskinen som kjører Termix."
+        "consequence": "Den kan åpne en fysisk seriell port på maskinen som kjører D.EX.T.E.R."
       },
       "hosts:export": {
         "title": "Eksporter verter med deres hemmeligheter",
@@ -1272,7 +1272,7 @@
       },
       "secrets:own": {
         "title": "Lagre sine egne hemmeligheter",
-        "consequence": "Kryptert av Termix. Pluginet har aldri nøkkelen."
+        "consequence": "Kryptert av D.EX.T.E.R. Pluginet har aldri nøkkelen."
       },
       "settings:read-core": {
         "title": "Les Termix-innstillinger",
@@ -1480,10 +1480,10 @@
         "security": "Sikkerhet"
       },
       "installedBadge": "Installert",
-      "incompatible": "Krever en nyere versjon av Termix",
+      "incompatible": "Krever en nyere versjon av D.EX.T.E.R.",
       "features": "Funksjoner",
       "whatItCanDo": "Hva den kan gjøre",
-      "addsToTermix": "Legger til i Termix",
+      "addsToTermix": "Legger til i D.EX.T.E.R.",
       "addsToTermixHint": "Avinstaller, og alle disse forsvinner.",
       "noServerAccess": "Ingen tilgang til serverne dine",
       "searchInstalled": "Søk blant installerte",
@@ -1501,7 +1501,7 @@
         "hostYourOwn": "Host ditt eget register",
         "add": "Legg til register",
         "addTitle": "Legg til et register",
-        "addHint": "Lim inn lenken til registerets index.json. Termix leser den og viser nøkkelen den signerer utvidelser med. Legg kun til register fra personer du stoler på.",
+        "addHint": "Lim inn lenken til registerets index.json. D.EX.T.E.R. leser den og viser nøkkelen den signerer utvidelser med. Legg kun til register fra personer du stoler på.",
         "urlLabel": "Indeks-URL",
         "check": "Sjekk",
         "addConfirm": "Stol på og legg til",
@@ -1554,7 +1554,7 @@
         "downloadsHint": "Hvor mange ganger en utgivelse ble lastet ned. Dette er ikke antall installasjoner."
       },
       "unverified": "Uverifisert",
-      "unverifiedHint": "Installert fra en fil. Termix har ikke sjekket eller signert den.",
+      "unverifiedHint": "Installert fra en fil. D.EX.T.E.R. har ikke sjekket eller signert den.",
       "reportIssue": "Rapporter et problem",
       "reportTo": "Rapporter til {{author}}",
       "requestFeature": "Forespør en funksjon",
@@ -1609,10 +1609,10 @@
         "perPage": "{{count}} per side",
         "perPageLabel": "Programtillegg per side"
       },
-      "showUnsupportedHint": "Disse er oppført, men ingen utgave kjører på denne versjonen ennå. Oppdater Termix for å installere dem.",
-      "unsupported": "Krever nyere Termix",
-      "unsupportedHint": "Ingen utgave av dette programtillegget kjører på denne versjonen av Termix. Oppdater Termix for å installere det.",
-      "needsTermix": "Krever Termix {{range}}",
+      "showUnsupportedHint": "Disse er oppført, men ingen utgave kjører på denne versjonen ennå. Oppdater D.EX.T.E.R. for å installere dem.",
+      "unsupported": "Krever nyere D.EX.T.E.R.",
+      "unsupportedHint": "Ingen utgave av dette programtillegget kjører på denne versjonen av D.EX.T.E.R. Oppdater D.EX.T.E.R. for å installere det.",
+      "needsTermix": "Krever D.EX.T.E.R. {{range}}",
       "showUnsupported": "Vis ikke støttet ({{count}})",
       "showMore": "Vis {{count}} til ({{total}} igjen)"
     }

@@ -226,14 +226,14 @@
     "neverBody": "Älä tarkista päivityksiä. Voit silti tarkistaa päivitykset manuaalisesti Asetuksista.",
     "onboardingTitle": "Sovelluspäivitykset",
     "onboardingBody": "Työpöytäsovellus voi nyt päivittää itsensä. Valitse, miten haluat uusien versioiden tulevan. Voit muuttaa tätä myöhemmin Asetukset > Päivitykset -kohdasta.",
-    "onboardingManual": "Tämä sovelluksen kopio on asennettu tavalla, joka ei tue automaattista päivitystä, joten Termix ilmoittaa, kun uusi versio on saatavilla, ja antaa linkin sen lataamiseen.",
+    "onboardingManual": "Tämä sovelluksen kopio on asennettu tavalla, joka ei tue automaattista päivitystä, joten D.EX.T.E.R. ilmoittaa, kun uusi versio on saatavilla, ja antaa linkin sen lataamiseen.",
     "download": "Lataa",
     "restart": "Käynnistä uudelleen nyt",
     "later": "Myöhemmin",
-    "available": "Termix {{version}} on saatavilla",
+    "available": "D.EX.T.E.R. {{version}} on saatavilla",
     "manualHint": "Lataa se julkaisusivulta ja asenna se tämän päälle.",
-    "ready": "Termix {{version}} on valmis asennettavaksi",
-    "readyHint": "Se asennetaan seuraavan kerran, kun Termix käynnistetään uudelleen."
+    "ready": "D.EX.T.E.R. {{version}} on valmis asennettavaksi",
+    "readyHint": "Se asennetaan seuraavan kerran, kun D.EX.T.E.R. käynnistetään uudelleen."
   },
   "safeMode": {
     "title": "Turvatoiminto",
@@ -387,7 +387,7 @@
     "sshPort": "SSH-portti",
     "authMethod": "Todennustapa",
     "authenticationMethod": "Todennustapa",
-    "authenticationMethodDesc": "Valitse yksi tapa, jota Termix käyttää tämän SSH-yhteyden todentamiseen. Muita tapoja ei kokeilla automaattisesti.",
+    "authenticationMethodDesc": "Valitse yksi tapa, jota D.EX.T.E.R. käyttää tämän SSH-yhteyden todentamiseen. Muita tapoja ei kokeilla automaattisesti.",
     "storedCredential": "Tallennettu tunnistetieto",
     "selectACredential": "Valitse tunnistetieto...",
     "keyTypeLabel": "Avaimen tyyppi",
@@ -403,7 +403,7 @@
     "replaceKey": "Korvaa avain",
     "docsLink": "Näytä dokumentaatio",
     "agentLabel": "SSH Agent",
-    "agentDesc": "Todenna SSH-agentin avulla, joka on käynnissä Termix-palvelimella (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agentin on oltava käynnissä koneella, jossa Termix on isännöity.",
+    "agentDesc": "Todenna SSH-agentin avulla, joka on käynnissä Termix-palvelimella (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agentin on oltava käynnissä koneella, jossa D.EX.T.E.R. on isännöity.",
     "agentAuthenticationDesc": "Käytä SSH-agentin avaimia tämän yhteyden todentamiseen. Jätä socket-polku tyhjäksi käyttääksesi SSH_AUTH_SOCKia.",
     "agentSocketPathLabel": "Agentin socket-polku",
     "agentSocketPathPlaceholder": "Jätä tyhjäksi käyttääksesi SSH_AUTH_SOCKia",
@@ -805,7 +805,7 @@
     "dragToRearrange": "Vedä järjestääksesi uudelleen",
     "arrangeUnlocked": "Avaa lukitus vedon avulla uudelleenjärjestelyyn",
     "webUiBindHostUnreachable": "Selaimesi ei pääse yhteyteen osoitteeseen 127.0.0.1 Termiä ajavalla koneella, joten tämä päätepiste ei lataudu. Käytä osoitetta, johon kone vastaa, kuten 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Tästä selaimesta eteenpäin ohjattava palvelu olisi saavutettavissa samassa isäntänimessä, josta Termix palvelee, joten tunneloitunut palvelu saisi Termix-istuntosi. Evästeet eivät huomioi porttia. Tämä päätepiste kieltäytyy avaamasta täällä; se toimii Termix-työpöytäsovelluksessa tai kun Termix avataan localhost-osoitteesta.",
+    "webUiBindHostSharesSessionCookie": "Tästä selaimesta eteenpäin ohjattava palvelu olisi saavutettavissa samassa isäntänimessä, josta D.EX.T.E.R. palvelee, joten tunneloitunut palvelu saisi Termix-istuntosi. Evästeet eivät huomioi porttia. Tämä päätepiste kieltäytyy avaamasta täällä; se toimii Termix-työpöytäsovelluksessa tai kun D.EX.T.E.R. avataan localhost-osoitteesta.",
     "webUiErrorLabelRequired": "Päätepisteen {{row}} tarvitsee nimen.",
     "webUiErrorLabelDuplicate": "Jokaisen päätepisteen tarvitsee eri nimen.",
     "webUiErrorPortRange": "Päätepisteen {{row}} tarvitsee portin väliltä 1–65535.",
@@ -952,7 +952,7 @@
     "localDesktopSignedOut": "Paikallisesta työpöydältä kirjautuminen ulos",
     "localDesktopUnavailable": "Paikallinen työpöytäistunto ei ole saatavilla",
     "localDesktopSignedOutDesc": "Kirjauduit ulos paikallisesta työpöytäistunnosta. Jatka paikallisesti käyttääksesi tämän laitteen sisäänrakennettua Termix-palvelinta uudelleen.",
-    "localDesktopUnavailableDesc": "Termix ei voinut aloittaa paikallista työpöytäistuntoa. Yritä uudelleen sen sijaan, että rekisteröisit uuden tilin.",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R. ei voinut aloittaa paikallista työpöytäistuntoa. Yritä uudelleen sen sijaan, että rekisteröisit uuden tilin.",
     "continueLocalDesktop": "Jatka paikallisella työpöydällä",
     "retryLocalDesktop": "Yritä paikallista työpöytäistuntoa uudelleen"
   },
@@ -999,10 +999,10 @@
     "registrationDisabled": "Sinulla ei vielä ole Termix-tiliä. Pyydä järjestelmänvalvojaa ottamaan käyttöön ulkoisten tilien automaattinen luonti.",
     "userNotAllowed": "Tiliäsi ei ole valtuutettu rekisteröitymään. Ota yhteyttä järjestelmänvalvojaan.",
     "databaseConnectionFailed": "Se saattaa olla vielä käynnistymässä tai se on pysähtynyt. Tämä sivu yrittää uudelleen ja jatkaa automaattisesti, kun palvelin on takaisin.",
-    "embeddedServerPortInUse": "Porttia {{port}} käyttää jo toinen ohjelma. Kyseessä on yleensä Termixin Docker-kontti tai edellisestä istunnosta jäänyt Termix-prosessi. Sulje se ja käynnistä Termix uudelleen.",
-    "embeddedServerPortInUseUnknownPort": "Termixin tarvitsema portti on jo toisen ohjelman käytössä. Sulje porttia käyttävä ohjelma ja käynnistä Termix uudelleen.",
+    "embeddedServerPortInUse": "Porttia {{port}} käyttää jo toinen ohjelma. Kyseessä on yleensä Termixin Docker-kontti tai edellisestä istunnosta jäänyt Termix-prosessi. Sulje se ja käynnistä D.EX.T.E.R. uudelleen.",
+    "embeddedServerPortInUseUnknownPort": "Termixin tarvitsema portti on jo toisen ohjelman käytössä. Sulje porttia käyttävä ohjelma ja käynnistä D.EX.T.E.R. uudelleen.",
     "embeddedServerOldDatabase": "Paikalliset tietosi ovat peräisin Termix 2.8 tai vanhemmasta versiosta, ja niiden on käyty ensin versiota 2.9. Asenna Termix 2.9.1, avaa se kerran, jotta se voi siirtää tietosi, ja päivitä sitten uudelleen tähän versioon.",
-    "embeddedServerCrashed": "Paikallinen palvelin pysähtyi odottamatta. Käynnistä Termix uudelleen ja tarkista työpöytäloki, jos ongelma toistuu.",
+    "embeddedServerCrashed": "Paikallinen palvelin pysähtyi odottamatta. Käynnistä D.EX.T.E.R. uudelleen ja tarkista työpöytäloki, jos ongelma toistuu.",
     "resetCodeSent": "Palautuskoodi lähetetty Docker-lokeihin",
     "codeVerified": "Koodi vahvistettu onnistuneesti",
     "passwordResetSuccess": "Salasana nollattu onnistuneesti",
@@ -1272,7 +1272,7 @@
       },
       "secrets:own": {
         "title": "Tallentaa omat salasanansa",
-        "consequence": "Termix salaa ne. Lisäosa ei koskaan pidä avainta hallussaan."
+        "consequence": "D.EX.T.E.R. salaa ne. Lisäosa ei koskaan pidä avainta hallussaan."
       },
       "settings:read-core": {
         "title": "Lukea Termixin asetukset",
@@ -1501,7 +1501,7 @@
         "hostYourOwn": "Isännöi oma rekisterisi",
         "add": "Lisää rekisteri",
         "addTitle": "Lisää rekisteri",
-        "addHint": "Liitä linkki rekisterin index.json-tiedostoon. Termix lukee sen ja näyttää avaimen, jolla se allekirjoittaa lisäosat. Lisää vain rekistereitä luotettavista lähteistä.",
+        "addHint": "Liitä linkki rekisterin index.json-tiedostoon. D.EX.T.E.R. lukee sen ja näyttää avaimen, jolla se allekirjoittaa lisäosat. Lisää vain rekistereitä luotettavista lähteistä.",
         "urlLabel": "Hakemiston URL-osoite",
         "check": "Tarkista",
         "addConfirm": "Luota ja lisää",
@@ -1554,7 +1554,7 @@
         "downloadsHint": "Kuinka monta kertaa julkaisu on ladattu. Tämä ei ole asennusten määrää."
       },
       "unverified": "Varmentamaton",
-      "unverifiedHint": "Asennettu tiedostosta. Termix ei ole tarkistanut tai allekirjoittanut sitä.",
+      "unverifiedHint": "Asennettu tiedostosta. D.EX.T.E.R. ei ole tarkistanut tai allekirjoittanut sitä.",
       "reportIssue": "Ilmoita ongelmasta",
       "reportTo": "Ilmoita käyttäjälle {{author}}",
       "requestFeature": "Pyydä uutta ominaisuutta",
@@ -1609,10 +1609,10 @@
         "perPage": "{{count}} per sivu",
         "perPageLabel": "Lisäosia per sivu"
       },
-      "showUnsupportedHint": "Nämä on listattu, mutta mikään julkaisu ei vielä toimi tässä versiossa. Päivitä Termix asentamaan ne.",
+      "showUnsupportedHint": "Nämä on listattu, mutta mikään julkaisu ei vielä toimi tässä versiossa. Päivitä D.EX.T.E.R. asentamaan ne.",
       "unsupported": "Vaatii uudemman Termixin",
-      "unsupportedHint": "Tämän lisäosan mikään julkaisu ei toimi tässä Termix-versiossa. Päivitä Termix asentamaan se.",
-      "needsTermix": "Vaatii Termix {{range}}",
+      "unsupportedHint": "Tämän lisäosan mikään julkaisu ei toimi tässä Termix-versiossa. Päivitä D.EX.T.E.R. asentamaan se.",
+      "needsTermix": "Vaatii D.EX.T.E.R. {{range}}",
       "showUnsupported": "Näytä tukevat ({{count}})",
       "showMore": "Näytä {{count}} lisää ({{total}} jäljellä)"
     }

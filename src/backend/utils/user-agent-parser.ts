@@ -82,10 +82,10 @@ function parseElectronUserAgent(userAgent: string): DeviceInfo {
 
   return {
     type: "desktop",
-    browser: "Termix Desktop",
+    browser: "D.EX.T.E.R. Desktop",
     version,
     os,
-    deviceInfo: `Termix Desktop on ${os}`,
+    deviceInfo: `D.EX.T.E.R. Desktop on ${os}`,
   };
 }
 
@@ -136,10 +136,10 @@ function parseMobileUserAgent(userAgent: string): DeviceInfo {
 
   return {
     type: "mobile",
-    browser: "Termix Mobile",
+    browser: "D.EX.T.E.R. Mobile",
     version,
     os,
-    deviceInfo: `Termix Mobile on ${os}`,
+    deviceInfo: `D.EX.T.E.R. Mobile on ${os}`,
   };
 }
 

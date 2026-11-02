@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Passo {{current}} de {{total}}",
-    "stageLabel": "Configuração do Termix",
+    "stageLabel": "Configuração do D.EX.T.E.R.",
     "setupHeading": "Configure o seu espaço de trabalho",
     "partialHeading": "Algumas coisas novas para configurar",
     "signOut": "Terminar sessão",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Ativo",
     "pluginsChoice_disabled": "Desativado",
     "pluginsChoice_remove": "Remover",
-    "pluginsConsentTitle": "Ajude a melhorar o Termix",
+    "pluginsConsentTitle": "Ajude a melhorar o D.EX.T.E.R.",
     "pluginsConsentNote": "Pode desativar isto a qualquer momento na aba Plugins.",
     "pluginsApplying": "A aplicar as suas escolhas",
     "pluginsSomeFailed": "Alguns plugins não puderam ser alterados. Pode corrigi-los mais tarde na aba Plugins. Prima Seguinte para continuar.",
@@ -226,14 +226,14 @@
     "neverBody": "Não verificar atualizações. Pode sempre verificar manualmente nas Definições.",
     "onboardingTitle": "Atualizações da aplicação",
     "onboardingBody": "A aplicação desktop pode agora atualizar-se automaticamente. Escolha como deseja receber as novas versões. Pode alterar isto mais tarde em Definições, Atualizações.",
-    "onboardingManual": "Esta cópia da aplicação foi instalada de uma forma que não permite atualizações automáticas, pelo que o Termix irá informar quando houver uma nova versão disponível com um link para a transferir.",
+    "onboardingManual": "Esta cópia da aplicação foi instalada de uma forma que não permite atualizações automáticas, pelo que o D.EX.T.E.R. irá informar quando houver uma nova versão disponível com um link para a transferir.",
     "download": "Transferir",
     "restart": "Reiniciar agora",
     "later": "Mais tarde",
-    "available": "O Termix {{version}} está disponível",
+    "available": "O D.EX.T.E.R. {{version}} está disponível",
     "manualHint": "Transfira-o na página de lançamentos e instale-o por cima desta versão.",
-    "ready": "O Termix {{version}} está pronto para instalar",
-    "readyHint": "Será instalado na próxima reinicialização do Termix."
+    "ready": "O D.EX.T.E.R. {{version}} está pronto para instalar",
+    "readyHint": "Será instalado na próxima reinicialização do D.EX.T.E.R."
   },
   "safeMode": {
     "title": "Modo seguro",
@@ -391,7 +391,7 @@
     "sshPort": "Porta SSH",
     "authMethod": "Método de autenticação",
     "authenticationMethod": "Método de autenticação",
-    "authenticationMethodDesc": "Selecione o único método que o Termix utilizará para autenticar esta ligação SSH. Outros métodos não são tentados automaticamente.",
+    "authenticationMethodDesc": "Selecione o único método que o D.EX.T.E.R. utilizará para autenticar esta ligação SSH. Outros métodos não são tentados automaticamente.",
     "storedCredential": "Credencial guardada",
     "selectACredential": "Selecionar uma credencial...",
     "keyTypeLabel": "Tipo de chave",
@@ -407,7 +407,7 @@
     "replaceKey": "Substituir chave",
     "docsLink": "Ver documentação",
     "agentLabel": "Agente SSH",
-    "agentDesc": "Autenticar usando um agente SSH em execução no servidor Termix (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). O agente deve estar em execução na máquina onde o Termix está alojado.",
+    "agentDesc": "Autenticar usando um agente SSH em execução no servidor D.EX.T.E.R. (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). O agente deve estar em execução na máquina onde o D.EX.T.E.R. está alojado.",
     "agentAuthenticationDesc": "Usar chaves de um agente SSH para autenticar esta ligação. Deixe o caminho do socket vazio para usar SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Caminho do socket do agente",
     "agentSocketPathPlaceholder": "Deixe vazio para usar SSH_AUTH_SOCK",
@@ -816,8 +816,8 @@
     "arrangeUnlockedSwitchedToManual": "Alterado para ordenação manual para que a sua ordem seja mantida",
     "dragToRearrange": "Arraste para reorganizar",
     "arrangeUnlocked": "Desbloquear arrastar para reorganizar",
-    "webUiBindHostUnreachable": "O seu navegador não consegue aceder a 127.0.0.1 na máquina onde o Termix está a executar, por isso este endpoint não será carregado. Utilize um endereço que essa máquina responda, como 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Neste navegador, o encaminhamento seria acedido no mesmo nome de host do qual o Termix é servido, pelo que o serviço tunelado receberia a sua sessão do Termix. Os cookies ignoram a porta. Este endpoint recusará abrir aqui; funciona na aplicação desktop do Termix ou quando o Termix é aberto em localhost.",
+    "webUiBindHostUnreachable": "O seu navegador não consegue aceder a 127.0.0.1 na máquina onde o D.EX.T.E.R. está a executar, por isso este endpoint não será carregado. Utilize um endereço que essa máquina responda, como 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Neste navegador, o encaminhamento seria acedido no mesmo nome de host do qual o D.EX.T.E.R. é servido, pelo que o serviço tunelado receberia a sua sessão do D.EX.T.E.R. Os cookies ignoram a porta. Este endpoint recusará abrir aqui; funciona na aplicação desktop do D.EX.T.E.R. ou quando o D.EX.T.E.R. é aberto em localhost.",
     "webUiErrorLabelRequired": "O endpoint {{row}} precisa de um rótulo.",
     "webUiErrorLabelDuplicate": "Cada endpoint precisa de um nome diferente.",
     "webUiErrorPortRange": "O endpoint {{row}} precisa de uma porta entre 1 e 65535.",
@@ -964,8 +964,8 @@
     "retrySecondFactorUI": "Recarregar métodos de verificação",
     "localDesktopSignedOut": "Sessão de ambiente de trabalho local terminada",
     "localDesktopUnavailable": "Sessão de ambiente de trabalho local indisponível",
-    "localDesktopSignedOutDesc": "Terminou a sessão do ambiente de trabalho local. Continue localmente para utilizar novamente o servidor Termix integrado neste dispositivo.",
-    "localDesktopUnavailableDesc": "O Termix não conseguiu iniciar uma sessão de ambiente de trabalho local. Tente novamente em vez de registar uma nova conta.",
+    "localDesktopSignedOutDesc": "Terminou a sessão do ambiente de trabalho local. Continue localmente para utilizar novamente o servidor D.EX.T.E.R. integrado neste dispositivo.",
+    "localDesktopUnavailableDesc": "O D.EX.T.E.R. não conseguiu iniciar uma sessão de ambiente de trabalho local. Tente novamente em vez de registar uma nova conta.",
     "continueLocalDesktop": "Continuar com ambiente de trabalho local",
     "retryLocalDesktop": "Tentar novamente sessão de ambiente de trabalho local"
   },
@@ -984,8 +984,8 @@
     "acceptNewKey": "Aceitar nova chave e continuar"
   },
   "errors": {
-    "databaseConnection": "O servidor Termix não está a responder",
-    "embeddedServerFailed": "O servidor local do Termix não conseguiu iniciar",
+    "databaseConnection": "O servidor D.EX.T.E.R. não está a responder",
+    "embeddedServerFailed": "O servidor local do D.EX.T.E.R. não conseguiu iniciar",
     "unknownError": "Erro desconhecido",
     "syncedHostMissing": "O host sincronizado não existe no servidor ligado",
     "linkedServerUnreachable": "O servidor ligado não está acessível",
@@ -1009,13 +1009,13 @@
     "sessionExpiredLogin": "Sessão expirada. Por favor, inicie sessão novamente."
   },
   "messages": {
-    "registrationDisabled": "Ainda não tem uma conta Termix. Peça a um administrador para ativar a criação automática de contas externas.",
+    "registrationDisabled": "Ainda não tem uma conta D.EX.T.E.R. Peça a um administrador para ativar a criação automática de contas externas.",
     "userNotAllowed": "A sua conta não está autorizada a registar-se. Por favor, contacte um administrador.",
     "databaseConnectionFailed": "Pode estar ainda a iniciar ou ter parado. Esta página continua a tentar e retoma automaticamente quando o servidor estiver de volta.",
-    "embeddedServerPortInUse": "A porta {{port}} já está em uso por outro programa. Isto é geralmente um contentor Docker do Termix ou um processo residual do Termix de uma sessão anterior. Feche-o e reinicie o Termix.",
-    "embeddedServerPortInUseUnknownPort": "Uma das portas necessárias ao Termix já está em uso por outro programa. Feche o que a estiver a usar e reinicie o Termix.",
+    "embeddedServerPortInUse": "A porta {{port}} já está em uso por outro programa. Isto é geralmente um contentor Docker do D.EX.T.E.R. ou um processo residual do D.EX.T.E.R. de uma sessão anterior. Feche-o e reinicie o D.EX.T.E.R.",
+    "embeddedServerPortInUseUnknownPort": "Uma das portas necessárias ao D.EX.T.E.R. já está em uso por outro programa. Feche o que a estiver a usar e reinicie o D.EX.T.E.R.",
     "embeddedServerOldDatabase": "Os seus dados locais são da versão 2.8 ou anterior do Termix e precisam de passar primeiro pela versão 2.9. Instale o Termix 2.9.1, abra-o uma vez para que possa migrar os seus dados e, em seguida, atualize novamente para esta versão.",
-    "embeddedServerCrashed": "O servidor local parou inesperadamente. Reinicie o Termix e verifique o registo do ambiente de trabalho se isto continuar a acontecer.",
+    "embeddedServerCrashed": "O servidor local parou inesperadamente. Reinicie o D.EX.T.E.R. e verifique o registo do ambiente de trabalho se isto continuar a acontecer.",
     "resetCodeSent": "Código de redefinição enviado para os registos do Docker",
     "codeVerified": "Código verificado com sucesso",
     "passwordResetSuccess": "Palavra-passe redefinida com sucesso",
@@ -1140,7 +1140,7 @@
         "missing": "Nenhum plugin instalado fornece este layout.",
         "disabled": "O plugin que fornece este layout está desativado.",
         "blocked": "O plugin que fornece este layout está à espera de algo de que precisa.",
-        "incompatible": "O plugin que fornece este layout não funciona com esta versão do Termix.",
+        "incompatible": "O plugin que fornece este layout não funciona com esta versão do D.EX.T.E.R.",
         "failed": "O layout falhou ao iniciar.",
         "crashed": "O layout falhou duas vezes ao desenhar a aplicação."
       },
@@ -1161,7 +1161,7 @@
       },
       "process:spawn": {
         "title": "Executar programas nesta máquina",
-        "consequence": "Os programas são executados no próprio servidor Termix, não nos seus servidores."
+        "consequence": "Os programas são executados no próprio servidor D.EX.T.E.R., não nos seus servidores."
       },
       "users:write": {
         "title": "Criar e alterar contas de utilizador",
@@ -1185,11 +1185,11 @@
       },
       "system:tls": {
         "title": "Gerir certificados",
-        "consequence": "Pode substituir o certificado que o Termix serve via HTTPS e responder a verificações de domínio de autoridades de certificação."
+        "consequence": "Pode substituir o certificado que o D.EX.T.E.R. serve via HTTPS e responder a verificações de domínio de autoridades de certificação."
       },
       "device:serial": {
         "title": "Aceder a dispositivos série e USB",
-        "consequence": "Pode abrir uma porta série física na máquina que executa o Termix."
+        "consequence": "Pode abrir uma porta série física na máquina que executa o D.EX.T.E.R."
       },
       "hosts:export": {
         "title": "Exportar hosts com os seus segredos",
@@ -1213,7 +1213,7 @@
       },
       "network:serve": {
         "title": "Aceitar ligações",
-        "consequence": "Abre uma porta no servidor Termix."
+        "consequence": "Abre uma porta no servidor D.EX.T.E.R."
       },
       "network:broadcast": {
         "title": "Enviar transmissões de rede",
@@ -1257,11 +1257,11 @@
       },
       "desktop:window": {
         "title": "Abrir janelas de ambiente de trabalho",
-        "consequence": "Apenas na aplicação de ambiente de trabalho Termix."
+        "consequence": "Apenas na aplicação de ambiente de trabalho D.EX.T.E.R."
       },
       "desktop:local": {
         "title": "Usar este computador",
-        "consequence": "Pode ler e alterar ficheiros, executar um shell e abrir portas locais neste computador. Apenas na aplicação desktop do Termix."
+        "consequence": "Pode ler e alterar ficheiros, executar um shell e abrir portas locais neste computador. Apenas na aplicação desktop do D.EX.T.E.R."
       },
       "users:impersonate": {
         "title": "Agir como outros utilizadores",
@@ -1289,10 +1289,10 @@
       },
       "secrets:own": {
         "title": "Armazenar os seus próprios segredos",
-        "consequence": "Criptografado pelo Termix. O plugin nunca detém a chave."
+        "consequence": "Criptografado pelo D.EX.T.E.R. O plugin nunca detém a chave."
       },
       "settings:read-core": {
-        "title": "Ler definições do Termix",
+        "title": "Ler definições do D.EX.T.E.R.",
         "consequence": "Definições do servidor, não os seus hosts ou credenciais."
       },
       "plugins:read": {
@@ -1410,7 +1410,7 @@
         "minor": "Adiciona também as suas próprias ecrãs e armazena os seus próprios dados, mantidos separados de outros plugins.",
         "none": "Não solicita nenhum acesso especial.",
         "uploadTitle": "Instalar {{name}} a partir de um ficheiro",
-        "uploadWarning": "Este ficheiro não foi verificado nem assinado pelo registo da Termix. Instale-o apenas se o tiver criado você mesmo ou confiar na pessoa que o criou."
+        "uploadWarning": "Este ficheiro não foi verificado nem assinado pelo registo da D.EX.T.E.R. Instale-o apenas se o tiver criado você mesmo ou confiar na pessoa que o criou."
       },
       "confirm": {
         "uninstallTitle": "Desinstalar {{name}}?",
@@ -1513,10 +1513,10 @@
         "security": "Segurança"
       },
       "installedBadge": "Instalado",
-      "incompatible": "Requer uma versão mais recente do Termix",
+      "incompatible": "Requer uma versão mais recente do D.EX.T.E.R.",
       "features": "Funcionalidades",
       "whatItCanDo": "O que pode fazer",
-      "addsToTermix": "Adiciona ao Termix",
+      "addsToTermix": "Adiciona ao D.EX.T.E.R.",
       "addsToTermixHint": "Desinstalar e todas estas funcionalidades serão removidas.",
       "noServerAccess": "Sem acesso aos seus servidores",
       "searchInstalled": "Pesquisar instalados",
@@ -1534,12 +1534,12 @@
         "hostYourOwn": "Alojar o seu próprio registo",
         "add": "Adicionar registo",
         "addTitle": "Adicionar um registo",
-        "addHint": "Cole o link para o index.json do registo. O Termix lê-o e mostra a chave com que assina os plugins. Adicione apenas registos de pessoas em quem confia.",
+        "addHint": "Cole o link para o index.json do registo. O D.EX.T.E.R. lê-o e mostra a chave com que assina os plugins. Adicione apenas registos de pessoas em quem confia.",
         "urlLabel": "URL do índice",
         "check": "Verificar",
         "addConfirm": "Confiar e adicionar",
         "added": "Adicionado {{name}}",
-        "customWarning": "Os plugins deste registo não são revistos pela equipa do Termix. Apenas o proprietário do registo decide o que nele se inclui. Cada transferência deve ser assinada pela chave acima.",
+        "customWarning": "Os plugins deste registo não são revistos pela equipa do D.EX.T.E.R. Apenas o proprietário do registo decide o que nele se inclui. Cada transferência deve ser assinada pela chave acima.",
         "keyFingerprint": "Chave {{keyId}}",
         "pluginCount_one": "{{count}} plugin",
         "pluginCount_many": "{{count}} plugins",
@@ -1549,12 +1549,12 @@
         "alwaysOn": "Sempre ativo",
         "communityHint": "Plugins feitos por outras pessoas. Cada versão é verificada por uma pessoa e por verificações automáticas antes de ser listada.",
         "communityConfirmTitle": "Ativar plugins da comunidade?",
-        "communityConfirmBody": "Os plugins da comunidade são feitos por outras pessoas, não pela equipa do Termix. Cada versão é verificada por uma pessoa e por verificações automáticas antes de ser listada, mas erros podem ainda ocorrer. Instale apenas plugins em quem confia e verifique o que cada um solicita.",
+        "communityConfirmBody": "Os plugins da comunidade são feitos por outras pessoas, não pela equipa do D.EX.T.E.R. Cada versão é verificada por uma pessoa e por verificações automáticas antes de ser listada, mas erros podem ainda ocorrer. Instale apenas plugins em quem confia e verifique o que cada um solicita.",
         "communityConfirm": "Ativar",
         "communityBadge": "Comunidade",
         "communityBadgeHint": "Do registo da comunidade. Feito por outras pessoas e revisto antes de ser listado.",
         "customBadge": "Personalizado",
-        "customBadgeHint": "De {{name}}, um registo adicionado por um administrador. Não revisto pela equipa do Termix.",
+        "customBadgeHint": "De {{name}}, um registo adicionado por um administrador. Não revisto pela equipa do D.EX.T.E.R.",
         "remove": "Remover",
         "removeTitle": "Remover {{name}}?",
         "removeBody": "Os seus plugins deixarão de aparecer em Explorar. Pode adicioná-lo novamente mais tarde.",
@@ -1591,7 +1591,7 @@
         "downloadsHint": "Quantas vezes uma versão foi descarregada. Isto não é o número de instalações."
       },
       "unverified": "Não verificado",
-      "unverifiedHint": "Instalado a partir de um ficheiro. O Termix não o verificou nem assinou.",
+      "unverifiedHint": "Instalado a partir de um ficheiro. O D.EX.T.E.R. não o verificou nem assinou.",
       "reportIssue": "Reportar um problema",
       "reportTo": "Reportar a {{author}}",
       "requestFeature": "Sugerir uma funcionalidade",
@@ -1647,10 +1647,10 @@
         "perPage": "{{count}} por página",
         "perPageLabel": "Plugins por página"
       },
-      "showUnsupportedHint": "Estes estão listados, mas nenhuma versão está disponível para esta versão ainda. Atualize o Termix para os instalar.",
-      "unsupported": "Requer uma versão mais recente do Termix",
-      "unsupportedHint": "Nenhuma versão deste plugin está disponível para esta versão do Termix. Atualize o Termix para o instalar.",
-      "needsTermix": "Requer Termix {{range}}",
+      "showUnsupportedHint": "Estes estão listados, mas nenhuma versão está disponível para esta versão ainda. Atualize o D.EX.T.E.R. para os instalar.",
+      "unsupported": "Requer uma versão mais recente do D.EX.T.E.R.",
+      "unsupportedHint": "Nenhuma versão deste plugin está disponível para esta versão do D.EX.T.E.R. Atualize o D.EX.T.E.R. para o instalar.",
+      "needsTermix": "Requer D.EX.T.E.R. {{range}}",
       "showUnsupported": "Mostrar incompatíveis ({{count}})",
       "showMore": "Mostrar mais {{count}} ({{total}} restantes)"
     }

@@ -81,7 +81,7 @@ describe("desktop update check", () => {
     expect(channel.asked).toEqual(["beta"]);
     expect(sendCoreAlert).toHaveBeenCalledWith(
       expect.objectContaining({
-        title: "Termix 2.9.1-beta.2 is available",
+        title: "D.EX.T.E.R. 2.9.1-beta.2 is available",
         dedupeKey: "update:2.9.1-beta.2",
       }),
     );

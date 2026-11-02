@@ -1265,7 +1265,7 @@ function createTray() {
     }
 
     tray = new Tray(trayIcon);
-    tray.setToolTip("Termix");
+    tray.setToolTip("D.EX.T.E.R.");
 
     const contextMenu = Menu.buildFromTemplate([
       {
@@ -1339,7 +1339,7 @@ function createWindow() {
     height: 800,
     minWidth: 800,
     minHeight: 600,
-    title: "Termix",
+    title: "D.EX.T.E.R.",
     // The app draws its own title bar so it follows the active theme. macOS
     // keeps the traffic lights on top of it, Windows and Linux get the
     // native controls as an overlay whose colors the renderer keeps in sync.
@@ -1685,7 +1685,7 @@ ipcMain.handle(
 
           res.writeHead(200, { "Content-Type": "text/html" });
           res.end(
-            `<html><body><h2>${success === "true" || secondFactor ? "Authentication successful!" : "Authentication failed."}</h2><p>You can close this tab and return to Termix.</p><script>window.close()</script></body></html>`,
+            `<html><body><h2>${success === "true" || secondFactor ? "Authentication successful!" : "Authentication failed."}</h2><p>You can close this tab and return to D.EX.T.E.R.</p><script>window.close()</script></body></html>`,
           );
 
           if (secondFactor) {

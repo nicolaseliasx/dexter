@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "步驟 {{current}} / {{total}}",
-    "stageLabel": "Termix 設定",
+    "stageLabel": "D.EX.T.E.R. 設定",
     "setupHeading": "設定您的工作區",
     "partialHeading": "還有幾項新設定",
     "signOut": "登出",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "開啟",
     "pluginsChoice_disabled": "關閉",
     "pluginsChoice_remove": "移除",
-    "pluginsConsentTitle": "協助改善 Termix",
+    "pluginsConsentTitle": "協助改善 D.EX.T.E.R.",
     "pluginsConsentNote": "您可以隨時從「外掛」分頁關閉此功能。",
     "pluginsApplying": "正在套用您的選擇",
     "pluginsSomeFailed": "部分外掛無法變更。您可以稍後從「外掛」分頁修復。按「下一步」繼續。",
@@ -226,14 +226,14 @@
     "neverBody": "不要檢查更新。您仍可在設定中手動檢查。",
     "onboardingTitle": "應用程式更新",
     "onboardingBody": "桌面應用程式現在可以自行更新。選擇您希望接收新版本的方式。您之後可以在「設定」>「更新」中更改此設定。",
-    "onboardingManual": "此應用程式副本的安裝方式無法自行更新，因此 Termix 會在新版本發布時通知您，並提供下載連結。",
+    "onboardingManual": "此應用程式副本的安裝方式無法自行更新，因此 D.EX.T.E.R. 會在新版本發布時通知您，並提供下載連結。",
     "download": "下載",
     "restart": "立即重新啟動",
     "later": "稍後",
-    "available": "Termix {{version}} 可供使用",
+    "available": "D.EX.T.E.R. {{version}} 可供使用",
     "manualHint": "從發布頁面下載並覆蓋安裝此版本。",
-    "ready": "Termix {{version}} 已準備好安裝",
-    "readyHint": "下次重新啟動 Termix 時將進行安裝。"
+    "ready": "D.EX.T.E.R. {{version}} 已準備好安裝",
+    "readyHint": "下次重新啟動 D.EX.T.E.R. 時將進行安裝。"
   },
   "safeMode": {
     "title": "安全模式",
@@ -383,7 +383,7 @@
     "sshPort": "SSH 連接埠",
     "authMethod": "驗證方法",
     "authenticationMethod": "驗證方法",
-    "authenticationMethodDesc": "選擇 Termix 將用於驗證此 SSH 連線的單一方法。系統不會自動嘗試其他方法。",
+    "authenticationMethodDesc": "選擇 D.EX.T.E.R. 將用於驗證此 SSH 連線的單一方法。系統不會自動嘗試其他方法。",
     "storedCredential": "已儲存的憑證",
     "selectACredential": "選擇憑證...",
     "keyTypeLabel": "金鑰類型",
@@ -399,7 +399,7 @@
     "replaceKey": "取代金鑰",
     "docsLink": "查看說明文件",
     "agentLabel": "SSH Agent",
-    "agentDesc": "使用在 Termix 伺服器上執行的 SSH agent 進行驗證 (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent)。Agent 必須在託管 Termix 的機器上執行。",
+    "agentDesc": "使用在 D.EX.T.E.R. 伺服器上執行的 SSH agent 進行驗證 (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent)。Agent 必須在託管 D.EX.T.E.R. 的機器上執行。",
     "agentAuthenticationDesc": "使用 SSH agent 中的金鑰驗證此連線。留空 socket 路徑以使用 SSH_AUTH_SOCK。",
     "agentSocketPathLabel": "Agent Socket 路徑",
     "agentSocketPathPlaceholder": "留空以使用 SSH_AUTH_SOCK",
@@ -792,8 +792,8 @@
     "arrangeUnlockedSwitchedToManual": "已切換為手動排序，以保留您的順序",
     "dragToRearrange": "拖曳以重新排列",
     "arrangeUnlocked": "解鎖拖曳以重新排列",
-    "webUiBindHostUnreachable": "您的瀏覽器無法存取執行 Termix 的機器上的 127.0.0.1，因此此端點無法載入。請使用該機器可回應的地址，例如 0.0.0.0。",
-    "webUiBindHostSharesSessionCookie": "從此瀏覽器，轉發將透過與 Termix 服務相同的網域名稱存取，因此隧道服務將收到您的 Termix 工作階段。Cookie 會忽略埠號。此端點將拒絕在此處開啟；它可在 Termix 桌面應用程式中運作，或在 localhost 開啟 Termix 時運作。",
+    "webUiBindHostUnreachable": "您的瀏覽器無法存取執行 D.EX.T.E.R. 的機器上的 127.0.0.1，因此此端點無法載入。請使用該機器可回應的地址，例如 0.0.0.0。",
+    "webUiBindHostSharesSessionCookie": "從此瀏覽器，轉發將透過與 D.EX.T.E.R. 服務相同的網域名稱存取，因此隧道服務將收到您的 D.EX.T.E.R. 工作階段。Cookie 會忽略埠號。此端點將拒絕在此處開啟；它可在 D.EX.T.E.R. 桌面應用程式中運作，或在 localhost 開啟 D.EX.T.E.R. 時運作。",
     "webUiErrorLabelRequired": "端點 {{row}} 需要標籤。",
     "webUiErrorLabelDuplicate": "每個端點需要不同的名稱。",
     "webUiErrorPortRange": "端點 {{row}} 需要介於 1 到 65535 之間的埠號。",
@@ -938,8 +938,8 @@
     "retrySecondFactorUI": "重新載入驗證方式",
     "localDesktopSignedOut": "已登出本機桌面",
     "localDesktopUnavailable": "本機桌面工作階段不可用",
-    "localDesktopSignedOutDesc": "您已登出本機桌面工作階段。請繼續使用本機模式，以再次使用此裝置內建的 Termix 伺服器。",
-    "localDesktopUnavailableDesc": "Termix 無法啟動本機桌面工作階段。請嘗試重試，而非註冊新帳戶。",
+    "localDesktopSignedOutDesc": "您已登出本機桌面工作階段。請繼續使用本機模式，以再次使用此裝置內建的 D.EX.T.E.R. 伺服器。",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R. 無法啟動本機桌面工作階段。請嘗試重試，而非註冊新帳戶。",
     "continueLocalDesktop": "繼續使用本機桌面",
     "retryLocalDesktop": "重試本機桌面工作階段"
   },
@@ -958,8 +958,8 @@
     "acceptNewKey": "接受新金鑰並繼續"
   },
   "errors": {
-    "databaseConnection": "Termix 伺服器沒有回應",
-    "embeddedServerFailed": "Termix 的本機伺服器無法啟動",
+    "databaseConnection": "D.EX.T.E.R. 伺服器沒有回應",
+    "embeddedServerFailed": "D.EX.T.E.R. 的本機伺服器無法啟動",
     "unknownError": "未知錯誤",
     "syncedHostMissing": "同步的主機不存在於已連結的伺服器上",
     "linkedServerUnreachable": "無法連線至已連結的伺服器",
@@ -983,13 +983,13 @@
     "sessionExpiredLogin": "工作階段已過期。請重新登入。"
   },
   "messages": {
-    "registrationDisabled": "您尚未擁有 Termix 帳號。請要求管理員開啟「自動建立外部帳號」功能。",
+    "registrationDisabled": "您尚未擁有 D.EX.T.E.R. 帳號。請要求管理員開啟「自動建立外部帳號」功能。",
     "userNotAllowed": "您的帳號無權註冊。請聯絡管理員。",
     "databaseConnectionFailed": "伺服器可能仍在啟動中，或已停止運作。此頁面會持續嘗試連線，待伺服器恢復後將自動繼續。",
-    "embeddedServerPortInUse": "連接埠 {{port}} 已被其他程式使用。這通常是 Termix Docker 容器或上次工作階段殘留的 Termix 行程。請關閉該程式，然後重新啟動 Termix。",
-    "embeddedServerPortInUseUnknownPort": "Termix 所需的其中一個連接埠已被其他程式使用。請關閉佔用該連接埠的程式，然後重新啟動 Termix。",
+    "embeddedServerPortInUse": "連接埠 {{port}} 已被其他程式使用。這通常是 D.EX.T.E.R. Docker 容器或上次工作階段殘留的 D.EX.T.E.R. 行程。請關閉該程式，然後重新啟動 D.EX.T.E.R.。",
+    "embeddedServerPortInUseUnknownPort": "D.EX.T.E.R. 所需的其中一個連接埠已被其他程式使用。請關閉佔用該連接埠的程式，然後重新啟動 D.EX.T.E.R.。",
     "embeddedServerOldDatabase": "您的本機資料來自 Termix 2.8 或更早版本，必須先透過 2.9 版本進行遷移。請安裝 Termix 2.9.1，開啟一次以完成資料遷移，然後再更新至此版本。",
-    "embeddedServerCrashed": "本機伺服器意外停止。請重新啟動 Termix，若問題持續發生，請檢查桌面記錄檔。",
+    "embeddedServerCrashed": "本機伺服器意外停止。請重新啟動 D.EX.T.E.R.，若問題持續發生，請檢查桌面記錄檔。",
     "resetCodeSent": "重設碼已傳送至 Docker 記錄檔",
     "codeVerified": "驗證碼驗證成功",
     "passwordResetSuccess": "密碼重設成功",
@@ -1106,7 +1106,7 @@
         "missing": "沒有已安裝的外掛程式提供此版面配置。",
         "disabled": "提供此版面配置的外掛程式已關閉。",
         "blocked": "提供此版面配置的外掛程式正在等待其所需的項目。",
-        "incompatible": "提供此版面配置的外掛程式與此版本的 Termix 不相容。",
+        "incompatible": "提供此版面配置的外掛程式與此版本的 D.EX.T.E.R. 不相容。",
         "failed": "版面配置啟動失敗。",
         "crashed": "版面配置在繪製應用程式時當機兩次。"
       },
@@ -1127,7 +1127,7 @@
       },
       "process:spawn": {
         "title": "在此機器上執行程式",
-        "consequence": "程式會在 Termix 伺服器本身執行，而非在您的主機上。"
+        "consequence": "程式會在 D.EX.T.E.R. 伺服器本身執行，而非在您的主機上。"
       },
       "users:write": {
         "title": "建立與變更使用者帳戶",
@@ -1151,11 +1151,11 @@
       },
       "system:tls": {
         "title": "管理憑證",
-        "consequence": "它可以替換 Termix 透過 HTTPS 提供的憑證，並回應憑證授權機構的網域檢查。"
+        "consequence": "它可以替換 D.EX.T.E.R. 透過 HTTPS 提供的憑證，並回應憑證授權機構的網域檢查。"
       },
       "device:serial": {
         "title": "存取序列埠與 USB 裝置",
-        "consequence": "它可以開啟執行 Termix 之機器上的實體序列埠。"
+        "consequence": "它可以開啟執行 D.EX.T.E.R. 之機器上的實體序列埠。"
       },
       "hosts:export": {
         "title": "匯出主機及其機密資訊",
@@ -1179,7 +1179,7 @@
       },
       "network:serve": {
         "title": "接受連線",
-        "consequence": "它會在 Termix 伺服器上開啟一個連接埠。"
+        "consequence": "它會在 D.EX.T.E.R. 伺服器上開啟一個連接埠。"
       },
       "network:broadcast": {
         "title": "傳送網路廣播",
@@ -1223,11 +1223,11 @@
       },
       "desktop:window": {
         "title": "開啟桌面視窗",
-        "consequence": "僅限於 Termix 桌面應用程式。"
+        "consequence": "僅限於 D.EX.T.E.R. 桌面應用程式。"
       },
       "desktop:local": {
         "title": "使用本機電腦",
-        "consequence": "可讀取與修改本機電腦上的檔案、執行 Shell 並開啟本機埠。僅適用於 Termix 桌面應用程式。"
+        "consequence": "可讀取與修改本機電腦上的檔案、執行 Shell 並開啟本機埠。僅適用於 D.EX.T.E.R. 桌面應用程式。"
       },
       "users:impersonate": {
         "title": "模擬其他使用者",
@@ -1255,10 +1255,10 @@
       },
       "secrets:own": {
         "title": "儲存專屬機密",
-        "consequence": "由 Termix 加密。外掛本身不會持有金鑰。"
+        "consequence": "由 D.EX.T.E.R. 加密。外掛本身不會持有金鑰。"
       },
       "settings:read-core": {
-        "title": "讀取 Termix 設定",
+        "title": "讀取 D.EX.T.E.R. 設定",
         "consequence": "僅限伺服器設定，不包含您的主機或憑證。"
       },
       "plugins:read": {
@@ -1354,7 +1354,7 @@
         "minor": "它也會新增自己的畫面，並儲存獨立的資料，與其他外掛分開管理。",
         "none": "它不需要任何特殊權限。",
         "uploadTitle": "從檔案安裝 {{name}}",
-        "uploadWarning": "此檔案未經 Termix 註冊表檢查或簽署。僅在您自行編譯或信任提供者時才安裝。"
+        "uploadWarning": "此檔案未經 D.EX.T.E.R. 註冊表檢查或簽署。僅在您自行編譯或信任提供者時才安裝。"
       },
       "confirm": {
         "uninstallTitle": "確定要解除安裝 {{name}} 嗎？",
@@ -1447,10 +1447,10 @@
         "security": "安全性"
       },
       "installedBadge": "已安裝",
-      "incompatible": "需要更新版 Termix",
+      "incompatible": "需要更新版 D.EX.T.E.R.",
       "features": "功能",
       "whatItCanDo": "功能說明",
-      "addsToTermix": "為 Termix 新增的功能",
+      "addsToTermix": "為 D.EX.T.E.R. 新增的功能",
       "addsToTermixHint": "解除安裝後，這些功能將一併移除。",
       "noServerAccess": "無法存取您的伺服器",
       "searchInstalled": "搜尋已安裝項目",
@@ -1468,12 +1468,12 @@
         "hostYourOwn": "託管您自己的登錄",
         "add": "新增登錄",
         "addTitle": "新增登錄",
-        "addHint": "貼上登錄 index.json 的連結。Termix 會讀取它並顯示用於簽署外掛程式的金鑰。僅新增您信任的人提供的登錄。",
+        "addHint": "貼上登錄 index.json 的連結。D.EX.T.E.R. 會讀取它並顯示用於簽署外掛程式的金鑰。僅新增您信任的人提供的登錄。",
         "urlLabel": "索引 URL",
         "check": "檢查",
         "addConfirm": "信任並新增",
         "added": "已新增 {{name}}",
-        "customWarning": "此登錄中的外掛程式未經 Termix 團隊審查。僅由登錄擁有者決定其內容。每次下載都必須由上述金鑰簽署。",
+        "customWarning": "此登錄中的外掛程式未經 D.EX.T.E.R. 團隊審查。僅由登錄擁有者決定其內容。每次下載都必須由上述金鑰簽署。",
         "keyFingerprint": "金鑰 {{keyId}}",
         "pluginCount_other": "{{count}} 個外掛程式",
         "officialName": "官方",
@@ -1481,12 +1481,12 @@
         "alwaysOn": "始終開啟",
         "communityHint": "由其他人製作的外掛程式。每個版本在列出前都會經過人工和自動化檢查。",
         "communityConfirmTitle": "要開啟社群外掛程式嗎？",
-        "communityConfirmBody": "社群外掛程式由其他人而非 Termix 團隊製作。每個版本在列出前都會經過人工和自動化檢查，但仍可能有疏漏。僅安裝您信任的外掛程式，並檢查每個外掛程式要求的權限。",
+        "communityConfirmBody": "社群外掛程式由其他人而非 D.EX.T.E.R. 團隊製作。每個版本在列出前都會經過人工和自動化檢查，但仍可能有疏漏。僅安裝您信任的外掛程式，並檢查每個外掛程式要求的權限。",
         "communityConfirm": "開啟",
         "communityBadge": "社群",
         "communityBadgeHint": "來自社群登錄。由其他人製作並在列出前經過審查。",
         "customBadge": "自訂",
-        "customBadgeHint": "來自 {{name}}，這是管理員新增的登錄。未經 Termix 團隊審查。",
+        "customBadgeHint": "來自 {{name}}，這是管理員新增的登錄。未經 D.EX.T.E.R. 團隊審查。",
         "remove": "移除",
         "removeTitle": "移除 {{name}}？",
         "removeBody": "其插件將不再顯示於「瀏覽」中。您可以稍後再次新增。",
@@ -1517,7 +1517,7 @@
         "downloadsHint": "版本被下載的次數。這並非安裝次數。"
       },
       "unverified": "未驗證",
-      "unverifiedHint": "從檔案安裝。Termix 未檢查或簽署此插件。",
+      "unverifiedHint": "從檔案安裝。D.EX.T.E.R. 未檢查或簽署此插件。",
       "reportIssue": "回報問題",
       "reportTo": "向 {{author}} 回報",
       "requestFeature": "請求新功能",
@@ -1571,10 +1571,10 @@
         "perPage": "每頁 {{count}} 項",
         "perPageLabel": "每頁外掛數量"
       },
-      "showUnsupportedHint": "這些項目已列出，但尚無版本可在此版本上執行。請更新 Termix 以安裝它們。",
-      "unsupported": "需要更新版本的 Termix",
-      "unsupportedHint": "此外掛尚無版本可在此版本的 Termix 上執行。請更新 Termix 以安裝它。",
-      "needsTermix": "需要 Termix {{range}}",
+      "showUnsupportedHint": "這些項目已列出，但尚無版本可在此版本上執行。請更新 D.EX.T.E.R. 以安裝它們。",
+      "unsupported": "需要更新版本的 D.EX.T.E.R.",
+      "unsupportedHint": "此外掛尚無版本可在此版本的 D.EX.T.E.R. 上執行。請更新 D.EX.T.E.R. 以安裝它。",
+      "needsTermix": "需要 D.EX.T.E.R. {{range}}",
       "showUnsupported": "顯示不支援的項目 ({{count}})",
       "showMore": "顯示更多 {{count}} 項（剩餘 {{total}} 項）"
     }

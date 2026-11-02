@@ -85,7 +85,7 @@ describe("GET /users/branding", () => {
 
     expect(response.statusCode).toBe(200);
     expect(response.body).toEqual({
-      appName: "Termix",
+      appName: "D.EX.T.E.R.",
       tagline: "",
       logo: null,
     });

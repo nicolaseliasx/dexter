@@ -18,7 +18,7 @@ export const BRANDING_KEYS = {
   logo: "branding_logo",
 } as const;
 
-export const BRANDING_DEFAULT_APP_NAME = "Termix";
+export const BRANDING_DEFAULT_APP_NAME = "D.EX.T.E.R.";
 
 interface SettingSource {
   get(key: string): Promise<string | null>;

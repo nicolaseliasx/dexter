@@ -15,7 +15,7 @@ import {
   nextIconHref,
 } from "./branding-document.ts";
 
-const DEFAULT_APP_NAME = "Termix";
+const DEFAULT_APP_NAME = "D.EX.T.E.R.";
 const DEFAULT_ICON_HREFS: Record<string, string> = {};
 
 interface BrandingContextValue {

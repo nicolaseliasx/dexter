@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Aan",
     "pluginsChoice_disabled": "Af",
     "pluginsChoice_remove": "Verwyder",
-    "pluginsConsentTitle": "Help om Termix te verbeter",
+    "pluginsConsentTitle": "Help om D.EX.T.E.R. te verbeter",
     "pluginsConsentNote": "Jy kan dit op enige tyd vanaf die Plugins-oortjie afskakel.",
     "pluginsApplying": "Pas jou keuses toe",
     "pluginsSomeFailed": "Sommige plugins kon nie verander word nie. Jy kan hulle later regstel vanaf die Plugins-oortjie. Druk Volgende om voort te gaan.",
@@ -226,14 +226,14 @@
     "neverBody": "Soek nie na opdaterings nie. Jy kan steeds handmatig in Instellings soek.",
     "onboardingTitle": "Toepassing-opdaterings",
     "onboardingBody": "Die buro-toepassing kan nou self opdateer. Kies hoe jy wil hê nuwe weergawes moet aankom. Jy kan dit later in Instellings, Opdaterings verander.",
-    "onboardingManual": "Hierdie kopie van die toepassing is op 'n manier geïnstalleer wat nie self kan opdateer nie, so Termix sal jou vertel wanneer 'n nuwe weergawe beskikbaar is met 'n skakel om dit af te laai.",
+    "onboardingManual": "Hierdie kopie van die toepassing is op 'n manier geïnstalleer wat nie self kan opdateer nie, so D.EX.T.E.R. sal jou vertel wanneer 'n nuwe weergawe beskikbaar is met 'n skakel om dit af te laai.",
     "download": "Laai af",
     "restart": "Herbegin nou",
     "later": "Later",
-    "available": "Termix {{version}} is beskikbaar",
+    "available": "D.EX.T.E.R. {{version}} is beskikbaar",
     "manualHint": "Laai dit af van die vrystellingsblad en installeer dit oor hierdie een.",
-    "ready": "Termix {{version}} is gereed om te installeer",
-    "readyHint": "Dit word die volgende keer wat Termix herbegin geïnstalleer."
+    "ready": "D.EX.T.E.R. {{version}} is gereed om te installeer",
+    "readyHint": "Dit word die volgende keer wat D.EX.T.E.R. herbegin geïnstalleer."
   },
   "safeMode": {
     "title": "Veilige modus",
@@ -387,7 +387,7 @@
     "sshPort": "SSH Poort",
     "authMethod": "Verifikasie Metode",
     "authenticationMethod": "Verifikasie Metode",
-    "authenticationMethodDesc": "Kies die een metode wat Termix sal gebruik om hierdie SSH-verbinding te verifieer. Ander metodes word nie outomaties probeer nie.",
+    "authenticationMethodDesc": "Kies die een metode wat D.EX.T.E.R. sal gebruik om hierdie SSH-verbinding te verifieer. Ander metodes word nie outomaties probeer nie.",
     "storedCredential": "Opgestoorde Kredensiaal",
     "selectACredential": "Kies 'n kredensiaal...",
     "keyTypeLabel": "Sleutel Tipe",
@@ -403,7 +403,7 @@
     "replaceKey": "Vervang sleutel",
     "docsLink": "Bekyk dokumentasie",
     "agentLabel": "SSH Agent",
-    "agentDesc": "Verifieer met behulp van 'n SSH agent wat op die Termix bediener loop (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Die agent moet op die masjien loop waar Termix gehuisves word.",
+    "agentDesc": "Verifieer met behulp van 'n SSH agent wat op die D.EX.T.E.R. bediener loop (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Die agent moet op die masjien loop waar D.EX.T.E.R. gehuisves word.",
     "agentAuthenticationDesc": "Gebruik sleutels van 'n SSH agent om hierdie verbinding te verifieer. Laat die sokketpad leeg om SSH_AUTH_SOCK te gebruik.",
     "agentSocketPathLabel": "Agent Sokketpad",
     "agentSocketPathPlaceholder": "Laat leeg om SSH_AUTH_SOCK te gebruik",
@@ -804,8 +804,8 @@
     "arrangeUnlockedSwitchedToManual": "Geskakel na handeleike sortering sodat jou volgorde behou word",
     "dragToRearrange": "Sleep om te herrangskik",
     "arrangeUnlocked": "Ontsluit sleep om te herrangskik",
-    "webUiBindHostUnreachable": "Jou blaaier kan nie 127.0.0.1 op die masjien bereik waar Termix loop nie, dus sal hierdie eindpunt nie laai nie. Gebruik 'n adres wat daardie masjien antwoord op, soos 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Vanaf hierdie blaaier sou die vorentoe-verbinding bereik word by dieselfde gasheernaam waar Termix bedien word, dus sou die getunneld diens jou Termix-sessie ontvang. Koekies ignoreer die poort. Hierdie eindpunt sal weier om hier oop te maak; dit werk vanaf die Termix-bureaublad-toepassing, of wanneer Termix by localhost oopgemaak word.",
+    "webUiBindHostUnreachable": "Jou blaaier kan nie 127.0.0.1 op die masjien bereik waar D.EX.T.E.R. loop nie, dus sal hierdie eindpunt nie laai nie. Gebruik 'n adres wat daardie masjien antwoord op, soos 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Vanaf hierdie blaaier sou die vorentoe-verbinding bereik word by dieselfde gasheernaam waar D.EX.T.E.R. bedien word, dus sou die getunneld diens jou Termix-sessie ontvang. Koekies ignoreer die poort. Hierdie eindpunt sal weier om hier oop te maak; dit werk vanaf die Termix-bureaublad-toepassing, of wanneer D.EX.T.E.R. by localhost oopgemaak word.",
     "webUiErrorLabelRequired": "Eindpunt {{row}} benodig 'n etiket.",
     "webUiErrorLabelDuplicate": "Elke eindpunt benodig 'n ander naam.",
     "webUiErrorPortRange": "Eindpunt {{row}} benodig 'n poort tussen 1 en 65535.",
@@ -952,7 +952,7 @@
     "localDesktopSignedOut": "Plaaslike werkskerm is afgemeld",
     "localDesktopUnavailable": "Plaaslike werkskerm-sessie is nie beskikbaar nie",
     "localDesktopSignedOutDesc": "Jy het afgemeld van die plaaslike werkskerm-sessie. Gaan plaaslik voort om hierdie toestel se ingeboude Termix-bediener weer te gebruik.",
-    "localDesktopUnavailableDesc": "Termix kon nie 'n plaaslike werkskerm-sessie begin nie. Probeer dit weer in plaas daarvan om 'n nuwe rekening te registreer.",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R. kon nie 'n plaaslike werkskerm-sessie begin nie. Probeer dit weer in plaas daarvan om 'n nuwe rekening te registreer.",
     "continueLocalDesktop": "Gaan voort met plaaslike werkskerm",
     "retryLocalDesktop": "Probeer plaaslike werkskerm-sessie weer"
   },
@@ -972,7 +972,7 @@
   },
   "errors": {
     "databaseConnection": "Die Termix-bedienaar reageer nie",
-    "embeddedServerFailed": "Termix se plaaslike bediener kon nie begin nie",
+    "embeddedServerFailed": "D.EX.T.E.R. se plaaslike bediener kon nie begin nie",
     "unknownError": "Onbekende fout",
     "syncedHostMissing": "Die gesinkroniseerde gasheer bestaan nie op die gekoppelde bediener nie",
     "linkedServerUnreachable": "Die gekoppelde bediener is nie bereikbaar nie",
@@ -999,10 +999,10 @@
     "registrationDisabled": "Jy het nog nie 'n Termix-rekening nie. Vra 'n admin om Eksterne rekenings outomaties skep aan te skakel.",
     "userNotAllowed": "Jou rekening is nie gemagtig om te registreer nie. Kontak asseblief 'n administrateur.",
     "databaseConnectionFailed": "Dit is dalk nog besig om te begin, of dit het gestop. Hierdie bladsy gaan voortdurend probeer en sal outomaties hervat sodra die bedienaar weer beskikbaar is.",
-    "embeddedServerPortInUse": "Poort {{port}} word reeds deur 'n ander program gebruik. Dit is gewoonlik 'n Termix Docker-houer of 'n oorblywende Termix-proses van 'n vorige sessie. Maak dit toe en herbegin dan Termix.",
-    "embeddedServerPortInUseUnknownPort": "Een van die poorte wat Termix benodig, word reeds deur 'n ander program gebruik. Maak wat dit gebruik toe en herbegin dan Termix.",
+    "embeddedServerPortInUse": "Poort {{port}} word reeds deur 'n ander program gebruik. Dit is gewoonlik 'n D.EX.T.E.R. Docker-houer of 'n oorblywende Termix-proses van 'n vorige sessie. Maak dit toe en herbegin dan D.EX.T.E.R.",
+    "embeddedServerPortInUseUnknownPort": "Een van die poorte wat D.EX.T.E.R. benodig, word reeds deur 'n ander program gebruik. Maak wat dit gebruik toe en herbegin dan D.EX.T.E.R.",
     "embeddedServerOldDatabase": "U plaaslike data is van Termix 2.8 of ouer en moet eers deur 2.9 gaan. Installeer Termix 2.9.1, open dit een keer sodat dit u data kan verskuif, en dateer dan weer na hierdie weergawe op.",
-    "embeddedServerCrashed": "Die plaaslike bediener het onverwags gestop. Herbegin Termix en kyk na die skryfstoeljoernaal as dit voortduur.",
+    "embeddedServerCrashed": "Die plaaslike bediener het onverwags gestop. Herbegin D.EX.T.E.R. en kyk na die skryfstoeljoernaal as dit voortduur.",
     "resetCodeSent": "Herstelkode na Docker-logs gestuur",
     "codeVerified": "Kode suksesvol verifieer",
     "passwordResetSuccess": "Wagwoord suksesvol herstel",
@@ -1123,7 +1123,7 @@
         "missing": "Geen geïnstalleerde plugin verskaf hierdie lê nie.",
         "disabled": "Die plugin wat hierdie lê verskaf, is afgeskakel.",
         "blocked": "Die plugin wat hierdie lê verskaf, wag op iets wat dit nodig het.",
-        "incompatible": "Die plugin wat hierdie lê verskaf, werk nie met hierdie weergawe van Termix nie.",
+        "incompatible": "Die plugin wat hierdie lê verskaf, werk nie met hierdie weergawe van D.EX.T.E.R. nie.",
         "failed": "Die lê het misluk om te begin.",
         "crashed": "Die lê het twee keer gekraak terwyl die app geteken is."
       },
@@ -1168,11 +1168,11 @@
       },
       "system:tls": {
         "title": "Bestuur sertifikate",
-        "consequence": "Dit kan die sertifikaat vervang wat Termix oor HTTPS verskaf en domeinkontroles van sertifikaatautoriteite beantwoord."
+        "consequence": "Dit kan die sertifikaat vervang wat D.EX.T.E.R. oor HTTPS verskaf en domeinkontroles van sertifikaatautoriteite beantwoord."
       },
       "device:serial": {
         "title": "Toegang tot reeks- en USB-toestelle",
-        "consequence": "Dit kan 'n fisiese reekspoort op die masjien wat Termix uitvoer, oopmaak."
+        "consequence": "Dit kan 'n fisiese reekspoort op die masjien wat D.EX.T.E.R. uitvoer, oopmaak."
       },
       "hosts:export": {
         "title": "Voer gasheer uit met hul geheime",
@@ -1272,7 +1272,7 @@
       },
       "secrets:own": {
         "title": "Bewaar sy eie geheime",
-        "consequence": "Versleutel deur Termix. Die plugin hou nooit die sleutel nie."
+        "consequence": "Versleutel deur D.EX.T.E.R. Die plugin hou nooit die sleutel nie."
       },
       "settings:read-core": {
         "title": "Lees Termix-instellings",
@@ -1480,10 +1480,10 @@
         "security": "Veiligheid"
       },
       "installedBadge": "Geïnstalleer",
-      "incompatible": "Benodig 'n nuwer Termix",
+      "incompatible": "Benodig 'n nuwer D.EX.T.E.R.",
       "features": "Eienskappe",
       "whatItCanDo": "Wat dit kan doen",
-      "addsToTermix": "Voeg by aan Termix",
+      "addsToTermix": "Voeg by aan D.EX.T.E.R.",
       "addsToTermixHint": "Deïnstalleer en almal van hierdie verdwyn.",
       "noServerAccess": "Geen toegang tot jou bedieners nie",
       "searchInstalled": "Soek geïnstalleerdes",
@@ -1501,7 +1501,7 @@
         "hostYourOwn": "Herberg jou eie register",
         "add": "Voeg register by",
         "addTitle": "Voeg 'n register by",
-        "addHint": "Plak die skakel na die register se index.json. Termix lees dit en wys die sleutel waarmee dit invoegtoepassings onderteken. Voeg slegs register by van mense wat jy vertrou.",
+        "addHint": "Plak die skakel na die register se index.json. D.EX.T.E.R. lees dit en wys die sleutel waarmee dit invoegtoepassings onderteken. Voeg slegs register by van mense wat jy vertrou.",
         "urlLabel": "Index-URL",
         "check": "Kontroleer",
         "addConfirm": "Vertrou en voeg by",
@@ -1554,7 +1554,7 @@
         "downloadsHint": "Hoeveel keer 'n uitgawe afgelaai is. Dit is nie die aantal installasies nie."
       },
       "unverified": "Ongeverifieer",
-      "unverifiedHint": "Van 'n lêer geïnstalleer. Termix het dit nie gecontroleer of geteken nie.",
+      "unverifiedHint": "Van 'n lêer geïnstalleer. D.EX.T.E.R. het dit nie gecontroleer of geteken nie.",
       "reportIssue": "Rapporteer 'n probleem",
       "reportTo": "Rapporteer aan {{author}}",
       "requestFeature": "Vra 'n funksie aan",
@@ -1609,10 +1609,10 @@
         "perPage": "{{count}} per bladsy",
         "perPageLabel": "Invoegprogramme per bladsy"
       },
-      "showUnsupportedHint": "Hierdie word gelys, maar geen vrylasing loop nog op hierdie weergawe nie. Werk Termix op om dit te installeer.",
-      "unsupported": "Benodig 'n nuwer Termix",
-      "unsupportedHint": "Geen vrylasing van hierdie invoegprogram loop op hierdie weergawe van Termix nie. Werk Termix op om dit te installeer.",
-      "needsTermix": "Benodig Termix {{range}}",
+      "showUnsupportedHint": "Hierdie word gelys, maar geen vrylasing loop nog op hierdie weergawe nie. Werk D.EX.T.E.R. op om dit te installeer.",
+      "unsupported": "Benodig 'n nuwer D.EX.T.E.R.",
+      "unsupportedHint": "Geen vrylasing van hierdie invoegprogram loop op hierdie weergawe van D.EX.T.E.R. nie. Werk D.EX.T.E.R. op om dit te installeer.",
+      "needsTermix": "Benodig D.EX.T.E.R. {{range}}",
       "showUnsupported": "Wys nie-ondersteunde ({{count}})",
       "showMore": "Wys {{count}} meer ({{total}} oor)"
     }

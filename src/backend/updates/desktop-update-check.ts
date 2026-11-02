@@ -40,7 +40,7 @@ export async function checkForDesktopUpdate(): Promise<void> {
   if (comparison === null || comparison >= 0) return;
 
   await sendCoreAlert({
-    title: `Termix ${latest.version} is available`,
+    title: `D.EX.T.E.R. ${latest.version} is available`,
     body: `You are on ${current}. Download the new version to update.`,
     severity: "info",
     category: "termix.update",

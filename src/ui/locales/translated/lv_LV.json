@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Solis {{current}} no {{total}}",
-    "stageLabel": "Termix iestatīšana",
+    "stageLabel": "D.EX.T.E.R. iestatīšana",
     "setupHeading": "Iestatiet savu darbvietu",
     "partialHeading": "Daži jauni iestatījumi",
     "signOut": "Izrakstīties",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Ieslēgts",
     "pluginsChoice_disabled": "Izslēgts",
     "pluginsChoice_remove": "Noņemt",
-    "pluginsConsentTitle": "Palīdzēt uzlabot Termix",
+    "pluginsConsentTitle": "Palīdzēt uzlabot D.EX.T.E.R.",
     "pluginsConsentNote": "Jūs varat jebkurā laikā to atslēgt no cilnes Spraudņi.",
     "pluginsApplying": "Jūsu izvēles piemērošana",
     "pluginsSomeFailed": "Dažus spraudņus neizdevās mainīt. Jūs varat tos labot vēlāk no cilnes Spraudņi. Nospiediet Tālāk, lai turpinātu.",
@@ -226,14 +226,14 @@
     "neverBody": "Neizpildīt atjauninājumu pārbaudi. Jūs joprojām varat pārbaudīt manuāli Iestatījumos.",
     "onboardingTitle": "Lietotnes atjauninājumi",
     "onboardingBody": "Tagad darbvirsmas lietotne var atjaunināt pati. Izvēlieties, kā vēlaties saņemt jaunās versijas. To varat mainīt vēlāk Iestatījumos, sadaļā Atjauninājumi.",
-    "onboardingManual": "Šī lietotnes kopija tika instalēta tā, ka to nevar atjaunināt pati, tāpēc Termix paziņos, kad ir iznākusi jauna versija, ar saiti tās lejupielādei.",
+    "onboardingManual": "Šī lietotnes kopija tika instalēta tā, ka to nevar atjaunināt pati, tāpēc D.EX.T.E.R. paziņos, kad ir iznākusi jauna versija, ar saiti tās lejupielādei.",
     "download": "Lejupielādēt",
     "restart": "Restartēt tagad",
     "later": "Vēlāk",
-    "available": "Ir pieejams Termix {{version}}",
+    "available": "Ir pieejams D.EX.T.E.R. {{version}}",
     "manualHint": "Lejupielādējiet to no izlaišanas lapas un instalējiet virs šīs versijas.",
-    "ready": "Termix {{version}} ir gatavs instalēšanai",
-    "readyHint": "Tas tiks instalēts nākamajā reizi, kad Termix tiks restartēts."
+    "ready": "D.EX.T.E.R. {{version}} ir gatavs instalēšanai",
+    "readyHint": "Tas tiks instalēts nākamajā reizi, kad D.EX.T.E.R. tiks restartēts."
   },
   "safeMode": {
     "title": "Drošais režīms",
@@ -391,7 +391,7 @@
     "sshPort": "SSH ports",
     "authMethod": "Autentifikācijas metode",
     "authenticationMethod": "Autentifikācijas metode",
-    "authenticationMethodDesc": "Izvēlieties vienu metodi, ko Termix izmantos šī SSH savienojuma autentifikācijai. Citas metodes netiek mēģinātas automātiski.",
+    "authenticationMethodDesc": "Izvēlieties vienu metodi, ko D.EX.T.E.R. izmantos šī SSH savienojuma autentifikācijai. Citas metodes netiek mēģinātas automātiski.",
     "storedCredential": "Saglabātie pieteikšanās dati",
     "selectACredential": "Izvēlieties pieteikšanās datus...",
     "keyTypeLabel": "Atslēgas tips",
@@ -407,7 +407,7 @@
     "replaceKey": "Aizvietot atslēgu",
     "docsLink": "Apskatīt dokumentāciju",
     "agentLabel": "SSH aģents",
-    "agentDesc": "Autentificēties, izmantojot SSH aģentu, kas darbojas Termix serverī (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Aģentam ir jādarbojas mašīnā, kurā ir hostēts Termix.",
+    "agentDesc": "Autentificēties, izmantojot SSH aģentu, kas darbojas D.EX.T.E.R. serverī (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Aģentam ir jādarbojas mašīnā, kurā ir hostēts D.EX.T.E.R.",
     "agentAuthenticationDesc": "Izmantot atslēgas no SSH aģenta, lai autentificētu šo savienojumu. Atstājiet ligzdas ceļu tukšu, lai izmantotu SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Aģenta ligzdas ceļš",
     "agentSocketPathPlaceholder": "Atstājiet tukšu, lai izmantotu SSH_AUTH_SOCK",
@@ -816,8 +816,8 @@
     "arrangeUnlockedSwitchedToManual": "Pārslēgts uz manuālo kārtošanu, lai jūsu secība tiktu saglabāta",
     "dragToRearrange": "Velciet, lai pārkārtotu",
     "arrangeUnlocked": "Atbloķēt vilkšanu pārkārtošanai",
-    "webUiBindHostUnreachable": "Jūsu pārlūks nevar sasniegt 127.0.0.1 datorā, kur darbojas Termix, tāpēc šis galapunkts neielādēsies. Izmantojiet adresi, uz kuru šis dators atbild, piemēram, 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "No šī pārlūka uz priekšu virzītais savienojums būtu sasniedzams tajā pašā hosta nosaukumā, no kura tiek apkalpots Termix, tāpēc tunelētajai pakalpojumu saņemtu jūsu Termix sesiju. Sīkdatnes ignorē portu. Šis galapunkts atteiksies atvērties šeit; tas darbojas no Termix desktop lietotnes vai kad Termix tiek atvērts vietnē localhost.",
+    "webUiBindHostUnreachable": "Jūsu pārlūks nevar sasniegt 127.0.0.1 datorā, kur darbojas D.EX.T.E.R., tāpēc šis galapunkts neielādēsies. Izmantojiet adresi, uz kuru šis dators atbild, piemēram, 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "No šī pārlūka uz priekšu virzītais savienojums būtu sasniedzams tajā pašā hosta nosaukumā, no kura tiek apkalpots D.EX.T.E.R., tāpēc tunelētajai pakalpojumu saņemtu jūsu D.EX.T.E.R. sesiju. Sīkdatnes ignorē portu. Šis galapunkts atteiksies atvērties šeit; tas darbojas no D.EX.T.E.R. desktop lietotnes vai kad D.EX.T.E.R. tiek atvērts vietnē localhost.",
     "webUiErrorLabelRequired": "Galapunktam {{row}} ir nepieciešama etiķete.",
     "webUiErrorLabelDuplicate": "Katram galapunktam ir jābūt unikālam nosaukumam.",
     "webUiErrorPortRange": "Galapunktam {{row}} ir nepieciešams ports no 1 līdz 65535.",
@@ -964,8 +964,8 @@
     "retrySecondFactorUI": "Pārlādēt verifikācijas metodes",
     "localDesktopSignedOut": "Vietējā darbvirsmas sesija izbeigta",
     "localDesktopUnavailable": "Vietējā darbvirsmas sesija nav pieejama",
-    "localDesktopSignedOutDesc": "Jūs izrakstījāties no vietējās darbvirsmas sesijas. Turpiniet lokāli, lai atkal izmantotu šīs ierīces iebūvēto Termix serveri.",
-    "localDesktopUnavailableDesc": "Termix nevarēja uzsākt vietējo darbvirsmas sesiju. Mēģiniet to vēlreiz, nevis reģistrējiet jaunu kontu.",
+    "localDesktopSignedOutDesc": "Jūs izrakstījāties no vietējās darbvirsmas sesijas. Turpiniet lokāli, lai atkal izmantotu šīs ierīces iebūvēto D.EX.T.E.R. serveri.",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R. nevarēja uzsākt vietējo darbvirsmas sesiju. Mēģiniet to vēlreiz, nevis reģistrējiet jaunu kontu.",
     "continueLocalDesktop": "Turpināt ar vietējo darbvirsmu",
     "retryLocalDesktop": "Mēģināt vēlreiz ar vietējo darbvirsmas sesiju"
   },
@@ -984,8 +984,8 @@
     "acceptNewKey": "Pieņemt jauno atslēgu un turpināt"
   },
   "errors": {
-    "databaseConnection": "Termix serveris neatbild",
-    "embeddedServerFailed": "Termix vietējais serveris nevarēja palaisties",
+    "databaseConnection": "D.EX.T.E.R. serveris neatbild",
+    "embeddedServerFailed": "D.EX.T.E.R. vietējais serveris nevarēja palaisties",
     "unknownError": "Nezināma kļūda",
     "syncedHostMissing": "Sinhronizētais mezgls neeksistē saistītajā serverī",
     "linkedServerUnreachable": "Saistītais serveris nav sasniedzams",
@@ -1009,13 +1009,13 @@
     "sessionExpiredLogin": "Sesija ir beigusies. Lūdzu, pieteikties vēlreiz."
   },
   "messages": {
-    "registrationDisabled": "Jums vēl nav Termix konta. Lūdziet administratoru ieslēgt automātisko ārējo kontu izveidi.",
+    "registrationDisabled": "Jums vēl nav D.EX.T.E.R. konta. Lūdziet administratoru ieslēgt automātisko ārējo kontu izveidi.",
     "userNotAllowed": "Jūsu kontam nav atļauts reģistrēties. Lūdzu, sazinieties ar administratoru.",
     "databaseConnectionFailed": "Tas varētu vēl sākties vai ir apstājies. Šī lapa turpina mēģināt un automātiski atsāks darbu, kad serveris būs pieejams.",
-    "embeddedServerPortInUse": "Ports {{port}} jau tiek izmantots citā programmā. Parasti tas ir Termix Docker konteineris vai iepriekšējās sesijas Termix process. Aizveriet to un restartējiet Termix.",
-    "embeddedServerPortInUseUnknownPort": "Viens no portiem, kurus Termix nepieciešams, jau tiek izmantots citā programmā. Aizveriet to, kas to izmanto, un restartējiet Termix.",
+    "embeddedServerPortInUse": "Ports {{port}} jau tiek izmantots citā programmā. Parasti tas ir D.EX.T.E.R. Docker konteineris vai iepriekšējās sesijas D.EX.T.E.R. process. Aizveriet to un restartējiet D.EX.T.E.R.",
+    "embeddedServerPortInUseUnknownPort": "Viens no portiem, kurus D.EX.T.E.R. nepieciešams, jau tiek izmantots citā programmā. Aizveriet to, kas to izmanto, un restartējiet D.EX.T.E.R.",
     "embeddedServerOldDatabase": "Jūsu vietējie dati ir no Termix 2.8 vai vecākas versijas, un tiem vispirms ir jāiziet cauri 2.9 versijai. Instalējiet Termix 2.9.1, atveriet to vienu reizi, lai tas pārvietotu jūsu datus, pēc tam atkal atjauniniet uz šo versiju.",
-    "embeddedServerCrashed": "Vietējais serveris negaidīti apstājās. Restartējiet Termix un, ja tas turpinās notikt, pārbaudiet darbvirsmas žurnālu.",
+    "embeddedServerCrashed": "Vietējais serveris negaidīti apstājās. Restartējiet D.EX.T.E.R. un, ja tas turpinās notikt, pārbaudiet darbvirsmas žurnālu.",
     "resetCodeSent": "Atiestatīšanas kods nosūtīts uz Docker žurnāliem",
     "codeVerified": "Kods veiksmīgi verificēts",
     "passwordResetSuccess": "Parole veiksmīgi nomainīta",
@@ -1140,7 +1140,7 @@
         "missing": "Neviens instalēts spraudnis nepiedāvā šo izkārtojumu.",
         "disabled": "Spraudnis, kas piedāvā šo izkārtojumu, ir izslēgts.",
         "blocked": "Spraudnis, kas piedāvā šo izkārtojumu, gaida kaut ko, kas tam nepieciešams.",
-        "incompatible": "Spraudnis, kas piedāvā šo izkārtojumu, nestrādā ar šo Termix versiju.",
+        "incompatible": "Spraudnis, kas piedāvā šo izkārtojumu, nestrādā ar šo D.EX.T.E.R. versiju.",
         "failed": "Izkārtojums neizdevās palaist.",
         "crashed": "Izkārtojums divas reizes sabruka, zīmējot lietotni."
       },
@@ -1161,7 +1161,7 @@
       },
       "process:spawn": {
         "title": "Palaikt programmas šajā datorā",
-        "consequence": "Programmas tiek palaistas pašā Termix serverī, nevis jūsu serveros."
+        "consequence": "Programmas tiek palaistas pašā D.EX.T.E.R. serverī, nevis jūsu serveros."
       },
       "users:write": {
         "title": "Izveidot un mainīt lietotāju kontus",
@@ -1185,11 +1185,11 @@
       },
       "system:tls": {
         "title": "Pārvaldīt sertifikātus",
-        "consequence": "Tas var aizstāt sertifikātu, ko Termix izmanto HTTPS, un atbildēt uz domēna pārbaudēm no sertifikātu izsniedzējiem."
+        "consequence": "Tas var aizstāt sertifikātu, ko D.EX.T.E.R. izmanto HTTPS, un atbildēt uz domēna pārbaudēm no sertifikātu izsniedzējiem."
       },
       "device:serial": {
         "title": "Piekļūt sērijveida un USB ierīcēm",
-        "consequence": "Tas var atvērt fizisku sērijveida portu datorā, kurā darbojas Termix."
+        "consequence": "Tas var atvērt fizisku sērijveida portu datorā, kurā darbojas D.EX.T.E.R."
       },
       "hosts:export": {
         "title": "Eksportēt hostus ar to noslēpumiem",
@@ -1213,7 +1213,7 @@
       },
       "network:serve": {
         "title": "Pieņemt savienojumus",
-        "consequence": "Tas atver portu Termix serverī."
+        "consequence": "Tas atver portu D.EX.T.E.R. serverī."
       },
       "network:broadcast": {
         "title": "Nosūtīt tīkla plašsaziņas ziņojumus",
@@ -1257,11 +1257,11 @@
       },
       "desktop:window": {
         "title": "Atvērt darbvirsmas logus",
-        "consequence": "Tikai Termix darbvirsmas lietotnē."
+        "consequence": "Tikai D.EX.T.E.R. darbvirsmas lietotnē."
       },
       "desktop:local": {
         "title": "Izmantot šo datoru",
-        "consequence": "Var lasīt un mainīt failus, palaist komandrindu un atvērt lokālus portus šajā datorā. Tikai Termix darbvirsmas lietotnē."
+        "consequence": "Var lasīt un mainīt failus, palaist komandrindu un atvērt lokālus portus šajā datorā. Tikai D.EX.T.E.R. darbvirsmas lietotnē."
       },
       "users:impersonate": {
         "title": "Rīkoties kā citi lietotāji",
@@ -1289,10 +1289,10 @@
       },
       "secrets:own": {
         "title": "Glabāt savus noslēpumus",
-        "consequence": "Šifrēts ar Termix. Spraudnis nekad nesatur atslēgu."
+        "consequence": "Šifrēts ar D.EX.T.E.R. Spraudnis nekad nesatur atslēgu."
       },
       "settings:read-core": {
-        "title": "Lasīt Termix iestatījumus",
+        "title": "Lasīt D.EX.T.E.R. iestatījumus",
         "consequence": "Servera iestatījumi, nevis jūsu hosti vai pieteikšanās dati."
       },
       "plugins:read": {
@@ -1410,7 +1410,7 @@
         "minor": "Tāpat tas pievieno savus ekrānus un glabā savus datus, kas ir atdalīti no citiem spraudņiem.",
         "none": "Tas neprasa nekādu īpašu piekļuvi.",
         "uploadTitle": "Instalēt {{name}} no faila",
-        "uploadWarning": "Šo failu nav pārbaudījis vai parakstījis Termix reģistrs. Instalējiet to tikai tad, ja to esat izveidojis pats vai uzticieties tam, kurš to ir izveidojis."
+        "uploadWarning": "Šo failu nav pārbaudījis vai parakstījis D.EX.T.E.R. reģistrs. Instalējiet to tikai tad, ja to esat izveidojis pats vai uzticieties tam, kurš to ir izveidojis."
       },
       "confirm": {
         "uninstallTitle": "Atinstalēt {{name}}?",
@@ -1513,10 +1513,10 @@
         "security": "Drošība"
       },
       "installedBadge": "Uzstādīts",
-      "incompatible": "Nepieciešams jaunāks Termix",
+      "incompatible": "Nepieciešams jaunāks D.EX.T.E.R.",
       "features": "Funkcijas",
       "whatItCanDo": "Ko tas spēj",
-      "addsToTermix": "Pievieno Termix",
+      "addsToTermix": "Pievieno D.EX.T.E.R.",
       "addsToTermixHint": "Ja noņem uzstādījumu, visas šīs funkcijas pazudīs.",
       "noServerAccess": "Nav piekļuves jūsu serveriem",
       "searchInstalled": "Meklēt uzstādītos",
@@ -1534,12 +1534,12 @@
         "hostYourOwn": "Izvietojiet savu reģistru",
         "add": "Pievienot reģistru",
         "addTitle": "Pievienot reģistru",
-        "addHint": "Ielīmējiet saiti uz reģistra index.json. Termix to nolasīs un parādīs atslēgu, ar kuru tas paraksta spraudņus. Pievienojiet tikai reģistrus no cilvēkiem, kam uzticat.",
+        "addHint": "Ielīmējiet saiti uz reģistra index.json. D.EX.T.E.R. to nolasīs un parādīs atslēgu, ar kuru tas paraksta spraudņus. Pievienojiet tikai reģistrus no cilvēkiem, kam uzticat.",
         "urlLabel": "Indeksa URL",
         "check": "Pārbaudīt",
         "addConfirm": "Uzticēties un pievienot",
         "added": "Pievienots {{name}}",
-        "customWarning": "Spraudņi no šī reģistra netiek pārskatīti Termix komandas. Tikai reģistra īpašnieks nosaka, kas tajā atrodas. Katrai lejupielādei ir jābūt parakstītai ar augstāk minēto atslēgu.",
+        "customWarning": "Spraudņi no šī reģistra netiek pārskatīti D.EX.T.E.R. komandas. Tikai reģistra īpašnieks nosaka, kas tajā atrodas. Katrai lejupielādei ir jābūt parakstītai ar augstāk minēto atslēgu.",
         "keyFingerprint": "Atslēga {{keyId}}",
         "pluginCount_zero": "0 spraudņi",
         "pluginCount_one": "{{count}} spraudnis",
@@ -1549,12 +1549,12 @@
         "alwaysOn": "Vienmēr ieslēgts",
         "communityHint": "Spraudņus izstrādājuši citi cilvēki. Katru versiju pirms iekļaušanas sarakstā pārbauda cilvēks un automatizētie pārbaudes.",
         "communityConfirmTitle": "Ieslēgt kopienas spraudņus?",
-        "communityConfirmBody": "Kopienas spraudņus izstrādājuši citi cilvēki, nevis Termix komanda. Katru versiju pirms iekļaušanas sarakstā pārbauda cilvēks un automatizētie pārbaudes, taču kļūdas var tikt cauri. Instalējiet tikai spraudņus, kam uzticat, un pārbaudiet, ko katrs no tiem pieprasa.",
+        "communityConfirmBody": "Kopienas spraudņus izstrādājuši citi cilvēki, nevis D.EX.T.E.R. komanda. Katru versiju pirms iekļaušanas sarakstā pārbauda cilvēks un automatizētie pārbaudes, taču kļūdas var tikt cauri. Instalējiet tikai spraudņus, kam uzticat, un pārbaudiet, ko katrs no tiem pieprasa.",
         "communityConfirm": "Ieslēgt",
         "communityBadge": "Kopiena",
         "communityBadgeHint": "No kopienas reģistra. Izstrādājis cits cilvēks un pārskatīts pirms iekļaušanas sarakstā.",
         "customBadge": "Pielāgots",
-        "customBadgeHint": "No {{name}}, reģistra, ko pievienoja administrators. Nepārskatīts Termix komandas.",
+        "customBadgeHint": "No {{name}}, reģistra, ko pievienoja administrators. Nepārskatīts D.EX.T.E.R. komandas.",
         "remove": "Noņemt",
         "removeTitle": "Noņemt {{name}}?",
         "removeBody": "Tā spraudņi vairs neparādīsies sadaļā „Pārlūkot”. To varat pievienot vēlāk.",
@@ -1591,7 +1591,7 @@
         "downloadsHint": "Cik reižu izlaidums tika lejupielādēts. Tas nav instalāciju skaits."
       },
       "unverified": "Nav verificēts",
-      "unverifiedHint": "Instalēts no faila. Termix to nav pārbaudījis vai parakstījis.",
+      "unverifiedHint": "Instalēts no faila. D.EX.T.E.R. to nav pārbaudījis vai parakstījis.",
       "reportIssue": "Ziņot par problēmu",
       "reportTo": "Ziņot {{author}}",
       "requestFeature": "Pieprasīt funkciju",
@@ -1647,10 +1647,10 @@
         "perPage": "{{count}} lapā",
         "perPageLabel": "Spraudņi lapā"
       },
-      "showUnsupportedHint": "Šie ir uzskaitīti, bet šajā versijā vēl nav pieejams neviens izlaidums. Atjauniniet Termix, lai tos instalētu.",
-      "unsupported": "Nepieciešams jaunāks Termix",
-      "unsupportedHint": "Šī spraudņa izlaidums nestrādā šajā Termix versijā. Atjauniniet Termix, lai to instalētu.",
-      "needsTermix": "Nepieciešams Termix {{range}}",
+      "showUnsupportedHint": "Šie ir uzskaitīti, bet šajā versijā vēl nav pieejams neviens izlaidums. Atjauniniet D.EX.T.E.R., lai tos instalētu.",
+      "unsupported": "Nepieciešams jaunāks D.EX.T.E.R.",
+      "unsupportedHint": "Šī spraudņa izlaidums nestrādā šajā D.EX.T.E.R. versijā. Atjauniniet D.EX.T.E.R., lai to instalētu.",
+      "needsTermix": "Nepieciešams D.EX.T.E.R. {{range}}",
       "showUnsupported": "Rādīt neatbalstītos ({{count}})",
       "showMore": "Rādīt vēl {{count}} (atlicis {{total}})"
     }

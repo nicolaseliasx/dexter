@@ -1107,7 +1107,7 @@ class AuthManager {
       !allowsSetupSession(path)
     ) {
       res.status(403).json({
-        error: "Set up a second factor before using Termix",
+        error: "Set up a second factor before using D.EX.T.E.R.",
         code: "SECOND_FACTOR_SETUP_REQUIRED",
       });
       return true;

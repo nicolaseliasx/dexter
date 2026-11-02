@@ -280,13 +280,13 @@ export async function remoteJson<T>(
     ) {
       throw new RemoteError(
         "basic_auth",
-        "The server asks for a username and password before Termix",
+        "The server asks for a username and password before D.EX.T.E.R.",
         401,
       );
     }
     throw new RemoteError(
       "proxy",
-      `Something other than Termix answered (${response.status})`,
+      `Something other than D.EX.T.E.R. answered (${response.status})`,
       response.status,
     );
   }

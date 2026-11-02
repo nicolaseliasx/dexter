@@ -922,8 +922,8 @@ async function requireRelease(
     const termix = neededTermix(found.release);
     throw new PluginManageError(
       termix
-        ? `${pluginId} ${found.release.version} needs Termix ${termix}`
-        : `${pluginId} ${found.release.version} does not run on this version of Termix`,
+        ? `${pluginId} ${found.release.version} needs D.EX.T.E.R. ${termix}`
+        : `${pluginId} ${found.release.version} does not run on this version of D.EX.T.E.R.`,
       409,
       "INCOMPATIBLE",
     );
@@ -1613,7 +1613,7 @@ function validateUpload(buffer: Buffer): PluginManifest {
   }
   if (!isApiCompatible(String(manifest.engine.api))) {
     throw new PluginManageError(
-      `${manifest.id} ${manifest.version} does not run on this version of Termix`,
+      `${manifest.id} ${manifest.version} does not run on this version of D.EX.T.E.R.`,
       409,
       "INCOMPATIBLE",
     );
@@ -1621,7 +1621,7 @@ function validateUpload(buffer: Buffer): PluginManifest {
   const termix = neededTermix({ engine: manifest.engine });
   if (termix) {
     throw new PluginManageError(
-      `${manifest.id} ${manifest.version} needs Termix ${termix}`,
+      `${manifest.id} ${manifest.version} needs D.EX.T.E.R. ${termix}`,
       409,
       "INCOMPATIBLE",
     );
@@ -1642,7 +1642,7 @@ async function assertReplaceable(
   if (official && !loader.get(pluginId)) return null;
   if (loader.bundledIds().has(pluginId)) {
     throw new PluginManageError(
-      `${pluginId} ships with Termix and can only be replaced by a signed release`,
+      `${pluginId} ships with D.EX.T.E.R. and can only be replaced by a signed release`,
       409,
       "BUNDLED_ID",
     );

@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "{{current}}. lépés a {{total}}-ból",
-    "stageLabel": "Termix beállítása",
+    "stageLabel": "D.EX.T.E.R. beállítása",
     "setupHeading": "Munkaterület beállítása",
     "partialHeading": "Egyes új dolgok beállítása",
     "signOut": "Kijelentkezés",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Bekapcsolva",
     "pluginsChoice_disabled": "Kikapcsolva",
     "pluginsChoice_remove": "Eltávolítás",
-    "pluginsConsentTitle": "Segítsen a Termix fejlesztésében",
+    "pluginsConsentTitle": "Segítsen a D.EX.T.E.R. fejlesztésében",
     "pluginsConsentNote": "Ezt bármikor kikapcsolhatja a Bővítmények fülön.",
     "pluginsApplying": "Választásai alkalmazása",
     "pluginsSomeFailed": "Néhány bővítmény nem módosítható. Ezeket később javíthatja a Bővítmények fülön. Nyomja meg a Tovább gombot a folytatáshoz.",
@@ -226,13 +226,13 @@
     "neverBody": "Ne ellenőrizze a frissítéseket. Kézzel is ellenőrizheti a Beállításokban.",
     "onboardingTitle": "Alkalmazásfrissítések",
     "onboardingBody": "Az asztali alkalmazás mostantól képes önmagát frissíteni. Válassza ki, hogyan szeretné, hogy az új verziók érkezzenek. Ezt később módosíthatja a Beállítások > Frissítések menüpontban.",
-    "onboardingManual": "Az alkalmazás ezt a példányát úgy telepítették, hogy nem tud önmagát frissíteni, így a Termix értesítést küld, ha új verzió jelenik meg, és letöltési linket is mellékel.",
+    "onboardingManual": "Az alkalmazás ezt a példányát úgy telepítették, hogy nem tud önmagát frissíteni, így a D.EX.T.E.R. értesítést küld, ha új verzió jelenik meg, és letöltési linket is mellékel.",
     "download": "Letöltés",
     "restart": "Újraindítás most",
     "later": "Később",
-    "available": "A Termix {{version}} verziója elérhető",
+    "available": "A D.EX.T.E.R. {{version}} verziója elérhető",
     "manualHint": "Töltse le a kiadási oldalról, és telepítse a jelenlegi helyére.",
-    "ready": "A Termix {{version}} verziója készen áll a telepítésre",
+    "ready": "A D.EX.T.E.R. {{version}} verziója készen áll a telepítésre",
     "readyHint": "A következő újraindításkor települ."
   },
   "safeMode": {
@@ -387,7 +387,7 @@
     "sshPort": "SSH port",
     "authMethod": "Hitelesítési módszer",
     "authenticationMethod": "Hitelesítési módszer",
-    "authenticationMethodDesc": "Válassza ki azt az egy módszert, amelyet a Termix használ ehhez az SSH kapcsolathoz. Egyéb módszerek nem próbálkoznak automatikusan.",
+    "authenticationMethodDesc": "Válassza ki azt az egy módszert, amelyet a D.EX.T.E.R. használ ehhez az SSH kapcsolathoz. Egyéb módszerek nem próbálkoznak automatikusan.",
     "storedCredential": "Mentett hitelesítő adat",
     "selectACredential": "Válasszon egy hitelesítő adatot...",
     "keyTypeLabel": "Kulcs típusa",
@@ -403,7 +403,7 @@
     "replaceKey": "Kulcs cseréje",
     "docsLink": "Dokumentáció megtekintése",
     "agentLabel": "SSH Agent",
-    "agentDesc": "Hitelesítés egy a Termix szerveren futó SSH agent segítségével (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Az agentnek futnia kell azon a gépen, ahol a Termix hosztolva van.",
+    "agentDesc": "Hitelesítés egy a D.EX.T.E.R. szerveren futó SSH agent segítségével (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Az agentnek futnia kell azon a gépen, ahol a D.EX.T.E.R. hosztolva van.",
     "agentAuthenticationDesc": "Használjon kulcsokat egy SSH agentből a kapcsolat hitelesítéséhez. Hagyja üresen a socket elérési útját az SSH_AUTH_SOCK használatához.",
     "agentSocketPathLabel": "Agent socket elérési útja",
     "agentSocketPathPlaceholder": "Hagyja üresen az SSH_AUTH_SOCK használatához",
@@ -804,8 +804,8 @@
     "arrangeUnlockedSwitchedToManual": "Kézi rendezésre váltott, hogy a sorrend megmaradjon",
     "dragToRearrange": "Húzd a rendezéshez",
     "arrangeUnlocked": "Húzásos rendezés feloldása",
-    "webUiBindHostUnreachable": "A böngésződ nem éri el a 127.0.0.1 címet a Termix futtatásáért felelős gépen, ezért ez a végpont nem töltődik be. Használj egy olyan címet, amelyet a gép fogad, például 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Ebből a böngészőből az átirányítás ugyanazon a hosztnéven lenne elérhető, mint ahol a Termix fut, így az alagúton átvezetett szolgáltatás megkapná a Termix munkamenetedet. A cookie-k figyelmen kívül hagyják a portot. Ez a végpont nem nyílik meg itt; a Termix asztali alkalmazásból működik, vagy ha a Termix localhoston van megnyitva.",
+    "webUiBindHostUnreachable": "A böngésződ nem éri el a 127.0.0.1 címet a D.EX.T.E.R. futtatásáért felelős gépen, ezért ez a végpont nem töltődik be. Használj egy olyan címet, amelyet a gép fogad, például 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Ebből a böngészőből az átirányítás ugyanazon a hosztnéven lenne elérhető, mint ahol a D.EX.T.E.R. fut, így az alagúton átvezetett szolgáltatás megkapná a D.EX.T.E.R. munkamenetedet. A cookie-k figyelmen kívül hagyják a portot. Ez a végpont nem nyílik meg itt; a D.EX.T.E.R. asztali alkalmazásból működik, vagy ha a D.EX.T.E.R. localhoston van megnyitva.",
     "webUiErrorLabelRequired": "A(z) {{row}} végpontnak szüksége van egy címkére.",
     "webUiErrorLabelDuplicate": "Minden végpontnak egyedi névvel kell rendelkeznie.",
     "webUiErrorPortRange": "A(z) {{row}} végpontnak szüksége van egy 1 és 65535 közötti portra.",
@@ -951,8 +951,8 @@
     "retrySecondFactorUI": "Ellenőrzési módszerek újratöltése",
     "localDesktopSignedOut": "Helyi asztali munkamenet lezárva",
     "localDesktopUnavailable": "Helyi asztali munkamenet nem elérhető",
-    "localDesktopSignedOutDesc": "Kijelentkezett a helyi asztali munkamenetből. Folytassa helyi módban, hogy újra használhassa az eszköz beépített Termix szerverét.",
-    "localDesktopUnavailableDesc": "A Termix nem tudott elindítani egy helyi asztali munkamenetet. Próbálja meg újra, ahelyett, hogy új fiókot regisztrálna.",
+    "localDesktopSignedOutDesc": "Kijelentkezett a helyi asztali munkamenetből. Folytassa helyi módban, hogy újra használhassa az eszköz beépített D.EX.T.E.R. szerverét.",
+    "localDesktopUnavailableDesc": "A D.EX.T.E.R. nem tudott elindítani egy helyi asztali munkamenetet. Próbálja meg újra, ahelyett, hogy új fiókot regisztrálna.",
     "continueLocalDesktop": "Folytatás helyi asztallal",
     "retryLocalDesktop": "Helyi asztali munkamenet újrapróbálása"
   },
@@ -971,8 +971,8 @@
     "acceptNewKey": "Új kulcs elfogadása és folytatás"
   },
   "errors": {
-    "databaseConnection": "A Termix szerver nem válaszol",
-    "embeddedServerFailed": "A Termix helyi szervert nem sikerült elindítani",
+    "databaseConnection": "A D.EX.T.E.R. szerver nem válaszol",
+    "embeddedServerFailed": "A D.EX.T.E.R. helyi szervert nem sikerült elindítani",
     "unknownError": "Ismeretlen hiba",
     "syncedHostMissing": "A szinkronizált gazdagép nem létezik a csatolt szerveren",
     "linkedServerUnreachable": "A csatolt szerver nem érhető el",
@@ -999,8 +999,8 @@
     "registrationDisabled": "Még nincs Termix-fiókja. Kérjen meg egy rendszergazdát, hogy engedélyezze a külső fiókok automatikus létrehozását.",
     "userNotAllowed": "A fiókja nem jogosult a regisztrációra. Kérjük, lépjen kapcsolatba egy rendszergazdával.",
     "databaseConnectionFailed": "Lehet, hogy még indul, vagy leállt. Ez az oldal folyamatosan próbálkozik, és automatikusan folytatja a munkát, amikor a szerver újra elérhető.",
-    "embeddedServerPortInUse": "A {{port}} portot már egy másik program használja. Ez általában egy Termix Docker-konténer vagy egy előző munkamenetből maradt Termix-folyamat. Zárja be, majd indítsa újra a Termixet.",
-    "embeddedServerPortInUseUnknownPort": "A Termix által szükséges portok egyikét már egy másik program használja. Zárja be azt, ami használja, majd indítsa újra a Termixet.",
+    "embeddedServerPortInUse": "A {{port}} portot már egy másik program használja. Ez általában egy D.EX.T.E.R. Docker-konténer vagy egy előző munkamenetből maradt Termix-folyamat. Zárja be, majd indítsa újra a Termixet.",
+    "embeddedServerPortInUseUnknownPort": "A D.EX.T.E.R. által szükséges portok egyikét már egy másik program használja. Zárja be azt, ami használja, majd indítsa újra a Termixet.",
     "embeddedServerOldDatabase": "A helyi adatai a Termix 2.8 vagy régebbi verzióból származnak, és először át kell futniuk a 2.9-es verzió migrációján. Telepítse a Termix 2.9.1 verzióját, nyissa meg egyszer, hogy az adatok átkerüljenek, majd frissítsen újra erre a verzióra.",
     "embeddedServerCrashed": "A helyi szerver váratlanul leállt. Indítsa újra a Termixet, és ellenőrizze az asztali naplót, ha ez továbbra is előfordul.",
     "resetCodeSent": "A visszaállítási kód elküldve a Docker naplókba",
@@ -1144,7 +1144,7 @@
       },
       "process:spawn": {
         "title": "Programok futtatása ezen a gépen",
-        "consequence": "A programok a Termix szerveren futnak, nem a hosztjaidon."
+        "consequence": "A programok a D.EX.T.E.R. szerveren futnak, nem a hosztjaidon."
       },
       "users:write": {
         "title": "Felhasználói fiókok létrehozása és módosítása",
@@ -1168,11 +1168,11 @@
       },
       "system:tls": {
         "title": "Tanúsítványok kezelése",
-        "consequence": "Cserélheti a Termix által HTTPS-en keresztül szolgáltatott tanúsítványt, és válaszolhat a tanúsítványkiadók domain ellenőrzéseire."
+        "consequence": "Cserélheti a D.EX.T.E.R. által HTTPS-en keresztül szolgáltatott tanúsítványt, és válaszolhat a tanúsítványkiadók domain ellenőrzéseire."
       },
       "device:serial": {
         "title": "Soros és USB eszközök hozzáférése",
-        "consequence": "Megnyithat egy fizikai soros portot azon a gépen, amelyen a Termix fut."
+        "consequence": "Megnyithat egy fizikai soros portot azon a gépen, amelyen a D.EX.T.E.R. fut."
       },
       "hosts:export": {
         "title": "Hosztok exportálása titkaikkal együtt",
@@ -1196,7 +1196,7 @@
       },
       "network:serve": {
         "title": "Csatlakozások fogadása",
-        "consequence": "Megnyit egy portot a Termix szerveren."
+        "consequence": "Megnyit egy portot a D.EX.T.E.R. szerveren."
       },
       "network:broadcast": {
         "title": "Hálózati közvetítések küldése",
@@ -1240,11 +1240,11 @@
       },
       "desktop:window": {
         "title": "Asztali ablakok megnyitása",
-        "consequence": "Csak a Termix asztali alkalmazásban."
+        "consequence": "Csak a D.EX.T.E.R. asztali alkalmazásban."
       },
       "desktop:local": {
         "title": "Ezen számítógép használata",
-        "consequence": "Fájlokat olvashat és módosíthat, shellt futtathat és helyi portokat nyithat meg ezen a számítógépen. Csak a Termix asztali alkalmazásban."
+        "consequence": "Fájlokat olvashat és módosíthat, shellt futtathat és helyi portokat nyithat meg ezen a számítógépen. Csak a D.EX.T.E.R. asztali alkalmazásban."
       },
       "users:impersonate": {
         "title": "Más felhasználók nevének használata",
@@ -1272,7 +1272,7 @@
       },
       "secrets:own": {
         "title": "Saját titkok tárolása",
-        "consequence": "A Termix titkosítja. A bővítmény sosem tárolja a kulcsot."
+        "consequence": "A D.EX.T.E.R. titkosítja. A bővítmény sosem tárolja a kulcsot."
       },
       "settings:read-core": {
         "title": "Termix-beállítások olvasása",
@@ -1382,7 +1382,7 @@
         "minor": "Saját képernyőket is hozzáad, és saját adatokat tárol, amelyek elkülönülnek a többi bővítményétől.",
         "none": "Nem kér különleges hozzáférést.",
         "uploadTitle": "{{name}} telepítése fájlból",
-        "uploadWarning": "Ezt a fájlt a Termix nyilvántartás nem ellenőrizte vagy aláírta. Csak akkor telepítse, ha maga készítette, vagy megbízik abban, aki készítette."
+        "uploadWarning": "Ezt a fájlt a D.EX.T.E.R. nyilvántartás nem ellenőrizte vagy aláírta. Csak akkor telepítse, ha maga készítette, vagy megbízik abban, aki készítette."
       },
       "confirm": {
         "uninstallTitle": "Törli a(z) {{name}} bővítményt?",
@@ -1480,7 +1480,7 @@
         "security": "Biztonság"
       },
       "installedBadge": "Telepítve",
-      "incompatible": "Újabb Termix verzió szükséges",
+      "incompatible": "Újabb D.EX.T.E.R. verzió szükséges",
       "features": "Funkciók",
       "whatItCanDo": "Mit tud",
       "addsToTermix": "Kiegészíti a Termixet",
@@ -1501,12 +1501,12 @@
         "hostYourOwn": "Saját regisztráció üzemeltetése",
         "add": "Regisztráció hozzáadása",
         "addTitle": "Regisztráció hozzáadása",
-        "addHint": "Illessze be a regisztráció index.json fájljának linkjét. A Termix beolvassa, és megjeleníti azt a kulcsot, amellyel a bővítményeket aláírja. Csak olyan regisztrációkat adjon hozzá, amelyeknek megbízik a tulajdonosában.",
+        "addHint": "Illessze be a regisztráció index.json fájljának linkjét. A D.EX.T.E.R. beolvassa, és megjeleníti azt a kulcsot, amellyel a bővítményeket aláírja. Csak olyan regisztrációkat adjon hozzá, amelyeknek megbízik a tulajdonosában.",
         "urlLabel": "Index URL",
         "check": "Ellenőrzés",
         "addConfirm": "Megbízás és hozzáadás",
         "added": "A(z) {{name}} hozzáadva",
-        "customWarning": "Ebből a regisztrációból származó bővítményeket nem ellenőrzi a Termix csapata. Csak a regisztráció tulajdonosa dönt arról, mi kerül bele. Minden letöltést a fenti kulccsal kell aláírni.",
+        "customWarning": "Ebből a regisztrációból származó bővítményeket nem ellenőrzi a D.EX.T.E.R. csapata. Csak a regisztráció tulajdonosa dönt arról, mi kerül bele. Minden letöltést a fenti kulccsal kell aláírni.",
         "keyFingerprint": "Kulcs: {{keyId}}",
         "pluginCount_one": "{{count}} bővítmény",
         "pluginCount_other": "{{count}} bővítmény",
@@ -1515,12 +1515,12 @@
         "alwaysOn": "Mindig bekapcsolva",
         "communityHint": "Mások által készített bővítmények. Minden verziót egy személy és automatizált ellenőrzések is átnéznek, mielőtt felkerülne a listára.",
         "communityConfirmTitle": "Bekapcsolja a közösségi bővítményeket?",
-        "communityConfirmBody": "A közösségi bővítményeket nem a Termix csapata, hanem mások készítik. Minden verziót egy személy és automatizált ellenőrzések is átnéznek, mielőtt felkerülne a listára, de előfordulhatnak hibák. Csak olyan bővítményeket telepítsen, amelyeknek megbízik, és ellenőrizze, mire kér engedélyt mindegyik.",
+        "communityConfirmBody": "A közösségi bővítményeket nem a D.EX.T.E.R. csapata, hanem mások készítik. Minden verziót egy személy és automatizált ellenőrzések is átnéznek, mielőtt felkerülne a listára, de előfordulhatnak hibák. Csak olyan bővítményeket telepítsen, amelyeknek megbízik, és ellenőrizze, mire kér engedélyt mindegyik.",
         "communityConfirm": "Bekapcsolás",
         "communityBadge": "Közösségi",
         "communityBadgeHint": "A közösségi regisztrációból. Mások által készített, és felvétel előtt ellenőrzött.",
         "customBadge": "Egyedi",
-        "customBadgeHint": "A(z) {{name}}-ből, egy admin által hozzáadott regisztrációból. Nem ellenőrizte a Termix csapata.",
+        "customBadgeHint": "A(z) {{name}}-ből, egy admin által hozzáadott regisztrációból. Nem ellenőrizte a D.EX.T.E.R. csapata.",
         "remove": "Eltávolítás",
         "removeTitle": "Eltávolítja a(z) {{name}} elemet?",
         "removeBody": "A benne lévő bővítmények már nem jelennek meg a Böngészés fülön. Később újra hozzáadhatja.",
@@ -1554,7 +1554,7 @@
         "downloadsHint": "Hányszor letöltötték egy kiadást. Ez nem a telepítések számát jelenti."
       },
       "unverified": "Nem ellenőrzött",
-      "unverifiedHint": "Fájlból telepítve. A Termix nem ellenőrizte vagy aláírta.",
+      "unverifiedHint": "Fájlból telepítve. A D.EX.T.E.R. nem ellenőrizte vagy aláírta.",
       "reportIssue": "Hiba bejelentése",
       "reportTo": "Bejelentés {{author}} felé",
       "requestFeature": "Funkciókérés",
@@ -1610,9 +1610,9 @@
         "perPageLabel": "Bővítmények oldalanként"
       },
       "showUnsupportedHint": "Ezek szerepelnek a listában, de még nincs kiadás, amely ezen a verzión futna. Frissítse a Termixet a telepítéshez.",
-      "unsupported": "Újabb Termix verzió szükséges",
-      "unsupportedHint": "Nincs olyan kiadása ennek a bővítménynek, amely ezen a Termix verzión futna. Frissítse a Termixet a telepítéshez.",
-      "needsTermix": "Termix {{range}} szükséges",
+      "unsupported": "Újabb D.EX.T.E.R. verzió szükséges",
+      "unsupportedHint": "Nincs olyan kiadása ennek a bővítménynek, amely ezen a D.EX.T.E.R. verzión futna. Frissítse a Termixet a telepítéshez.",
+      "needsTermix": "D.EX.T.E.R. {{range}} szükséges",
       "showUnsupported": "Nem támogatottak megjelenítése ({{count}})",
       "showMore": "Még {{count}} megjelenítése ({{total}} hátralévő)"
     }

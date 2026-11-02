@@ -271,7 +271,7 @@ export class PluginLoader {
 
     if (!isTermixCompatible(manifest.engine.termix, getLocalVersion())) {
       throw new Error(
-        `Plugin ${manifest.id} needs Termix ${manifest.engine.termix}, but this is ${getLocalVersion()}`,
+        `Plugin ${manifest.id} needs D.EX.T.E.R. ${manifest.engine.termix}, but this is ${getLocalVersion()}`,
       );
     }
 

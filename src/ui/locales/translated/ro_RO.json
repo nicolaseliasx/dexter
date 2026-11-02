@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Pasul {{current}} din {{total}}",
-    "stageLabel": "Configurare Termix",
+    "stageLabel": "Configurare D.EX.T.E.R.",
     "setupHeading": "Configurează spațiul de lucru",
     "partialHeading": "Câteva lucruri noi de configurat",
     "signOut": "Deconectare",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Activat",
     "pluginsChoice_disabled": "Dezactivat",
     "pluginsChoice_remove": "Elimină",
-    "pluginsConsentTitle": "Ajută la îmbunătățirea Termix",
+    "pluginsConsentTitle": "Ajută la îmbunătățirea D.EX.T.E.R.",
     "pluginsConsentNote": "Poți dezactiva această opțiune oricând din fila Plugin-uri.",
     "pluginsApplying": "Se aplică alegerile tale",
     "pluginsSomeFailed": "Unele plugin-uri nu au putut fi modificate. Le poți repara mai târziu din fila Plugin-uri. Apasă Înainte pentru a continua.",
@@ -226,14 +226,14 @@
     "neverBody": "Nu verifica actualizările. Îți poți verifica manual în Setări.",
     "onboardingTitle": "Actualizări aplicație",
     "onboardingBody": "Aplicația desktop se poate actualiza acum singură. Alege cum vrei să primești versiunile noi. Poți modifica această setare ulterior în Setări, Actualizări.",
-    "onboardingManual": "Această copie a aplicației a fost instalată într-un mod care nu permite actualizarea automată, așa că Termix îți va anunța când apare o versiune nouă, cu un link pentru descărcare.",
+    "onboardingManual": "Această copie a aplicației a fost instalată într-un mod care nu permite actualizarea automată, așa că D.EX.T.E.R. îți va anunța când apare o versiune nouă, cu un link pentru descărcare.",
     "download": "Descarcă",
     "restart": "Repornire acum",
     "later": "Mai târziu",
-    "available": "Termix {{version}} este disponibil",
+    "available": "D.EX.T.E.R. {{version}} este disponibil",
     "manualHint": "Descarcă-l de pe pagina de lansare și instalează-l peste cel actual.",
-    "ready": "Termix {{version}} este gata de instalare",
-    "readyHint": "Se instalează data viitoare când Termix se repornește."
+    "ready": "D.EX.T.E.R. {{version}} este gata de instalare",
+    "readyHint": "Se instalează data viitoare când D.EX.T.E.R. se repornește."
   },
   "safeMode": {
     "title": "Mod sigur",
@@ -391,7 +391,7 @@
     "sshPort": "Port SSH",
     "authMethod": "Metodă de autentificare",
     "authenticationMethod": "Metodă de autentificare",
-    "authenticationMethodDesc": "Selectează metoda pe care Termix o va folosi pentru autentificarea acestei conexiuni SSH. Celelalte metode nu sunt încercate automat.",
+    "authenticationMethodDesc": "Selectează metoda pe care D.EX.T.E.R. o va folosi pentru autentificarea acestei conexiuni SSH. Celelalte metode nu sunt încercate automat.",
     "storedCredential": "Credențial stocată",
     "selectACredential": "Selectează o credențială...",
     "keyTypeLabel": "Tip cheie",
@@ -407,7 +407,7 @@
     "replaceKey": "Înlocuiește cheia",
     "docsLink": "Vezi documentația",
     "agentLabel": "Agent SSH",
-    "agentDesc": "Autentifică folosind un agent SSH care rulează pe serverul Termix (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agentul trebuie să ruleze pe mașina unde este găzduit Termix.",
+    "agentDesc": "Autentifică folosind un agent SSH care rulează pe serverul D.EX.T.E.R. (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agentul trebuie să ruleze pe mașina unde este găzduit D.EX.T.E.R.",
     "agentAuthenticationDesc": "Folosește cheile dintr-un agent SSH pentru a autentifica această conexiune. Lasă calea socketului goală pentru a folosi SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Calea socketului agentului",
     "agentSocketPathPlaceholder": "Lasă gol pentru a folosi SSH_AUTH_SOCK",
@@ -816,8 +816,8 @@
     "arrangeUnlockedSwitchedToManual": "Comutat la sortare manuală pentru ca ordinea ta să fie păstrată",
     "dragToRearrange": "Trage pentru a rearanja",
     "arrangeUnlocked": "Deblochează tragerea pentru rearanjare",
-    "webUiBindHostUnreachable": "Browserul tău nu poate ajunge la 127.0.0.1 pe mașina care rulează Termix, așa că acest endpoint nu se va încărca. Folosește o adresă la care răspunde mașina, cum ar fi 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Din acest browser, forward-ul ar fi accesat la același nume de gazdă de unde este servit Termix, așa că serviciul tunelat ar primi sesiunea ta Termix. Cookie-urile ignoră portul. Acest endpoint va refuza să se deschidă aici; funcționează din aplicația desktop Termix sau când Termix este deschis la localhost.",
+    "webUiBindHostUnreachable": "Browserul tău nu poate ajunge la 127.0.0.1 pe mașina care rulează D.EX.T.E.R., așa că acest endpoint nu se va încărca. Folosește o adresă la care răspunde mașina, cum ar fi 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Din acest browser, forward-ul ar fi accesat la același nume de gazdă de unde este servit D.EX.T.E.R., așa că serviciul tunelat ar primi sesiunea ta D.EX.T.E.R. Cookie-urile ignoră portul. Acest endpoint va refuza să se deschidă aici; funcționează din aplicația desktop D.EX.T.E.R. sau când D.EX.T.E.R. este deschis la localhost.",
     "webUiErrorLabelRequired": "Endpoint-ul {{row}} are nevoie de o etichetă.",
     "webUiErrorLabelDuplicate": "Fiecare endpoint are nevoie de un nume diferit.",
     "webUiErrorPortRange": "Endpoint-ul {{row}} are nevoie de un port între 1 și 65535.",
@@ -964,8 +964,8 @@
     "retrySecondFactorUI": "Reîncarcă metodele de verificare",
     "localDesktopSignedOut": "Sesiunea desktop locală s-a deconectat",
     "localDesktopUnavailable": "Sesiunea desktop locală nu este disponibilă",
-    "localDesktopSignedOutDesc": "V-ați deconectat de la sesiunea desktop locală. Continuați local pentru a utiliza din nou serverul Termix integrat al acestui dispozitiv.",
-    "localDesktopUnavailableDesc": "Termix nu a putut porni o sesiune desktop locală. Încercați din nou în loc să înregistrați un cont nou.",
+    "localDesktopSignedOutDesc": "V-ați deconectat de la sesiunea desktop locală. Continuați local pentru a utiliza din nou serverul D.EX.T.E.R. integrat al acestui dispozitiv.",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R. nu a putut porni o sesiune desktop locală. Încercați din nou în loc să înregistrați un cont nou.",
     "continueLocalDesktop": "Continuă cu desktopul local",
     "retryLocalDesktop": "Reîncearcă sesiunea desktop locală"
   },
@@ -984,8 +984,8 @@
     "acceptNewKey": "Acceptă cheia nouă și continuă"
   },
   "errors": {
-    "databaseConnection": "Serverul Termix nu răspunde",
-    "embeddedServerFailed": "Serverul local Termix nu a putut fi pornit",
+    "databaseConnection": "Serverul D.EX.T.E.R. nu răspunde",
+    "embeddedServerFailed": "Serverul local D.EX.T.E.R. nu a putut fi pornit",
     "unknownError": "Eroare necunoscută",
     "syncedHostMissing": "Gazda sincronizată nu există pe serverul legat",
     "linkedServerUnreachable": "Serverul legat nu este accesibil",
@@ -1009,13 +1009,13 @@
     "sessionExpiredLogin": "Sesiunea a expirat. Vă rugăm să vă autentificați din nou."
   },
   "messages": {
-    "registrationDisabled": "Nu aveți încă un cont Termix. Cereți unui administrator să activeze opțiunea „Auto-create external accounts” (Creare automată conturi externe).",
+    "registrationDisabled": "Nu aveți încă un cont D.EX.T.E.R. Cereți unui administrator să activeze opțiunea „Auto-create external accounts” (Creare automată conturi externe).",
     "userNotAllowed": "Contul dvs. nu este autorizat pentru înregistrare. Vă rugăm să contactați un administrator.",
     "databaseConnectionFailed": "Este posibil să se mai inițializeze sau să fi oprit. Această pagină continuă să încerce și va reveni automat când serverul va fi din nou disponibil.",
-    "embeddedServerPortInUse": "Portul {{port}} este deja utilizat de un alt program. De obicei, acesta este un container Docker Termix sau un proces Termix rămas dintr-o sesiune anterioară. Închideți-l, apoi reporniți Termix.",
-    "embeddedServerPortInUseUnknownPort": "Unul dintre porturile de care are nevoie Termix este deja utilizat de un alt program. Închideți aplicația care îl utilizează, apoi reporniți Termix.",
+    "embeddedServerPortInUse": "Portul {{port}} este deja utilizat de un alt program. De obicei, acesta este un container Docker D.EX.T.E.R. sau un proces D.EX.T.E.R. rămas dintr-o sesiune anterioară. Închideți-l, apoi reporniți D.EX.T.E.R.",
+    "embeddedServerPortInUseUnknownPort": "Unul dintre porturile de care are nevoie D.EX.T.E.R. este deja utilizat de un alt program. Închideți aplicația care îl utilizează, apoi reporniți D.EX.T.E.R.",
     "embeddedServerOldDatabase": "Datele locale sunt din Termix 2.8 sau o versiune anterioară și trebuie să treacă mai întâi prin versiunea 2.9. Instalați Termix 2.9.1, deschideți-l o dată pentru a vă muta datele, apoi actualizați din nou la această versiune.",
-    "embeddedServerCrashed": "Serverul local s-a oprit neașteptat. Reporniți Termix și verificați jurnalul desktop dacă problema persistă.",
+    "embeddedServerCrashed": "Serverul local s-a oprit neașteptat. Reporniți D.EX.T.E.R. și verificați jurnalul desktop dacă problema persistă.",
     "resetCodeSent": "Codul de resetare a fost trimis în jurnalul Docker",
     "codeVerified": "Codul a fost verificat cu succes",
     "passwordResetSuccess": "Parola a fost resetată cu succes",
@@ -1140,7 +1140,7 @@
         "missing": "Niciun plugin instalat nu oferă acest aspect.",
         "disabled": "Plugin-ul care oferă acest aspect este dezactivat.",
         "blocked": "Plugin-ul care oferă acest aspect așteaptă ceva de care are nevoie.",
-        "incompatible": "Plugin-ul care oferă acest aspect nu funcționează cu această versiune de Termix.",
+        "incompatible": "Plugin-ul care oferă acest aspect nu funcționează cu această versiune de D.EX.T.E.R.",
         "failed": "Aspectul nu a putut fi pornit.",
         "crashed": "Aspectul a eșuat de două ori în timpul randării aplicației."
       },
@@ -1161,7 +1161,7 @@
       },
       "process:spawn": {
         "title": "Execută programe pe acest dispozitiv",
-        "consequence": "Programele rulează pe serverul Termix însuși, nu pe host-urile tale."
+        "consequence": "Programele rulează pe serverul D.EX.T.E.R. însuși, nu pe host-urile tale."
       },
       "users:write": {
         "title": "Creează și modifică conturi de utilizator",
@@ -1185,11 +1185,11 @@
       },
       "system:tls": {
         "title": "Gestionează certificatele",
-        "consequence": "Poate înlocui certificatul pe care Termix îl servește prin HTTPS și poate răspunde la verificările de domeniu de la autoritățile de certificare."
+        "consequence": "Poate înlocui certificatul pe care D.EX.T.E.R. îl servește prin HTTPS și poate răspunde la verificările de domeniu de la autoritățile de certificare."
       },
       "device:serial": {
         "title": "Accesează dispozitivele seriale și USB",
-        "consequence": "Poate deschide un port serial fizic pe mașina care rulează Termix."
+        "consequence": "Poate deschide un port serial fizic pe mașina care rulează D.EX.T.E.R."
       },
       "hosts:export": {
         "title": "Exportă gazdele cu secretele lor",
@@ -1213,7 +1213,7 @@
       },
       "network:serve": {
         "title": "Acceptă conexiuni",
-        "consequence": "Deschide un port pe serverul Termix."
+        "consequence": "Deschide un port pe serverul D.EX.T.E.R."
       },
       "network:broadcast": {
         "title": "Trimite broadcast-uri de rețea",
@@ -1257,11 +1257,11 @@
       },
       "desktop:window": {
         "title": "Deschide ferestre desktop",
-        "consequence": "Doar în aplicația desktop Termix."
+        "consequence": "Doar în aplicația desktop D.EX.T.E.R."
       },
       "desktop:local": {
         "title": "Folosește acest calculator",
-        "consequence": "Poate citi și modifica fișiere, rula un shell și deschide porturi locale pe acest calculator. Doar în aplicația desktop Termix."
+        "consequence": "Poate citi și modifica fișiere, rula un shell și deschide porturi locale pe acest calculator. Doar în aplicația desktop D.EX.T.E.R."
       },
       "users:impersonate": {
         "title": "Acționează în numele altor utilizatori",
@@ -1289,10 +1289,10 @@
       },
       "secrets:own": {
         "title": "Să își stocheze propriile secrete",
-        "consequence": "Criptate de Termix. Pluginul nu deține niciodată cheia."
+        "consequence": "Criptate de D.EX.T.E.R. Pluginul nu deține niciodată cheia."
       },
       "settings:read-core": {
-        "title": "Să citească setările Termix",
+        "title": "Să citească setările D.EX.T.E.R.",
         "consequence": "Setări ale serverului, nu ale gazdelor sau a acreditărilor tale."
       },
       "plugins:read": {
@@ -1410,7 +1410,7 @@
         "minor": "Adaugă propriile ecrane și stochează propriile date, separate de cele ale altor plugin-uri.",
         "none": "Nu solicită acces special.",
         "uploadTitle": "Instalează {{name}} dintr-un fișier",
-        "uploadWarning": "Acest fișier nu a fost verificat sau semnat de registrul Termix. Instalează-l doar dacă l-ai creat tu însuți sau dacă ai încredere în persoana care l-a creat."
+        "uploadWarning": "Acest fișier nu a fost verificat sau semnat de registrul D.EX.T.E.R. Instalează-l doar dacă l-ai creat tu însuți sau dacă ai încredere în persoana care l-a creat."
       },
       "confirm": {
         "uninstallTitle": "Dezinstalezi {{name}}?",
@@ -1513,10 +1513,10 @@
         "security": "Securitate"
       },
       "installedBadge": "Instalat",
-      "incompatible": "Necesită o versiune mai nouă de Termix",
+      "incompatible": "Necesită o versiune mai nouă de D.EX.T.E.R.",
       "features": "Funcționalități",
       "whatItCanDo": "Ce poate face",
-      "addsToTermix": "Adaugă în Termix",
+      "addsToTermix": "Adaugă în D.EX.T.E.R.",
       "addsToTermixHint": "Dezinstalarea va elimina toate acestea.",
       "noServerAccess": "Fără acces la serverele tale",
       "searchInstalled": "Caută în instalate",
@@ -1534,12 +1534,12 @@
         "hostYourOwn": "Găzduiește-ți propriul registru",
         "add": "Adaugă registru",
         "addTitle": "Adaugă un registru",
-        "addHint": "Lipește link-ul către index.json al registrului. Termix îl citește și afișează cheia cu care semnează pluginurile. Adaugă doar registre de la surse de încredere.",
+        "addHint": "Lipește link-ul către index.json al registrului. D.EX.T.E.R. îl citește și afișează cheia cu care semnează pluginurile. Adaugă doar registre de la surse de încredere.",
         "urlLabel": "URL index",
         "check": "Verifică",
         "addConfirm": "Aprobă și adaugă",
         "added": "Adăugat {{name}}",
-        "customWarning": "Pluginurile din acest registru nu sunt verificate de echipa Termix. Doar proprietarul registrului decide ce conține. Fiecare descărcare trebuie semnată cu cheia de mai sus.",
+        "customWarning": "Pluginurile din acest registru nu sunt verificate de echipa D.EX.T.E.R. Doar proprietarul registrului decide ce conține. Fiecare descărcare trebuie semnată cu cheia de mai sus.",
         "keyFingerprint": "Cheia {{keyId}}",
         "pluginCount_one": "{{count}} plugin",
         "pluginCount_few": "{{count}} pluginuri",
@@ -1549,12 +1549,12 @@
         "alwaysOn": "Mereu activat",
         "communityHint": "Pluginuri create de alte persoane. Fiecare versiune este verificată de o persoană și prin verificări automate înainte de a fi listată.",
         "communityConfirmTitle": "Activezi pluginurile comunității?",
-        "communityConfirmBody": "Pluginurile comunității sunt create de alte persoane, nu de echipa Termix. Fiecare versiune este verificată de o persoană și prin verificări automate înainte de a fi listată, dar pot trece totuși erori. Instalează doar pluginuri de care ai încredere și verifică ce solicită fiecare.",
+        "communityConfirmBody": "Pluginurile comunității sunt create de alte persoane, nu de echipa D.EX.T.E.R. Fiecare versiune este verificată de o persoană și prin verificări automate înainte de a fi listată, dar pot trece totuși erori. Instalează doar pluginuri de care ai încredere și verifică ce solicită fiecare.",
         "communityConfirm": "Activează",
         "communityBadge": "Comunitate",
         "communityBadgeHint": "Din registrul comunității. Creat de alte persoane și verificat înainte de listare.",
         "customBadge": "Personalizat",
-        "customBadgeHint": "Din {{name}}, un registru adăugat de un administrator. Nu este verificat de echipa Termix.",
+        "customBadgeHint": "Din {{name}}, un registru adăugat de un administrator. Nu este verificat de echipa D.EX.T.E.R.",
         "remove": "Elimină",
         "removeTitle": "Elimină {{name}}?",
         "removeBody": "Plugin-urile sale nu vor mai apărea în secțiunea Browse. Le poți adăuga din nou mai târziu.",
@@ -1591,7 +1591,7 @@
         "downloadsHint": "De câte ori a fost descărcată o versiune. Acesta nu este numărul de instalări."
       },
       "unverified": "Nevalidat",
-      "unverifiedHint": "Instalat dintr-un fișier. Termix nu l-a verificat sau semnat.",
+      "unverifiedHint": "Instalat dintr-un fișier. D.EX.T.E.R. nu l-a verificat sau semnat.",
       "reportIssue": "Semnalează o problemă",
       "reportTo": "Semnalează către {{author}}",
       "requestFeature": "Solicită o funcționalitate",
@@ -1647,10 +1647,10 @@
         "perPage": "{{count}} per pagină",
         "perPageLabel": "Pluginuri per pagină"
       },
-      "showUnsupportedHint": "Acestea sunt listate, dar nicio versiune nu rulează încă pe această versiune. Actualizează Termix pentru a le instala.",
-      "unsupported": "Necesită o versiune mai nouă de Termix",
-      "unsupportedHint": "Nicio versiune a acestui plugin nu rulează pe această versiune de Termix. Actualizează Termix pentru a-l instala.",
-      "needsTermix": "Necesită Termix {{range}}",
+      "showUnsupportedHint": "Acestea sunt listate, dar nicio versiune nu rulează încă pe această versiune. Actualizează D.EX.T.E.R. pentru a le instala.",
+      "unsupported": "Necesită o versiune mai nouă de D.EX.T.E.R.",
+      "unsupportedHint": "Nicio versiune a acestui plugin nu rulează pe această versiune de D.EX.T.E.R. Actualizează D.EX.T.E.R. pentru a-l instala.",
+      "needsTermix": "Necesită D.EX.T.E.R. {{range}}",
       "showUnsupported": "Afișează nesuportate ({{count}})",
       "showMore": "Afișează încă {{count}} (mai rămân {{total}})"
     }

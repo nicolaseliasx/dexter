@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "שלב {{current}} מתוך {{total}}",
-    "stageLabel": "הגדרות Termix",
+    "stageLabel": "הגדרות D.EX.T.E.R.",
     "setupHeading": "הגדר את שטח העבודה שלך",
     "partialHeading": "עוד כמה דברים להגדרה",
     "signOut": "התנתק",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "פעיל",
     "pluginsChoice_disabled": "כבוי",
     "pluginsChoice_remove": "הסר",
-    "pluginsConsentTitle": "עזור לשפר את Termix",
+    "pluginsConsentTitle": "עזור לשפר את D.EX.T.E.R.",
     "pluginsConsentNote": "תוכל לכבות זאת בכל עת מהלשונית תוספים.",
     "pluginsApplying": "מחיל את הבחירות שלך",
     "pluginsSomeFailed": "לא ניתן היה לשנות חלק מהתוספים. תוכל לתקן אותם מאוחר יותר מהלשונית תוספים. לחץ על הבא כדי להמשיך.",
@@ -226,13 +226,13 @@
     "neverBody": "אל תבדוק אם יש עדכונים. עדיין ניתן לבדוק ידנית בהגדרות.",
     "onboardingTitle": "עדכוני אפליקציה",
     "onboardingBody": "אפליקציית שולחן העבודה יכולה כעת לעדכן את עצמה. בחר כיצד תרצה שגרסאות חדשות יגיעו. ניתן לשנות זאת מאוחר יותר בהגדרות, עדכונים.",
-    "onboardingManual": "עותק זה של האפליקציה הותקן בדרך שאינה מאפשרת עדכון עצמי, לכן Termix יודיע לך כאשר גרסה חדשה זמינה עם קישור להורדה.",
+    "onboardingManual": "עותק זה של האפליקציה הותקן בדרך שאינה מאפשרת עדכון עצמי, לכן D.EX.T.E.R. יודיע לך כאשר גרסה חדשה זמינה עם קישור להורדה.",
     "download": "הורד",
     "restart": "הפעל מחדש עכשיו",
     "later": "מאוחר יותר",
-    "available": "Termix {{version}} זמין",
+    "available": "D.EX.T.E.R. {{version}} זמין",
     "manualHint": "הורד אותו מדף השחרור והתקן אותו מעל זה.",
-    "ready": "Termix {{version}} מוכן להתקנה",
+    "ready": "D.EX.T.E.R. {{version}} מוכן להתקנה",
     "readyHint": "הוא מותקן בפעם הבאה ש-Termix מופעל מחדש."
   },
   "safeMode": {
@@ -407,7 +407,7 @@
     "replaceKey": "החלף מפתח",
     "docsLink": "צפה בתיעוד",
     "agentLabel": "סוכן SSH",
-    "agentDesc": "אמת באמצעות סוכן SSH הפועל על שרת Termix (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). הסוכן חייב לפעול על המכונה בה מופעל Termix.",
+    "agentDesc": "אמת באמצעות סוכן SSH הפועל על שרת D.EX.T.E.R. (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). הסוכן חייב לפעול על המכונה בה מופעל D.EX.T.E.R.",
     "agentAuthenticationDesc": "השתמש במפתחות מסוכן SSH כדי לאמת חיבור זה. השאר את נתיב הסוקט ריק כדי להשתמש ב-SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "נתיב סוקט סוכן",
     "agentSocketPathPlaceholder": "השאר ריק כדי להשתמש ב-SSH_AUTH_SOCK",
@@ -816,8 +816,8 @@
     "arrangeUnlockedSwitchedToManual": "הוחלף למיון ידני כדי שהסדר שלך יישאר",
     "dragToRearrange": "גרור לסידור מחדש",
     "arrangeUnlocked": "בטל נעילה לגרירה לסידור מחדש",
-    "webUiBindHostUnreachable": "הדפדפן שלך אינו יכול להגיע ל-127.0.0.1 במכונה הרצה את Termix, ולכן נקודת הקצה הזו לא תטען. השתמש בכתובת שהמכונה עונה עליה, כמו 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "מדפדפן זה, ההפניה תהיה נגישה באותו שם מארח שבו Termix מוגש, ולכן השירות המנהור יקבל את הפגישה שלך ב-Termix. עוגיות מתעלמות מהפורט. נקודת קצה זו תסרב להיפתח כאן; היא עובדת מאפליקציית הדסקטופ של Termix, או כאשר Termix נפתח ב-localhost.",
+    "webUiBindHostUnreachable": "הדפדפן שלך אינו יכול להגיע ל-127.0.0.1 במכונה הרצה את D.EX.T.E.R., ולכן נקודת הקצה הזו לא תטען. השתמש בכתובת שהמכונה עונה עליה, כמו 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "מדפדפן זה, ההפניה תהיה נגישה באותו שם מארח שבו D.EX.T.E.R. מוגש, ולכן השירות המנהור יקבל את הפגישה שלך ב-Termix. עוגיות מתעלמות מהפורט. נקודת קצה זו תסרב להיפתח כאן; היא עובדת מאפליקציית הדסקטופ של D.EX.T.E.R., או כאשר D.EX.T.E.R. נפתח ב-localhost.",
     "webUiErrorLabelRequired": "נקודת הקצה {{row}} צריכה תווית.",
     "webUiErrorLabelDuplicate": "לכל נקודת קצה צריך שם שונה.",
     "webUiErrorPortRange": "נקודת הקצה {{row}} צריכה פורט בין 1 ל-65535.",
@@ -964,8 +964,8 @@
     "retrySecondFactorUI": "טען מחדש שיטות אימות",
     "localDesktopSignedOut": "יצאת מהשולחן העבודה המקומי",
     "localDesktopUnavailable": "הפעלת שולחן עבודה מקומי אינה זמינה",
-    "localDesktopSignedOutDesc": "יצאת מההפעלה המקומית של שולחן העבודה. המשך באופן מקומי כדי להשתמש שוב בשרת Termix המובנה של המכשיר הזה.",
-    "localDesktopUnavailableDesc": "Termix לא הצליח להתחיל הפעלה מקומית של שולחן עבודה. נסה שוב במקום להירשם לחשבון חדש.",
+    "localDesktopSignedOutDesc": "יצאת מההפעלה המקומית של שולחן העבודה. המשך באופן מקומי כדי להשתמש שוב בשרת D.EX.T.E.R. המובנה של המכשיר הזה.",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R. לא הצליח להתחיל הפעלה מקומית של שולחן עבודה. נסה שוב במקום להירשם לחשבון חדש.",
     "continueLocalDesktop": "המשך עם שולחן העבודה המקומי",
     "retryLocalDesktop": "נסה שוב את הפעלת שולחן העבודה המקומי"
   },
@@ -984,8 +984,8 @@
     "acceptNewKey": "קבל מפתח חדש והמשך"
   },
   "errors": {
-    "databaseConnection": "שרת Termix אינו מגיב",
-    "embeddedServerFailed": "שרת Termix המקומי לא הצליח להתחיל",
+    "databaseConnection": "שרת D.EX.T.E.R. אינו מגיב",
+    "embeddedServerFailed": "שרת D.EX.T.E.R. המקומי לא הצליח להתחיל",
     "unknownError": "שגיאה לא ידועה",
     "syncedHostMissing": "המארח המסונכרן אינו קיים בשרת המקושר",
     "linkedServerUnreachable": "השרת המקושר אינו נגיש",
@@ -1012,10 +1012,10 @@
     "registrationDisabled": "אין לך עדיין חשבון ב-Termix. בקש ממנהל מערכת להפעיל את האפשרות 'צור חשבונות חיצוניים אוטומטית'.",
     "userNotAllowed": "החשבון שלך אינו מורשה להרשמה. אנא פנה למנהל המערכת.",
     "databaseConnectionFailed": "ייתכן שהוא עדיין מתחיל להפעיל, או שהופסק. דף זה ממשיך לנסות וממשיך באופן אוטומטי ברגע שהשרת חוזר.",
-    "embeddedServerPortInUse": "הפורט {{port}} כבר בשימוש על ידי תוכנית אחרת. לרוב מדובר במיכל Docker של Termix או בתהליך Termix שנותר מהפעלה קודמת. סגור אותו, ואז הפעל מחדש את Termix.",
-    "embeddedServerPortInUseUnknownPort": "אחד מהפורטים ש-Termix זקוק להם כבר בשימוש על ידי תוכנית אחרת. סגור את מה שמשתמש בו, ואז הפעל מחדש את Termix.",
+    "embeddedServerPortInUse": "הפורט {{port}} כבר בשימוש על ידי תוכנית אחרת. לרוב מדובר במיכל Docker של D.EX.T.E.R. או בתהליך D.EX.T.E.R. שנותר מהפעלה קודמת. סגור אותו, ואז הפעל מחדש את D.EX.T.E.R.",
+    "embeddedServerPortInUseUnknownPort": "אחד מהפורטים ש-Termix זקוק להם כבר בשימוש על ידי תוכנית אחרת. סגור את מה שמשתמש בו, ואז הפעל מחדש את D.EX.T.E.R.",
     "embeddedServerOldDatabase": "הנתונים המקומיים שלך הם מ-Termix 2.8 או קודם יותר, ועליהם לעבור דרך גרסה 2.9 תחילה. התקן את Termix 2.9.1, פתח אותו פעם אחת כדי שיוכל להעביר את הנתונים שלך, ואז עדכן שוב לגרסה זו.",
-    "embeddedServerCrashed": "השרת המקומי הופסק באופן בלתי צפוי. הפעל מחדש את Termix, ובדוק את יומן השולחן העבודה אם זה ממשיך לקרות.",
+    "embeddedServerCrashed": "השרת המקומי הופסק באופן בלתי צפוי. הפעל מחדש את D.EX.T.E.R., ובדוק את יומן השולחן העבודה אם זה ממשיך לקרות.",
     "resetCodeSent": "קוד איפוס נשלח ליומני Docker",
     "codeVerified": "הקוד אומת בהצלחה",
     "passwordResetSuccess": "הסיסמה אופסה בהצלחה",
@@ -1140,7 +1140,7 @@
         "missing": "אף תוסף מותקן לא מספק את הפריסה הזו.",
         "disabled": "התוסף שמספק את הפריסה הזו כבוי.",
         "blocked": "התוסף שמספק את הפריסה הזו מחכה למשהו שהוא צריך.",
-        "incompatible": "התוסף שמספק את הפריסה הזו לא עובד עם הגרסה הזו של Termix.",
+        "incompatible": "התוסף שמספק את הפריסה הזו לא עובד עם הגרסה הזו של D.EX.T.E.R.",
         "failed": "הפריסה נכשלה בהפעלה.",
         "crashed": "הפריסה קרסה פעמיים בזמן ציור האפליקציה."
       },
@@ -1185,11 +1185,11 @@
       },
       "system:tls": {
         "title": "ניהול תעודות",
-        "consequence": "התוסף יכול להחליף את התעודה ש-HTTPS של Termix משתמש בה, ולענות על בדיקות דומיין מרשויות תעודה."
+        "consequence": "התוסף יכול להחליף את התעודה ש-HTTPS של D.EX.T.E.R. משתמש בה, ולענות על בדיקות דומיין מרשויות תעודה."
       },
       "device:serial": {
         "title": "גישה למכשירים סריאליים ו-USB",
-        "consequence": "התוסף יכול לפתוח פורט סריאלי פיזי במכשיר שרץ עליו Termix."
+        "consequence": "התוסף יכול לפתוח פורט סריאלי פיזי במכשיר שרץ עליו D.EX.T.E.R."
       },
       "hosts:export": {
         "title": "ייצא מארחים עם הסודות שלהם",
@@ -1257,11 +1257,11 @@
       },
       "desktop:window": {
         "title": "פתיחת חלונות שולחן עבודה",
-        "consequence": "רק באפליקציית שולחן העבודה של Termix."
+        "consequence": "רק באפליקציית שולחן העבודה של D.EX.T.E.R."
       },
       "desktop:local": {
         "title": "השתמש במחשב הזה",
-        "consequence": "יכול לקרוא ולשנות קבצים, להפעיל שרשרת ולפתוח פורטים מקומיים במחשב הזה. רק באפליקציית Termix."
+        "consequence": "יכול לקרוא ולשנות קבצים, להפעיל שרשרת ולפתוח פורטים מקומיים במחשב הזה. רק באפליקציית D.EX.T.E.R."
       },
       "users:impersonate": {
         "title": "פעולה כמשתמשים אחרים",
@@ -1289,10 +1289,10 @@
       },
       "secrets:own": {
         "title": "לאחסן סודות משלו",
-        "consequence": "מוצפן על ידי Termix. לתוסף אין גישה למפתח."
+        "consequence": "מוצפן על ידי D.EX.T.E.R. לתוסף אין גישה למפתח."
       },
       "settings:read-core": {
-        "title": "לקרוא הגדרות של Termix",
+        "title": "לקרוא הגדרות של D.EX.T.E.R.",
         "consequence": "הגדרות שרת, לא מארחים או אישורים שלך."
       },
       "plugins:read": {
@@ -1410,7 +1410,7 @@
         "minor": "הוא גם מוסיף מסכים משלו ושמר נתונים משלו, המוחזקים בנפרד מתוספים אחרים.",
         "none": "הוא אינו מבקש גישה מיוחדת.",
         "uploadTitle": "התקן את {{name}} מקובץ",
-        "uploadWarning": "קובץ זה לא נבדק או חתום על ידי רשומת Termix. התקן אותו רק אם בניית אותו בעצמך או סומך על מי שבנה אותו."
+        "uploadWarning": "קובץ זה לא נבדק או חתום על ידי רשומת D.EX.T.E.R. התקן אותו רק אם בניית אותו בעצמך או סומך על מי שבנה אותו."
       },
       "confirm": {
         "uninstallTitle": "להסיר התקנה של {{name}}?",
@@ -1513,7 +1513,7 @@
         "security": "אבטחה"
       },
       "installedBadge": "מותקן",
-      "incompatible": "דורש Termix חדש יותר",
+      "incompatible": "דורש D.EX.T.E.R. חדש יותר",
       "features": "תכונות",
       "whatItCanDo": "מה שהוא יכול לעשות",
       "addsToTermix": "מוסיף ל-Termix",
@@ -1534,12 +1534,12 @@
         "hostYourOwn": "ארח רשומה משלך",
         "add": "הוסף רשומה",
         "addTitle": "הוסף רשומה",
-        "addHint": "הדבק את הקישור ל-index.json של הרשומה. Termix קורא אותו ומציג את המפתח שבו הוא חותם על תוספים. הוסף רק רשומות מאנשים שאתה סומך עליהם.",
+        "addHint": "הדבק את הקישור ל-index.json של הרשומה. D.EX.T.E.R. קורא אותו ומציג את המפתח שבו הוא חותם על תוספים. הוסף רק רשומות מאנשים שאתה סומך עליהם.",
         "urlLabel": "כתובת אינדקס",
         "check": "בדוק",
         "addConfirm": "סמוך והוסף",
         "added": "נוסף {{name}}",
-        "customWarning": "תוספים מרשומה זו אינם נבדקים על ידי צוות Termix. רק בעל הרשומה מחליט מה נכלל בה. כל הורדה חייבת להיות חתומה על ידי המפתח למעלה.",
+        "customWarning": "תוספים מרשומה זו אינם נבדקים על ידי צוות D.EX.T.E.R. רק בעל הרשומה מחליט מה נכלל בה. כל הורדה חייבת להיות חתומה על ידי המפתח למעלה.",
         "keyFingerprint": "מפתח {{keyId}}",
         "pluginCount_one": "{{count}} תוסף",
         "pluginCount_two": "{{count}} תוספים",
@@ -1549,12 +1549,12 @@
         "alwaysOn": "תמיד פעיל",
         "communityHint": "תוספים שנוצרו על ידי אנשים אחרים. כל גרסה נבדקת על ידי אדם ועל ידי בדיקות אוטומטיות לפני שהיא מוצגת.",
         "communityConfirmTitle": "להפעיל תוספי קהילה?",
-        "communityConfirmBody": "תוספי קהילה נוצרים על ידי אנשים אחרים, לא על ידי צוות Termix. כל גרסה נבדקת על ידי אדם ועל ידי בדיקות אוטומטיות לפני שהיא מוצגת, אך טעויות עדיין יכולות לחדור. התקן רק תוספים שאתה סומך עליהם ובדוק מה כל אחד מהם מבקש.",
+        "communityConfirmBody": "תוספי קהילה נוצרים על ידי אנשים אחרים, לא על ידי צוות D.EX.T.E.R. כל גרסה נבדקת על ידי אדם ועל ידי בדיקות אוטומטיות לפני שהיא מוצגת, אך טעויות עדיין יכולות לחדור. התקן רק תוספים שאתה סומך עליהם ובדוק מה כל אחד מהם מבקש.",
         "communityConfirm": "הפעל",
         "communityBadge": "קהילה",
         "communityBadgeHint": "מרשומת הקהילה. נוצר על ידי אנשים אחרים ונבדק לפני שהוצג.",
         "customBadge": "מותאם אישית",
-        "customBadgeHint": "מ-{{name}}, רשומה שהוסיף מנהל. לא נבדק על ידי צוות Termix.",
+        "customBadgeHint": "מ-{{name}}, רשומה שהוסיף מנהל. לא נבדק על ידי צוות D.EX.T.E.R.",
         "remove": "הסר",
         "removeTitle": "להסיר את {{name}}?",
         "removeBody": "התוספים שלו לא יופיעו עוד בדפדוף. תוכל להוסיף אותו שוב מאוחר יותר.",
@@ -1591,7 +1591,7 @@
         "downloadsHint": "כמה פעמים גרסה הורדה. זה לא מספר ההתקנות."
       },
       "unverified": "לא מאומת",
-      "unverifiedHint": "הותקן מקובץ. Termix לא בדק או חתם עליו.",
+      "unverifiedHint": "הותקן מקובץ. D.EX.T.E.R. לא בדק או חתם עליו.",
       "reportIssue": "דווח על בעיה",
       "reportTo": "דווח ל-{{author}}",
       "requestFeature": "בקש תכונה",
@@ -1647,10 +1647,10 @@
         "perPage": "{{count}} בעמוד",
         "perPageLabel": "תוספים בעמוד"
       },
-      "showUnsupportedHint": "אלה מופיעים אך אין גרסה שרצה על גרסה זו עדיין. עדכן את Termix כדי להתקין אותם.",
-      "unsupported": "דורש Termix חדש יותר",
-      "unsupportedHint": "אין גרסה של תוסף זה שרצה על גרסה זו של Termix. עדכן את Termix כדי להתקין אותו.",
-      "needsTermix": "דורש Termix {{range}}",
+      "showUnsupportedHint": "אלה מופיעים אך אין גרסה שרצה על גרסה זו עדיין. עדכן את D.EX.T.E.R. כדי להתקין אותם.",
+      "unsupported": "דורש D.EX.T.E.R. חדש יותר",
+      "unsupportedHint": "אין גרסה של תוסף זה שרצה על גרסה זו של D.EX.T.E.R. עדכן את D.EX.T.E.R. כדי להתקין אותו.",
+      "needsTermix": "דורש D.EX.T.E.R. {{range}}",
       "showUnsupported": "הצג לא נתמך ({{count}})",
       "showMore": "הצג עוד {{count}} (נשארו {{total}})"
     }

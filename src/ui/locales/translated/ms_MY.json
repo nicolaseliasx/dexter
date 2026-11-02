@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Langkah {{current}} daripada {{total}}",
-    "stageLabel": "Persediaan Termix",
+    "stageLabel": "Persediaan D.EX.T.E.R.",
     "setupHeading": "Sediakan ruang kerja anda",
     "partialHeading": "Beberapa perkara baharu untuk disediakan",
     "signOut": "Log keluar",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Hidup",
     "pluginsChoice_disabled": "Mati",
     "pluginsChoice_remove": "Buang",
-    "pluginsConsentTitle": "Bantu perbaiki Termix",
+    "pluginsConsentTitle": "Bantu perbaiki D.EX.T.E.R.",
     "pluginsConsentNote": "Anda boleh mematikan ini pada bila-bila masa dari tab Plugin.",
     "pluginsApplying": "Mengaplikasikan pilihan anda",
     "pluginsSomeFailed": "Sebahagian plugin tidak dapat diubah. Anda boleh membetulkannya kemudian dari tab Plugin. Tekan Seterusnya untuk meneruskan.",
@@ -226,14 +226,14 @@
     "neverBody": "Jangan semak kemas kini. Anda masih boleh menyemak secara manual dalam Tetapan.",
     "onboardingTitle": "Kemas kini aplikasi",
     "onboardingBody": "Aplikasi desktop kini boleh dikemas kini secara automatik. Pilih bagaimana anda mahu versi baharu tiba. Anda boleh mengubah ini kemudian dalam Tetapan, Kemas kini.",
-    "onboardingManual": "Salinan aplikasi ini dipasang dengan cara yang tidak boleh dikemas kini secara automatik, jadi Termix akan memberitahu anda apabila versi baharu dikeluarkan dengan pautan untuk memuat turunnya.",
+    "onboardingManual": "Salinan aplikasi ini dipasang dengan cara yang tidak boleh dikemas kini secara automatik, jadi D.EX.T.E.R. akan memberitahu anda apabila versi baharu dikeluarkan dengan pautan untuk memuat turunnya.",
     "download": "Muat turun",
     "restart": "Mula semula sekarang",
     "later": "Nanti",
-    "available": "Termix {{version}} tersedia",
+    "available": "D.EX.T.E.R. {{version}} tersedia",
     "manualHint": "Muat turun dari halaman pelepasan dan pasang di atas yang ini.",
-    "ready": "Termix {{version}} sedia untuk dipasang",
-    "readyHint": "Ia akan dipasang pada kali seterusnya Termix dimulakan semula."
+    "ready": "D.EX.T.E.R. {{version}} sedia untuk dipasang",
+    "readyHint": "Ia akan dipasang pada kali seterusnya D.EX.T.E.R. dimulakan semula."
   },
   "safeMode": {
     "title": "Modus selamat",
@@ -383,7 +383,7 @@
     "sshPort": "Port SSH",
     "authMethod": "Kaedah Pengesahan",
     "authenticationMethod": "Kaedah Pengesahan",
-    "authenticationMethodDesc": "Pilih satu kaedah yang akan digunakan oleh Termix untuk mengesahkan sambungan SSH ini. Kaedah lain tidak dicuba secara automatik.",
+    "authenticationMethodDesc": "Pilih satu kaedah yang akan digunakan oleh D.EX.T.E.R. untuk mengesahkan sambungan SSH ini. Kaedah lain tidak dicuba secara automatik.",
     "storedCredential": "Kredensial Tersimpan",
     "selectACredential": "Pilih kredensial...",
     "keyTypeLabel": "Jenis Kunci",
@@ -399,7 +399,7 @@
     "replaceKey": "Ganti kunci",
     "docsLink": "Lihat dokumen",
     "agentLabel": "Ejen SSH",
-    "agentDesc": "Ketahui menggunakan ejen SSH yang berjalan pada pelayan Termix (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Ejen mesti berjalan pada mesin di mana Termix dihoskan.",
+    "agentDesc": "Ketahui menggunakan ejen SSH yang berjalan pada pelayan D.EX.T.E.R. (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Ejen mesti berjalan pada mesin di mana D.EX.T.E.R. dihoskan.",
     "agentAuthenticationDesc": "Gunakan kunci dari ejen SSH untuk mengesahkan sambungan ini. Biarkan laluan soket kosong untuk menggunakan SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Laluan Soket Ejen",
     "agentSocketPathPlaceholder": "Biarkan kosong untuk menggunakan SSH_AUTH_SOCK",
@@ -792,8 +792,8 @@
     "arrangeUnlockedSwitchedToManual": "Beralih ke susunan manual supaya susunan anda kekal",
     "dragToRearrange": "Seret untuk menyusun semula",
     "arrangeUnlocked": "Buka kunci seret untuk menyusun semula",
-    "webUiBindHostUnreachable": "Pelayar anda tidak dapat mencapai 127.0.0.1 pada mesin yang menjalankan Termix, jadi hujung ini tidak akan dimuatkan. Gunakan alamat yang dijawab oleh mesin tersebut, seperti 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Dari pelayar ini, terowong akan dicapai pada nama hos yang sama di mana Termix dilayan, jadi perkhidmatan terowong akan menerima sesi Termix anda. Kuki mengabaikan port. Hujung ini akan menolak untuk dibuka di sini; ia berfungsi dari aplikasi desktop Termix, atau apabila Termix dibuka di localhost.",
+    "webUiBindHostUnreachable": "Pelayar anda tidak dapat mencapai 127.0.0.1 pada mesin yang menjalankan D.EX.T.E.R., jadi hujung ini tidak akan dimuatkan. Gunakan alamat yang dijawab oleh mesin tersebut, seperti 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Dari pelayar ini, terowong akan dicapai pada nama hos yang sama di mana D.EX.T.E.R. dilayan, jadi perkhidmatan terowong akan menerima sesi D.EX.T.E.R. anda. Kuki mengabaikan port. Hujung ini akan menolak untuk dibuka di sini; ia berfungsi dari aplikasi desktop D.EX.T.E.R., atau apabila D.EX.T.E.R. dibuka di localhost.",
     "webUiErrorLabelRequired": "Hujung {{row}} memerlukan label.",
     "webUiErrorLabelDuplicate": "Setiap hujung memerlukan nama yang berbeza.",
     "webUiErrorPortRange": "Hujung {{row}} memerlukan port antara 1 dan 65535.",
@@ -938,8 +938,8 @@
     "retrySecondFactorUI": "Muat semula kaedah pengesahan",
     "localDesktopSignedOut": "Meja kerja tempatan telah log keluar",
     "localDesktopUnavailable": "Sesi meja kerja tempatan tidak tersedia",
-    "localDesktopSignedOutDesc": "Anda telah log keluar dari sesi meja kerja tempatan. Teruskan secara tempatan untuk menggunakan pelayan Termix terbina dalam peranti ini sekali lagi.",
-    "localDesktopUnavailableDesc": "Termix tidak dapat memulakan sesi meja kerja tempatan. Cuba semula daripada mendaftar akaun baharu.",
+    "localDesktopSignedOutDesc": "Anda telah log keluar dari sesi meja kerja tempatan. Teruskan secara tempatan untuk menggunakan pelayan D.EX.T.E.R. terbina dalam peranti ini sekali lagi.",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R. tidak dapat memulakan sesi meja kerja tempatan. Cuba semula daripada mendaftar akaun baharu.",
     "continueLocalDesktop": "Teruskan dengan meja kerja tempatan",
     "retryLocalDesktop": "Cuba semula sesi meja kerja tempatan"
   },
@@ -958,8 +958,8 @@
     "acceptNewKey": "Terima Kunci Baharu & Teruskan"
   },
   "errors": {
-    "databaseConnection": "Pelayan Termix tidak memberi respons",
-    "embeddedServerFailed": "Pelayan tempatan Termix tidak dapat dimulakan",
+    "databaseConnection": "Pelayan D.EX.T.E.R. tidak memberi respons",
+    "embeddedServerFailed": "Pelayan tempatan D.EX.T.E.R. tidak dapat dimulakan",
     "unknownError": "Ralat tidak diketahui",
     "syncedHostMissing": "Hos yang diselaraskan tidak wujud pada pelayan yang dipautkan",
     "linkedServerUnreachable": "Pelayan yang dipautkan tidak dapat dicapai",
@@ -983,13 +983,13 @@
     "sessionExpiredLogin": "Sesi telah tamat tempoh. Sila log masuk semula."
   },
   "messages": {
-    "registrationDisabled": "Anda belum mempunyai akaun Termix. Minta pentadbir menghidupkan Cipta akaun luar secara automatik.",
+    "registrationDisabled": "Anda belum mempunyai akaun D.EX.T.E.R. Minta pentadbir menghidupkan Cipta akaun luar secara automatik.",
     "userNotAllowed": "Akaun anda tidak dibenarkan untuk mendaftar. Sila hubungi pentadbir.",
     "databaseConnectionFailed": "Ia mungkin masih dalam proses permulaan, atau telah berhenti. Halaman ini akan terus cuba dan akan kembali berfungsi secara automatik apabila pelayan sedia.",
-    "embeddedServerPortInUse": "Port {{port}} sudah digunakan oleh program lain. Ini biasanya bekas kontena Docker Termix atau proses Termix yang tinggal dari sesi sebelumnya. Tutupnya, kemudian mulakan semula Termix.",
-    "embeddedServerPortInUseUnknownPort": "Salah satu port yang diperlukan oleh Termix sudah digunakan oleh program lain. Tutup apa sahaja yang menggunakannya, kemudian mulakan semula Termix.",
+    "embeddedServerPortInUse": "Port {{port}} sudah digunakan oleh program lain. Ini biasanya bekas kontena Docker D.EX.T.E.R. atau proses D.EX.T.E.R. yang tinggal dari sesi sebelumnya. Tutupnya, kemudian mulakan semula D.EX.T.E.R.",
+    "embeddedServerPortInUseUnknownPort": "Salah satu port yang diperlukan oleh D.EX.T.E.R. sudah digunakan oleh program lain. Tutup apa sahaja yang menggunakannya, kemudian mulakan semula D.EX.T.E.R.",
     "embeddedServerOldDatabase": "Data tempatan anda adalah dari Termix 2.8 atau lebih lama dan perlu melalui versi 2.9 terlebih dahulu. Pasang Termix 2.9.1, buka sekali supaya ia boleh memindahkan data anda, kemudian kemaskini ke versi ini semula.",
-    "embeddedServerCrashed": "Pelayan tempatan berhenti secara tidak dijangka. Mulakan semula Termix, dan semak log desktop jika ini berlaku berulang kali.",
+    "embeddedServerCrashed": "Pelayan tempatan berhenti secara tidak dijangka. Mulakan semula D.EX.T.E.R., dan semak log desktop jika ini berlaku berulang kali.",
     "resetCodeSent": "Kod reset dihantar ke log Docker",
     "codeVerified": "Kod berjaya disahkan",
     "passwordResetSuccess": "Kata laluan berjaya diset semula",
@@ -1106,7 +1106,7 @@
         "missing": "Tiada plugin yang dipasang menyediakan susun atur ini.",
         "disabled": "Plugin yang menyediakan susun atur ini dimatikan.",
         "blocked": "Plugin yang menyediakan susun atur ini sedang menunggu sesuatu yang diperlukan.",
-        "incompatible": "Plugin yang menyediakan susun atur ini tidak berfungsi dengan versi Termix ini.",
+        "incompatible": "Plugin yang menyediakan susun atur ini tidak berfungsi dengan versi D.EX.T.E.R. ini.",
         "failed": "Susun atur gagal dimulakan.",
         "crashed": "Susun atur terhenti dua kali semasa melukis aplikasi."
       },
@@ -1127,7 +1127,7 @@
       },
       "process:spawn": {
         "title": "Jalankan program pada mesin ini",
-        "consequence": "Program dijalankan pada pelayan Termix itu sendiri, bukan pada hos anda."
+        "consequence": "Program dijalankan pada pelayan D.EX.T.E.R. itu sendiri, bukan pada hos anda."
       },
       "users:write": {
         "title": "Cipta dan ubah akaun pengguna",
@@ -1151,11 +1151,11 @@
       },
       "system:tls": {
         "title": "Urus sijil",
-        "consequence": "Ia boleh menggantikan sijil yang dilayan oleh Termix melalui HTTPS dan menjawab semakan domain daripada pihak berkuasa sijil."
+        "consequence": "Ia boleh menggantikan sijil yang dilayan oleh D.EX.T.E.R. melalui HTTPS dan menjawab semakan domain daripada pihak berkuasa sijil."
       },
       "device:serial": {
         "title": "Akses peranti siri dan USB",
-        "consequence": "Ia boleh membuka port siri fizikal pada mesin yang menjalankan Termix."
+        "consequence": "Ia boleh membuka port siri fizikal pada mesin yang menjalankan D.EX.T.E.R."
       },
       "hosts:export": {
         "title": "Eksport hos dengan rahsia mereka",
@@ -1179,7 +1179,7 @@
       },
       "network:serve": {
         "title": "Terima sambungan",
-        "consequence": "Ia membuka port pada pelayan Termix."
+        "consequence": "Ia membuka port pada pelayan D.EX.T.E.R."
       },
       "network:broadcast": {
         "title": "Hantar siaran rangkaian",
@@ -1223,11 +1223,11 @@
       },
       "desktop:window": {
         "title": "Buka tetingkap desktop",
-        "consequence": "Hanya dalam aplikasi desktop Termix."
+        "consequence": "Hanya dalam aplikasi desktop D.EX.T.E.R."
       },
       "desktop:local": {
         "title": "Gunakan komputer ini",
-        "consequence": "Boleh membaca dan mengubah fail, menjalankan shell dan membuka port tempatan pada komputer ini. Hanya dalam aplikasi desktop Termix."
+        "consequence": "Boleh membaca dan mengubah fail, menjalankan shell dan membuka port tempatan pada komputer ini. Hanya dalam aplikasi desktop D.EX.T.E.R."
       },
       "users:impersonate": {
         "title": "Bertindak sebagai pengguna lain",
@@ -1255,10 +1255,10 @@
       },
       "secrets:own": {
         "title": "Simpan rahsia miliknya sendiri",
-        "consequence": "Disulitan oleh Termix. Plugin tidak pernah memegang kunci."
+        "consequence": "Disulitan oleh D.EX.T.E.R. Plugin tidak pernah memegang kunci."
       },
       "settings:read-core": {
-        "title": "Baca tetapan Termix",
+        "title": "Baca tetapan D.EX.T.E.R.",
         "consequence": "Tetapan pelayan, bukan hos atau kelayakan anda."
       },
       "plugins:read": {
@@ -1354,7 +1354,7 @@
         "minor": "Ia juga menambah skrin sendiri dan menyimpan datanya sendiri, yang diasingkan daripada plugin lain.",
         "none": "Ia tidak meminta sebarang akses istimewa.",
         "uploadTitle": "Pasang {{name}} daripada fail",
-        "uploadWarning": "Fail ini tidak diperiksa atau ditandatangani oleh daftar Termix. Pasang hanya jika anda membina ia sendiri atau mempercayai pembuatnya."
+        "uploadWarning": "Fail ini tidak diperiksa atau ditandatangani oleh daftar D.EX.T.E.R. Pasang hanya jika anda membina ia sendiri atau mempercayai pembuatnya."
       },
       "confirm": {
         "uninstallTitle": "Nyahpasang {{name}}?",
@@ -1447,10 +1447,10 @@
         "security": "Keselamatan"
       },
       "installedBadge": "Dipasang",
-      "incompatible": "Memerlukan Termix yang lebih baharu",
+      "incompatible": "Memerlukan D.EX.T.E.R. yang lebih baharu",
       "features": "Ciri-ciri",
       "whatItCanDo": "Apa yang boleh dilakukan",
-      "addsToTermix": "Menambah kepada Termix",
+      "addsToTermix": "Menambah kepada D.EX.T.E.R.",
       "addsToTermixHint": "Nyahpasang dan semua ini akan hilang.",
       "noServerAccess": "Tiada akses ke pelayan anda",
       "searchInstalled": "Cari yang dipasang",
@@ -1468,12 +1468,12 @@
         "hostYourOwn": "Hoskan daftar anda sendiri",
         "add": "Tambah daftar",
         "addTitle": "Tambah daftar",
-        "addHint": "Tampal pautan ke index.json daftar. Termix akan membacanya dan memaparkan kunci yang digunakan untuk menandatangani plugin. Hanya tambah daftar daripada orang yang anda percayai.",
+        "addHint": "Tampal pautan ke index.json daftar. D.EX.T.E.R. akan membacanya dan memaparkan kunci yang digunakan untuk menandatangani plugin. Hanya tambah daftar daripada orang yang anda percayai.",
         "urlLabel": "URL Indeks",
         "check": "Semak",
         "addConfirm": "Percaya dan tambah",
         "added": "Menambah {{name}}",
-        "customWarning": "Plugin dari daftar ini tidak disemak oleh pasukan Termix. Hanya pemilik daftar yang memutuskan apa yang ada di dalamnya. Setiap muat turun mesti ditandatangani oleh kunci di atas.",
+        "customWarning": "Plugin dari daftar ini tidak disemak oleh pasukan D.EX.T.E.R. Hanya pemilik daftar yang memutuskan apa yang ada di dalamnya. Setiap muat turun mesti ditandatangani oleh kunci di atas.",
         "keyFingerprint": "Kunci {{keyId}}",
         "pluginCount_other": "{{count}} plugin",
         "officialName": "Rasmi",
@@ -1481,12 +1481,12 @@
         "alwaysOn": "Sentiasa dihidupkan",
         "communityHint": "Plugin yang dibuat oleh orang lain. Setiap versi disemak oleh seseorang dan oleh pemeriksaan automatik sebelum ia disenaraikan.",
         "communityConfirmTitle": "Hidupkan plugin komuniti?",
-        "communityConfirmBody": "Plugin komuniti dibuat oleh orang lain, bukan pasukan Termix. Setiap versi disemak oleh seseorang dan oleh pemeriksaan automatik sebelum ia disenaraikan, tetapi kesilapan masih boleh berlaku. Hanya pasang plugin yang anda percayai dan semak apa yang diminta oleh setiap satu.",
+        "communityConfirmBody": "Plugin komuniti dibuat oleh orang lain, bukan pasukan D.EX.T.E.R. Setiap versi disemak oleh seseorang dan oleh pemeriksaan automatik sebelum ia disenaraikan, tetapi kesilapan masih boleh berlaku. Hanya pasang plugin yang anda percayai dan semak apa yang diminta oleh setiap satu.",
         "communityConfirm": "Hidupkan",
         "communityBadge": "Komuniti",
         "communityBadgeHint": "Dari daftar komuniti. Dibuat oleh orang lain dan disemak sebelum ia disenaraikan.",
         "customBadge": "Tersuai",
-        "customBadgeHint": "Dari {{name}}, sebuah daftar yang ditambah oleh pentadbir. Tidak disemak oleh pasukan Termix.",
+        "customBadgeHint": "Dari {{name}}, sebuah daftar yang ditambah oleh pentadbir. Tidak disemak oleh pasukan D.EX.T.E.R.",
         "remove": "Buang",
         "removeTitle": "Buang {{name}}?",
         "removeBody": "Pluginnya tidak akan lagi dipaparkan dalam Teroka. Anda boleh menambahnya semula kemudian.",
@@ -1517,7 +1517,7 @@
         "downloadsHint": "Berapa kali satu versi telah dimuat turun. Ini bukan bilangan pemasangan."
       },
       "unverified": "Tidak disahkan",
-      "unverifiedHint": "Dipasang daripada fail. Termix tidak menyemak atau menandatanganinya.",
+      "unverifiedHint": "Dipasang daripada fail. D.EX.T.E.R. tidak menyemak atau menandatanganinya.",
       "reportIssue": "Laporkan isu",
       "reportTo": "Laporkan kepada {{author}}",
       "requestFeature": "Minta ciri",
@@ -1571,10 +1571,10 @@
         "perPage": "{{count}} setiap halaman",
         "perPageLabel": "Plugin setiap halaman"
       },
-      "showUnsupportedHint": "Ini disenaraikan tetapi tiada pelepasan yang berjalan pada versi ini lagi. Kemas kini Termix untuk memasangnya.",
-      "unsupported": "Memerlukan Termix yang lebih baru",
-      "unsupportedHint": "Tiada pelepasan plugin ini berjalan pada versi Termix ini. Kemas kini Termix untuk memasangnya.",
-      "needsTermix": "Memerlukan Termix {{range}}",
+      "showUnsupportedHint": "Ini disenaraikan tetapi tiada pelepasan yang berjalan pada versi ini lagi. Kemas kini D.EX.T.E.R. untuk memasangnya.",
+      "unsupported": "Memerlukan D.EX.T.E.R. yang lebih baru",
+      "unsupportedHint": "Tiada pelepasan plugin ini berjalan pada versi D.EX.T.E.R. ini. Kemas kini D.EX.T.E.R. untuk memasangnya.",
+      "needsTermix": "Memerlukan D.EX.T.E.R. {{range}}",
       "showUnsupported": "Papar yang tidak disokong ({{count}})",
       "showMore": "Papar {{count}} lagi ({{total}} baki)"
     }

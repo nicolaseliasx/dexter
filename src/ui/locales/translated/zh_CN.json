@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "第 {{current}} 步，共 {{total}} 步",
-    "stageLabel": "Termix 设置",
+    "stageLabel": "D.EX.T.E.R. 设置",
     "setupHeading": "设置您的工作区",
     "partialHeading": "还有几项新内容需要设置",
     "signOut": "退出登录",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "开启",
     "pluginsChoice_disabled": "关闭",
     "pluginsChoice_remove": "移除",
-    "pluginsConsentTitle": "帮助改进 Termix",
+    "pluginsConsentTitle": "帮助改进 D.EX.T.E.R.",
     "pluginsConsentNote": "您可以随时从“插件”选项卡关闭此功能。",
     "pluginsApplying": "正在应用您的选择",
     "pluginsSomeFailed": "部分插件无法更改。您可以稍后从“插件”选项卡修复它们。按“下一步”继续。",
@@ -226,14 +226,14 @@
     "neverBody": "不检查更新。您仍可在设置中手动检查。",
     "onboardingTitle": "应用更新",
     "onboardingBody": "桌面应用现在可以自动更新。请选择您希望接收新版本的方式。您稍后可以在“设置”>“更新”中更改此选项。",
-    "onboardingManual": "此应用副本的安装方式不支持自动更新，因此 Termix 会在新版本发布时通知您，并提供下载链接。",
+    "onboardingManual": "此应用副本的安装方式不支持自动更新，因此 D.EX.T.E.R. 会在新版本发布时通知您，并提供下载链接。",
     "download": "下载",
     "restart": "立即重启",
     "later": "稍后",
-    "available": "Termix {{version}} 可用",
+    "available": "D.EX.T.E.R. {{version}} 可用",
     "manualHint": "从发布页面下载并覆盖安装当前版本。",
-    "ready": "Termix {{version}} 已准备好安装",
-    "readyHint": "下次重启 Termix 时将进行安装。"
+    "ready": "D.EX.T.E.R. {{version}} 已准备好安装",
+    "readyHint": "下次重启 D.EX.T.E.R. 时将进行安装。"
   },
   "safeMode": {
     "title": "安全模式",
@@ -383,7 +383,7 @@
     "sshPort": "SSH 端口",
     "authMethod": "认证方式",
     "authenticationMethod": "认证方式",
-    "authenticationMethodDesc": "选择 Termix 用于验证此 SSH 连接的一种方法。不会自动尝试其他方法。",
+    "authenticationMethodDesc": "选择 D.EX.T.E.R. 用于验证此 SSH 连接的一种方法。不会自动尝试其他方法。",
     "storedCredential": "已保存的凭据",
     "selectACredential": "选择凭据...",
     "keyTypeLabel": "密钥类型",
@@ -399,7 +399,7 @@
     "replaceKey": "替换密钥",
     "docsLink": "查看文档",
     "agentLabel": "SSH Agent",
-    "agentDesc": "使用在 Termix 服务器上运行的 SSH Agent 进行认证（Bitwarden、1Password、gpg-agent、KeeAgent、ssh-agent）。Agent 必须在托管 Termix 的机器上运行。",
+    "agentDesc": "使用在 D.EX.T.E.R. 服务器上运行的 SSH Agent 进行认证（Bitwarden、1Password、gpg-agent、KeeAgent、ssh-agent）。Agent 必须在托管 D.EX.T.E.R. 的机器上运行。",
     "agentAuthenticationDesc": "使用 SSH Agent 中的密钥验证此连接。留空套接字路径以使用 SSH_AUTH_SOCK。",
     "agentSocketPathLabel": "Agent 套接字路径",
     "agentSocketPathPlaceholder": "留空以使用 SSH_AUTH_SOCK",
@@ -792,8 +792,8 @@
     "arrangeUnlockedSwitchedToManual": "已切换为手动排序，以便保留您的顺序",
     "dragToRearrange": "拖拽以重新排列",
     "arrangeUnlocked": "解锁拖拽以重新排列",
-    "webUiBindHostUnreachable": "您的浏览器无法访问运行 Termix 的机器上的 127.0.0.1，因此此端点无法加载。请使用该机器响应的地址，例如 0.0.0.0。",
-    "webUiBindHostSharesSessionCookie": "在此浏览器中，转发将通过与 Termix 服务相同的域名访问，因此隧道服务将收到您的 Termix 会话。Cookie 忽略端口。此端点将拒绝在此处打开；它在 Termix 桌面应用中有效，或者当 Termix 在 localhost 上打开时有效。",
+    "webUiBindHostUnreachable": "您的浏览器无法访问运行 D.EX.T.E.R. 的机器上的 127.0.0.1，因此此端点无法加载。请使用该机器响应的地址，例如 0.0.0.0。",
+    "webUiBindHostSharesSessionCookie": "在此浏览器中，转发将通过与 D.EX.T.E.R. 服务相同的域名访问，因此隧道服务将收到您的 D.EX.T.E.R. 会话。Cookie 忽略端口。此端点将拒绝在此处打开；它在 D.EX.T.E.R. 桌面应用中有效，或者当 D.EX.T.E.R. 在 localhost 上打开时有效。",
     "webUiErrorLabelRequired": "端点 {{row}} 需要标签。",
     "webUiErrorLabelDuplicate": "每个端点需要不同的名称。",
     "webUiErrorPortRange": "端点 {{row}} 需要 1 到 65535 之间的端口。",
@@ -938,8 +938,8 @@
     "retrySecondFactorUI": "重新加载验证方法",
     "localDesktopSignedOut": "本地桌面已退出",
     "localDesktopUnavailable": "本地桌面会话不可用",
-    "localDesktopSignedOutDesc": "您已退出本地桌面会话。继续本地操作以再次使用此设备内置的 Termix 服务器。",
-    "localDesktopUnavailableDesc": "Termix 无法启动本地桌面会话。请重试，而不是注册新账户。",
+    "localDesktopSignedOutDesc": "您已退出本地桌面会话。继续本地操作以再次使用此设备内置的 D.EX.T.E.R. 服务器。",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R. 无法启动本地桌面会话。请重试，而不是注册新账户。",
     "continueLocalDesktop": "继续使用本地桌面",
     "retryLocalDesktop": "重试本地桌面会话"
   },
@@ -958,8 +958,8 @@
     "acceptNewKey": "接受新密钥并继续"
   },
   "errors": {
-    "databaseConnection": "Termix 服务器无响应",
-    "embeddedServerFailed": "Termix 的本地服务器无法启动",
+    "databaseConnection": "D.EX.T.E.R. 服务器无响应",
+    "embeddedServerFailed": "D.EX.T.E.R. 的本地服务器无法启动",
     "unknownError": "未知错误",
     "syncedHostMissing": "同步的主机在链接的服务器上不存在",
     "linkedServerUnreachable": "无法访问链接的服务器",
@@ -983,13 +983,13 @@
     "sessionExpiredLogin": "会话已过期。请重新登录。"
   },
   "messages": {
-    "registrationDisabled": "您还没有 Termix 账户。请联系管理员开启“自动创建外部账户”功能。",
+    "registrationDisabled": "您还没有 D.EX.T.E.R. 账户。请联系管理员开启“自动创建外部账户”功能。",
     "userNotAllowed": "您的账户无权注册。请联系管理员。",
     "databaseConnectionFailed": "服务器可能仍在启动，或已停止。此页面会持续重试，并在服务器恢复后自动继续。",
-    "embeddedServerPortInUse": "端口 {{port}} 已被其他程序占用。这通常是 Termix Docker 容器或上一次会话残留的 Termix 进程。请关闭该程序，然后重启 Termix。",
-    "embeddedServerPortInUseUnknownPort": "Termix 所需的一个端口已被其他程序占用。请关闭占用该端口的程序，然后重启 Termix。",
+    "embeddedServerPortInUse": "端口 {{port}} 已被其他程序占用。这通常是 D.EX.T.E.R. Docker 容器或上一次会话残留的 D.EX.T.E.R. 进程。请关闭该程序，然后重启 D.EX.T.E.R.。",
+    "embeddedServerPortInUseUnknownPort": "D.EX.T.E.R. 所需的一个端口已被其他程序占用。请关闭占用该端口的程序，然后重启 D.EX.T.E.R.。",
     "embeddedServerOldDatabase": "您的本地数据来自 Termix 2.8 或更早版本，必须先通过 2.9 版本进行迁移。请安装 Termix 2.9.1，打开一次以完成数据迁移，然后再更新到当前版本。",
-    "embeddedServerCrashed": "本地服务器意外停止。请重启 Termix，如果问题持续出现，请检查桌面日志。",
+    "embeddedServerCrashed": "本地服务器意外停止。请重启 D.EX.T.E.R.，如果问题持续出现，请检查桌面日志。",
     "resetCodeSent": "重置代码已发送至 Docker 日志",
     "codeVerified": "代码验证成功",
     "passwordResetSuccess": "密码重置成功",
@@ -1106,7 +1106,7 @@
         "missing": "没有已安装的插件提供此布局。",
         "disabled": "提供此布局的插件已关闭。",
         "blocked": "提供此布局的插件正在等待其所需的依赖项。",
-        "incompatible": "提供此布局的插件与此版本的 Termix 不兼容。",
+        "incompatible": "提供此布局的插件与此版本的 D.EX.T.E.R. 不兼容。",
         "failed": "布局启动失败。",
         "crashed": "在绘制应用时，布局崩溃了两次。"
       },
@@ -1127,7 +1127,7 @@
       },
       "process:spawn": {
         "title": "在此机器上运行程序",
-        "consequence": "程序在 Termix 服务器本身上运行，而不是在您的主机上。"
+        "consequence": "程序在 D.EX.T.E.R. 服务器本身上运行，而不是在您的主机上。"
       },
       "users:write": {
         "title": "创建和修改用户账户",
@@ -1151,11 +1151,11 @@
       },
       "system:tls": {
         "title": "管理证书",
-        "consequence": "它可以替换 Termix 通过 HTTPS 提供的证书，并响应证书颁发机构的域名验证。"
+        "consequence": "它可以替换 D.EX.T.E.R. 通过 HTTPS 提供的证书，并响应证书颁发机构的域名验证。"
       },
       "device:serial": {
         "title": "访问串行和 USB 设备",
-        "consequence": "它可以打开运行 Termix 的机器上的物理串行端口。"
+        "consequence": "它可以打开运行 D.EX.T.E.R. 的机器上的物理串行端口。"
       },
       "hosts:export": {
         "title": "导出主机及其密钥",
@@ -1179,7 +1179,7 @@
       },
       "network:serve": {
         "title": "接受连接",
-        "consequence": "它在 Termix 服务器上打开一个端口。"
+        "consequence": "它在 D.EX.T.E.R. 服务器上打开一个端口。"
       },
       "network:broadcast": {
         "title": "发送网络广播",
@@ -1223,11 +1223,11 @@
       },
       "desktop:window": {
         "title": "打开桌面窗口",
-        "consequence": "仅在 Termix 桌面应用中。"
+        "consequence": "仅在 D.EX.T.E.R. 桌面应用中。"
       },
       "desktop:local": {
         "title": "使用此计算机",
-        "consequence": "可以在此计算机上读取和修改文件、运行 Shell 并打开本地端口。仅限 Termix 桌面应用。"
+        "consequence": "可以在此计算机上读取和修改文件、运行 Shell 并打开本地端口。仅限 D.EX.T.E.R. 桌面应用。"
       },
       "users:impersonate": {
         "title": "以其他用户身份操作",
@@ -1255,10 +1255,10 @@
       },
       "secrets:own": {
         "title": "存储其自身的密钥",
-        "consequence": "由 Termix 加密。插件本身不持有密钥。"
+        "consequence": "由 D.EX.T.E.R. 加密。插件本身不持有密钥。"
       },
       "settings:read-core": {
-        "title": "读取 Termix 设置",
+        "title": "读取 D.EX.T.E.R. 设置",
         "consequence": "服务器设置，而非您的主机或凭据。"
       },
       "plugins:read": {
@@ -1354,7 +1354,7 @@
         "minor": "它还会添加自己的界面并存储自己的数据，这些数据与其他插件分开保存。",
         "none": "它不请求任何特殊权限。",
         "uploadTitle": "从文件安装 {{name}}",
-        "uploadWarning": "此文件未经 Termix 注册表检查或签名。仅当您自己构建或信任构建者时才安装。"
+        "uploadWarning": "此文件未经 D.EX.T.E.R. 注册表检查或签名。仅当您自己构建或信任构建者时才安装。"
       },
       "confirm": {
         "uninstallTitle": "卸载 {{name}}？",
@@ -1447,10 +1447,10 @@
         "security": "安全"
       },
       "installedBadge": "已安装",
-      "incompatible": "需要更新 Termix",
+      "incompatible": "需要更新 D.EX.T.E.R.",
       "features": "功能",
       "whatItCanDo": "它能做什么",
-      "addsToTermix": "为 Termix 添加",
+      "addsToTermix": "为 D.EX.T.E.R. 添加",
       "addsToTermixHint": "卸载后，这些功能都将消失。",
       "noServerAccess": "无法访问您的服务器",
       "searchInstalled": "搜索已安装",
@@ -1468,12 +1468,12 @@
         "hostYourOwn": "托管您自己的注册表",
         "add": "添加注册表",
         "addTitle": "添加注册表",
-        "addHint": "粘贴注册表 index.json 的链接。Termix 将读取该文件并显示用于签署插件的密钥。仅添加您信任的人提供的注册表。",
+        "addHint": "粘贴注册表 index.json 的链接。D.EX.T.E.R. 将读取该文件并显示用于签署插件的密钥。仅添加您信任的人提供的注册表。",
         "urlLabel": "索引 URL",
         "check": "检查",
         "addConfirm": "信任并添加",
         "added": "已添加 {{name}}",
-        "customWarning": "此注册表中的插件未经 Termix 团队审核。注册表的所有者决定其中包含的内容。每次下载都必须由上述密钥签名。",
+        "customWarning": "此注册表中的插件未经 D.EX.T.E.R. 团队审核。注册表的所有者决定其中包含的内容。每次下载都必须由上述密钥签名。",
         "keyFingerprint": "密钥 {{keyId}}",
         "pluginCount_other": "{{count}} 个插件",
         "officialName": "官方",
@@ -1481,12 +1481,12 @@
         "alwaysOn": "始终开启",
         "communityHint": "由其他人制作的插件。每个版本在列出前都经过人工和自动化检查。",
         "communityConfirmTitle": "要开启社区插件吗？",
-        "communityConfirmBody": "社区插件由其他人制作，而非 Termix 团队。每个版本在列出前都经过人工和自动化检查，但仍可能有疏漏。仅安装您信任的插件，并检查每个插件的权限请求。",
+        "communityConfirmBody": "社区插件由其他人制作，而非 D.EX.T.E.R. 团队。每个版本在列出前都经过人工和自动化检查，但仍可能有疏漏。仅安装您信任的插件，并检查每个插件的权限请求。",
         "communityConfirm": "开启",
         "communityBadge": "社区",
         "communityBadgeHint": "来自社区注册表。由其他人制作，并在列出前经过审核。",
         "customBadge": "自定义",
-        "customBadgeHint": "来自 {{name}}，这是管理员添加的注册表。未经 Termix 团队审核。",
+        "customBadgeHint": "来自 {{name}}，这是管理员添加的注册表。未经 D.EX.T.E.R. 团队审核。",
         "remove": "移除",
         "removeTitle": "移除 {{name}}？",
         "removeBody": "其插件将不再显示在“浏览”中。您可以稍后再次添加。",
@@ -1517,7 +1517,7 @@
         "downloadsHint": "某个版本被下载的次数。这并非安装数量。"
       },
       "unverified": "未验证",
-      "unverifiedHint": "从文件安装。Termix 未对其进行检查或签名。",
+      "unverifiedHint": "从文件安装。D.EX.T.E.R. 未对其进行检查或签名。",
       "reportIssue": "报告问题",
       "reportTo": "向 {{author}} 报告",
       "requestFeature": "请求功能",
@@ -1571,10 +1571,10 @@
         "perPage": "每页 {{count}} 项",
         "perPageLabel": "每页插件数"
       },
-      "showUnsupportedHint": "这些插件已列出，但尚无适用于此版本的发布版。请更新 Termix 以安装它们。",
-      "unsupported": "需要更新 Termix",
-      "unsupportedHint": "此插件尚无适用于此版本 Termix 的发布版。请更新 Termix 以安装它。",
-      "needsTermix": "需要 Termix {{range}}",
+      "showUnsupportedHint": "这些插件已列出，但尚无适用于此版本的发布版。请更新 D.EX.T.E.R. 以安装它们。",
+      "unsupported": "需要更新 D.EX.T.E.R.",
+      "unsupportedHint": "此插件尚无适用于此版本 D.EX.T.E.R. 的发布版。请更新 D.EX.T.E.R. 以安装它。",
+      "needsTermix": "需要 D.EX.T.E.R. {{range}}",
       "showUnsupported": "显示不兼容的插件 ({{count}})",
       "showMore": "显示更多 {{count}} 项（剩余 {{total}} 项）"
     }

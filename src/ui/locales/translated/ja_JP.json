@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "{{total}} 件中 {{current}} 件目",
-    "stageLabel": "Termix のセットアップ",
+    "stageLabel": "D.EX.T.E.R. のセットアップ",
     "setupHeading": "ワークスペースのセットアップ",
     "partialHeading": "いくつかの新しい設定が必要です",
     "signOut": "サインアウト",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "オン",
     "pluginsChoice_disabled": "オフ",
     "pluginsChoice_remove": "削除",
-    "pluginsConsentTitle": "Termix の改善にご協力ください",
+    "pluginsConsentTitle": "D.EX.T.E.R. の改善にご協力ください",
     "pluginsConsentNote": "これはいつでもプラグインタブからオフにできます。",
     "pluginsApplying": "選択を適用しています",
     "pluginsSomeFailed": "一部のプラグインの変更ができませんでした。後でプラグインタブから修正できます。続行するには「次へ」を押してください。",
@@ -226,14 +226,14 @@
     "neverBody": "アップデートを確認しません。設定から手動で確認することはできます。",
     "onboardingTitle": "アプリのアップデート",
     "onboardingBody": "デスクトップアプリが自動で更新できるようになりました。新しいバージョンの入手方法を選んでください。後で「設定」>「アップデート」から変更できます。",
-    "onboardingManual": "このアプリのコピーは自動更新できない方法でインストールされたため、Termix は新しいバージョンがリリースされたときにダウンロードリンク付きでお知らせします。",
+    "onboardingManual": "このアプリのコピーは自動更新できない方法でインストールされたため、D.EX.T.E.R. は新しいバージョンがリリースされたときにダウンロードリンク付きでお知らせします。",
     "download": "ダウンロード",
     "restart": "今すぐ再起動",
     "later": "後で",
-    "available": "Termix {{version}} が利用可能です",
+    "available": "D.EX.T.E.R. {{version}} が利用可能です",
     "manualHint": "リリースページからダウンロードして、現在のバージョンに上書きインストールしてください。",
-    "ready": "Termix {{version}} のインストール準備ができました",
-    "readyHint": "Termix を再起動したときにインストールされます。"
+    "ready": "D.EX.T.E.R. {{version}} のインストール準備ができました",
+    "readyHint": "D.EX.T.E.R. を再起動したときにインストールされます。"
   },
   "safeMode": {
     "title": "セーフモード",
@@ -383,7 +383,7 @@
     "sshPort": "SSH ポート",
     "authMethod": "認証方法",
     "authenticationMethod": "認証方法",
-    "authenticationMethodDesc": "Termix がこの SSH 接続の認証に使用する1つの方法を選択してください。他の方法は自動的に試されません。",
+    "authenticationMethodDesc": "D.EX.T.E.R. がこの SSH 接続の認証に使用する1つの方法を選択してください。他の方法は自動的に試されません。",
     "storedCredential": "保存された認証情報",
     "selectACredential": "認証情報を選択...",
     "keyTypeLabel": "キーの種類",
@@ -399,7 +399,7 @@
     "replaceKey": "キーを置き換える",
     "docsLink": "ドキュメントを表示",
     "agentLabel": "SSH エージェント",
-    "agentDesc": "Termix サーバー上で実行中の SSH エージェント（Bitwarden、1Password、gpg-agent、KeeAgent、ssh-agent）を使用して認証します。エージェントは Termix がホストされているマシン上で実行されている必要があります。",
+    "agentDesc": "D.EX.T.E.R. サーバー上で実行中の SSH エージェント（Bitwarden、1Password、gpg-agent、KeeAgent、ssh-agent）を使用して認証します。エージェントは D.EX.T.E.R. がホストされているマシン上で実行されている必要があります。",
     "agentAuthenticationDesc": "SSH エージェントのキーを使用してこの接続を認証します。ソケットパスを空のままにすると、SSH_AUTH_SOCK が使用されます。",
     "agentSocketPathLabel": "エージェントソケットパス",
     "agentSocketPathPlaceholder": "SSH_AUTH_SOCK を使用する場合は空のままにしてください",
@@ -792,8 +792,8 @@
     "arrangeUnlockedSwitchedToManual": "順序を保持するため、手動ソートに切り替えました",
     "dragToRearrange": "ドラッグして並べ替え",
     "arrangeUnlocked": "ドラッグによる並べ替えを解除",
-    "webUiBindHostUnreachable": "Termix を実行しているマシン上の 127.0.0.1 にブラウザからアクセスできないため、このエンドポイントは読み込まれません。0.0.0.0 のように、そのマシンが応答するアドレスを使用してください。",
-    "webUiBindHostSharesSessionCookie": "このブラウザからは、フォワード先が Termix と同じホスト名でアクセスされるため、トンネル経由のサービスに Termix のセッションが送信されます。Cookie はポートを無視します。このエンドポイントはここで開くことを拒否します。Termix デスクトップアプリから、または localhost で Termix を開いた場合に機能します。",
+    "webUiBindHostUnreachable": "D.EX.T.E.R. を実行しているマシン上の 127.0.0.1 にブラウザからアクセスできないため、このエンドポイントは読み込まれません。0.0.0.0 のように、そのマシンが応答するアドレスを使用してください。",
+    "webUiBindHostSharesSessionCookie": "このブラウザからは、フォワード先が D.EX.T.E.R. と同じホスト名でアクセスされるため、トンネル経由のサービスに D.EX.T.E.R. のセッションが送信されます。Cookie はポートを無視します。このエンドポイントはここで開くことを拒否します。D.EX.T.E.R. デスクトップアプリから、または localhost で D.EX.T.E.R. を開いた場合に機能します。",
     "webUiErrorLabelRequired": "エンドポイント {{row}} にはラベルが必要です。",
     "webUiErrorLabelDuplicate": "各エンドポイントには異なる名前が必要です。",
     "webUiErrorPortRange": "エンドポイント {{row}} には 1 から 65535 の間のポート番号が必要です。",
@@ -938,8 +938,8 @@
     "retrySecondFactorUI": "認証方法を再読み込み",
     "localDesktopSignedOut": "ローカルデスクトップからサインアウトしました",
     "localDesktopUnavailable": "ローカルデスクトップセッションが利用できません",
-    "localDesktopSignedOutDesc": "ローカルデスクトップセッションからサインアウトしました。このデバイスの内蔵 Termix サーバーを再度使用するには、ローカルで続行してください。",
-    "localDesktopUnavailableDesc": "Termix はローカルデスクトップセッションを開始できませんでした。新しいアカウントを登録する代わりに、再試行してください。",
+    "localDesktopSignedOutDesc": "ローカルデスクトップセッションからサインアウトしました。このデバイスの内蔵 D.EX.T.E.R. サーバーを再度使用するには、ローカルで続行してください。",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R. はローカルデスクトップセッションを開始できませんでした。新しいアカウントを登録する代わりに、再試行してください。",
     "continueLocalDesktop": "ローカルデスクトップで続行",
     "retryLocalDesktop": "ローカルデスクトップセッションを再試行"
   },
@@ -958,8 +958,8 @@
     "acceptNewKey": "新しいキーを承諾して続行"
   },
   "errors": {
-    "databaseConnection": "Termix サーバーが応答していません",
-    "embeddedServerFailed": "Termix のローカルサーバーが起動できませんでした",
+    "databaseConnection": "D.EX.T.E.R. サーバーが応答していません",
+    "embeddedServerFailed": "D.EX.T.E.R. のローカルサーバーが起動できませんでした",
     "unknownError": "不明なエラー",
     "syncedHostMissing": "同期されたホストはリンクされたサーバー上に存在しません",
     "linkedServerUnreachable": "リンクされたサーバーに到達できません",
@@ -1106,7 +1106,7 @@
         "missing": "このレイアウトを提供するインストール済みプラグインがありません。",
         "disabled": "このレイアウトを提供するプラグインが無効になっています。",
         "blocked": "このレイアウトを提供するプラグインが、必要なものを待機しています。",
-        "incompatible": "このレイアウトを提供するプラグインは、このバージョンの Termix と互換性がありません。",
+        "incompatible": "このレイアウトを提供するプラグインは、このバージョンの D.EX.T.E.R. と互換性がありません。",
         "failed": "レイアウトの起動に失敗しました。",
         "crashed": "アプリを描画する際に、レイアウトが2回クラッシュしました。"
       },
@@ -1127,7 +1127,7 @@
       },
       "process:spawn": {
         "title": "このマシンでプログラムを実行",
-        "consequence": "プログラムはホストではなく、Termix サーバー自体で実行されます。"
+        "consequence": "プログラムはホストではなく、D.EX.T.E.R. サーバー自体で実行されます。"
       },
       "users:write": {
         "title": "ユーザーアカウントの作成と変更",
@@ -1151,11 +1151,11 @@
       },
       "system:tls": {
         "title": "証明書の管理",
-        "consequence": "Termix が HTTPS で提供する証明書の置換や、認証局からのドメイン確認への応答が可能です。"
+        "consequence": "D.EX.T.E.R. が HTTPS で提供する証明書の置換や、認証局からのドメイン確認への応答が可能です。"
       },
       "device:serial": {
         "title": "シリアルおよび USB デバイスへのアクセス",
-        "consequence": "Termix を実行しているマシンの物理シリアルポートを開くことができます。"
+        "consequence": "D.EX.T.E.R. を実行しているマシンの物理シリアルポートを開くことができます。"
       },
       "hosts:export": {
         "title": "シークレットを含むホストをエクスポート",
@@ -1179,7 +1179,7 @@
       },
       "network:serve": {
         "title": "接続の受け入れ",
-        "consequence": "Termix サーバーでポートを開きます。"
+        "consequence": "D.EX.T.E.R. サーバーでポートを開きます。"
       },
       "network:broadcast": {
         "title": "ネットワークブロードキャストの送信",
@@ -1223,11 +1223,11 @@
       },
       "desktop:window": {
         "title": "デスクトップウィンドウを開く",
-        "consequence": "Termix デスクトップアプリでのみ可能です。"
+        "consequence": "D.EX.T.E.R. デスクトップアプリでのみ可能です。"
       },
       "desktop:local": {
         "title": "このコンピューターを使用",
-        "consequence": "このコンピューター上のファイルの読み書き、シェル実行、ローカルポートの開放が可能です。Termix デスクトップアプリでのみ利用できます。"
+        "consequence": "このコンピューター上のファイルの読み書き、シェル実行、ローカルポートの開放が可能です。D.EX.T.E.R. デスクトップアプリでのみ利用できます。"
       },
       "users:impersonate": {
         "title": "他のユーザーとして動作",
@@ -1255,10 +1255,10 @@
       },
       "secrets:own": {
         "title": "独自のシークレットを保存",
-        "consequence": "Termix によって暗号化されます。プラグインは鍵を保持しません。"
+        "consequence": "D.EX.T.E.R. によって暗号化されます。プラグインは鍵を保持しません。"
       },
       "settings:read-core": {
-        "title": "Termix の設定を読み取る",
+        "title": "D.EX.T.E.R. の設定を読み取る",
         "consequence": "サーバーの設定です。ホストや認証情報は含まれません。"
       },
       "plugins:read": {
@@ -1354,7 +1354,7 @@
         "minor": "独自の画面を追加し、他のプラグインとは別にデータを保存します。",
         "none": "特別なアクセス権は要求しません。",
         "uploadTitle": "ファイルから {{name}} をインストール",
-        "uploadWarning": "このファイルは Termix レジストリによって確認または署名されていません。自分で作成したもの、または作成者を信頼できる場合にのみインストールしてください。"
+        "uploadWarning": "このファイルは D.EX.T.E.R. レジストリによって確認または署名されていません。自分で作成したもの、または作成者を信頼できる場合にのみインストールしてください。"
       },
       "confirm": {
         "uninstallTitle": "{{name}} をアンインストールしますか？",
@@ -1447,10 +1447,10 @@
         "security": "セキュリティ"
       },
       "installedBadge": "インストール済み",
-      "incompatible": "新しい Termix が必要です",
+      "incompatible": "新しい D.EX.T.E.R. が必要です",
       "features": "機能",
       "whatItCanDo": "できること",
-      "addsToTermix": "Termix に追加されるもの",
+      "addsToTermix": "D.EX.T.E.R. に追加されるもの",
       "addsToTermixHint": "アンインストールすると、これらすべてが削除されます。",
       "noServerAccess": "サーバーへのアクセスなし",
       "searchInstalled": "インストール済みを検索",
@@ -1468,12 +1468,12 @@
         "hostYourOwn": "独自のレジストリをホスト",
         "add": "レジストリを追加",
         "addTitle": "レジストリを追加",
-        "addHint": "レジストリの index.json へのリンクを貼り付けてください。Termix はこれを読み取り、プラグインに署名する鍵を表示します。信頼できる人からのレジストリのみを追加してください。",
+        "addHint": "レジストリの index.json へのリンクを貼り付けてください。D.EX.T.E.R. はこれを読み取り、プラグインに署名する鍵を表示します。信頼できる人からのレジストリのみを追加してください。",
         "urlLabel": "インデックス URL",
         "check": "確認",
         "addConfirm": "信頼して追加",
         "added": "{{name}} を追加しました",
-        "customWarning": "このレジストリのプラグインは Termix チームによってレビューされていません。レジストリの所有者のみがその内容を決めます。すべてのダウンロードは上記の鍵で署名されている必要があります。",
+        "customWarning": "このレジストリのプラグインは D.EX.T.E.R. チームによってレビューされていません。レジストリの所有者のみがその内容を決めます。すべてのダウンロードは上記の鍵で署名されている必要があります。",
         "keyFingerprint": "鍵 {{keyId}}",
         "pluginCount_other": "{{count}} 個のプラグイン",
         "officialName": "公式",
@@ -1481,12 +1481,12 @@
         "alwaysOn": "常に有効",
         "communityHint": "他の人によって作成されたプラグインです。各バージョンは、リストに掲載される前に人間と自動チェックの両方で確認されます。",
         "communityConfirmTitle": "コミュニティプラグインを有効にしますか？",
-        "communityConfirmBody": "コミュニティプラグインは Termix チームではなく、他の人によって作成されています。各バージョンはリストに掲載される前に人間と自動チェックの両方で確認されますが、ミスが漏れることもあります。信頼できるプラグインのみをインストールし、各プラグインが要求する権限を確認してください。",
+        "communityConfirmBody": "コミュニティプラグインは D.EX.T.E.R. チームではなく、他の人によって作成されています。各バージョンはリストに掲載される前に人間と自動チェックの両方で確認されますが、ミスが漏れることもあります。信頼できるプラグインのみをインストールし、各プラグインが要求する権限を確認してください。",
         "communityConfirm": "有効にする",
         "communityBadge": "コミュニティ",
         "communityBadgeHint": "コミュニティレジストリから。他の人によって作成され、リストに掲載される前にレビューされています。",
         "customBadge": "カスタム",
-        "customBadgeHint": "{{name}}（管理者が追加したレジストリ）から。Termix チームによってレビューされていません。",
+        "customBadgeHint": "{{name}}（管理者が追加したレジストリ）から。D.EX.T.E.R. チームによってレビューされていません。",
         "remove": "削除",
         "removeTitle": "{{name}} を削除しますか？",
         "removeBody": "そのプラグインは「閲覧」に表示されなくなります。後で再度追加できます。",
@@ -1517,7 +1517,7 @@
         "downloadsHint": "リリースがダウンロードされた回数です。これはインストール数ではありません。"
       },
       "unverified": "未検証",
-      "unverifiedHint": "ファイルからインストールされました。Termix はこれをチェックまたは署名していません。",
+      "unverifiedHint": "ファイルからインストールされました。D.EX.T.E.R. はこれをチェックまたは署名していません。",
       "reportIssue": "問題を報告する",
       "reportTo": "{{author}} に報告する",
       "requestFeature": "機能をリクエストする",
@@ -1571,10 +1571,10 @@
         "perPage": "1ページあたり {{count}} 件",
         "perPageLabel": "1ページあたりのプラグイン数"
       },
-      "showUnsupportedHint": "これらはリストされていますが、このバージョンではまだリリースが実行されません。インストールするには Termix をアップデートしてください。",
-      "unsupported": "新しい Termix が必要です",
-      "unsupportedHint": "このプラグインのリリースは、このバージョンの Termix では実行されません。インストールするには Termix をアップデートしてください。",
-      "needsTermix": "Termix {{range}} が必要です",
+      "showUnsupportedHint": "これらはリストされていますが、このバージョンではまだリリースが実行されません。インストールするには D.EX.T.E.R. をアップデートしてください。",
+      "unsupported": "新しい D.EX.T.E.R. が必要です",
+      "unsupportedHint": "このプラグインのリリースは、このバージョンの D.EX.T.E.R. では実行されません。インストールするには D.EX.T.E.R. をアップデートしてください。",
+      "needsTermix": "D.EX.T.E.R. {{range}} が必要です",
       "showUnsupported": "サポートされていないものを表示 ({{count}})",
       "showMore": "さらに {{count}} 件を表示 (残り {{total}} 件)"
     }

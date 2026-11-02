@@ -148,7 +148,7 @@ export function createPluginDesktopLocal(deps: Deps): PluginDesktopLocal {
       const { getLink } = await import("../sync/client/link-store.js");
       const link = await getLink();
       if (!link)
-        throw new Error("This device is not linked to a Termix server");
+        throw new Error("This device is not linked to a D.EX.T.E.R. server");
       if (!pathname.startsWith("/")) throw new Error("Invalid path");
       return remoteJson(
         {

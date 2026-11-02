@@ -14,7 +14,7 @@ const starter = readFileSync(
   "utf8",
 );
 const announceReady = starter.slice(
-  starter.indexOf('systemLogger.success("Termix backend started successfully"'),
+  starter.indexOf('systemLogger.success("D.EX.T.E.R. backend started successfully"'),
   starter.indexOf("const gracefulShutdown"),
 );
 
@@ -100,7 +100,7 @@ describe("embedded backend readiness", () => {
     const { child, settled } = start();
     child.stdout.emit(
       "data",
-      Buffer.from("Termix backend started successfully"),
+      Buffer.from("D.EX.T.E.R. backend started successfully"),
     );
     child.emit("message", { type: "backend-ready" });
     await Promise.resolve();

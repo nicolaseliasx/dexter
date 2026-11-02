@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Bước {{current}} trên {{total}}",
-    "stageLabel": "Thiết lập Termix",
+    "stageLabel": "Thiết lập D.EX.T.E.R.",
     "setupHeading": "Thiết lập không gian làm việc",
     "partialHeading": "Một vài mục mới cần thiết lập",
     "signOut": "Đăng xuất",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Bật",
     "pluginsChoice_disabled": "Tắt",
     "pluginsChoice_remove": "Xóa",
-    "pluginsConsentTitle": "Giúp cải thiện Termix",
+    "pluginsConsentTitle": "Giúp cải thiện D.EX.T.E.R.",
     "pluginsConsentNote": "Bạn có thể tắt tính năng này bất cứ lúc nào từ tab Plugin.",
     "pluginsApplying": "Đang áp dụng lựa chọn của bạn",
     "pluginsSomeFailed": "Không thể thay đổi một số plugin. Bạn có thể khắc phục sau từ tab Plugin. Nhấn Tiếp theo để tiếp tục.",
@@ -226,14 +226,14 @@
     "neverBody": "Không kiểm tra cập nhật. Bạn vẫn có thể kiểm tra thủ công trong Cài đặt.",
     "onboardingTitle": "Cập nhật ứng dụng",
     "onboardingBody": "Ứng dụng máy tính để bàn giờ có thể tự động cập nhật. Chọn cách bạn muốn nhận các phiên bản mới. Bạn có thể thay đổi điều này sau trong Cài đặt, mục Cập nhật.",
-    "onboardingManual": "Bản cài đặt ứng dụng này được cài đặt theo cách không thể tự động cập nhật, nên Termix sẽ thông báo cho bạn khi có phiên bản mới kèm theo liên kết tải xuống.",
+    "onboardingManual": "Bản cài đặt ứng dụng này được cài đặt theo cách không thể tự động cập nhật, nên D.EX.T.E.R. sẽ thông báo cho bạn khi có phiên bản mới kèm theo liên kết tải xuống.",
     "download": "Tải xuống",
     "restart": "Khởi động lại ngay",
     "later": "Để sau",
-    "available": "Termix {{version}} đã sẵn sàng",
+    "available": "D.EX.T.E.R. {{version}} đã sẵn sàng",
     "manualHint": "Tải xuống từ trang phát hành và cài đặt đè lên bản hiện tại.",
-    "ready": "Termix {{version}} đã sẵn sàng để cài đặt",
-    "readyHint": "Nó sẽ được cài đặt khi Termix khởi động lại lần tới."
+    "ready": "D.EX.T.E.R. {{version}} đã sẵn sàng để cài đặt",
+    "readyHint": "Nó sẽ được cài đặt khi D.EX.T.E.R. khởi động lại lần tới."
   },
   "safeMode": {
     "title": "Chế độ an toàn",
@@ -383,7 +383,7 @@
     "sshPort": "Cổng SSH",
     "authMethod": "Phương thức xác thực",
     "authenticationMethod": "Phương thức xác thực",
-    "authenticationMethodDesc": "Chọn phương thức duy nhất Termix sẽ dùng để xác thực kết nối SSH này. Các phương thức khác sẽ không được thử tự động.",
+    "authenticationMethodDesc": "Chọn phương thức duy nhất D.EX.T.E.R. sẽ dùng để xác thực kết nối SSH này. Các phương thức khác sẽ không được thử tự động.",
     "storedCredential": "Thông tin đăng nhập đã lưu",
     "selectACredential": "Chọn thông tin đăng nhập...",
     "keyTypeLabel": "Loại khóa",
@@ -399,7 +399,7 @@
     "replaceKey": "Thay thế khóa",
     "docsLink": "Xem tài liệu",
     "agentLabel": "SSH Agent",
-    "agentDesc": "Xác thực bằng SSH agent đang chạy trên máy chủ Termix (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agent phải đang chạy trên máy chủ nơi Termix được lưu trữ.",
+    "agentDesc": "Xác thực bằng SSH agent đang chạy trên máy chủ D.EX.T.E.R. (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agent phải đang chạy trên máy chủ nơi D.EX.T.E.R. được lưu trữ.",
     "agentAuthenticationDesc": "Sử dụng khóa từ SSH agent để xác thực kết nối này. Để trống đường dẫn socket để dùng SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Đường dẫn socket agent",
     "agentSocketPathPlaceholder": "Để trống để dùng SSH_AUTH_SOCK",
@@ -792,8 +792,8 @@
     "arrangeUnlockedSwitchedToManual": "Đã chuyển sang sắp xếp thủ công để thứ tự của bạn được giữ nguyên",
     "dragToRearrange": "Kéo để sắp xếp lại",
     "arrangeUnlocked": "Mở khóa kéo để sắp xếp lại",
-    "webUiBindHostUnreachable": "Trình duyệt của bạn không thể truy cập 127.0.0.1 trên máy đang chạy Termix, vì vậy điểm cuối này sẽ không tải. Sử dụng địa chỉ mà máy đó phản hồi, chẳng hạn như 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Từ trình duyệt này, đường chuyển tiếp sẽ được truy cập tại cùng tên máy chủ mà Termix được phục vụ, vì vậy dịch vụ được chuyển tiếp sẽ nhận phiên Termix của bạn. Cookie bỏ qua cổng. Điểm cuối này sẽ từ chối mở ở đây; nó hoạt động từ ứng dụng máy tính để bàn Termix, hoặc khi Termix được mở tại localhost.",
+    "webUiBindHostUnreachable": "Trình duyệt của bạn không thể truy cập 127.0.0.1 trên máy đang chạy D.EX.T.E.R., vì vậy điểm cuối này sẽ không tải. Sử dụng địa chỉ mà máy đó phản hồi, chẳng hạn như 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Từ trình duyệt này, đường chuyển tiếp sẽ được truy cập tại cùng tên máy chủ mà D.EX.T.E.R. được phục vụ, vì vậy dịch vụ được chuyển tiếp sẽ nhận phiên D.EX.T.E.R. của bạn. Cookie bỏ qua cổng. Điểm cuối này sẽ từ chối mở ở đây; nó hoạt động từ ứng dụng máy tính để bàn D.EX.T.E.R., hoặc khi D.EX.T.E.R. được mở tại localhost.",
     "webUiErrorLabelRequired": "Điểm cuối {{row}} cần một nhãn.",
     "webUiErrorLabelDuplicate": "Mỗi điểm cuối cần một tên khác nhau.",
     "webUiErrorPortRange": "Điểm cuối {{row}} cần một cổng từ 1 đến 65535.",
@@ -938,8 +938,8 @@
     "retrySecondFactorUI": "Tải lại phương thức xác minh",
     "localDesktopSignedOut": "Đã đăng xuất khỏi máy tính để bàn cục bộ",
     "localDesktopUnavailable": "Phiên máy tính để bàn cục bộ không khả dụng",
-    "localDesktopSignedOutDesc": "Bạn đã đăng xuất khỏi phiên máy tính để bàn cục bộ. Tiếp tục cục bộ để sử dụng lại máy chủ Termix tích hợp của thiết bị này.",
-    "localDesktopUnavailableDesc": "Termix không thể khởi động phiên máy tính để bàn cục bộ. Hãy thử lại thay vì đăng ký tài khoản mới.",
+    "localDesktopSignedOutDesc": "Bạn đã đăng xuất khỏi phiên máy tính để bàn cục bộ. Tiếp tục cục bộ để sử dụng lại máy chủ D.EX.T.E.R. tích hợp của thiết bị này.",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R. không thể khởi động phiên máy tính để bàn cục bộ. Hãy thử lại thay vì đăng ký tài khoản mới.",
     "continueLocalDesktop": "Tiếp tục với máy tính để bàn cục bộ",
     "retryLocalDesktop": "Thử lại phiên máy tính để bàn cục bộ"
   },
@@ -958,8 +958,8 @@
     "acceptNewKey": "Chấp nhận khóa mới & Tiếp tục"
   },
   "errors": {
-    "databaseConnection": "Máy chủ Termix không phản hồi",
-    "embeddedServerFailed": "Máy chủ cục bộ của Termix không thể khởi động",
+    "databaseConnection": "Máy chủ D.EX.T.E.R. không phản hồi",
+    "embeddedServerFailed": "Máy chủ cục bộ của D.EX.T.E.R. không thể khởi động",
     "unknownError": "Lỗi không xác định",
     "syncedHostMissing": "Máy chủ đồng bộ hóa không tồn tại trên máy chủ đã liên kết",
     "linkedServerUnreachable": "Không thể truy cập máy chủ đã liên kết",
@@ -983,13 +983,13 @@
     "sessionExpiredLogin": "Phiên làm việc đã hết hạn. Vui lòng đăng nhập lại."
   },
   "messages": {
-    "registrationDisabled": "Bạn chưa có tài khoản Termix. Hãy yêu cầu quản trị viên bật tùy chọn Tự động tạo tài khoản bên ngoài.",
+    "registrationDisabled": "Bạn chưa có tài khoản D.EX.T.E.R. Hãy yêu cầu quản trị viên bật tùy chọn Tự động tạo tài khoản bên ngoài.",
     "userNotAllowed": "Tài khoản của bạn không được phép đăng ký. Vui lòng liên hệ với quản trị viên.",
     "databaseConnectionFailed": "Máy chủ có thể vẫn đang khởi động hoặc đã dừng. Trang này sẽ tiếp tục thử kết nối và tự động hoạt động trở lại khi máy chủ sẵn sàng.",
-    "embeddedServerPortInUse": "Cổng {{port}} đang được sử dụng bởi một chương trình khác. Điều này thường là do một container Docker Termix hoặc một tiến trình Termix còn sót lại từ phiên trước. Hãy đóng nó đi, sau đó khởi động lại Termix.",
-    "embeddedServerPortInUseUnknownPort": "Một trong các cổng mà Termix cần đang bị một chương trình khác sử dụng. Hãy đóng chương trình đang sử dụng cổng đó, sau đó khởi động lại Termix.",
+    "embeddedServerPortInUse": "Cổng {{port}} đang được sử dụng bởi một chương trình khác. Điều này thường là do một container Docker D.EX.T.E.R. hoặc một tiến trình D.EX.T.E.R. còn sót lại từ phiên trước. Hãy đóng nó đi, sau đó khởi động lại D.EX.T.E.R.",
+    "embeddedServerPortInUseUnknownPort": "Một trong các cổng mà D.EX.T.E.R. cần đang bị một chương trình khác sử dụng. Hãy đóng chương trình đang sử dụng cổng đó, sau đó khởi động lại D.EX.T.E.R.",
     "embeddedServerOldDatabase": "Dữ liệu cục bộ của bạn từ Termix 2.8 hoặc cũ hơn và cần phải được nâng cấp qua phiên bản 2.9 trước. Hãy cài đặt Termix 2.9.1, mở ứng dụng một lần để nó có thể di chuyển dữ liệu của bạn, sau đó cập nhật lên phiên bản này.",
-    "embeddedServerCrashed": "Máy chủ cục bộ đã dừng hoạt động bất ngờ. Hãy khởi động lại Termix và kiểm tra nhật ký máy tính để bàn nếu tình trạng này tiếp tục xảy ra.",
+    "embeddedServerCrashed": "Máy chủ cục bộ đã dừng hoạt động bất ngờ. Hãy khởi động lại D.EX.T.E.R. và kiểm tra nhật ký máy tính để bàn nếu tình trạng này tiếp tục xảy ra.",
     "resetCodeSent": "Mã đặt lại đã được gửi đến nhật ký Docker",
     "codeVerified": "Xác minh mã thành công",
     "passwordResetSuccess": "Đặt lại mật khẩu thành công",
@@ -1106,7 +1106,7 @@
         "missing": "Không có plugin nào đã cài đặt cung cấp bố cục này.",
         "disabled": "Plugin cung cấp bố cục này đã bị tắt.",
         "blocked": "Plugin cung cấp bố cục này đang chờ một thành phần cần thiết.",
-        "incompatible": "Plugin cung cấp bố cục này không tương thích với phiên bản Termix này.",
+        "incompatible": "Plugin cung cấp bố cục này không tương thích với phiên bản D.EX.T.E.R. này.",
         "failed": "Bố cục không khởi động được.",
         "crashed": "Bố cục bị lỗi hai lần khi vẽ ứng dụng."
       },
@@ -1127,7 +1127,7 @@
       },
       "process:spawn": {
         "title": "Chạy chương trình trên máy này",
-        "consequence": "Chương trình chạy trên chính máy chủ Termix, không phải trên các máy chủ của bạn."
+        "consequence": "Chương trình chạy trên chính máy chủ D.EX.T.E.R., không phải trên các máy chủ của bạn."
       },
       "users:write": {
         "title": "Tạo và thay đổi tài khoản người dùng",
@@ -1151,11 +1151,11 @@
       },
       "system:tls": {
         "title": "Quản lý chứng chỉ",
-        "consequence": "Nó có thể thay thế chứng chỉ mà Termix cung cấp qua HTTPS và phản hồi các kiểm tra tên miền từ cơ quan cấp chứng chỉ."
+        "consequence": "Nó có thể thay thế chứng chỉ mà D.EX.T.E.R. cung cấp qua HTTPS và phản hồi các kiểm tra tên miền từ cơ quan cấp chứng chỉ."
       },
       "device:serial": {
         "title": "Truy cập thiết bị nối tiếp và USB",
-        "consequence": "Nó có thể mở cổng nối tiếp vật lý trên máy đang chạy Termix."
+        "consequence": "Nó có thể mở cổng nối tiếp vật lý trên máy đang chạy D.EX.T.E.R."
       },
       "hosts:export": {
         "title": "Xuất máy chủ kèm theo thông tin bảo mật",
@@ -1179,7 +1179,7 @@
       },
       "network:serve": {
         "title": "Chấp nhận kết nối",
-        "consequence": "Nó mở một cổng trên máy chủ Termix."
+        "consequence": "Nó mở một cổng trên máy chủ D.EX.T.E.R."
       },
       "network:broadcast": {
         "title": "Gửi tin nhắn phát sóng mạng",
@@ -1223,11 +1223,11 @@
       },
       "desktop:window": {
         "title": "Mở cửa sổ máy tính để bàn",
-        "consequence": "Chỉ trong ứng dụng máy tính để bàn Termix."
+        "consequence": "Chỉ trong ứng dụng máy tính để bàn D.EX.T.E.R."
       },
       "desktop:local": {
         "title": "Sử dụng máy tính này",
-        "consequence": "Có thể đọc và thay đổi tệp, chạy shell và mở cổng cục bộ trên máy tính này. Chỉ khả dụng trong ứng dụng Termix dành cho máy tính để bàn."
+        "consequence": "Có thể đọc và thay đổi tệp, chạy shell và mở cổng cục bộ trên máy tính này. Chỉ khả dụng trong ứng dụng D.EX.T.E.R. dành cho máy tính để bàn."
       },
       "users:impersonate": {
         "title": "Hoạt động thay mặt người dùng khác",
@@ -1255,10 +1255,10 @@
       },
       "secrets:own": {
         "title": "Lưu trữ bí mật riêng",
-        "consequence": "Được Termix mã hóa. Plugin không bao giờ nắm giữ khóa."
+        "consequence": "Được D.EX.T.E.R. mã hóa. Plugin không bao giờ nắm giữ khóa."
       },
       "settings:read-core": {
-        "title": "Đọc cài đặt Termix",
+        "title": "Đọc cài đặt D.EX.T.E.R.",
         "consequence": "Cài đặt máy chủ, không phải máy chủ hoặc thông tin đăng nhập của bạn."
       },
       "plugins:read": {
@@ -1354,7 +1354,7 @@
         "minor": "Nó cũng thêm các màn hình riêng và lưu trữ dữ liệu riêng, được tách biệt khỏi các plugin khác.",
         "none": "Nó không yêu cầu quyền truy cập đặc biệt nào.",
         "uploadTitle": "Cài đặt {{name}} từ tệp",
-        "uploadWarning": "Tệp này chưa được kiểm tra hoặc ký bởi sổ đăng ký Termix. Chỉ cài đặt nếu bạn tự xây dựng nó hoặc tin tưởng người đã tạo."
+        "uploadWarning": "Tệp này chưa được kiểm tra hoặc ký bởi sổ đăng ký D.EX.T.E.R. Chỉ cài đặt nếu bạn tự xây dựng nó hoặc tin tưởng người đã tạo."
       },
       "confirm": {
         "uninstallTitle": "Gỡ cài đặt {{name}}?",
@@ -1447,10 +1447,10 @@
         "security": "Bảo mật"
       },
       "installedBadge": "Đã cài đặt",
-      "incompatible": "Cần phiên bản Termix mới hơn",
+      "incompatible": "Cần phiên bản D.EX.T.E.R. mới hơn",
       "features": "Tính năng",
       "whatItCanDo": "Những gì nó có thể làm",
-      "addsToTermix": "Thêm vào Termix",
+      "addsToTermix": "Thêm vào D.EX.T.E.R.",
       "addsToTermixHint": "Gỡ cài đặt và tất cả những mục này sẽ biến mất.",
       "noServerAccess": "Không truy cập vào máy chủ của bạn",
       "searchInstalled": "Tìm kiếm đã cài đặt",
@@ -1468,12 +1468,12 @@
         "hostYourOwn": "Tự lưu trữ registry",
         "add": "Thêm registry",
         "addTitle": "Thêm một registry",
-        "addHint": "Dán liên kết đến file index.json của registry. Termix sẽ đọc file này và hiển thị khóa dùng để ký cho các plugin. Chỉ thêm registry từ những người bạn tin tưởng.",
+        "addHint": "Dán liên kết đến file index.json của registry. D.EX.T.E.R. sẽ đọc file này và hiển thị khóa dùng để ký cho các plugin. Chỉ thêm registry từ những người bạn tin tưởng.",
         "urlLabel": "URL chỉ mục",
         "check": "Kiểm tra",
         "addConfirm": "Tin tưởng và thêm",
         "added": "Đã thêm {{name}}",
-        "customWarning": "Các plugin từ registry này không được đội ngũ Termix xem xét. Chỉ chủ sở hữu registry quyết định nội dung của nó. Mọi lượt tải xuống đều phải được ký bằng khóa ở trên.",
+        "customWarning": "Các plugin từ registry này không được đội ngũ D.EX.T.E.R. xem xét. Chỉ chủ sở hữu registry quyết định nội dung của nó. Mọi lượt tải xuống đều phải được ký bằng khóa ở trên.",
         "keyFingerprint": "Khóa {{keyId}}",
         "pluginCount_other": "{{count}} plugin",
         "officialName": "Chính thức",
@@ -1481,12 +1481,12 @@
         "alwaysOn": "Luôn bật",
         "communityHint": "Các plugin do người khác tạo. Mỗi phiên bản đều được kiểm tra bởi con người và các quy trình tự động trước khi được liệt kê.",
         "communityConfirmTitle": "Bật plugin cộng đồng?",
-        "communityConfirmBody": "Plugin cộng đồng do người khác tạo, không phải đội ngũ Termix. Mỗi phiên bản đều được kiểm tra bởi con người và các quy trình tự động trước khi được liệt kê, nhưng vẫn có thể có sai sót lọt qua. Chỉ cài đặt các plugin bạn tin tưởng và kiểm tra những gì mỗi plugin yêu cầu.",
+        "communityConfirmBody": "Plugin cộng đồng do người khác tạo, không phải đội ngũ D.EX.T.E.R. Mỗi phiên bản đều được kiểm tra bởi con người và các quy trình tự động trước khi được liệt kê, nhưng vẫn có thể có sai sót lọt qua. Chỉ cài đặt các plugin bạn tin tưởng và kiểm tra những gì mỗi plugin yêu cầu.",
         "communityConfirm": "Bật",
         "communityBadge": "Cộng đồng",
         "communityBadgeHint": "Từ registry cộng đồng. Do người khác tạo và đã được xem xét trước khi liệt kê.",
         "customBadge": "Tùy chỉnh",
-        "customBadgeHint": "Từ {{name}}, một registry do quản trị viên thêm. Không được đội ngũ Termix xem xét.",
+        "customBadgeHint": "Từ {{name}}, một registry do quản trị viên thêm. Không được đội ngũ D.EX.T.E.R. xem xét.",
         "remove": "Xóa",
         "removeTitle": "Xóa {{name}}?",
         "removeBody": "Các plugin của nó sẽ không còn hiển thị trong mục Khám phá. Bạn có thể thêm lại sau.",
@@ -1517,7 +1517,7 @@
         "downloadsHint": "Số lần một phiên bản phát hành được tải xuống. Đây không phải là số lần cài đặt."
       },
       "unverified": "Chưa xác minh",
-      "unverifiedHint": "Được cài đặt từ tệp. Termix chưa kiểm tra hoặc ký xác thực.",
+      "unverifiedHint": "Được cài đặt từ tệp. D.EX.T.E.R. chưa kiểm tra hoặc ký xác thực.",
       "reportIssue": "Báo cáo sự cố",
       "reportTo": "Báo cáo cho {{author}}",
       "requestFeature": "Yêu cầu tính năng",
@@ -1571,10 +1571,10 @@
         "perPage": "{{count}} mỗi trang",
         "perPageLabel": "Plugin mỗi trang"
       },
-      "showUnsupportedHint": "Những plugin này được liệt kê nhưng chưa có bản phát hành nào chạy trên phiên bản này. Hãy cập nhật Termix để cài đặt chúng.",
-      "unsupported": "Yêu cầu phiên bản Termix mới hơn",
-      "unsupportedHint": "Không có bản phát hành nào của plugin này chạy trên phiên bản Termix hiện tại. Hãy cập nhật Termix để cài đặt nó.",
-      "needsTermix": "Yêu cầu Termix {{range}}",
+      "showUnsupportedHint": "Những plugin này được liệt kê nhưng chưa có bản phát hành nào chạy trên phiên bản này. Hãy cập nhật D.EX.T.E.R. để cài đặt chúng.",
+      "unsupported": "Yêu cầu phiên bản D.EX.T.E.R. mới hơn",
+      "unsupportedHint": "Không có bản phát hành nào của plugin này chạy trên phiên bản D.EX.T.E.R. hiện tại. Hãy cập nhật D.EX.T.E.R. để cài đặt nó.",
+      "needsTermix": "Yêu cầu D.EX.T.E.R. {{range}}",
       "showUnsupported": "Hiển thị không hỗ trợ ({{count}})",
       "showMore": "Hiển thị thêm {{count}} (còn {{total}})"
     }
