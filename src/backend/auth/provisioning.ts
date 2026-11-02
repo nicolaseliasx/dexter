@@ -275,7 +275,7 @@ export async function findOrProvisionExternalUser(
           provider: identity.provider,
         });
         throw new LoginMethodError(
-          "You have no D.EX.T.E.R. account yet. Ask an admin to turn on Auto-create external accounts.",
+          "You have no Termix account yet. Ask an admin to turn on Auto-create external accounts.",
           403,
           "registration_disabled",
         );

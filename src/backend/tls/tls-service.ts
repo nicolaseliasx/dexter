@@ -206,7 +206,7 @@ export async function reloadTls(): Promise<TlsReloadResult> {
       return {
         applied: false,
         message:
-          "Certificate installed, but HTTPS could not be started. Restart D.EX.T.E.R. with ENABLE_SSL=true to apply it.",
+          "Certificate installed, but HTTPS could not be started. Restart Termix with ENABLE_SSL=true to apply it.",
       };
     }
     persistSSLEnv(String(config.port), config.certPath, config.keyPath);
@@ -221,7 +221,7 @@ export async function reloadTls(): Promise<TlsReloadResult> {
     return {
       applied: false,
       message:
-        "Certificate installed, but it could not be loaded. Restart D.EX.T.E.R. to apply it.",
+        "Certificate installed, but it could not be loaded. Restart Termix to apply it.",
     };
   }
 }

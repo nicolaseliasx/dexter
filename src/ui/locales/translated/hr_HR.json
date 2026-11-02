@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Uključeno",
     "pluginsChoice_disabled": "Isključeno",
     "pluginsChoice_remove": "Ukloni",
-    "pluginsConsentTitle": "Pomozite poboljšati D.EX.T.E.R.",
+    "pluginsConsentTitle": "Pomozite poboljšati Termix",
     "pluginsConsentNote": "Ovo možete isključiti u bilo kojem trenutku s kartice Dodaci.",
     "pluginsApplying": "Primjena vaših odabira",
     "pluginsSomeFailed": "Neki se dodatci nisu mogli promijeniti. Možete ih popraviti kasnije s kartice Dodaci. Pritisnite Dalje za nastavak.",
@@ -226,14 +226,14 @@
     "neverBody": "Ne provjeravaj za ažuriranja. I dalje možete ručno provjeriti u Postavkama.",
     "onboardingTitle": "Ažuriranja aplikacije",
     "onboardingBody": "Desktop aplikacija se sada može sama ažurirati. Odaberite kako želite da nove verzije stignu. Ovo možete kasnije promijeniti u Postavkama, Ažuriranja.",
-    "onboardingManual": "Ova kopija aplikacije instalirana je na način koji ne dopušta samostalno ažuriranje, pa će vas D.EX.T.E.R. obavijestiti kada je nova verzija dostupna s poveznicom za preuzimanje.",
+    "onboardingManual": "Ova kopija aplikacije instalirana je na način koji ne dopušta samostalno ažuriranje, pa će vas Termix obavijestiti kada je nova verzija dostupna s poveznicom za preuzimanje.",
     "download": "Preuzmi",
     "restart": "Ponovno pokreni sada",
     "later": "Kasnije",
-    "available": "D.EX.T.E.R. {{version}} je dostupan",
+    "available": "Termix {{version}} je dostupan",
     "manualHint": "Preuzmite ga s stranice izdanja i instalirajte preko ove verzije.",
-    "ready": "D.EX.T.E.R. {{version}} je spreman za instalaciju",
-    "readyHint": "Instalirat će se sljedeći put kada se D.EX.T.E.R. ponovno pokrene."
+    "ready": "Termix {{version}} je spreman za instalaciju",
+    "readyHint": "Instalirat će se sljedeći put kada se Termix ponovno pokrene."
   },
   "safeMode": {
     "title": "Sigurni način rada",
@@ -391,7 +391,7 @@
     "sshPort": "SSH port",
     "authMethod": "Metoda autentifikacije",
     "authenticationMethod": "Metoda autentifikacije",
-    "authenticationMethodDesc": "Odaberite jednu metodu koju će D.EX.T.E.R. koristiti za autentifikaciju ovog SSH povezivanja. Ostale metode se ne pokušavaju automatski.",
+    "authenticationMethodDesc": "Odaberite jednu metodu koju će Termix koristiti za autentifikaciju ovog SSH povezivanja. Ostale metode se ne pokušavaju automatski.",
     "storedCredential": "Spremljene vjerodajnice",
     "selectACredential": "Odaberite vjerodajnice...",
     "keyTypeLabel": "Vrsta ključa",
@@ -407,7 +407,7 @@
     "replaceKey": "Zamijeni ključ",
     "docsLink": "Pogledaj dokumentaciju",
     "agentLabel": "SSH agent",
-    "agentDesc": "Autentificirajte se koristeći SSH agent koji se pokreće na D.EX.T.E.R. poslužitelju (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agent se mora pokretati na računalu na kojem je D.EX.T.E.R. hostan.",
+    "agentDesc": "Autentificirajte se koristeći SSH agent koji se pokreće na Termix poslužitelju (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agent se mora pokretati na računalu na kojem je Termix hostan.",
     "agentAuthenticationDesc": "Koristite ključeve iz SSH agenta za autentifikaciju ovog povezivanja. Ostavite put do soketa praznim za korištenje SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Put do agentovog soketa",
     "agentSocketPathPlaceholder": "Ostavite prazno za korištenje SSH_AUTH_SOCK",
@@ -816,8 +816,8 @@
     "arrangeUnlockedSwitchedToManual": "Prebaceno na ručno sortiranje kako bi se zadržao vaš redoslijed",
     "dragToRearrange": "Povucite za promjenu redoslijeda",
     "arrangeUnlocked": "Otključaj povlačenje za promjenu redoslijeda",
-    "webUiBindHostUnreachable": "Vaš preglednik ne može doseći adresu 127.0.0.1 na računalu na kojem se pokreće D.EX.T.E.R., stoga se ovaj krajnji točka neće učitati. Koristite adresu na koju to računalo odgovara, poput 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Iz ovog preglednika, forward bi se dostigao na istom imenu hosta s kojeg se služi D.EX.T.E.R., pa bi tunelirana usluga primila vašu D.EX.T.E.R. sesiju. kolačići ignoriraju port. Ova krajnja točka odbit će otvaranje ovdje; radi iz D.EX.T.E.R. desktop aplikacije ili kada se D.EX.T.E.R. otvori na localhostu.",
+    "webUiBindHostUnreachable": "Vaš preglednik ne može doseći adresu 127.0.0.1 na računalu na kojem se pokreće Termix, stoga se ovaj krajnji točka neće učitati. Koristite adresu na koju to računalo odgovara, poput 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Iz ovog preglednika, forward bi se dostigao na istom imenu hosta s kojeg se služi Termix, pa bi tunelirana usluga primila vašu Termix sesiju. kolačići ignoriraju port. Ova krajnja točka odbit će otvaranje ovdje; radi iz Termix desktop aplikacije ili kada se Termix otvori na localhostu.",
     "webUiErrorLabelRequired": "Krajnja točka {{row}} treba oznaku.",
     "webUiErrorLabelDuplicate": "Svaka krajnja točka treba jedinstveno ime.",
     "webUiErrorPortRange": "Krajnja točka {{row}} treba port između 1 i 65535.",
@@ -964,8 +964,8 @@
     "retrySecondFactorUI": "Osveži metode provjere",
     "localDesktopSignedOut": "Odjava s lokalne radne površine",
     "localDesktopUnavailable": "Sesija lokalne radne površine nije dostupna",
-    "localDesktopSignedOutDesc": "Odjavili ste se sa sesije lokalne radne površine. Nastavite lokalno kako biste ponovno koristili ugrađeni D.EX.T.E.R. poslužitelj na ovom uređaju.",
-    "localDesktopUnavailableDesc": "D.EX.T.E.R. nije mogao pokrenuti sesiju lokalne radne površine. Pokušajte ponovno umjesto registracije novog računa.",
+    "localDesktopSignedOutDesc": "Odjavili ste se sa sesije lokalne radne površine. Nastavite lokalno kako biste ponovno koristili ugrađeni Termix poslužitelj na ovom uređaju.",
+    "localDesktopUnavailableDesc": "Termix nije mogao pokrenuti sesiju lokalne radne površine. Pokušajte ponovno umjesto registracije novog računa.",
     "continueLocalDesktop": "Nastavi s lokalnom radnom površinom",
     "retryLocalDesktop": "Pokušaj ponovno s sesijom lokalne radne površine"
   },
@@ -984,8 +984,8 @@
     "acceptNewKey": "Prihvati novi ključ i nastavi"
   },
   "errors": {
-    "databaseConnection": "D.EX.T.E.R. poslužitelj ne odgovara",
-    "embeddedServerFailed": "Lokalni D.EX.T.E.R. poslužitelj se nije mogao pokrenuti",
+    "databaseConnection": "Termix poslužitelj ne odgovara",
+    "embeddedServerFailed": "Lokalni Termix poslužitelj se nije mogao pokrenuti",
     "unknownError": "Nepoznata greška",
     "syncedHostMissing": "Sinkronizirani domaćin ne postoji na povezanom poslužitelju",
     "linkedServerUnreachable": "Povezani poslužitelj nije dostupan",
@@ -1009,13 +1009,13 @@
     "sessionExpiredLogin": "Sesija je istekla. Ponovno se prijavite."
   },
   "messages": {
-    "registrationDisabled": "Još nemate D.EX.T.E.R. račun. Zatražite od administratora da uključi opciju Automatsko stvaranje vanjskih računa.",
+    "registrationDisabled": "Još nemate Termix račun. Zatražite od administratora da uključi opciju Automatsko stvaranje vanjskih računa.",
     "userNotAllowed": "Vaš račun nije ovlašten za registraciju. Kontaktirajte administratora.",
     "databaseConnectionFailed": "Moguće je da se još pokreće ili je zaustavljen. Ova stranica nastavlja pokušavati i automatski se nastavlja raditi čim poslužitelj ponovno bude dostupan.",
-    "embeddedServerPortInUse": "Port {{port}} već koristi drugi program. To je obično D.EX.T.E.R. Docker kontejner ili preostali D.EX.T.E.R. proces iz prethodne sesije. Zatvorite ga, a zatim ponovno pokrenite D.EX.T.E.R.",
-    "embeddedServerPortInUseUnknownPort": "Jedan od portova koji Termixu trebaju već koristi drugi program. Zatvorite program koji ga koristi, a zatim ponovno pokrenite D.EX.T.E.R.",
+    "embeddedServerPortInUse": "Port {{port}} već koristi drugi program. To je obično Termix Docker kontejner ili preostali Termix proces iz prethodne sesije. Zatvorite ga, a zatim ponovno pokrenite Termix.",
+    "embeddedServerPortInUseUnknownPort": "Jedan od portova koji Termixu trebaju već koristi drugi program. Zatvorite program koji ga koristi, a zatim ponovno pokrenite Termix.",
     "embeddedServerOldDatabase": "Vaši lokalni podaci potječu iz Termixa 2.8 ili starije verzije i moraju prvo proći kroz verziju 2.9. Instalirajte Termix 2.9.1, otvorite ga jednom kako bi mogao premjestiti vaše podatke, a zatim ponovno ažurirajte na ovu verziju.",
-    "embeddedServerCrashed": "Lokalni poslužitelj je neočekivano prestao raditi. Ponovno pokrenite D.EX.T.E.R. i provjerite dnevnik radne površine ako se to ponavlja.",
+    "embeddedServerCrashed": "Lokalni poslužitelj je neočekivano prestao raditi. Ponovno pokrenite Termix i provjerite dnevnik radne površine ako se to ponavlja.",
     "resetCodeSent": "Kod za resetiranje poslan u Docker dnevnike",
     "codeVerified": "Kod uspješno potvrđen",
     "passwordResetSuccess": "Lozinka uspješno resetirana",
@@ -1161,7 +1161,7 @@
       },
       "process:spawn": {
         "title": "Pokretanje programa na ovom uređaju",
-        "consequence": "Programi se pokreću na samom D.EX.T.E.R. poslužitelju, a ne na vašim poslužiteljima."
+        "consequence": "Programi se pokreću na samom Termix poslužitelju, a ne na vašim poslužiteljima."
       },
       "users:write": {
         "title": "Izrada i izmjena korisničkih računa",
@@ -1185,11 +1185,11 @@
       },
       "system:tls": {
         "title": "Upravljanje certifikatima",
-        "consequence": "Može zamijeniti certifikat koji D.EX.T.E.R. koristi za HTTPS i odgovoriti na provjere domena od strane izdavatelja certifikata."
+        "consequence": "Može zamijeniti certifikat koji Termix koristi za HTTPS i odgovoriti na provjere domena od strane izdavatelja certifikata."
       },
       "device:serial": {
         "title": "Pristup serijskim i USB uređajima",
-        "consequence": "Može otvoriti fizički serijski port na uređaju na kojem radi D.EX.T.E.R."
+        "consequence": "Može otvoriti fizički serijski port na uređaju na kojem radi Termix."
       },
       "hosts:export": {
         "title": "Izvezi hostove s njihovim tajnama",
@@ -1213,7 +1213,7 @@
       },
       "network:serve": {
         "title": "Prihvaćanje veza",
-        "consequence": "Otvara port na D.EX.T.E.R. poslužitelju."
+        "consequence": "Otvara port na Termix poslužitelju."
       },
       "network:broadcast": {
         "title": "Slanje mrežnih broadcast poruka",
@@ -1257,11 +1257,11 @@
       },
       "desktop:window": {
         "title": "Otvaranje prozora radne površine",
-        "consequence": "Samo u D.EX.T.E.R. aplikaciji za radnu površinu."
+        "consequence": "Samo u Termix aplikaciji za radnu površinu."
       },
       "desktop:local": {
         "title": "Koristi ovaj računal",
-        "consequence": "Može čitati i mijenjati datoteke, pokretati shell i otvarati lokalne portove na ovom računalu. Samo u D.EX.T.E.R. desktop aplikaciji."
+        "consequence": "Može čitati i mijenjati datoteke, pokretati shell i otvarati lokalne portove na ovom računalu. Samo u Termix desktop aplikaciji."
       },
       "users:impersonate": {
         "title": "Djelovanje u ime drugih korisnika",
@@ -1410,7 +1410,7 @@
         "minor": "Također dodaje vlastite ekrane i pohranjuje vlastite podatke, odvojeno od drugih dodataka.",
         "none": "Ne traži nikakav poseban pristup.",
         "uploadTitle": "Instaliraj {{name}} iz datoteke",
-        "uploadWarning": "Ova datoteka nije provjerena niti potpisana od strane D.EX.T.E.R. registra. Instalirajte je samo ako ste je sami izradili ili vjerujete onome tko ju je napravio."
+        "uploadWarning": "Ova datoteka nije provjerena niti potpisana od strane Termix registra. Instalirajte je samo ako ste je sami izradili ili vjerujete onome tko ju je napravio."
       },
       "confirm": {
         "uninstallTitle": "Deinstalirati {{name}}?",
@@ -1516,7 +1516,7 @@
       "incompatible": "Zahtijeva noviju verziju Termixa",
       "features": "Značajke",
       "whatItCanDo": "Što može učiniti",
-      "addsToTermix": "Dodaje u D.EX.T.E.R.",
+      "addsToTermix": "Dodaje u Termix",
       "addsToTermixHint": "Deinstalacijom se uklanjaju sve ove značajke.",
       "noServerAccess": "Nema pristupa vašim poslužiteljima",
       "searchInstalled": "Pretraži instalirane",
@@ -1534,12 +1534,12 @@
         "hostYourOwn": "Hostajte vlastiti registar",
         "add": "Dodaj registar",
         "addTitle": "Dodaj registar",
-        "addHint": "Zalijepite poveznicu na index.json registra. D.EX.T.E.R. ga čita i prikazuje ključ kojim potpisuje dodatke. Dodajte samo registre od ljudi kojima vjerujete.",
+        "addHint": "Zalijepite poveznicu na index.json registra. Termix ga čita i prikazuje ključ kojim potpisuje dodatke. Dodajte samo registre od ljudi kojima vjerujete.",
         "urlLabel": "URL indeksa",
         "check": "Provjeri",
         "addConfirm": "Vjeruj i dodaj",
         "added": "Dodano {{name}}",
-        "customWarning": "Dodaci iz ovog registra nisu pregledani od strane D.EX.T.E.R. tima. Samo vlasnik registra odlučuje što se nalazi u njemu. Svako preuzimanje mora biti potpisano ključem iznad.",
+        "customWarning": "Dodaci iz ovog registra nisu pregledani od strane Termix tima. Samo vlasnik registra odlučuje što se nalazi u njemu. Svako preuzimanje mora biti potpisano ključem iznad.",
         "keyFingerprint": "Ključ {{keyId}}",
         "pluginCount_one": "{{count}} dodatak",
         "pluginCount_few": "{{count}} dodatka",
@@ -1549,12 +1549,12 @@
         "alwaysOn": "Uvijek uključen",
         "communityHint": "Dodaci koje su napravili drugi ljudi. Svaka verzija je provjerena od strane osobe i automatiziranim provjerama prije nego što bude navedena.",
         "communityConfirmTitle": "Uključiti dodatke zajednice?",
-        "communityConfirmBody": "Dodatke zajednice prave drugi ljudi, a ne D.EX.T.E.R. tim. Svaka verzija je provjerena od strane osobe i automatiziranim provjerama prije nego što bude navedena, ali greške se mogu probiti. Instalirajte samo dodatke kojima vjerujete i provjerite što svaki od njih traži.",
+        "communityConfirmBody": "Dodatke zajednice prave drugi ljudi, a ne Termix tim. Svaka verzija je provjerena od strane osobe i automatiziranim provjerama prije nego što bude navedena, ali greške se mogu probiti. Instalirajte samo dodatke kojima vjerujete i provjerite što svaki od njih traži.",
         "communityConfirm": "Uključi",
         "communityBadge": "Zajednica",
         "communityBadgeHint": "Iz registra zajednice. Napravili su ga drugi ljudi i pregledan je prije nego što je naveden.",
         "customBadge": "Prilagođeno",
-        "customBadgeHint": "Iz {{name}}, registra koji je dodao administrator. Nije pregledan od strane D.EX.T.E.R. tima.",
+        "customBadgeHint": "Iz {{name}}, registra koji je dodao administrator. Nije pregledan od strane Termix tima.",
         "remove": "Ukloni",
         "removeTitle": "Ukloniti {{name}}?",
         "removeBody": "Njegovi dodaci više se neće prikazivati u Pregledu. Možete ga ponovno dodati kasnije.",
@@ -1591,7 +1591,7 @@
         "downloadsHint": "Koliko je puta verzija preuzeta. Ovo nije broj instalacija."
       },
       "unverified": "Neprovjereno",
-      "unverifiedHint": "Instalirano iz datoteke. D.EX.T.E.R. ga nije provjerio niti potpisao.",
+      "unverifiedHint": "Instalirano iz datoteke. Termix ga nije provjerio niti potpisao.",
       "reportIssue": "Prijavi problem",
       "reportTo": "Prijavi autoru {{author}}",
       "requestFeature": "Zatraži novu značajku",
@@ -1647,10 +1647,10 @@
         "perPage": "{{count}} po stranici",
         "perPageLabel": "Dodaci po stranici"
       },
-      "showUnsupportedHint": "Ovi su navedeni, ali još nema izdanja koje radi na ovoj verziji. Ažurirajte D.EX.T.E.R. da biste ih instalirali.",
-      "unsupported": "Zahtijeva noviji D.EX.T.E.R.",
-      "unsupportedHint": "Nijedno izdanje ovog dodatka ne radi na ovoj verziji Termixa. Ažurirajte D.EX.T.E.R. da biste ga instalirali.",
-      "needsTermix": "Zahtijeva D.EX.T.E.R. {{range}}",
+      "showUnsupportedHint": "Ovi su navedeni, ali još nema izdanja koje radi na ovoj verziji. Ažurirajte Termix da biste ih instalirali.",
+      "unsupported": "Zahtijeva noviji Termix",
+      "unsupportedHint": "Nijedno izdanje ovog dodatka ne radi na ovoj verziji Termixa. Ažurirajte Termix da biste ga instalirali.",
+      "needsTermix": "Zahtijeva Termix {{range}}",
       "showUnsupported": "Prikaži nepodržane ({{count}})",
       "showMore": "Prikaži još {{count}} (ostalo: {{total}})"
     }

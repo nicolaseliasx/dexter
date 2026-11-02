@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Zapnuto",
     "pluginsChoice_disabled": "Vypnuto",
     "pluginsChoice_remove": "Odstranit",
-    "pluginsConsentTitle": "Pomozte zlepšit D.EX.T.E.R.",
+    "pluginsConsentTitle": "Pomozte zlepšit Termix",
     "pluginsConsentNote": "Tuto funkci můžete kdykoli vypnout ze záložky Pluginy.",
     "pluginsApplying": "Aplikování vašich voleb",
     "pluginsSomeFailed": "Některé pluginy se nepodařilo změnit. Opravíte je později ze záložky Pluginy. Stiskněte Další pro pokračování.",
@@ -226,13 +226,13 @@
     "neverBody": "Nezkontrolovat aktualizace. Stále je můžete zkontrolovat ručně v Nastavení.",
     "onboardingTitle": "Aktualizace aplikace",
     "onboardingBody": "Desktopová aplikace se nyní dokáže aktualizovat sama. Vyberte si, jak chcete, aby nové verze přicházely. Toto můžete později změnit v Nastavení, Aktualizace.",
-    "onboardingManual": "Tato kopie aplikace byla nainstalována způsobem, který neumožňuje automatickou aktualizaci, takže D.EX.T.E.R. vás upozorní, když je k dispozici nová verze, a poskytne odkaz ke stažení.",
+    "onboardingManual": "Tato kopie aplikace byla nainstalována způsobem, který neumožňuje automatickou aktualizaci, takže Termix vás upozorní, když je k dispozici nová verze, a poskytne odkaz ke stažení.",
     "download": "Stáhnout",
     "restart": "Restartovat nyní",
     "later": "Později",
-    "available": "D.EX.T.E.R. {{version}} je k dispozici",
+    "available": "Termix {{version}} je k dispozici",
     "manualHint": "Stáhněte si ho ze stránky s vydáním a nainstalujte přes tuto verzi.",
-    "ready": "D.EX.T.E.R. {{version}} je připraven k instalaci",
+    "ready": "Termix {{version}} je připraven k instalaci",
     "readyHint": "Nainstaluje se při příštím restartu Termixu."
   },
   "safeMode": {
@@ -395,7 +395,7 @@
     "sshPort": "SSH port",
     "authMethod": "Metoda ověření",
     "authenticationMethod": "Metoda autentizace",
-    "authenticationMethodDesc": "Vyberte jednu metodu, kterou D.EX.T.E.R. použije k autentizaci tohoto SSH připojení. Ostatní metody se automaticky nezkouší.",
+    "authenticationMethodDesc": "Vyberte jednu metodu, kterou Termix použije k autentizaci tohoto SSH připojení. Ostatní metody se automaticky nezkouší.",
     "storedCredential": "Uložené přihlašovací údaje",
     "selectACredential": "Vyberte přihlašovací údaje...",
     "keyTypeLabel": "Typ klíče",
@@ -411,7 +411,7 @@
     "replaceKey": "Nahradit klíč",
     "docsLink": "Zobrazit dokumentaci",
     "agentLabel": "SSH Agent",
-    "agentDesc": "Autentizace pomocí SSH agenta běžícího na serveru D.EX.T.E.R. (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agent musí běžet na stroji, kde je D.EX.T.E.R. hostován.",
+    "agentDesc": "Autentizace pomocí SSH agenta běžícího na serveru Termix (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agent musí běžet na stroji, kde je Termix hostován.",
     "agentAuthenticationDesc": "Použít klíče z SSH agenta k autentizaci tohoto připojení. Nechte cestu k socketu prázdnou pro použití SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Cesta k socketu agenta",
     "agentSocketPathPlaceholder": "Nechte prázdné pro použití SSH_AUTH_SOCK",
@@ -828,8 +828,8 @@
     "arrangeUnlockedSwitchedToManual": "Přepnuto na ruční řazení, aby se zachovalo pořadí",
     "dragToRearrange": "Přetáhněte pro přeuspořádání",
     "arrangeUnlocked": "Odemknout přetahování pro přeuspořádání",
-    "webUiBindHostUnreachable": "Váš prohlížeč nemůže dosáhnout na 127.0.0.1 na počítači, kde běží D.EX.T.E.R., takže tento koncový bod se nenačte. Použijte adresu, na kterou tento počítač odpovídá, například 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Z tohoto prohlížeče by byl forward dosažitelný na stejném názvu hostitele, ze kterého je D.EX.T.E.R. poskytován, takže tunelovaná služba by obdržela vaši relaci D.EX.T.E.R. Cookies ignorují port. Tento koncový bod se zde odmítne otevřít; funguje z desktopové aplikace D.EX.T.E.R. nebo když je D.EX.T.E.R. otevřen na localhost.",
+    "webUiBindHostUnreachable": "Váš prohlížeč nemůže dosáhnout na 127.0.0.1 na počítači, kde běží Termix, takže tento koncový bod se nenačte. Použijte adresu, na kterou tento počítač odpovídá, například 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Z tohoto prohlížeče by byl forward dosažitelný na stejném názvu hostitele, ze kterého je Termix poskytován, takže tunelovaná služba by obdržela vaši relaci Termix. Cookies ignorují port. Tento koncový bod se zde odmítne otevřít; funguje z desktopové aplikace Termix nebo když je Termix otevřen na localhost.",
     "webUiErrorLabelRequired": "Koncový bod {{row}} potřebuje popisek.",
     "webUiErrorLabelDuplicate": "Každý koncový bod potřebuje jiný název.",
     "webUiErrorPortRange": "Koncový bod {{row}} potřebuje port mezi 1 a 65535.",
@@ -977,8 +977,8 @@
     "retrySecondFactorUI": "Obnovit metody ověření",
     "localDesktopSignedOut": "Odhlášení z místní plochy",
     "localDesktopUnavailable": "Relace místní plochy není dostupná",
-    "localDesktopSignedOutDesc": "Odhlásili jste se z relace místní plochy. Pokračujte lokálně pro opětovné použití vestavěného D.EX.T.E.R. serveru tohoto zařízení.",
-    "localDesktopUnavailableDesc": "D.EX.T.E.R. se nepodařilo spustit relaci místní plochy. Místo registrace nového účtu to zkuste znovu.",
+    "localDesktopSignedOutDesc": "Odhlásili jste se z relace místní plochy. Pokračujte lokálně pro opětovné použití vestavěného Termix serveru tohoto zařízení.",
+    "localDesktopUnavailableDesc": "Termix se nepodařilo spustit relaci místní plochy. Místo registrace nového účtu to zkuste znovu.",
     "continueLocalDesktop": "Pokračovat s místní plochou",
     "retryLocalDesktop": "Zkusit znovu relaci místní plochy"
   },
@@ -997,8 +997,8 @@
     "acceptNewKey": "Přijmout nový klíč a pokračovat"
   },
   "errors": {
-    "databaseConnection": "Server D.EX.T.E.R. neodpovídá",
-    "embeddedServerFailed": "Lokální server D.EX.T.E.R. se nepodařilo spustit",
+    "databaseConnection": "Server Termix neodpovídá",
+    "embeddedServerFailed": "Lokální server Termix se nepodařilo spustit",
     "unknownError": "Neznámá chyba",
     "syncedHostMissing": "Synchronizovaný hostitel neexistuje na propojeném serveru",
     "linkedServerUnreachable": "Propojený server není dosažitelný",
@@ -1022,13 +1022,13 @@
     "sessionExpiredLogin": "Relace vypršela. Prosím, přihlaste se znovu."
   },
   "messages": {
-    "registrationDisabled": "Zatím nemáte účet D.EX.T.E.R. Požádejte administrátora, aby zapnul možnost Automatické vytváření externích účtů.",
+    "registrationDisabled": "Zatím nemáte účet Termix. Požádejte administrátora, aby zapnul možnost Automatické vytváření externích účtů.",
     "userNotAllowed": "Váš účet není oprávněn k registraci. Kontaktujte prosím administrátora.",
     "databaseConnectionFailed": "Server se možná stále spouští, nebo byl zastaven. Tato stránka se bude neustále pokoušet o připojení a automaticky se obnoví, jakmile bude server znovu dostupný.",
-    "embeddedServerPortInUse": "Port {{port}} je již používán jiným programem. Obvykle se jedná o Docker kontejner D.EX.T.E.R. nebo zbytkový proces D.EX.T.E.R. z předchozí relace. Zavřete jej a poté restartujte D.EX.T.E.R.",
-    "embeddedServerPortInUseUnknownPort": "Jeden z portů, které D.EX.T.E.R. potřebuje, je již používán jiným programem. Zavřete aplikaci, která jej používá, a poté restartujte D.EX.T.E.R.",
+    "embeddedServerPortInUse": "Port {{port}} je již používán jiným programem. Obvykle se jedná o Docker kontejner Termix nebo zbytkový proces Termix z předchozí relace. Zavřete jej a poté restartujte Termix.",
+    "embeddedServerPortInUseUnknownPort": "Jeden z portů, které Termix potřebuje, je již používán jiným programem. Zavřete aplikaci, která jej používá, a poté restartujte Termix.",
     "embeddedServerOldDatabase": "Vaše místní data pocházejí z Termix 2.8 nebo starší verze a musí být nejprve převedena verzí 2.9. Nainstalujte Termix 2.9.1, otevřete jej jednou, aby mohl přesunout vaše data, a poté aktualizujte znovu na tuto verzi.",
-    "embeddedServerCrashed": "Místní server neočekávaně přestal běžet. Restartujte D.EX.T.E.R. a pokud se problém opakuje, zkontrolujte protokol desktopu.",
+    "embeddedServerCrashed": "Místní server neočekávaně přestal běžet. Restartujte Termix a pokud se problém opakuje, zkontrolujte protokol desktopu.",
     "resetCodeSent": "Resetovací kód byl odeslán do logů Dockeru",
     "codeVerified": "Kód byl úspěšně ověřen",
     "passwordResetSuccess": "Heslo bylo úspěšně resetováno",
@@ -1157,7 +1157,7 @@
         "missing": "Žádný nainstalovaný plugin toto rozložení neposkytuje.",
         "disabled": "Plugin, který toto rozložení poskytuje, je vypnutý.",
         "blocked": "Plugin, který toto rozložení poskytuje, čeká na něco, co potřebuje.",
-        "incompatible": "Plugin, který toto rozložení poskytuje, nefunguje s touto verzí D.EX.T.E.R.",
+        "incompatible": "Plugin, který toto rozložení poskytuje, nefunguje s touto verzí Termix.",
         "failed": "Rozložení se nepodařilo spustit.",
         "crashed": "Rozložení dvakrát selhalo při vykreslování aplikace."
       },
@@ -1178,7 +1178,7 @@
       },
       "process:spawn": {
         "title": "Spouštět programy na tomto počítači",
-        "consequence": "Programy se spouštějí přímo na serveru D.EX.T.E.R., ne na vašich hostitelích."
+        "consequence": "Programy se spouštějí přímo na serveru Termix, ne na vašich hostitelích."
       },
       "users:write": {
         "title": "Vytvářet a měnit uživatelské účty",
@@ -1202,11 +1202,11 @@
       },
       "system:tls": {
         "title": "Spravovat certifikáty",
-        "consequence": "Může nahradit certifikát, který D.EX.T.E.R. poskytuje přes HTTPS, a odpovídat na ověřování domén od certifikačních autorit."
+        "consequence": "Může nahradit certifikát, který Termix poskytuje přes HTTPS, a odpovídat na ověřování domén od certifikačních autorit."
       },
       "device:serial": {
         "title": "Přístup k sériovým a USB zařízením",
-        "consequence": "Může otevřít fyzický sériový port na počítači, kde běží D.EX.T.E.R."
+        "consequence": "Může otevřít fyzický sériový port na počítači, kde běží Termix."
       },
       "hosts:export": {
         "title": "Exportovat hostitele s jejich tajnými informacemi",
@@ -1230,7 +1230,7 @@
       },
       "network:serve": {
         "title": "Přijímat připojení",
-        "consequence": "Otevírá port na serveru D.EX.T.E.R."
+        "consequence": "Otevírá port na serveru Termix."
       },
       "network:broadcast": {
         "title": "Odesílat síťová vysílání",
@@ -1274,11 +1274,11 @@
       },
       "desktop:window": {
         "title": "Otevírat okna plochy",
-        "consequence": "Pouze v desktopové aplikaci D.EX.T.E.R."
+        "consequence": "Pouze v desktopové aplikaci Termix."
       },
       "desktop:local": {
         "title": "Použít tento počítač",
-        "consequence": "Může číst a měnit soubory, spouštět shell a otevírat místní porty na tomto počítači. Pouze v desktopové aplikaci D.EX.T.E.R."
+        "consequence": "Může číst a měnit soubory, spouštět shell a otevírat místní porty na tomto počítači. Pouze v desktopové aplikaci Termix."
       },
       "users:impersonate": {
         "title": "Jednat jménem jiných uživatelů",
@@ -1306,10 +1306,10 @@
       },
       "secrets:own": {
         "title": "Ukládat vlastní tajné informace",
-        "consequence": "Šifrováno aplikací D.EX.T.E.R. Plugin nikdy neobsahuje klíč."
+        "consequence": "Šifrováno aplikací Termix. Plugin nikdy neobsahuje klíč."
       },
       "settings:read-core": {
-        "title": "Číst nastavení D.EX.T.E.R.",
+        "title": "Číst nastavení Termix",
         "consequence": "Nastavení serveru, nikoliv vaše hostitelé nebo přihlašovací údaje."
       },
       "plugins:read": {
@@ -1438,7 +1438,7 @@
         "minor": "Také přidává vlastní obrazovky a ukládá vlastní data, která jsou oddělena od dat jiných pluginů.",
         "none": "Nežádá o žádný speciální přístup.",
         "uploadTitle": "Nainstalovat {{name}} ze souboru",
-        "uploadWarning": "Tento soubor nebyl D.EX.T.E.R. registrem ověřen ani podepsán. Nainstalujte jej pouze v případě, že jste jej vytvořili sami nebo důvěřujete autorovi."
+        "uploadWarning": "Tento soubor nebyl Termix registrem ověřen ani podepsán. Nainstalujte jej pouze v případě, že jste jej vytvořili sami nebo důvěřujete autorovi."
       },
       "confirm": {
         "uninstallTitle": "Odinstalovat {{name}}?",
@@ -1546,10 +1546,10 @@
         "security": "Zabezpečení"
       },
       "installedBadge": "Nainstalováno",
-      "incompatible": "Vyžaduje novější verzi D.EX.T.E.R.",
+      "incompatible": "Vyžaduje novější verzi Termix",
       "features": "Funkce",
       "whatItCanDo": "Co umí",
-      "addsToTermix": "Přidává do D.EX.T.E.R.",
+      "addsToTermix": "Přidává do Termix",
       "addsToTermixHint": "Po odinstalování zmizí všechny tyto funkce.",
       "noServerAccess": "Žádný přístup k vašim serverům",
       "searchInstalled": "Hledat mezi nainstalovanými",
@@ -1567,12 +1567,12 @@
         "hostYourOwn": "Hostovat vlastní rejstřík",
         "add": "Přidat rejstřík",
         "addTitle": "Přidat rejstřík",
-        "addHint": "Vložte odkaz na index.json rejstříku. D.EX.T.E.R. ho přečte a zobrazí klíč, kterým pluginy podepisuje. Přidávejte pouze rejstříky od lidí, kterým důvěřujete.",
+        "addHint": "Vložte odkaz na index.json rejstříku. Termix ho přečte a zobrazí klíč, kterým pluginy podepisuje. Přidávejte pouze rejstříky od lidí, kterým důvěřujete.",
         "urlLabel": "URL indexu",
         "check": "Zkontrolovat",
         "addConfirm": "Důvěřovat a přidat",
         "added": "Přidáno {{name}}",
-        "customWarning": "Pluginy z tohoto rejstříku nejsou recenzovány týmem D.EX.T.E.R. Pouze vlastník rejstříku rozhoduje o tom, co v něm je. Každé stažení musí být podepsáno výše uvedeným klíčem.",
+        "customWarning": "Pluginy z tohoto rejstříku nejsou recenzovány týmem Termix. Pouze vlastník rejstříku rozhoduje o tom, co v něm je. Každé stažení musí být podepsáno výše uvedeným klíčem.",
         "keyFingerprint": "Klíč {{keyId}}",
         "pluginCount_one": "{{count}} plugin",
         "pluginCount_few": "{{count}} pluginů",
@@ -1583,12 +1583,12 @@
         "alwaysOn": "Vždy zapnuto",
         "communityHint": "Pluginy vytvořené ostatními lidmi. Každá verze je před zařazením zkontrolována člověkem i automatizovanými kontrolami.",
         "communityConfirmTitle": "Zapnout komunitní pluginy?",
-        "communityConfirmBody": "Komunitní pluginy vytvářejí jiní lidé, ne tým D.EX.T.E.R. Každá verze je před zařazením zkontrolována člověkem i automatizovanými kontrolami, ale chyby se mohou stále vyskytnout. Instalujte pouze pluginy, kterým důvěřujete, a zkontrolujte, co každý z nich vyžaduje.",
+        "communityConfirmBody": "Komunitní pluginy vytvářejí jiní lidé, ne tým Termix. Každá verze je před zařazením zkontrolována člověkem i automatizovanými kontrolami, ale chyby se mohou stále vyskytnout. Instalujte pouze pluginy, kterým důvěřujete, a zkontrolujte, co každý z nich vyžaduje.",
         "communityConfirm": "Zapnout",
         "communityBadge": "Komunitní",
         "communityBadgeHint": "Z komunitního rejstříku. Vytvořeno ostatními lidmi a recenzováno před zařazením.",
         "customBadge": "Vlastní",
-        "customBadgeHint": "Z {{name}}, rejstříku přidaného administrátorem. Nebylo recenzováno týmem D.EX.T.E.R.",
+        "customBadgeHint": "Z {{name}}, rejstříku přidaného administrátorem. Nebylo recenzováno týmem Termix.",
         "remove": "Odebrat",
         "removeTitle": "Odebrat {{name}}?",
         "removeBody": "Jejich pluginy se již nebudou zobrazovat v sekci Prohlížet. Můžete je přidat znovu později.",
@@ -1628,7 +1628,7 @@
         "downloadsHint": "Počet stažení dané verze. Toto není počet instalací."
       },
       "unverified": "Nepotvrzený",
-      "unverifiedHint": "Nainstalováno ze souboru. D.EX.T.E.R. jej neověřil ani nepodepsal.",
+      "unverifiedHint": "Nainstalováno ze souboru. Termix jej neověřil ani nepodepsal.",
       "reportIssue": "Nahlásit problém",
       "reportTo": "Nahlásit autorovi {{author}}",
       "requestFeature": "Navrhnout novou funkci",
@@ -1685,10 +1685,10 @@
         "perPage": "{{count}} na stranu",
         "perPageLabel": "Pluginů na stranu"
       },
-      "showUnsupportedHint": "Tyto jsou uvedeny, ale žádná verze zatím na této verzi neběží. Aktualizujte D.EX.T.E.R. pro jejich instalaci.",
-      "unsupported": "Vyžaduje novější D.EX.T.E.R.",
-      "unsupportedHint": "Žádná verze tohoto pluginu neběží na této verzi D.EX.T.E.R. Aktualizujte D.EX.T.E.R. pro jeho instalaci.",
-      "needsTermix": "Vyžaduje D.EX.T.E.R. {{range}}",
+      "showUnsupportedHint": "Tyto jsou uvedeny, ale žádná verze zatím na této verzi neběží. Aktualizujte Termix pro jejich instalaci.",
+      "unsupported": "Vyžaduje novější Termix",
+      "unsupportedHint": "Žádná verze tohoto pluginu neběží na této verzi Termix. Aktualizujte Termix pro jeho instalaci.",
+      "needsTermix": "Vyžaduje Termix {{range}}",
       "showUnsupported": "Zobrazit nepodporované ({{count}})",
       "showMore": "Zobrazit {{count}} dalších (zbývá {{total}})"
     }

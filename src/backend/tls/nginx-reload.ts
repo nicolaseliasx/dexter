@@ -134,7 +134,7 @@ export function reloadNginxWithSSL(): { applied: boolean; message: string } {
     return {
       applied: false,
       message:
-        "Certificate installed, but nginx could not be reloaded automatically. Restart D.EX.T.E.R. with ENABLE_SSL=true to apply it.",
+        "Certificate installed, but nginx could not be reloaded automatically. Restart Termix with ENABLE_SSL=true to apply it.",
     };
   }
 }

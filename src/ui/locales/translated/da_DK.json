@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Til",
     "pluginsChoice_disabled": "Fra",
     "pluginsChoice_remove": "Fjern",
-    "pluginsConsentTitle": "Hjælp med at forbedre D.EX.T.E.R.",
+    "pluginsConsentTitle": "Hjælp med at forbedre Termix",
     "pluginsConsentNote": "Du kan slå dette fra når som helst fra Plugins-fanen.",
     "pluginsApplying": "Anvender dine valg",
     "pluginsSomeFailed": "Nogle plugins kunne ikke ændres. Du kan rette dem senere fra Plugins-fanen. Tryk på Næste for at fortsætte.",
@@ -226,14 +226,14 @@
     "neverBody": "Tjek ikke efter opdateringer. Du kan stadig tjekke manuelt i Indstillinger.",
     "onboardingTitle": "App-opdateringer",
     "onboardingBody": "Skrivebordsappen kan nu opdatere sig selv. Vælg, hvordan du vil modtage nye versioner. Du kan ændre dette senere i Indstillinger, Opdateringer.",
-    "onboardingManual": "Denne kopi af appen blev installeret på en måde, der ikke understøtter selvopdatering, så D.EX.T.E.R. vil give dig besked, når en ny version er udkommet, med et link til at downloade den.",
+    "onboardingManual": "Denne kopi af appen blev installeret på en måde, der ikke understøtter selvopdatering, så Termix vil give dig besked, når en ny version er udkommet, med et link til at downloade den.",
     "download": "Download",
     "restart": "Genstart nu",
     "later": "Senere",
-    "available": "D.EX.T.E.R. {{version}} er tilgængelig",
+    "available": "Termix {{version}} er tilgængelig",
     "manualHint": "Download den fra udgivelsessiden og installer den over den nuværende.",
-    "ready": "D.EX.T.E.R. {{version}} er klar til installation",
-    "readyHint": "Den installeres næste gang D.EX.T.E.R. genstartes."
+    "ready": "Termix {{version}} er klar til installation",
+    "readyHint": "Den installeres næste gang Termix genstartes."
   },
   "safeMode": {
     "title": "Sikker tilstand",
@@ -387,7 +387,7 @@
     "sshPort": "SSH-port",
     "authMethod": "Autentificeringsmetode",
     "authenticationMethod": "Autentificeringsmetode",
-    "authenticationMethodDesc": "Vælg den metode, D.EX.T.E.R. vil bruge til at autentificere denne SSH-forbindelse. Andre metoder prøves ikke automatisk.",
+    "authenticationMethodDesc": "Vælg den metode, Termix vil bruge til at autentificere denne SSH-forbindelse. Andre metoder prøves ikke automatisk.",
     "storedCredential": "Gemt legitimationsoplysning",
     "selectACredential": "Vælg en legitimationsoplysning...",
     "keyTypeLabel": "Nøgletype",
@@ -403,7 +403,7 @@
     "replaceKey": "Erstat nøgle",
     "docsLink": "Se dokumentation",
     "agentLabel": "SSH-agent",
-    "agentDesc": "Autentificer ved hjælp af en SSH-agent, der kører på Termix-serveren (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agenten skal køre på den maskine, hvor D.EX.T.E.R. er hostet.",
+    "agentDesc": "Autentificer ved hjælp af en SSH-agent, der kører på Termix-serveren (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agenten skal køre på den maskine, hvor Termix er hostet.",
     "agentAuthenticationDesc": "Brug nøgler fra en SSH-agent til at autentificere denne forbindelse. Lad socket-stien være tom for at bruge SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Agent-socket-sti",
     "agentSocketPathPlaceholder": "Lad være tom for at bruge SSH_AUTH_SOCK",
@@ -804,8 +804,8 @@
     "arrangeUnlockedSwitchedToManual": "Skiftet til manuel sortering, så din rækkefølge bevares",
     "dragToRearrange": "Træk for at omarrangere",
     "arrangeUnlocked": "Lås op for træk og omarrangering",
-    "webUiBindHostUnreachable": "Din browser kan ikke nå 127.0.0.1 på maskinen, der kører D.EX.T.E.R., så denne endepunkt vil ikke indlæses. Brug en adresse, som maskinen svarer på, f.eks. 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Fra denne browser ville viderestillingen blive nået på samme værtsnavn, som D.EX.T.E.R. serveres fra, så den tunnelerede tjeneste ville modtage din Termix-session. Cookies ignorerer porten. Dette endepunkt vil nægte at åbne her; det fungerer fra Termix-skrivebordsappen, eller når D.EX.T.E.R. åbnes på localhost.",
+    "webUiBindHostUnreachable": "Din browser kan ikke nå 127.0.0.1 på maskinen, der kører Termix, så denne endepunkt vil ikke indlæses. Brug en adresse, som maskinen svarer på, f.eks. 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Fra denne browser ville viderestillingen blive nået på samme værtsnavn, som Termix serveres fra, så den tunnelerede tjeneste ville modtage din Termix-session. Cookies ignorerer porten. Dette endepunkt vil nægte at åbne her; det fungerer fra Termix-skrivebordsappen, eller når Termix åbnes på localhost.",
     "webUiErrorLabelRequired": "Endepunkt {{row}} skal have et navn.",
     "webUiErrorLabelDuplicate": "Hvert endepunkt skal have et unikt navn.",
     "webUiErrorPortRange": "Endepunkt {{row}} skal have en port mellem 1 og 65535.",
@@ -952,7 +952,7 @@
     "localDesktopSignedOut": "Lokal desktop logget ud",
     "localDesktopUnavailable": "Lokal desktop-session ikke tilgængelig",
     "localDesktopSignedOutDesc": "Du har logget ud af den lokale desktop-session. Fortsæt lokalt for at bruge denne enheds indbyggede Termix-server igen.",
-    "localDesktopUnavailableDesc": "D.EX.T.E.R. kunne ikke starte en lokal desktop-session. Prøv igen i stedet for at registrere en ny konto.",
+    "localDesktopUnavailableDesc": "Termix kunne ikke starte en lokal desktop-session. Prøv igen i stedet for at registrere en ny konto.",
     "continueLocalDesktop": "Fortsæt med lokal desktop",
     "retryLocalDesktop": "Prøv igen med lokal desktop-session"
   },
@@ -972,7 +972,7 @@
   },
   "errors": {
     "databaseConnection": "Termix-serveren svarer ikke",
-    "embeddedServerFailed": "D.EX.T.E.R.' lokale server kunne ikke starte",
+    "embeddedServerFailed": "Termix' lokale server kunne ikke starte",
     "unknownError": "Ukendt fejl",
     "syncedHostMissing": "Den synkroniserede vært findes ikke på den linkede server",
     "linkedServerUnreachable": "Den linkede server er ikke tilgængelig",
@@ -999,10 +999,10 @@
     "registrationDisabled": "Du har ikke en Termix-konto endnu. Bed en administrator om at slå 'Auto-create external accounts' til.",
     "userNotAllowed": "Din konto er ikke autoriseret til at registrere. Kontakt venligst en administrator.",
     "databaseConnectionFailed": "Den starter muligvis stadig, eller den er stoppet. Denne side fortsætter med at prøve og genoptager automatisk, når serveren er tilbage.",
-    "embeddedServerPortInUse": "Port {{port}} er allerede i brug af et andet program. Dette er typisk en D.EX.T.E.R. Docker-container eller en efterladt Termix-proces fra en tidligere session. Luk den, og genstart derefter D.EX.T.E.R.",
-    "embeddedServerPortInUseUnknownPort": "En af de porte, som D.EX.T.E.R. har brug for, er allerede i brug af et andet program. Luk det, der bruger den, og genstart derefter D.EX.T.E.R.",
+    "embeddedServerPortInUse": "Port {{port}} er allerede i brug af et andet program. Dette er typisk en Termix Docker-container eller en efterladt Termix-proces fra en tidligere session. Luk den, og genstart derefter Termix.",
+    "embeddedServerPortInUseUnknownPort": "En af de porte, som Termix har brug for, er allerede i brug af et andet program. Luk det, der bruger den, og genstart derefter Termix.",
     "embeddedServerOldDatabase": "Dine lokale data stammer fra Termix 2.8 eller ældre og skal først migreres gennem version 2.9. Installer Termix 2.9.1, åbn den én gang, så den kan flytte dine data, og opdater derefter til denne version igen.",
-    "embeddedServerCrashed": "Den lokale server stoppede uventet. Genstart D.EX.T.E.R., og tjek skrivebordsloggen, hvis dette fortsætter.",
+    "embeddedServerCrashed": "Den lokale server stoppede uventet. Genstart Termix, og tjek skrivebordsloggen, hvis dette fortsætter.",
     "resetCodeSent": "Nulstillingskode sendt til Docker-logs",
     "codeVerified": "Kode verificeret med succes",
     "passwordResetSuccess": "Adgangskode nulstillet med succes",
@@ -1123,7 +1123,7 @@
         "missing": "Intet installeret plugin leverer dette layout.",
         "disabled": "Pluginet, der leverer dette layout, er slukket.",
         "blocked": "Pluginet, der leverer dette layout, venter på noget, det har brug for.",
-        "incompatible": "Pluginet, der leverer dette layout, fungerer ikke med denne version af D.EX.T.E.R.",
+        "incompatible": "Pluginet, der leverer dette layout, fungerer ikke med denne version af Termix.",
         "failed": "Layoutet kunne ikke starte.",
         "crashed": "Layoutet kørte to gange i jorden, mens appen blev tegnet."
       },
@@ -1168,11 +1168,11 @@
       },
       "system:tls": {
         "title": "Administrer certifikater",
-        "consequence": "Den kan erstatte det certifikat, D.EX.T.E.R. serverer over HTTPS, og besvare domænekontroller fra certifikatautoriteter."
+        "consequence": "Den kan erstatte det certifikat, Termix serverer over HTTPS, og besvare domænekontroller fra certifikatautoriteter."
       },
       "device:serial": {
         "title": "Adgang til serielle og USB-enheder",
-        "consequence": "Den kan åbne en fysisk seriell port på maskinen, der kører D.EX.T.E.R."
+        "consequence": "Den kan åbne en fysisk seriell port på maskinen, der kører Termix."
       },
       "hosts:export": {
         "title": "Eksportér værter med deres hemmeligheder",
@@ -1244,7 +1244,7 @@
       },
       "desktop:local": {
         "title": "Brug denne computer",
-        "consequence": "Kan læse og ændre filer, køre en shell og åbne lokale porte på denne computer. Kun i D.EX.T.E.R. desktop-appen."
+        "consequence": "Kan læse og ændre filer, køre en shell og åbne lokale porte på denne computer. Kun i Termix desktop-appen."
       },
       "users:impersonate": {
         "title": "Udfør som andre brugere",
@@ -1272,7 +1272,7 @@
       },
       "secrets:own": {
         "title": "Gemme sine egne hemmeligheder",
-        "consequence": "Krypteret af D.EX.T.E.R. Pluginet har aldrig nøglen."
+        "consequence": "Krypteret af Termix. Pluginet har aldrig nøglen."
       },
       "settings:read-core": {
         "title": "Læs Termix-indstillinger",
@@ -1480,10 +1480,10 @@
         "security": "Sikkerhed"
       },
       "installedBadge": "Installeret",
-      "incompatible": "Kræver en nyere version af D.EX.T.E.R.",
+      "incompatible": "Kræver en nyere version af Termix",
       "features": "Funktioner",
       "whatItCanDo": "Hvad det kan",
-      "addsToTermix": "Tilføjer til D.EX.T.E.R.",
+      "addsToTermix": "Tilføjer til Termix",
       "addsToTermixHint": "Afinstaller, og alle disse forsvinder.",
       "noServerAccess": "Ingen adgang til dine servere",
       "searchInstalled": "Søg i installerede",
@@ -1501,7 +1501,7 @@
         "hostYourOwn": "Vært for dit eget register",
         "add": "Tilføj register",
         "addTitle": "Tilføj et register",
-        "addHint": "Indsæt linket til registrets index.json. D.EX.T.E.R. læser det og viser nøglen, det signerer plugins med. Tilføj kun registre fra personer, du stoler på.",
+        "addHint": "Indsæt linket til registrets index.json. Termix læser det og viser nøglen, det signerer plugins med. Tilføj kun registre fra personer, du stoler på.",
         "urlLabel": "Index-URL",
         "check": "Tjek",
         "addConfirm": "Stol på og tilføj",
@@ -1554,7 +1554,7 @@
         "downloadsHint": "Hvor mange gange en udgivelse er blevet downloadet. Dette er ikke antallet af installationer."
       },
       "unverified": "Ikke verificeret",
-      "unverifiedHint": "Installeret fra en fil. D.EX.T.E.R. har ikke kontrolleret eller signeret den.",
+      "unverifiedHint": "Installeret fra en fil. Termix har ikke kontrolleret eller signeret den.",
       "reportIssue": "Rapportér et problem",
       "reportTo": "Rapportér til {{author}}",
       "requestFeature": "Foreslå en funktion",
@@ -1609,10 +1609,10 @@
         "perPage": "{{count}} pr. side",
         "perPageLabel": "Plugins pr. side"
       },
-      "showUnsupportedHint": "Disse er opført, men der er endnu ingen udgivelse, der kører på denne version. Opdater D.EX.T.E.R. for at installere dem.",
-      "unsupported": "Kræver en nyere D.EX.T.E.R.",
-      "unsupportedHint": "Der er ingen udgivelse af dette plugin, der kører på denne version af D.EX.T.E.R. Opdater D.EX.T.E.R. for at installere det.",
-      "needsTermix": "Kræver D.EX.T.E.R. {{range}}",
+      "showUnsupportedHint": "Disse er opført, men der er endnu ingen udgivelse, der kører på denne version. Opdater Termix for at installere dem.",
+      "unsupported": "Kræver en nyere Termix",
+      "unsupportedHint": "Der er ingen udgivelse af dette plugin, der kører på denne version af Termix. Opdater Termix for at installere det.",
+      "needsTermix": "Kræver Termix {{range}}",
       "showUnsupported": "Vis understøttet ({{count}})",
       "showMore": "Vis {{count}} mere ({{total}} tilbage)"
     }

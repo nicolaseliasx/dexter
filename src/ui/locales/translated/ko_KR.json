@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "{{total}}단계 중 {{current}}단계",
-    "stageLabel": "D.EX.T.E.R. 설정",
+    "stageLabel": "Termix 설정",
     "setupHeading": "작업 공간 설정하기",
     "partialHeading": "설정할 새로운 항목 몇 가지",
     "signOut": "로그아웃",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "켬",
     "pluginsChoice_disabled": "끔",
     "pluginsChoice_remove": "제거",
-    "pluginsConsentTitle": "D.EX.T.E.R. 개선에 기여하기",
+    "pluginsConsentTitle": "Termix 개선에 기여하기",
     "pluginsConsentNote": "언제든지 플러그인 탭에서 이 기능을 끌 수 있습니다.",
     "pluginsApplying": "선택 사항 적용 중",
     "pluginsSomeFailed": "일부 플러그인을 변경할 수 없습니다. 나중에 플러그인 탭에서 수정할 수 있습니다. 계속하려면 다음을 누르세요.",
@@ -230,9 +230,9 @@
     "download": "다운로드",
     "restart": "지금 재시작",
     "later": "나중에",
-    "available": "D.EX.T.E.R. {{version}} 사용 가능",
+    "available": "Termix {{version}} 사용 가능",
     "manualHint": "릴리스 페이지에서 다운로드하여 현재 버전 위에 설치하세요.",
-    "ready": "D.EX.T.E.R. {{version}} 설치 준비 완료",
+    "ready": "Termix {{version}} 설치 준비 완료",
     "readyHint": "Termix가 다음에 재시작될 때 설치됩니다."
   },
   "safeMode": {
@@ -399,7 +399,7 @@
     "replaceKey": "키 교체",
     "docsLink": "문서 보기",
     "agentLabel": "SSH 에이전트",
-    "agentDesc": "D.EX.T.E.R. 서버에서 실행 중인 SSH 에이전트(Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent)를 사용하여 인증합니다. 에이전트는 Termix가 호스팅되는 머신에서 실행 중이어야 합니다.",
+    "agentDesc": "Termix 서버에서 실행 중인 SSH 에이전트(Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent)를 사용하여 인증합니다. 에이전트는 Termix가 호스팅되는 머신에서 실행 중이어야 합니다.",
     "agentAuthenticationDesc": "SSH 에이전트의 키를 사용하여 이 연결을 인증합니다. 소켓 경로를 비워두면 SSH_AUTH_SOCK을(를) 사용합니다.",
     "agentSocketPathLabel": "에이전트 소켓 경로",
     "agentSocketPathPlaceholder": "SSH_AUTH_SOCK을(를) 사용하려면 비워두세요",
@@ -793,7 +793,7 @@
     "dragToRearrange": "드래그하여 순서 변경",
     "arrangeUnlocked": "드래그 순서 변경 잠금 해제",
     "webUiBindHostUnreachable": "Termix가 실행 중인 기기의 127.0.0.1에 브라우저가 접근할 수 없으므로 이 엔드포인트가 로드되지 않습니다. 0.0.0.0과 같이 해당 기기가 응답하는 주소를 사용하세요.",
-    "webUiBindHostSharesSessionCookie": "이 브라우저에서 포워딩은 Termix가 제공되는 것과 동일한 호스트명으로 접근하게 되므로, 터널링된 서비스는 D.EX.T.E.R. 세션을 받게 됩니다. 쿠키는 포트를 무시합니다. 이 엔드포인트는 여기서 열기를 거부합니다; D.EX.T.E.R. 데스크톱 앱이나 localhost에서 Termix를 열 때 작동합니다.",
+    "webUiBindHostSharesSessionCookie": "이 브라우저에서 포워딩은 Termix가 제공되는 것과 동일한 호스트명으로 접근하게 되므로, 터널링된 서비스는 Termix 세션을 받게 됩니다. 쿠키는 포트를 무시합니다. 이 엔드포인트는 여기서 열기를 거부합니다; Termix 데스크톱 앱이나 localhost에서 Termix를 열 때 작동합니다.",
     "webUiErrorLabelRequired": "엔드포인트 {{row}}에는 라벨이 필요합니다.",
     "webUiErrorLabelDuplicate": "각 엔드포인트는 고유한 이름이 필요합니다.",
     "webUiErrorPortRange": "엔드포인트 {{row}}에는 1에서 65535 사이의 포트가 필요합니다.",
@@ -938,7 +938,7 @@
     "retrySecondFactorUI": "인증 방법 새로고침",
     "localDesktopSignedOut": "로컬 데스크톱 로그아웃됨",
     "localDesktopUnavailable": "로컬 데스크톱 세션 사용 불가",
-    "localDesktopSignedOutDesc": "로컬 데스크톱 세션에서 로그아웃했습니다. 이 장치의 기본 D.EX.T.E.R. 서버를 다시 사용하려면 로컬로 계속하세요.",
+    "localDesktopSignedOutDesc": "로컬 데스크톱 세션에서 로그아웃했습니다. 이 장치의 기본 Termix 서버를 다시 사용하려면 로컬로 계속하세요.",
     "localDesktopUnavailableDesc": "Termix에서 로컬 데스크톱 세션을 시작할 수 없습니다. 새 계정을 등록하는 대신 다시 시도하세요.",
     "continueLocalDesktop": "로컬 데스크톱으로 계속",
     "retryLocalDesktop": "로컬 데스크톱 세션 재시도"
@@ -958,7 +958,7 @@
     "acceptNewKey": "새 키 수락 및 계속"
   },
   "errors": {
-    "databaseConnection": "D.EX.T.E.R. 서버가 응답하지 않습니다",
+    "databaseConnection": "Termix 서버가 응답하지 않습니다",
     "embeddedServerFailed": "Termix의 로컬 서버를 시작할 수 없습니다",
     "unknownError": "알 수 없는 오류",
     "syncedHostMissing": "동기화된 호스트가 연결된 서버에 존재하지 않습니다",
@@ -983,10 +983,10 @@
     "sessionExpiredLogin": "세션이 만료되었습니다. 다시 로그인해 주세요."
   },
   "messages": {
-    "registrationDisabled": "아직 D.EX.T.E.R. 계정이 없습니다. 관리자에게 외부 계정 자동 생성을 활성화해 달라고 요청하세요.",
+    "registrationDisabled": "아직 Termix 계정이 없습니다. 관리자에게 외부 계정 자동 생성을 활성화해 달라고 요청하세요.",
     "userNotAllowed": "귀하의 계정은 등록이 허용되지 않았습니다. 관리자에게 문의해 주세요.",
     "databaseConnectionFailed": "서버가 아직 시작 중이거나 중지되었을 수 있습니다. 이 페이지는 계속 시도하다가 서버가 다시 연결되면 자동으로 계속됩니다.",
-    "embeddedServerPortInUse": "포트 {{port}}는 이미 다른 프로그램에서 사용 중입니다. 일반적으로 D.EX.T.E.R. Docker 컨테이너나 이전 세션의 D.EX.T.E.R. 프로세스가 원인입니다. 해당 프로그램을 닫은 후 Termix를 다시 시작하세요.",
+    "embeddedServerPortInUse": "포트 {{port}}는 이미 다른 프로그램에서 사용 중입니다. 일반적으로 Termix Docker 컨테이너나 이전 세션의 Termix 프로세스가 원인입니다. 해당 프로그램을 닫은 후 Termix를 다시 시작하세요.",
     "embeddedServerPortInUseUnknownPort": "Termix가 필요로 하는 포트 중 하나가 이미 다른 프로그램에서 사용 중입니다. 해당 포트를 사용하는 프로그램을 닫은 후 Termix를 다시 시작하세요.",
     "embeddedServerOldDatabase": "로컬 데이터가 Termix 2.8 이하 버전에서 생성된 것으로, 먼저 2.9 버전을 거쳐야 합니다. Termix 2.9.1을 설치하고 한 번 실행하여 데이터를 마이그레이션한 후, 다시 이 버전으로 업데이트하세요.",
     "embeddedServerCrashed": "로컬 서버가 예기치 않게 중지되었습니다. Termix를 다시 시작하고, 이 문제가 계속 발생하면 데스크톱 로그를 확인하세요.",
@@ -1127,7 +1127,7 @@
       },
       "process:spawn": {
         "title": "이 컴퓨터에서 프로그램 실행",
-        "consequence": "프로그램은 호스트가 아닌 D.EX.T.E.R. 서버 자체에서 실행됩니다."
+        "consequence": "프로그램은 호스트가 아닌 Termix 서버 자체에서 실행됩니다."
       },
       "users:write": {
         "title": "사용자 계정 생성 및 변경",
@@ -1179,7 +1179,7 @@
       },
       "network:serve": {
         "title": "연결 허용",
-        "consequence": "D.EX.T.E.R. 서버에서 포트를 엽니다."
+        "consequence": "Termix 서버에서 포트를 엽니다."
       },
       "network:broadcast": {
         "title": "네트워크 브로드캐스트 전송",
@@ -1223,11 +1223,11 @@
       },
       "desktop:window": {
         "title": "데스크톱 창 열기",
-        "consequence": "D.EX.T.E.R. 데스크톱 앱에서만 가능합니다."
+        "consequence": "Termix 데스크톱 앱에서만 가능합니다."
       },
       "desktop:local": {
         "title": "이 컴퓨터 사용",
-        "consequence": "이 컴퓨터에서 파일을 읽고 수정하고, 셸을 실행하며 로컬 포트를 열 수 있습니다. D.EX.T.E.R. 데스크톱 앱에서만 가능합니다."
+        "consequence": "이 컴퓨터에서 파일을 읽고 수정하고, 셸을 실행하며 로컬 포트를 열 수 있습니다. Termix 데스크톱 앱에서만 가능합니다."
       },
       "users:impersonate": {
         "title": "다른 사용자로 행동",
@@ -1258,7 +1258,7 @@
         "consequence": "Termix에서 암호화합니다. 플러그인은 키를 보유하지 않습니다."
       },
       "settings:read-core": {
-        "title": "D.EX.T.E.R. 설정 읽기",
+        "title": "Termix 설정 읽기",
         "consequence": "서버 설정입니다. 호스트나 자격 증명은 포함되지 않습니다."
       },
       "plugins:read": {
@@ -1354,7 +1354,7 @@
         "minor": "또한 자체 화면을 추가하고 다른 플러그인과 분리된 자체 데이터를 저장합니다.",
         "none": "특별한 접근 권한을 요청하지 않습니다.",
         "uploadTitle": "파일에서 {{name}} 설치",
-        "uploadWarning": "이 파일은 D.EX.T.E.R. 레지스트리에서 확인하거나 서명하지 않았습니다. 직접 빌드했거나 작성자를 신뢰하는 경우에만 설치하세요."
+        "uploadWarning": "이 파일은 Termix 레지스트리에서 확인하거나 서명하지 않았습니다. 직접 빌드했거나 작성자를 신뢰하는 경우에만 설치하세요."
       },
       "confirm": {
         "uninstallTitle": "{{name}}을(를) 제거하시겠습니까?",
@@ -1447,7 +1447,7 @@
         "security": "보안"
       },
       "installedBadge": "설치됨",
-      "incompatible": "더 새로운 D.EX.T.E.R. 버전 필요",
+      "incompatible": "더 새로운 Termix 버전 필요",
       "features": "기능",
       "whatItCanDo": "주요 기능",
       "addsToTermix": "Termix에 추가되는 기능",
@@ -1473,7 +1473,7 @@
         "check": "확인",
         "addConfirm": "신뢰하고 추가",
         "added": "{{name}} 추가됨",
-        "customWarning": "이 레지스트리의 플러그인은 D.EX.T.E.R. 팀에서 검토하지 않습니다. 레지스트리 소유자만 내용을 결정합니다. 모든 다운로드는 위의 키로 서명되어야 합니다.",
+        "customWarning": "이 레지스트리의 플러그인은 Termix 팀에서 검토하지 않습니다. 레지스트리 소유자만 내용을 결정합니다. 모든 다운로드는 위의 키로 서명되어야 합니다.",
         "keyFingerprint": "키 {{keyId}}",
         "pluginCount_other": "{{count}}개 플러그인",
         "officialName": "공식",
@@ -1481,12 +1481,12 @@
         "alwaysOn": "항상 켜짐",
         "communityHint": "다른 사용자가 만든 플러그인입니다. 각 버전은 목록에 올라가기 전에 사람과 자동 검사를 통해 확인됩니다.",
         "communityConfirmTitle": "커뮤니티 플러그인을 켜시겠습니까?",
-        "communityConfirmBody": "커뮤니티 플러그인은 D.EX.T.E.R. 팀이 아닌 다른 사용자가 만듭니다. 각 버전은 목록에 올라가기 전에 사람과 자동 검사를 통해 확인되지만, 실수가 발생할 수 있습니다. 신뢰할 수 있는 플러그인만 설치하고 각 플러그인이 요청하는 권한을 확인하세요.",
+        "communityConfirmBody": "커뮤니티 플러그인은 Termix 팀이 아닌 다른 사용자가 만듭니다. 각 버전은 목록에 올라가기 전에 사람과 자동 검사를 통해 확인되지만, 실수가 발생할 수 있습니다. 신뢰할 수 있는 플러그인만 설치하고 각 플러그인이 요청하는 권한을 확인하세요.",
         "communityConfirm": "켜기",
         "communityBadge": "커뮤니티",
         "communityBadgeHint": "커뮤니티 레지스트리에서 제공됩니다. 다른 사용자가 만들었고 목록에 올라가기 전에 검토되었습니다.",
         "customBadge": "사용자 정의",
-        "customBadgeHint": "{{name}}에서 제공됩니다. 관리자가 추가한 레지스트리입니다. D.EX.T.E.R. 팀에서 검토하지 않았습니다.",
+        "customBadgeHint": "{{name}}에서 제공됩니다. 관리자가 추가한 레지스트리입니다. Termix 팀에서 검토하지 않았습니다.",
         "remove": "제거",
         "removeTitle": "{{name}}을(를) 제거하시겠습니까?",
         "removeBody": "해당 플러그인은 더 이상 탐색 화면에 표시되지 않습니다. 나중에 다시 추가할 수 있습니다.",
@@ -1572,9 +1572,9 @@
         "perPageLabel": "페이지당 플러그인 수"
       },
       "showUnsupportedHint": "이 플러그인들은 목록에 있지만, 현재 버전에서는 아직 릴리스가 실행되지 않습니다. 설치하려면 Termix를 업데이트하세요.",
-      "unsupported": "더 새로운 D.EX.T.E.R. 필요",
-      "unsupportedHint": "이 플러그인의 릴리스는 현재 D.EX.T.E.R. 버전에서 실행되지 않습니다. 설치하려면 Termix를 업데이트하세요.",
-      "needsTermix": "D.EX.T.E.R. {{range}} 필요",
+      "unsupported": "더 새로운 Termix 필요",
+      "unsupportedHint": "이 플러그인의 릴리스는 현재 Termix 버전에서 실행되지 않습니다. 설치하려면 Termix를 업데이트하세요.",
+      "needsTermix": "Termix {{range}} 필요",
       "showUnsupported": "지원되지 않는 항목 표시 ({{count}})",
       "showMore": "더 보기 {{count}}개 (남은 {{total}}개)"
     }

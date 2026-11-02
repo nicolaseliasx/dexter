@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Aan",
     "pluginsChoice_disabled": "Uit",
     "pluginsChoice_remove": "Verwijderen",
-    "pluginsConsentTitle": "Help D.EX.T.E.R. te verbeteren",
+    "pluginsConsentTitle": "Help Termix te verbeteren",
     "pluginsConsentNote": "Je kunt dit op elk moment uitschakelen via het tabblad Plugins.",
     "pluginsApplying": "Je keuzes toepassen",
     "pluginsSomeFailed": "Sommige plugins konden niet worden gewijzigd. Je kunt ze later oplossen via het tabblad Plugins. Druk op Volgende om door te gaan.",
@@ -226,14 +226,14 @@
     "neverBody": "Niet controleren op updates. Je kunt dit handmatig doen in Instellingen.",
     "onboardingTitle": "App-updates",
     "onboardingBody": "De bureaublad-app kan zichzelf nu updaten. Kies hoe je nieuwe versies wilt ontvangen. Je kunt dit later wijzigen in Instellingen, Updates.",
-    "onboardingManual": "Deze kopie van de app is op een manier geïnstalleerd die geen automatische updates ondersteunt. D.EX.T.E.R. geeft je daarom een seintje als er een nieuwe versie is, met een link om hem te downloaden.",
+    "onboardingManual": "Deze kopie van de app is op een manier geïnstalleerd die geen automatische updates ondersteunt. Termix geeft je daarom een seintje als er een nieuwe versie is, met een link om hem te downloaden.",
     "download": "Downloaden",
     "restart": "Nu herstarten",
     "later": "Later",
-    "available": "D.EX.T.E.R. {{version}} is beschikbaar",
+    "available": "Termix {{version}} is beschikbaar",
     "manualHint": "Download hem van de releasepagina en installeer hem bovenop deze versie.",
-    "ready": "D.EX.T.E.R. {{version}} is klaar om te installeren",
-    "readyHint": "Het wordt geïnstalleerd de volgende keer dat D.EX.T.E.R. herstart."
+    "ready": "Termix {{version}} is klaar om te installeren",
+    "readyHint": "Het wordt geïnstalleerd de volgende keer dat Termix herstart."
   },
   "safeMode": {
     "title": "Veilige modus",
@@ -387,7 +387,7 @@
     "sshPort": "SSH-poort",
     "authMethod": "Authenticatiemethode",
     "authenticationMethod": "Authenticatiemethode",
-    "authenticationMethodDesc": "Selecteer de ene methode die D.EX.T.E.R. zal gebruiken om deze SSH-verbinding te verifiëren. Andere methoden worden niet automatisch geprobeerd.",
+    "authenticationMethodDesc": "Selecteer de ene methode die Termix zal gebruiken om deze SSH-verbinding te verifiëren. Andere methoden worden niet automatisch geprobeerd.",
     "storedCredential": "Opgeslagen referentiegegevens",
     "selectACredential": "Selecteer referentiegegevens...",
     "keyTypeLabel": "Sleuteltype",
@@ -403,7 +403,7 @@
     "replaceKey": "Sleutel vervangen",
     "docsLink": "Bekijk documentatie",
     "agentLabel": "SSH-agent",
-    "agentDesc": "Verifieer met behulp van een SSH-agent die op de Termix-server draait (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). De agent moet draaien op de machine waar D.EX.T.E.R. op gehost wordt.",
+    "agentDesc": "Verifieer met behulp van een SSH-agent die op de Termix-server draait (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). De agent moet draaien op de machine waar Termix op gehost wordt.",
     "agentAuthenticationDesc": "Gebruik sleutels van een SSH-agent om deze verbinding te verifiëren. Laat het socket-pad leeg om SSH_AUTH_SOCK te gebruiken.",
     "agentSocketPathLabel": "Agent-socketpad",
     "agentSocketPathPlaceholder": "Laat leeg om SSH_AUTH_SOCK te gebruiken",
@@ -804,8 +804,8 @@
     "arrangeUnlockedSwitchedToManual": "Overschakeld naar handmatig sorteren zodat je volgorde behouden blijft",
     "dragToRearrange": "Slepen om opnieuw te rangschikken",
     "arrangeUnlocked": "Ontgrendelen om te slepen en opnieuw te rangschikken",
-    "webUiBindHostUnreachable": "Je browser kan geen verbinding maken met 127.0.0.1 op de machine waarop D.EX.T.E.R. draait, dus dit eindpunt wordt niet geladen. Gebruik een adres waarop die machine luistert, zoals 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Vanuit deze browser zou de doorsturing bereikt worden via dezelfde hostnaam als waar D.EX.T.E.R. vanaf wordt geserveerd, dus de getunneld service zou je Termix-sessie ontvangen. Cookies negeren de poort. Dit eindpunt weigert hier te openen; het werkt vanuit de Termix-desktopapp, of wanneer D.EX.T.E.R. op localhost wordt geopend.",
+    "webUiBindHostUnreachable": "Je browser kan geen verbinding maken met 127.0.0.1 op de machine waarop Termix draait, dus dit eindpunt wordt niet geladen. Gebruik een adres waarop die machine luistert, zoals 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Vanuit deze browser zou de doorsturing bereikt worden via dezelfde hostnaam als waar Termix vanaf wordt geserveerd, dus de getunneld service zou je Termix-sessie ontvangen. Cookies negeren de poort. Dit eindpunt weigert hier te openen; het werkt vanuit de Termix-desktopapp, of wanneer Termix op localhost wordt geopend.",
     "webUiErrorLabelRequired": "Eindpunt {{row}} heeft een label nodig.",
     "webUiErrorLabelDuplicate": "Elk eindpunt moet een unieke naam hebben.",
     "webUiErrorPortRange": "Eindpunt {{row}} heeft een poort nodig tussen 1 en 65535.",
@@ -952,7 +952,7 @@
     "localDesktopSignedOut": "Lokaal bureaublad afgemeld",
     "localDesktopUnavailable": "Lokale bureaubladsessie niet beschikbaar",
     "localDesktopSignedOutDesc": "Je bent afgemeld van de lokale bureaubladsessie. Ga lokaal verder om de ingebouwde Termix-server van dit apparaat opnieuw te gebruiken.",
-    "localDesktopUnavailableDesc": "D.EX.T.E.R. kon geen lokale bureaubladsessie starten. Probeer het opnieuw in plaats van een nieuw account te registreren.",
+    "localDesktopUnavailableDesc": "Termix kon geen lokale bureaubladsessie starten. Probeer het opnieuw in plaats van een nieuw account te registreren.",
     "continueLocalDesktop": "Doorgaan met lokaal bureaublad",
     "retryLocalDesktop": "Lokale bureaubladsessie opnieuw proberen"
   },
@@ -972,7 +972,7 @@
   },
   "errors": {
     "databaseConnection": "De Termix-server reageert niet",
-    "embeddedServerFailed": "De lokale server van D.EX.T.E.R. kon niet worden gestart",
+    "embeddedServerFailed": "De lokale server van Termix kon niet worden gestart",
     "unknownError": "Onbekende fout",
     "syncedHostMissing": "De gesynchroniseerde host bestaat niet op de gekoppelde server",
     "linkedServerUnreachable": "De gekoppelde server is niet bereikbaar",
@@ -999,10 +999,10 @@
     "registrationDisabled": "U heeft nog geen Termix-account. Vraag een beheerder om 'Automatisch externe accounts aanmaken' in te schakelen.",
     "userNotAllowed": "Uw account is niet gemachtigd om zich te registreren. Neem contact op met een beheerder.",
     "databaseConnectionFailed": "De server start mogelijk nog op of is gestopt. Deze pagina blijft proberen en gaat automatisch verder zodra de server weer beschikbaar is.",
-    "embeddedServerPortInUse": "Poort {{port}} wordt al gebruikt door een ander programma. Dit is meestal een D.EX.T.E.R. Docker-container of een overgebleven Termix-proces van een eerdere sessie. Sluit deze af en start D.EX.T.E.R. opnieuw op.",
-    "embeddedServerPortInUseUnknownPort": "Een van de poorten die D.EX.T.E.R. nodig heeft, wordt al gebruikt door een ander programma. Sluit het programma dat deze gebruikt en start D.EX.T.E.R. opnieuw op.",
+    "embeddedServerPortInUse": "Poort {{port}} wordt al gebruikt door een ander programma. Dit is meestal een Termix Docker-container of een overgebleven Termix-proces van een eerdere sessie. Sluit deze af en start Termix opnieuw op.",
+    "embeddedServerPortInUseUnknownPort": "Een van de poorten die Termix nodig heeft, wordt al gebruikt door een ander programma. Sluit het programma dat deze gebruikt en start Termix opnieuw op.",
     "embeddedServerOldDatabase": "Je lokale gegevens zijn afkomstig van Termix 2.8 of ouder en moeten eerst door versie 2.9 worden verwerkt. Installeer Termix 2.9.1, open het een keer zodat je gegevens kunnen worden gemigreerd en update daarna opnieuw naar deze versie.",
-    "embeddedServerCrashed": "De lokale server is onverwacht gestopt. Start D.EX.T.E.R. opnieuw op en controleer het bureaubladlogboek als dit blijft gebeuren.",
+    "embeddedServerCrashed": "De lokale server is onverwacht gestopt. Start Termix opnieuw op en controleer het bureaubladlogboek als dit blijft gebeuren.",
     "resetCodeSent": "Resetcode verzonden naar Docker-logboeken",
     "codeVerified": "Code succesvol geverifieerd",
     "passwordResetSuccess": "Wachtwoord succesvol gereset",
@@ -1123,7 +1123,7 @@
         "missing": "Geen enkele geïnstalleerde plugin biedt deze lay-out aan.",
         "disabled": "De plugin die deze lay-out aanbiedt, is uitgeschakeld.",
         "blocked": "De plugin die deze lay-out aanbiedt, wacht op iets wat het nodig heeft.",
-        "incompatible": "De plugin die deze lay-out aanbiedt, werkt niet met deze versie van D.EX.T.E.R.",
+        "incompatible": "De plugin die deze lay-out aanbiedt, werkt niet met deze versie van Termix.",
         "failed": "De lay-out kon niet worden gestart.",
         "crashed": "De lay-out crashte twee keer tijdens het tekenen van de app."
       },
@@ -1168,11 +1168,11 @@
       },
       "system:tls": {
         "title": "Certificaten beheren",
-        "consequence": "Het kan het certificaat vervangen dat D.EX.T.E.R. via HTTPS aanbiedt en domeincontroles van certificeringsinstanties beantwoorden."
+        "consequence": "Het kan het certificaat vervangen dat Termix via HTTPS aanbiedt en domeincontroles van certificeringsinstanties beantwoorden."
       },
       "device:serial": {
         "title": "Toegang tot seriële en USB-apparaten",
-        "consequence": "Het kan een fysieke seriële poort openen op de machine waarop D.EX.T.E.R. draait."
+        "consequence": "Het kan een fysieke seriële poort openen op de machine waarop Termix draait."
       },
       "hosts:export": {
         "title": "Hosts exporteren met hun geheimen",
@@ -1272,7 +1272,7 @@
       },
       "secrets:own": {
         "title": "Eigen geheimen opslaan",
-        "consequence": "Versleuteld door D.EX.T.E.R. De plugin heeft nooit toegang tot de sleutel."
+        "consequence": "Versleuteld door Termix. De plugin heeft nooit toegang tot de sleutel."
       },
       "settings:read-core": {
         "title": "Termix-instellingen lezen",
@@ -1480,10 +1480,10 @@
         "security": "Beveiliging"
       },
       "installedBadge": "Geïnstalleerd",
-      "incompatible": "Vereist een nieuwere D.EX.T.E.R.",
+      "incompatible": "Vereist een nieuwere Termix",
       "features": "Functies",
       "whatItCanDo": "Wat het kan",
-      "addsToTermix": "Voegt toe aan D.EX.T.E.R.",
+      "addsToTermix": "Voegt toe aan Termix",
       "addsToTermixHint": "Als je het deïnstalleert, verdwijnen al deze functies.",
       "noServerAccess": "Geen toegang tot je servers",
       "searchInstalled": "Zoeken in geïnstalleerde",
@@ -1501,7 +1501,7 @@
         "hostYourOwn": "Je eigen registrar hosten",
         "add": "Registrar toevoegen",
         "addTitle": "Een registrar toevoegen",
-        "addHint": "Plak de link naar de index.json van de registrar. D.EX.T.E.R. leest deze in en toont de sleutel waarmee de plugins worden ondertekend. Voeg alleen registrars toe van bronnen die je vertrouwt.",
+        "addHint": "Plak de link naar de index.json van de registrar. Termix leest deze in en toont de sleutel waarmee de plugins worden ondertekend. Voeg alleen registrars toe van bronnen die je vertrouwt.",
         "urlLabel": "Index-URL",
         "check": "Controleren",
         "addConfirm": "Vertrouwen en toevoegen",
@@ -1554,7 +1554,7 @@
         "downloadsHint": "Hoe vaak een release is gedownload. Dit is niet het aantal installaties."
       },
       "unverified": "Niet geverifieerd",
-      "unverifiedHint": "Geïnstalleerd vanuit een bestand. D.EX.T.E.R. heeft dit niet gecontroleerd of ondertekend.",
+      "unverifiedHint": "Geïnstalleerd vanuit een bestand. Termix heeft dit niet gecontroleerd of ondertekend.",
       "reportIssue": "Probleem melden",
       "reportTo": "Melden aan {{author}}",
       "requestFeature": "Functie aanvragen",
@@ -1609,10 +1609,10 @@
         "perPage": "{{count}} per pagina",
         "perPageLabel": "Plugins per pagina"
       },
-      "showUnsupportedHint": "Deze worden weergegeven, maar er is nog geen release die op deze versie werkt. Werk D.EX.T.E.R. bij om ze te installeren.",
-      "unsupported": "Vereist nieuwere D.EX.T.E.R.",
-      "unsupportedHint": "Er is geen release van deze plugin die op deze versie van D.EX.T.E.R. werkt. Werk D.EX.T.E.R. bij om deze te installeren.",
-      "needsTermix": "Vereist D.EX.T.E.R. {{range}}",
+      "showUnsupportedHint": "Deze worden weergegeven, maar er is nog geen release die op deze versie werkt. Werk Termix bij om ze te installeren.",
+      "unsupported": "Vereist nieuwere Termix",
+      "unsupportedHint": "Er is geen release van deze plugin die op deze versie van Termix werkt. Werk Termix bij om deze te installeren.",
+      "needsTermix": "Vereist Termix {{range}}",
       "showUnsupported": "Ongestuurde weergeven ({{count}})",
       "showMore": "{{count}} meer weergeven ({{total}} over)"
     }

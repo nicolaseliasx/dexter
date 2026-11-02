@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "På",
     "pluginsChoice_disabled": "Av",
     "pluginsChoice_remove": "Ta bort",
-    "pluginsConsentTitle": "Hjälp till att förbättra D.EX.T.E.R.",
+    "pluginsConsentTitle": "Hjälp till att förbättra Termix",
     "pluginsConsentNote": "Du kan stänga av detta när som helst från fliken Plugins.",
     "pluginsApplying": "Tillämpar dina val",
     "pluginsSomeFailed": "Vissa plugins kunde inte ändras. Du kan åtgärda dem senare från fliken Plugins. Tryck på Nästa för att fortsätta.",
@@ -226,14 +226,14 @@
     "neverBody": "Sök inte efter uppdateringar. Du kan fortfarande söka manuellt i Inställningar.",
     "onboardingTitle": "Appuppdateringar",
     "onboardingBody": "Skrivbordsappen kan nu uppdatera sig själv. Välj hur du vill att nya versioner ska levereras. Du kan ändra detta senare i Inställningar, Uppdateringar.",
-    "onboardingManual": "Den här kopian av appen installerades på ett sätt som inte kan uppdatera sig själv, så D.EX.T.E.R. kommer att meddela dig när en ny version finns tillgänglig med en länk för att ladda ner den.",
+    "onboardingManual": "Den här kopian av appen installerades på ett sätt som inte kan uppdatera sig själv, så Termix kommer att meddela dig när en ny version finns tillgänglig med en länk för att ladda ner den.",
     "download": "Ladda ner",
     "restart": "Starta om nu",
     "later": "Senare",
-    "available": "D.EX.T.E.R. {{version}} finns tillgänglig",
+    "available": "Termix {{version}} finns tillgänglig",
     "manualHint": "Ladda ner den från versionsidan och installera den över den nuvarande.",
-    "ready": "D.EX.T.E.R. {{version}} är redo att installeras",
-    "readyHint": "Den installeras nästa gång D.EX.T.E.R. startas om."
+    "ready": "Termix {{version}} är redo att installeras",
+    "readyHint": "Den installeras nästa gång Termix startas om."
   },
   "safeMode": {
     "title": "Säkerhetsläge",
@@ -387,7 +387,7 @@
     "sshPort": "SSH-port",
     "authMethod": "Autentiseringsmetod",
     "authenticationMethod": "Autentiseringsmetod",
-    "authenticationMethodDesc": "Välj den metod som D.EX.T.E.R. ska använda för att autentisera denna SSH-anslutning. Andra metoder försöker inte automatiskt.",
+    "authenticationMethodDesc": "Välj den metod som Termix ska använda för att autentisera denna SSH-anslutning. Andra metoder försöker inte automatiskt.",
     "storedCredential": "Sparad inloggningsuppgift",
     "selectACredential": "Välj en inloggningsuppgift...",
     "keyTypeLabel": "Nyckeltyp",
@@ -403,7 +403,7 @@
     "replaceKey": "Byt ut nyckel",
     "docsLink": "Visa dokumentation",
     "agentLabel": "SSH-agent",
-    "agentDesc": "Autentisera med en SSH-agent som körs på Termix-servern (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agenten måste köras på den maskin där D.EX.T.E.R. är värd.",
+    "agentDesc": "Autentisera med en SSH-agent som körs på Termix-servern (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agenten måste köras på den maskin där Termix är värd.",
     "agentAuthenticationDesc": "Använd nycklar från en SSH-agent för att autentisera denna anslutning. Lämna socket-sökvägen tom för att använda SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Agentens socket-sökväg",
     "agentSocketPathPlaceholder": "Lämna tom för att använda SSH_AUTH_SOCK",
@@ -804,8 +804,8 @@
     "arrangeUnlockedSwitchedToManual": "Bytte till manuell sortering så att din ordning behålls",
     "dragToRearrange": "Dra för att ordna om",
     "arrangeUnlocked": "Lås upp dragning för att ordna om",
-    "webUiBindHostUnreachable": "Din webbläsare kan inte nå 127.0.0.1 på den dator som kör D.EX.T.E.R., så denna slutpunkt kommer inte att laddas. Använd en adress som den datorn svarar på, till exempel 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Från denna webbläsare skulle framåtportningen nås på samma värdnamn som D.EX.T.E.R. serveras från, så den tunnelade tjänsten skulle ta emot din Termix-session. Cookies ignorerar porten. Denna slutpunkt vägrar att öppnas här; den fungerar från Termix-skrivbordsappen, eller när D.EX.T.E.R. öppnas på localhost.",
+    "webUiBindHostUnreachable": "Din webbläsare kan inte nå 127.0.0.1 på den dator som kör Termix, så denna slutpunkt kommer inte att laddas. Använd en adress som den datorn svarar på, till exempel 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Från denna webbläsare skulle framåtportningen nås på samma värdnamn som Termix serveras från, så den tunnelade tjänsten skulle ta emot din Termix-session. Cookies ignorerar porten. Denna slutpunkt vägrar att öppnas här; den fungerar från Termix-skrivbordsappen, eller när Termix öppnas på localhost.",
     "webUiErrorLabelRequired": "Slutpunkt {{row}} behöver en etikett.",
     "webUiErrorLabelDuplicate": "Varje slutpunkt behöver ett unikt namn.",
     "webUiErrorPortRange": "Slutpunkt {{row}} behöver en port mellan 1 och 65535.",
@@ -952,7 +952,7 @@
     "localDesktopSignedOut": "Inloggad från lokal skrivbordssession",
     "localDesktopUnavailable": "Lokal skrivbordssession inte tillgänglig",
     "localDesktopSignedOutDesc": "Du loggade ut från den lokala skrivbordssessionen. Fortsätt lokalt för att använda denna enhets inbyggda Termix-server igen.",
-    "localDesktopUnavailableDesc": "D.EX.T.E.R. kunde inte starta en lokal skrivbordssession. Försök igen istället för att registrera ett nytt konto.",
+    "localDesktopUnavailableDesc": "Termix kunde inte starta en lokal skrivbordssession. Försök igen istället för att registrera ett nytt konto.",
     "continueLocalDesktop": "Fortsätt med lokalt skrivbord",
     "retryLocalDesktop": "Försök igen med lokal skrivbordssession"
   },
@@ -972,7 +972,7 @@
   },
   "errors": {
     "databaseConnection": "Termix-servern svarar inte",
-    "embeddedServerFailed": "D.EX.T.E.R. lokala server kunde inte startas",
+    "embeddedServerFailed": "Termix lokala server kunde inte startas",
     "unknownError": "Okänt fel",
     "syncedHostMissing": "Den synkroniserade värden finns inte på den länkade servern",
     "linkedServerUnreachable": "Den länkade servern är inte nåbar",
@@ -999,10 +999,10 @@
     "registrationDisabled": "Du har inget Termix-konto ännu. Be en administratör att aktivera \"Skapa externa konton automatiskt\".",
     "userNotAllowed": "Ditt konto är inte behörigt att registrera sig. Kontakta en administratör.",
     "databaseConnectionFailed": "Den kanske fortfarande startar, eller så har den stoppats. Denna sida fortsätter att försöka och återgår till normalt läge automatiskt när servern är tillbaka.",
-    "embeddedServerPortInUse": "Port {{port}} används redan av ett annat program. Detta är oftast en D.EX.T.E.R. Docker-container eller en kvarvarande Termix-process från en tidigare session. Stäng den och starta om D.EX.T.E.R.",
-    "embeddedServerPortInUseUnknownPort": "En av portarna som D.EX.T.E.R. behöver används redan av ett annat program. Stäng det som använder porten och starta om D.EX.T.E.R.",
+    "embeddedServerPortInUse": "Port {{port}} används redan av ett annat program. Detta är oftast en Termix Docker-container eller en kvarvarande Termix-process från en tidigare session. Stäng den och starta om Termix.",
+    "embeddedServerPortInUseUnknownPort": "En av portarna som Termix behöver används redan av ett annat program. Stäng det som använder porten och starta om Termix.",
     "embeddedServerOldDatabase": "Din lokala data är från Termix 2.8 eller äldre och måste först migreras via version 2.9. Installera Termix 2.9.1, öppna den en gång så att den kan flytta dina data, och uppgradera sedan till denna version igen.",
-    "embeddedServerCrashed": "Den lokala servern stoppade oväntat. Starta om D.EX.T.E.R. och kontrollera skrivbordsloggen om detta fortsätter att hända.",
+    "embeddedServerCrashed": "Den lokala servern stoppade oväntat. Starta om Termix och kontrollera skrivbordsloggen om detta fortsätter att hända.",
     "resetCodeSent": "Återställningskod skickad till Docker-loggarna",
     "codeVerified": "Koden verifierades framgångsrikt",
     "passwordResetSuccess": "Lösenordet återställdes framgångsrikt",
@@ -1123,7 +1123,7 @@
         "missing": "Inget installerat plugin tillhandahåller den här layouten.",
         "disabled": "Pluginet som tillhandahåller den här layouten är avstängt.",
         "blocked": "Pluginet som tillhandahåller den här layouten väntar på något det behöver.",
-        "incompatible": "Pluginet som tillhandahåller den här layouten fungerar inte med den här versionen av D.EX.T.E.R.",
+        "incompatible": "Pluginet som tillhandahåller den här layouten fungerar inte med den här versionen av Termix.",
         "failed": "Layouten misslyckades med att starta.",
         "crashed": "Layouten kraschade två gånger medan appen ritades."
       },
@@ -1168,11 +1168,11 @@
       },
       "system:tls": {
         "title": "Hantera certifikat",
-        "consequence": "Den kan ersätta certifikatet som D.EX.T.E.R. serverar via HTTPS och svara på domänkontroller från certifikatutfärdare."
+        "consequence": "Den kan ersätta certifikatet som Termix serverar via HTTPS och svara på domänkontroller från certifikatutfärdare."
       },
       "device:serial": {
         "title": "Åtkomst till seriella och USB-enheter",
-        "consequence": "Den kan öppna en fysisk seriell port på maskinen som kör D.EX.T.E.R."
+        "consequence": "Den kan öppna en fysisk seriell port på maskinen som kör Termix."
       },
       "hosts:export": {
         "title": "Exportera värdar med deras hemligheter",
@@ -1272,7 +1272,7 @@
       },
       "secrets:own": {
         "title": "Lagra egna hemligheter",
-        "consequence": "Krypterat av D.EX.T.E.R. Pluginet har aldrig nyckeln."
+        "consequence": "Krypterat av Termix. Pluginet har aldrig nyckeln."
       },
       "settings:read-core": {
         "title": "Läs Termix-inställningar",
@@ -1480,10 +1480,10 @@
         "security": "Säkerhet"
       },
       "installedBadge": "Installerad",
-      "incompatible": "Kräver en nyare D.EX.T.E.R.",
+      "incompatible": "Kräver en nyare Termix",
       "features": "Funktioner",
       "whatItCanDo": "Vad den kan göra",
-      "addsToTermix": "Lägger till i D.EX.T.E.R.",
+      "addsToTermix": "Lägger till i Termix",
       "addsToTermixHint": "Avinstallera och alla dessa försvinner.",
       "noServerAccess": "Ingen åtkomst till dina servrar",
       "searchInstalled": "Sök bland installerade",
@@ -1501,7 +1501,7 @@
         "hostYourOwn": "Värd ditt eget register",
         "add": "Lägg till register",
         "addTitle": "Lägg till ett register",
-        "addHint": "Klistra in länken till registrets index.json. D.EX.T.E.R. läser den och visar nyckeln den signerar tilläggen med. Lägg bara till register från personer du litar på.",
+        "addHint": "Klistra in länken till registrets index.json. Termix läser den och visar nyckeln den signerar tilläggen med. Lägg bara till register från personer du litar på.",
         "urlLabel": "Index-URL",
         "check": "Kontrollera",
         "addConfirm": "Lita på och lägg till",
@@ -1554,7 +1554,7 @@
         "downloadsHint": "Hur många gånger en version har laddats ner. Detta är inte antalet installationer."
       },
       "unverified": "Ej verifierad",
-      "unverifiedHint": "Installerad från en fil. D.EX.T.E.R. har inte kontrollerat eller signerat den.",
+      "unverifiedHint": "Installerad från en fil. Termix har inte kontrollerat eller signerat den.",
       "reportIssue": "Rapportera ett problem",
       "reportTo": "Rapportera till {{author}}",
       "requestFeature": "Begär en funktion",
@@ -1609,10 +1609,10 @@
         "perPage": "{{count}} per sida",
         "perPageLabel": "Tillägg per sida"
       },
-      "showUnsupportedHint": "Dessa listas men ingen version fungerar på denna version ännu. Uppdatera D.EX.T.E.R. för att installera dem.",
-      "unsupported": "Kräver en nyare D.EX.T.E.R.",
-      "unsupportedHint": "Ingen version av detta tillägg fungerar på denna version av D.EX.T.E.R. Uppdatera D.EX.T.E.R. för att installera det.",
-      "needsTermix": "Kräver D.EX.T.E.R. {{range}}",
+      "showUnsupportedHint": "Dessa listas men ingen version fungerar på denna version ännu. Uppdatera Termix för att installera dem.",
+      "unsupported": "Kräver en nyare Termix",
+      "unsupportedHint": "Ingen version av detta tillägg fungerar på denna version av Termix. Uppdatera Termix för att installera det.",
+      "needsTermix": "Kräver Termix {{range}}",
       "showUnsupported": "Visa ej stödda ({{count}})",
       "showMore": "Visa {{count}} till ({{total}} kvar)"
     }

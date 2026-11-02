@@ -102,7 +102,7 @@ async function provisionLocalDesktopUserIfNeeded(): Promise<void> {
       // expected - env file may not exist
     }
 
-    systemLogger.info("D.EX.T.E.R. backend initialization started", {
+    systemLogger.info("Termix backend initialization started", {
       operation: "backend_init_start",
       nodeEnv: process.env.NODE_ENV || "production",
       port: process.env.PORT || 4090,
@@ -133,7 +133,7 @@ async function provisionLocalDesktopUserIfNeeded(): Promise<void> {
     }
     process.env.VERSION = version;
 
-    versionLogger.info(`D.EX.T.E.R. Backend starting - Version: ${version}`, {
+    versionLogger.info(`Termix Backend starting - Version: ${version}`, {
       operation: "startup",
       version: version,
     });
@@ -279,7 +279,7 @@ async function provisionLocalDesktopUserIfNeeded(): Promise<void> {
       }
     }
 
-    systemLogger.success("D.EX.T.E.R. backend started successfully", {
+    systemLogger.success("Termix backend started successfully", {
       operation: "backend_init_complete",
       port: process.env.PORT || 4090,
       ssl: process.env.ENABLE_SSL === "true",

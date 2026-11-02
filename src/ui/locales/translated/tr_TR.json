@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "{{total}} adımın {{current}}. adımı",
-    "stageLabel": "D.EX.T.E.R. kurulumu",
+    "stageLabel": "Termix kurulumu",
     "setupHeading": "Çalışma alanınızı kurun",
     "partialHeading": "Kurulması gereken birkaç yeni şey",
     "signOut": "Oturumu kapat",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Açık",
     "pluginsChoice_disabled": "Kapalı",
     "pluginsChoice_remove": "Kaldır",
-    "pluginsConsentTitle": "D.EX.T.E.R.'i geliştirmeye yardımcı olun",
+    "pluginsConsentTitle": "Termix'i geliştirmeye yardımcı olun",
     "pluginsConsentNote": "Bunu istediğiniz zaman Eklentiler sekmesinden kapatabilirsiniz.",
     "pluginsApplying": "Seçimleriniz uygulanıyor",
     "pluginsSomeFailed": "Bazı eklentiler değiştirilemedi. Bunları daha sonra Eklentiler sekmesinden düzeltebilirsiniz. Devam etmek için İleri'ye basın.",
@@ -226,14 +226,14 @@
     "neverBody": "Güncelleme kontrolü yapma. Ayarlar'dan manuel olarak kontrol edebilirsiniz.",
     "onboardingTitle": "Uygulama güncellemeleri",
     "onboardingBody": "Masaüstü uygulaması artık kendini güncelleyebilir. Yeni sürümlerin nasıl geleceğini seçin. Bunu daha sonra Ayarlar > Güncellemeler bölümünden değiştirebilirsiniz.",
-    "onboardingManual": "Bu uygulama kopyası kendini güncelleyemeyecek şekilde kurulmuş, bu yüzden D.EX.T.E.R. yeni bir sürüm çıktığında size indirme bağlantısıyla birlikte bildirimde bulunacaktır.",
+    "onboardingManual": "Bu uygulama kopyası kendini güncelleyemeyecek şekilde kurulmuş, bu yüzden Termix yeni bir sürüm çıktığında size indirme bağlantısıyla birlikte bildirimde bulunacaktır.",
     "download": "İndir",
     "restart": "Şimdi yeniden başlat",
     "later": "Daha sonra",
-    "available": "D.EX.T.E.R. {{version}} mevcut",
+    "available": "Termix {{version}} mevcut",
     "manualHint": "Sürüm sayfasından indirin ve bunun üzerine yükleyin.",
-    "ready": "D.EX.T.E.R. {{version}} yüklenmeye hazır",
-    "readyHint": "D.EX.T.E.R. yeniden başladığında yüklenir."
+    "ready": "Termix {{version}} yüklenmeye hazır",
+    "readyHint": "Termix yeniden başladığında yüklenir."
   },
   "safeMode": {
     "title": "Güvenli mod",
@@ -387,7 +387,7 @@
     "sshPort": "SSH Portu",
     "authMethod": "Kimlik Doğrulama Yöntemi",
     "authenticationMethod": "Kimlik Doğrulama Yöntemi",
-    "authenticationMethodDesc": "D.EX.T.E.R.'in bu SSH bağlantısını doğrulamak için kullanacağı tek yöntemi seçin. Diğer yöntemler otomatik olarak denenmez.",
+    "authenticationMethodDesc": "Termix'in bu SSH bağlantısını doğrulamak için kullanacağı tek yöntemi seçin. Diğer yöntemler otomatik olarak denenmez.",
     "storedCredential": "Kayıtlı Kimlik Bilgisi",
     "selectACredential": "Bir kimlik bilgisi seçin...",
     "keyTypeLabel": "Anahtar Türü",
@@ -403,7 +403,7 @@
     "replaceKey": "Anahtarı değiştir",
     "docsLink": "Dokümanları görüntüle",
     "agentLabel": "SSH Aracısı",
-    "agentDesc": "D.EX.T.E.R. sunucusunda çalışan bir SSH aracısı kullanarak kimlik doğrulaması yapın (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Aracı, D.EX.T.E.R.'in barındırıldığı makinede çalışmalıdır.",
+    "agentDesc": "Termix sunucusunda çalışan bir SSH aracısı kullanarak kimlik doğrulaması yapın (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Aracı, Termix'in barındırıldığı makinede çalışmalıdır.",
     "agentAuthenticationDesc": "Bu bağlantıyı doğrulamak için bir SSH aracısındaki anahtarları kullanın. SSH_AUTH_SOCK kullanmak için soket yolunu boş bırakın.",
     "agentSocketPathLabel": "Aracı Soket Yolu",
     "agentSocketPathPlaceholder": "SSH_AUTH_SOCK kullanmak için boş bırakın",
@@ -804,8 +804,8 @@
     "arrangeUnlockedSwitchedToManual": "Sıralamanızın kalıcı olması için manuel sıralamaya geçildi",
     "dragToRearrange": "Yeniden düzenlemek için sürükleyin",
     "arrangeUnlocked": "Yeniden düzenlemek için sürüklemeyi kilidinden çıkar",
-    "webUiBindHostUnreachable": "Tarayıcınız, D.EX.T.E.R.'in çalıştığı makinedeki 127.0.0.1 adresine ulaşamadığından bu uç nokta yüklenmeyecek. 0.0.0.0 gibi makinenin yanıt verdiği bir adres kullanın.",
-    "webUiBindHostSharesSessionCookie": "Bu tarayıcıdan, yönlendirme D.EX.T.E.R.'in sunulduğu aynı ana bilgisayar adında erişileceğinden, tünel servis D.EX.T.E.R. oturumunuzu alacaktır. Çerezler portu görmezden gelir. Bu uç nokta burada açılmayı reddedecektir; D.EX.T.E.R. masaüstü uygulamasından veya D.EX.T.E.R. localhost'ta açıldığında çalışır.",
+    "webUiBindHostUnreachable": "Tarayıcınız, Termix'in çalıştığı makinedeki 127.0.0.1 adresine ulaşamadığından bu uç nokta yüklenmeyecek. 0.0.0.0 gibi makinenin yanıt verdiği bir adres kullanın.",
+    "webUiBindHostSharesSessionCookie": "Bu tarayıcıdan, yönlendirme Termix'in sunulduğu aynı ana bilgisayar adında erişileceğinden, tünel servis Termix oturumunuzu alacaktır. Çerezler portu görmezden gelir. Bu uç nokta burada açılmayı reddedecektir; Termix masaüstü uygulamasından veya Termix localhost'ta açıldığında çalışır.",
     "webUiErrorLabelRequired": "{{row}} numaralı uç nokta için bir etiket gerekli.",
     "webUiErrorLabelDuplicate": "Her uç nokta farklı bir isim gerektirir.",
     "webUiErrorPortRange": "{{row}} numaralı uç nokta için 1 ile 65535 arasında bir port gerekli.",
@@ -951,8 +951,8 @@
     "retrySecondFactorUI": "Doğrulama yöntemlerini yeniden yükle",
     "localDesktopSignedOut": "Yerel masaüstü oturumu kapatıldı",
     "localDesktopUnavailable": "Yerel masaüstü oturumu kullanılamıyor",
-    "localDesktopSignedOutDesc": "Yerel masaüstü oturumundan çıkış yaptınız. Bu cihazın yerleşik D.EX.T.E.R. sunucusunu tekrar kullanmak için yerel olarak devam edin.",
-    "localDesktopUnavailableDesc": "D.EX.T.E.R. yerel bir masaüstü oturumu başlatamadı. Yeni bir hesap kaydetmek yerine yeniden deneyin.",
+    "localDesktopSignedOutDesc": "Yerel masaüstü oturumundan çıkış yaptınız. Bu cihazın yerleşik Termix sunucusunu tekrar kullanmak için yerel olarak devam edin.",
+    "localDesktopUnavailableDesc": "Termix yerel bir masaüstü oturumu başlatamadı. Yeni bir hesap kaydetmek yerine yeniden deneyin.",
     "continueLocalDesktop": "Yerel masaüstü ile devam et",
     "retryLocalDesktop": "Yerel masaüstü oturumunu tekrar dene"
   },
@@ -971,8 +971,8 @@
     "acceptNewKey": "Yeni Anahtarı Kabul Et & Devam Et"
   },
   "errors": {
-    "databaseConnection": "D.EX.T.E.R. sunucusu yanıt vermiyor",
-    "embeddedServerFailed": "D.EX.T.E.R.'in yerel sunucusu başlatılamadı",
+    "databaseConnection": "Termix sunucusu yanıt vermiyor",
+    "embeddedServerFailed": "Termix'in yerel sunucusu başlatılamadı",
     "unknownError": "Bilinmeyen hata",
     "syncedHostMissing": "Senkronize edilen sunucu, bağlantılı sunucuda mevcut değil",
     "linkedServerUnreachable": "Bağlantılı sunucuya ulaşılamıyor",
@@ -996,13 +996,13 @@
     "sessionExpiredLogin": "Oturum süresi doldu. Lütfen tekrar giriş yapın."
   },
   "messages": {
-    "registrationDisabled": "Henüz bir D.EX.T.E.R. hesabınız yok. Bir yöneticiden Dış hesapları otomatik oluştur özelliğini açmasını isteyin.",
+    "registrationDisabled": "Henüz bir Termix hesabınız yok. Bir yöneticiden Dış hesapları otomatik oluştur özelliğini açmasını isteyin.",
     "userNotAllowed": "Hesabınızın kayıt olma yetkisi yok. Lütfen bir yöneticiyle iletişime geçin.",
     "databaseConnectionFailed": "Sunucu hala başlatılıyor veya durmuş olabilir. Bu sayfa sunucu tekrar bağlanana kadar bağlantıyı yeniden denemeye devam eder.",
-    "embeddedServerPortInUse": "{{port}} numaralı bağlantı noktası başka bir program tarafından kullanılıyor. Bu genellikle bir D.EX.T.E.R. Docker kapsayıcısı veya önceki bir oturumdan kalan bir D.EX.T.E.R. işlemidir. Kapatın ve ardından D.EX.T.E.R.'i yeniden başlatın.",
-    "embeddedServerPortInUseUnknownPort": "D.EX.T.E.R.'in ihtiyaç duyduğu bağlantı noktalarından biri başka bir program tarafından kullanılıyor. Kullanan programı kapatın ve ardından D.EX.T.E.R.'i yeniden başlatın.",
+    "embeddedServerPortInUse": "{{port}} numaralı bağlantı noktası başka bir program tarafından kullanılıyor. Bu genellikle bir Termix Docker kapsayıcısı veya önceki bir oturumdan kalan bir Termix işlemidir. Kapatın ve ardından Termix'i yeniden başlatın.",
+    "embeddedServerPortInUseUnknownPort": "Termix'in ihtiyaç duyduğu bağlantı noktalarından biri başka bir program tarafından kullanılıyor. Kullanan programı kapatın ve ardından Termix'i yeniden başlatın.",
     "embeddedServerOldDatabase": "Yerel verileriniz Termix 2.8 veya daha eski bir sürümden kalmadır ve önce 2.9 sürümünden geçmelidir. Termix 2.9.1'i yükleyin, verilerinizi taşıyabilmesi için bir kez açın, ardından tekrar bu sürüme güncelleyin.",
-    "embeddedServerCrashed": "Yerel sunucu beklenmedik şekilde durdu. D.EX.T.E.R.'i yeniden başlatın ve bu durum devam ederse masaüstü günlüklerini kontrol edin.",
+    "embeddedServerCrashed": "Yerel sunucu beklenmedik şekilde durdu. Termix'i yeniden başlatın ve bu durum devam ederse masaüstü günlüklerini kontrol edin.",
     "resetCodeSent": "Sıfırlama kodu Docker günlüklerine gönderildi",
     "codeVerified": "Kod başarıyla doğrulandı",
     "passwordResetSuccess": "Şifre başarıyla sıfırlandı",
@@ -1123,7 +1123,7 @@
         "missing": "Bu düzeni sağlayan yüklü bir eklenti yok.",
         "disabled": "Bu düzeni sağlayan eklenti kapalı.",
         "blocked": "Bu düzeni sağlayan eklenti, ihtiyaç duyduğu bir şeyi bekliyor.",
-        "incompatible": "Bu düzeni sağlayan eklenti, bu D.EX.T.E.R. sürümüyle çalışmıyor.",
+        "incompatible": "Bu düzeni sağlayan eklenti, bu Termix sürümüyle çalışmıyor.",
         "failed": "Düzen başlatılamadı.",
         "crashed": "Uygulama çizilirken düzen iki kez çöktü."
       },
@@ -1144,7 +1144,7 @@
       },
       "process:spawn": {
         "title": "Bu makinede programlar çalıştırabilir",
-        "consequence": "Programlar, sunucularınızda değil, D.EX.T.E.R. sunucusunun kendisinde çalışır."
+        "consequence": "Programlar, sunucularınızda değil, Termix sunucusunun kendisinde çalışır."
       },
       "users:write": {
         "title": "Kullanıcı hesapları oluşturabilir ve değiştirebilir",
@@ -1168,11 +1168,11 @@
       },
       "system:tls": {
         "title": "Sertifikaları yönetebilir",
-        "consequence": "D.EX.T.E.R.'in HTTPS üzerinden sunduğu sertifikayı değiştirebilir ve sertifika otoritelerinden gelen alan adı kontrollerine yanıt verebilir."
+        "consequence": "Termix'in HTTPS üzerinden sunduğu sertifikayı değiştirebilir ve sertifika otoritelerinden gelen alan adı kontrollerine yanıt verebilir."
       },
       "device:serial": {
         "title": "Seri ve USB cihazlarına erişebilir",
-        "consequence": "D.EX.T.E.R.'in çalıştığı makinedeki fiziksel seri portu açabilir."
+        "consequence": "Termix'in çalıştığı makinedeki fiziksel seri portu açabilir."
       },
       "hosts:export": {
         "title": "Ana bilgisayarları gizli bilgileriyle birlikte dışa aktar",
@@ -1196,7 +1196,7 @@
       },
       "network:serve": {
         "title": "Bağlantıları kabul edebilir",
-        "consequence": "D.EX.T.E.R. sunucusunda bir bağlantı noktası açar."
+        "consequence": "Termix sunucusunda bir bağlantı noktası açar."
       },
       "network:broadcast": {
         "title": "Ağ yayınları gönderebilir",
@@ -1240,11 +1240,11 @@
       },
       "desktop:window": {
         "title": "Masaüstü pencereleri açabilir",
-        "consequence": "Sadece D.EX.T.E.R. masaüstü uygulamasında."
+        "consequence": "Sadece Termix masaüstü uygulamasında."
       },
       "desktop:local": {
         "title": "Bu bilgisayarı kullan",
-        "consequence": "Bu bilgisayarda dosyaları okuyabilir ve değiştirebilir, kabuk çalıştırabilir ve yerel bağlantı noktalarını açabilir. Sadece D.EX.T.E.R. masaüstü uygulamasında."
+        "consequence": "Bu bilgisayarda dosyaları okuyabilir ve değiştirebilir, kabuk çalıştırabilir ve yerel bağlantı noktalarını açabilir. Sadece Termix masaüstü uygulamasında."
       },
       "users:impersonate": {
         "title": "Diğer kullanıcılar adına hareket edebilir",
@@ -1272,10 +1272,10 @@
       },
       "secrets:own": {
         "title": "Kendi gizli bilgilerini sakla",
-        "consequence": "D.EX.T.E.R. tarafından şifrelenir. Eklenti asla anahtarı tutmaz."
+        "consequence": "Termix tarafından şifrelenir. Eklenti asla anahtarı tutmaz."
       },
       "settings:read-core": {
-        "title": "D.EX.T.E.R. ayarlarını oku",
+        "title": "Termix ayarlarını oku",
         "consequence": "Sunucu ayarları, ana bilgisayarlarınız veya kimlik bilgileriniz değil."
       },
       "plugins:read": {
@@ -1382,7 +1382,7 @@
         "minor": "Ayrıca kendi ekranlarını ekler ve diğer eklentilerden ayrı tutulan kendi verilerini saklar.",
         "none": "Herhangi bir özel erişim istemez.",
         "uploadTitle": "{{name}} dosyadan yükle",
-        "uploadWarning": "Bu dosya D.EX.T.E.R. kayıt defteri tarafından kontrol edilmedi veya imzalanmadı. Sadece kendiniz oluşturduysanız veya oluşturan kişiye güveniyorsanız yükleyin."
+        "uploadWarning": "Bu dosya Termix kayıt defteri tarafından kontrol edilmedi veya imzalanmadı. Sadece kendiniz oluşturduysanız veya oluşturan kişiye güveniyorsanız yükleyin."
       },
       "confirm": {
         "uninstallTitle": "{{name}} kaldırılsın mı?",
@@ -1480,10 +1480,10 @@
         "security": "Güvenlik"
       },
       "installedBadge": "Yüklü",
-      "incompatible": "Daha yeni bir D.EX.T.E.R. sürümü gerekiyor",
+      "incompatible": "Daha yeni bir Termix sürümü gerekiyor",
       "features": "Özellikler",
       "whatItCanDo": "Ne yapabilir",
-      "addsToTermix": "D.EX.T.E.R.'e ekler",
+      "addsToTermix": "Termix'e ekler",
       "addsToTermixHint": "Kaldırırsanız bunların hepsi kaybolur.",
       "noServerAccess": "Sunucularınıza erişim yok",
       "searchInstalled": "Yüklenenleri ara",
@@ -1501,12 +1501,12 @@
         "hostYourOwn": "Kendi kaydınızı barındırın",
         "add": "Kayıt ekle",
         "addTitle": "Kayıt ekle",
-        "addHint": "Kaydın index.json dosyasına bağlantıyı yapıştırın. D.EX.T.E.R. bunu okur ve eklentileri imzaladığı anahtarı gösterir. Yalnızca güvendiğiniz kişilerden kayıtlar ekleyin.",
+        "addHint": "Kaydın index.json dosyasına bağlantıyı yapıştırın. Termix bunu okur ve eklentileri imzaladığı anahtarı gösterir. Yalnızca güvendiğiniz kişilerden kayıtlar ekleyin.",
         "urlLabel": "Dizin URL'si",
         "check": "Kontrol et",
         "addConfirm": "Güven ve ekle",
         "added": "{{name}} eklendi",
-        "customWarning": "Bu kayıttaki eklentiler D.EX.T.E.R. ekibi tarafından gözden geçirilmez. Kaydın sahibi yalnızca içeriği belirler. Her indirme yukarıdaki anahtarla imzalanmalıdır.",
+        "customWarning": "Bu kayıttaki eklentiler Termix ekibi tarafından gözden geçirilmez. Kaydın sahibi yalnızca içeriği belirler. Her indirme yukarıdaki anahtarla imzalanmalıdır.",
         "keyFingerprint": "Anahtar {{keyId}}",
         "pluginCount_one": "{{count}} eklenti",
         "pluginCount_other": "{{count}} eklenti",
@@ -1515,12 +1515,12 @@
         "alwaysOn": "Her zaman açık",
         "communityHint": "Diğer kişiler tarafından yapılan eklentiler. Her sürüm listelenmeden önce bir kişi ve otomatik kontroller tarafından kontrol edilir.",
         "communityConfirmTitle": "Topluluk eklentileri açılsın mı?",
-        "communityConfirmBody": "Topluluk eklentileri D.EX.T.E.R. ekibi tarafından değil, diğer kişiler tarafından yapılır. Her sürüm listelenmeden önce bir kişi ve otomatik kontroller tarafından kontrol edilir, ancak hatalar yine de geçebilir. Yalnızca güvendiğiniz eklentileri yükleyin ve her birinin ne istediğini kontrol edin.",
+        "communityConfirmBody": "Topluluk eklentileri Termix ekibi tarafından değil, diğer kişiler tarafından yapılır. Her sürüm listelenmeden önce bir kişi ve otomatik kontroller tarafından kontrol edilir, ancak hatalar yine de geçebilir. Yalnızca güvendiğiniz eklentileri yükleyin ve her birinin ne istediğini kontrol edin.",
         "communityConfirm": "Aç",
         "communityBadge": "Topluluk",
         "communityBadgeHint": "Topluluk kaydından. Diğer kişiler tarafından yapılmış ve listelenmeden önce gözden geçirilmiştir.",
         "customBadge": "Özel",
-        "customBadgeHint": "{{name}} kayıtlarından, bir yönetici tarafından eklenen bir kayıttan. D.EX.T.E.R. ekibi tarafından gözden geçirilmemiştir.",
+        "customBadgeHint": "{{name}} kayıtlarından, bir yönetici tarafından eklenen bir kayıttan. Termix ekibi tarafından gözden geçirilmemiştir.",
         "remove": "Kaldır",
         "removeTitle": "{{name}} kaldırılsın mı?",
         "removeBody": "Eklentileri artık Gözat bölümünde görünmeyecek. Daha sonra tekrar ekleyebilirsiniz.",
@@ -1554,7 +1554,7 @@
         "downloadsHint": "Bir sürümün kaç kez indirildiği. Bu, kurulum sayısı değildir."
       },
       "unverified": "Doğrulanmamış",
-      "unverifiedHint": "Bir dosyadan yüklendi. D.EX.T.E.R. bunu kontrol etmedi veya imzalamadı.",
+      "unverifiedHint": "Bir dosyadan yüklendi. Termix bunu kontrol etmedi veya imzalamadı.",
       "reportIssue": "Sorun bildir",
       "reportTo": "{{author}}'a bildir",
       "requestFeature": "Özellik iste",
@@ -1609,10 +1609,10 @@
         "perPage": "Sayfa başına {{count}}",
         "perPageLabel": "Sayfa başına eklenti"
       },
-      "showUnsupportedHint": "Bu eklentiler listelenmiştir ancak bu sürümde henüz hiçbir sürüm çalışmıyor. Yüklemek için D.EX.T.E.R.'i güncelleyin.",
-      "unsupported": "Daha yeni bir D.EX.T.E.R. sürümü gerekiyor",
-      "unsupportedHint": "Bu eklentinin bu D.EX.T.E.R. sürümünde çalışan bir sürümü yok. Yüklemek için D.EX.T.E.R.'i güncelleyin.",
-      "needsTermix": "D.EX.T.E.R. {{range}} gerekiyor",
+      "showUnsupportedHint": "Bu eklentiler listelenmiştir ancak bu sürümde henüz hiçbir sürüm çalışmıyor. Yüklemek için Termix'i güncelleyin.",
+      "unsupported": "Daha yeni bir Termix sürümü gerekiyor",
+      "unsupportedHint": "Bu eklentinin bu Termix sürümünde çalışan bir sürümü yok. Yüklemek için Termix'i güncelleyin.",
+      "needsTermix": "Termix {{range}} gerekiyor",
       "showUnsupported": "Desteklenmeyenleri göster ({{count}})",
       "showMore": "{{count}} tane daha göster ({{total}} kaldı)"
     }

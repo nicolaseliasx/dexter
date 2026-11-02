@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Pas {{current}} de {{total}}",
-    "stageLabel": "Configuració de D.EX.T.E.R.",
+    "stageLabel": "Configuració de Termix",
     "setupHeading": "Configura el teu espai de treball",
     "partialHeading": "Hi ha algunes coses noves per configurar",
     "signOut": "Tanca la sessió",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Activat",
     "pluginsChoice_disabled": "Desactivat",
     "pluginsChoice_remove": "Elimina",
-    "pluginsConsentTitle": "Ajuda a millorar D.EX.T.E.R.",
+    "pluginsConsentTitle": "Ajuda a millorar Termix",
     "pluginsConsentNote": "Pots desactivar-ho en qualsevol moment des de la pestanya de complements.",
     "pluginsApplying": "S'estan aplicant les teves eleccions",
     "pluginsSomeFailed": "No s'han pogut canviar alguns complements. Pots corregir-ho més tard des de la pestanya de complements. Prem Següent per continuar.",
@@ -226,14 +226,14 @@
     "neverBody": "No comprovis si hi ha actualitzacions. Encara pots comprovar-ho manualment a Configuració.",
     "onboardingTitle": "Actualitzacions de l'aplicació",
     "onboardingBody": "L'aplicació d'escriptori ara es pot actualitzar sola. Tria com vols que arribin les noves versions. Pots canviar-ho més endavant a Configuració, Actualitzacions.",
-    "onboardingManual": "Aquesta còpia de l'aplicació s'ha instal·lat d'una manera que no es pot actualitzar sola, per la qual cosa D.EX.T.E.R. t'informarà quan hi hagi una nova versió disponible amb un enllaç per descarregar-la.",
+    "onboardingManual": "Aquesta còpia de l'aplicació s'ha instal·lat d'una manera que no es pot actualitzar sola, per la qual cosa Termix t'informarà quan hi hagi una nova versió disponible amb un enllaç per descarregar-la.",
     "download": "Descarrega",
     "restart": "Reinicia ara",
     "later": "Més tard",
-    "available": "Hi ha disponible D.EX.T.E.R. {{version}}",
+    "available": "Hi ha disponible Termix {{version}}",
     "manualHint": "Descarrega-la des de la pàgina de llançaments i instal·la-la sobre aquesta.",
-    "ready": "D.EX.T.E.R. {{version}} està llest per instal·lar-se",
-    "readyHint": "S'instal·larà la propera vegada que reiniciïs D.EX.T.E.R."
+    "ready": "Termix {{version}} està llest per instal·lar-se",
+    "readyHint": "S'instal·larà la propera vegada que reiniciïs Termix."
   },
   "safeMode": {
     "title": "Mode segur",
@@ -391,7 +391,7 @@
     "sshPort": "Port SSH",
     "authMethod": "Mètode d'autenticació",
     "authenticationMethod": "Mètode d'autenticació",
-    "authenticationMethodDesc": "Selecciona l'únic mètode que D.EX.T.E.R. utilitzarà per autenticar aquesta connexió SSH. No s'intentaran altres mètodes automàticament.",
+    "authenticationMethodDesc": "Selecciona l'únic mètode que Termix utilitzarà per autenticar aquesta connexió SSH. No s'intentaran altres mètodes automàticament.",
     "storedCredential": "Credencial emmagatzemada",
     "selectACredential": "Selecciona una credencial...",
     "keyTypeLabel": "Tipus de clau",
@@ -407,7 +407,7 @@
     "replaceKey": "Substitueix la clau",
     "docsLink": "Visualitza la documentació",
     "agentLabel": "Agent SSH",
-    "agentDesc": "Autentica utilitzant un agent SSH que s'està executant al servidor D.EX.T.E.R. (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). L'agent s'ha d'estar executant a la màquina on s'allotja D.EX.T.E.R.",
+    "agentDesc": "Autentica utilitzant un agent SSH que s'està executant al servidor Termix (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). L'agent s'ha d'estar executant a la màquina on s'allotja Termix.",
     "agentAuthenticationDesc": "Utilitza les claus d'un agent SSH per autenticar aquesta connexió. Deixa el camí del socket buit per utilitzar SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Camí del socket de l'agent",
     "agentSocketPathPlaceholder": "Deixa buit per utilitzar SSH_AUTH_SOCK",
@@ -816,8 +816,8 @@
     "arrangeUnlockedSwitchedToManual": "S'ha canviat a l'ordenació manual perquè la vostra ordre es mantingui",
     "dragToRearrange": "Arrossegueu per reordenar",
     "arrangeUnlocked": "Desbloquejar l'arrossegament per reordenar",
-    "webUiBindHostUnreachable": "El vostre navegador no pot arribar a 127.0.0.1 a la màquina on s'executa D.EX.T.E.R., per tant, aquest punt d'accés no es carregarà. Utilitzeu una adreça que aquesta màquina respongui, com ara 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Des d'aquest navegador, la reenviada s'assoliria al mateix nom d'amfitrió des d'on es serveix D.EX.T.E.R., de manera que el servei reenviat rebria la vostra sessió de D.EX.T.E.R. Les galetes ignoren el port. Aquest punt d'accés es negarà a obrir-se aquí; funciona des de l'aplicació d'escriptori de D.EX.T.E.R. o quan D.EX.T.E.R. s'obre a localhost.",
+    "webUiBindHostUnreachable": "El vostre navegador no pot arribar a 127.0.0.1 a la màquina on s'executa Termix, per tant, aquest punt d'accés no es carregarà. Utilitzeu una adreça que aquesta màquina respongui, com ara 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Des d'aquest navegador, la reenviada s'assoliria al mateix nom d'amfitrió des d'on es serveix Termix, de manera que el servei reenviat rebria la vostra sessió de Termix. Les galetes ignoren el port. Aquest punt d'accés es negarà a obrir-se aquí; funciona des de l'aplicació d'escriptori de Termix o quan Termix s'obre a localhost.",
     "webUiErrorLabelRequired": "El punt d'accés {{row}} necessita una etiqueta.",
     "webUiErrorLabelDuplicate": "Cada punt d'accés necessita un nom diferent.",
     "webUiErrorPortRange": "El punt d'accés {{row}} necessita un port entre 1 i 65535.",
@@ -964,8 +964,8 @@
     "retrySecondFactorUI": "Recarrega els mètodes de verificació",
     "localDesktopSignedOut": "S'ha tancat la sessió de l'escriptori local",
     "localDesktopUnavailable": "La sessió de l'escriptori local no està disponible",
-    "localDesktopSignedOutDesc": "Heu tancat la sessió de l'escriptori local. Continueu localment per utilitzar de nou el servidor D.EX.T.E.R. integrat d'aquest dispositiu.",
-    "localDesktopUnavailableDesc": "D.EX.T.E.R. no ha pogut iniciar una sessió d'escriptori local. Intenteu-ho de nou en lloc de registrar un nou compte.",
+    "localDesktopSignedOutDesc": "Heu tancat la sessió de l'escriptori local. Continueu localment per utilitzar de nou el servidor Termix integrat d'aquest dispositiu.",
+    "localDesktopUnavailableDesc": "Termix no ha pogut iniciar una sessió d'escriptori local. Intenteu-ho de nou en lloc de registrar un nou compte.",
     "continueLocalDesktop": "Continua amb l'escriptori local",
     "retryLocalDesktop": "Torna a intentar la sessió de l'escriptori local"
   },
@@ -984,8 +984,8 @@
     "acceptNewKey": "Accepta la clau nova i continua"
   },
   "errors": {
-    "databaseConnection": "El servidor de D.EX.T.E.R. no respon",
-    "embeddedServerFailed": "El servidor local de D.EX.T.E.R. no ha pogut iniciar-se",
+    "databaseConnection": "El servidor de Termix no respon",
+    "embeddedServerFailed": "El servidor local de Termix no ha pogut iniciar-se",
     "unknownError": "Error desconegut",
     "syncedHostMissing": "L'amfitrió sincronitzat no existeix al servidor enllaçat",
     "linkedServerUnreachable": "El servidor enllaçat no és accessible",
@@ -1009,13 +1009,13 @@
     "sessionExpiredLogin": "La sessió ha caducat. Si us plau, inicia sessió de nou."
   },
   "messages": {
-    "registrationDisabled": "Encara no tens un compte de D.EX.T.E.R. Demana a un administrador que activi la creació automàtica de comptes externs.",
+    "registrationDisabled": "Encara no tens un compte de Termix. Demana a un administrador que activi la creació automàtica de comptes externs.",
     "userNotAllowed": "El teu compte no està autoritzat per registrar-se. Si us plau, contacta amb un administrador.",
     "databaseConnectionFailed": "Potser encara s'està iniciant o s'ha aturat. Aquesta pàgina continuarà intentant-ho i es recuperarà automàticament quan el servidor torni a estar disponible.",
-    "embeddedServerPortInUse": "El port {{port}} ja està en ús per un altre programa. Normalment és un contenidor Docker de D.EX.T.E.R. o un procés de D.EX.T.E.R. d'una sessió anterior. Tanca'l i reinicia D.EX.T.E.R.",
-    "embeddedServerPortInUseUnknownPort": "Un dels ports que necessita D.EX.T.E.R. ja està en ús per un altre programa. Tanca el que l'està utilitzant i reinicia D.EX.T.E.R.",
+    "embeddedServerPortInUse": "El port {{port}} ja està en ús per un altre programa. Normalment és un contenidor Docker de Termix o un procés de Termix d'una sessió anterior. Tanca'l i reinicia Termix.",
+    "embeddedServerPortInUseUnknownPort": "Un dels ports que necessita Termix ja està en ús per un altre programa. Tanca el que l'està utilitzant i reinicia Termix.",
     "embeddedServerOldDatabase": "Les dades locals són de Termix 2.8 o anterior i han de passar primer per la versió 2.9. Instal·la Termix 2.9.1, obre-la un cop perquè pugui moure les dades i, a continuació, actualitza a aquesta versió.",
-    "embeddedServerCrashed": "El servidor local s'ha aturat inesperadament. Reinicia D.EX.T.E.R. i consulta el registre d'escriptori si el problema persisteix.",
+    "embeddedServerCrashed": "El servidor local s'ha aturat inesperadament. Reinicia Termix i consulta el registre d'escriptori si el problema persisteix.",
     "resetCodeSent": "Codi de restabliment enviat als registres de Docker",
     "codeVerified": "Codi verificat correctament",
     "passwordResetSuccess": "Contrasenya restablerta correctament",
@@ -1140,7 +1140,7 @@
         "missing": "Cap connector instal·lat proporciona aquest disseny.",
         "disabled": "El connector que proporciona aquest disseny està desactivat.",
         "blocked": "El connector que proporciona aquest disseny està esperant alguna cosa que necessita.",
-        "incompatible": "El connector que proporciona aquest disseny no funciona amb aquesta versió de D.EX.T.E.R.",
+        "incompatible": "El connector que proporciona aquest disseny no funciona amb aquesta versió de Termix.",
         "failed": "El disseny no s'ha pogut iniciar.",
         "crashed": "El disseny s'ha bloquejat dues vegades mentre dibuixava l'aplicació."
       },
@@ -1161,7 +1161,7 @@
       },
       "process:spawn": {
         "title": "Executar programes en aquest ordinador",
-        "consequence": "Els programes s'executen al mateix servidor de D.EX.T.E.R., no als vostres servidors remots."
+        "consequence": "Els programes s'executen al mateix servidor de Termix, no als vostres servidors remots."
       },
       "users:write": {
         "title": "Crear i modificar comptes d'usuari",
@@ -1185,11 +1185,11 @@
       },
       "system:tls": {
         "title": "Gestionar certificats",
-        "consequence": "Pot substituir el certificat que D.EX.T.E.R. serveix per HTTPS i respondre a les comprovacions de domini de les autoritats de certificació."
+        "consequence": "Pot substituir el certificat que Termix serveix per HTTPS i respondre a les comprovacions de domini de les autoritats de certificació."
       },
       "device:serial": {
         "title": "Accedir a dispositius sèrie i USB",
-        "consequence": "Pot obrir un port sèrie físic a l'ordinador que executa D.EX.T.E.R."
+        "consequence": "Pot obrir un port sèrie físic a l'ordinador que executa Termix."
       },
       "hosts:export": {
         "title": "Exporta els hosts amb els seus secrets",
@@ -1213,7 +1213,7 @@
       },
       "network:serve": {
         "title": "Acceptar connexions",
-        "consequence": "Obre un port al servidor de D.EX.T.E.R."
+        "consequence": "Obre un port al servidor de Termix."
       },
       "network:broadcast": {
         "title": "Enviar difusions de xarxa",
@@ -1257,11 +1257,11 @@
       },
       "desktop:window": {
         "title": "Obrir finestres d'escriptori",
-        "consequence": "Només a l'aplicació d'escriptori de D.EX.T.E.R."
+        "consequence": "Només a l'aplicació d'escriptori de Termix."
       },
       "desktop:local": {
         "title": "Utilitzar aquest ordinador",
-        "consequence": "Pot llegir i modificar fitxers, executar un shell i obrir ports locals en aquest ordinador. Només a l'aplicació d'escriptori de D.EX.T.E.R."
+        "consequence": "Pot llegir i modificar fitxers, executar un shell i obrir ports locals en aquest ordinador. Només a l'aplicació d'escriptori de Termix."
       },
       "users:impersonate": {
         "title": "Actuar com a altres usuaris",
@@ -1289,10 +1289,10 @@
       },
       "secrets:own": {
         "title": "Emmagatzemar els seus propis secrets",
-        "consequence": "Xifrat per D.EX.T.E.R. El plugin mai no té la clau."
+        "consequence": "Xifrat per Termix. El plugin mai no té la clau."
       },
       "settings:read-core": {
-        "title": "Llegir la configuració de D.EX.T.E.R.",
+        "title": "Llegir la configuració de Termix",
         "consequence": "Configuració del servidor, no els teus hosts ni credencials."
       },
       "plugins:read": {
@@ -1410,7 +1410,7 @@
         "minor": "També afegeix les seves pròpies pantalles i emmagatzema les seves pròpies dades, mantingudes separades de les d'altres complements.",
         "none": "No demana cap accés especial.",
         "uploadTitle": "Instal·la {{name}} des d'un fitxer",
-        "uploadWarning": "Aquest fitxer no ha estat verificat ni signat pel registre de D.EX.T.E.R. Només l'has d'instal·lar si l'has creat tu mateix o si confies en qui l'ha creat."
+        "uploadWarning": "Aquest fitxer no ha estat verificat ni signat pel registre de Termix. Només l'has d'instal·lar si l'has creat tu mateix o si confies en qui l'ha creat."
       },
       "confirm": {
         "uninstallTitle": "Vols desinstal·lar {{name}}?",
@@ -1513,10 +1513,10 @@
         "security": "Seguretat"
       },
       "installedBadge": "Instal·lat",
-      "incompatible": "Requereix una versió més recent de D.EX.T.E.R.",
+      "incompatible": "Requereix una versió més recent de Termix",
       "features": "Funcionalitats",
       "whatItCanDo": "Què pot fer",
-      "addsToTermix": "Afegeix a D.EX.T.E.R.",
+      "addsToTermix": "Afegeix a Termix",
       "addsToTermixHint": "Si desinstal·les el complement, totes aquestes funcionalitats desapareixeran.",
       "noServerAccess": "Sense accés als teus servidors",
       "searchInstalled": "Cercar entre els instal·lats",
@@ -1534,12 +1534,12 @@
         "hostYourOwn": "Allotja el teu propi registre",
         "add": "Afegeix un registre",
         "addTitle": "Afegeix un registre",
-        "addHint": "Enganxa l'enllaç a l'index.json del registre. D.EX.T.E.R. el llegeix i mostra la clau amb la qual signa els complements. Només afegeixis registres de persones de confiança.",
+        "addHint": "Enganxa l'enllaç a l'index.json del registre. Termix el llegeix i mostra la clau amb la qual signa els complements. Només afegeixis registres de persones de confiança.",
         "urlLabel": "URL de l'índex",
         "check": "Comprova",
         "addConfirm": "Confia i afegeix",
         "added": "S'ha afegit {{name}}",
-        "customWarning": "Els complements d'aquest registre no són revisats per l'equip de D.EX.T.E.R. Només el propietari del registre decideix què hi ha. Cada descàrrega ha d'estar signada amb la clau anterior.",
+        "customWarning": "Els complements d'aquest registre no són revisats per l'equip de Termix. Només el propietari del registre decideix què hi ha. Cada descàrrega ha d'estar signada amb la clau anterior.",
         "keyFingerprint": "Clau {{keyId}}",
         "pluginCount_one": "{{count}} complement",
         "pluginCount_many": "{{count}} complements",
@@ -1549,12 +1549,12 @@
         "alwaysOn": "Sempre activat",
         "communityHint": "Complements fets per altres persones. Cada versió és revisada per una persona i per comprovacions automatitzades abans de ser publicada.",
         "communityConfirmTitle": "Vols activar els complements de la comunitat?",
-        "communityConfirmBody": "Els complements de la comunitat són fets per altres persones, no per l'equip de D.EX.T.E.R. Cada versió és revisada per una persona i per comprovacions automatitzades abans de ser publicada, però encara poden passar errors. Només instal·lis complements de confiança i comprova què demana cadascun.",
+        "communityConfirmBody": "Els complements de la comunitat són fets per altres persones, no per l'equip de Termix. Cada versió és revisada per una persona i per comprovacions automatitzades abans de ser publicada, però encara poden passar errors. Només instal·lis complements de confiança i comprova què demana cadascun.",
         "communityConfirm": "Activa",
         "communityBadge": "Comunitat",
         "communityBadgeHint": "Del registre de la comunitat. Fet per altres persones i revisat abans de ser publicat.",
         "customBadge": "Personalitzat",
-        "customBadgeHint": "De {{name}}, un registre afegit per un administrador. No revisat per l'equip de D.EX.T.E.R.",
+        "customBadgeHint": "De {{name}}, un registre afegit per un administrador. No revisat per l'equip de Termix.",
         "remove": "Eliminar",
         "removeTitle": "Vols eliminar {{name}}?",
         "removeBody": "Els seus connectors ja no es mostraran a Explorar. Ho pots tornar a afegir més endavant.",
@@ -1591,7 +1591,7 @@
         "downloadsHint": "Quant de temps s'ha descarregat una versió. Això no és el nombre d'instal·lacions."
       },
       "unverified": "No verificat",
-      "unverifiedHint": "Instal·lat des d'un fitxer. D.EX.T.E.R. no l'ha verificat ni signat.",
+      "unverifiedHint": "Instal·lat des d'un fitxer. Termix no l'ha verificat ni signat.",
       "reportIssue": "Informar d'un problema",
       "reportTo": "Informar a {{author}}",
       "requestFeature": "Sol·licitar una funcionalitat",
@@ -1647,10 +1647,10 @@
         "perPage": "{{count}} per pàgina",
         "perPageLabel": "Complements per pàgina"
       },
-      "showUnsupportedHint": "Aquests es llisten, però encara no hi ha cap versió que s'executi en aquesta versió. Actualitza D.EX.T.E.R. per instal·lar-los.",
-      "unsupported": "Cal una versió més recent de D.EX.T.E.R.",
-      "unsupportedHint": "Cap versió d'aquest complement s'executa en aquesta versió de D.EX.T.E.R. Actualitza D.EX.T.E.R. per instal·lar-lo.",
-      "needsTermix": "Cal D.EX.T.E.R. {{range}}",
+      "showUnsupportedHint": "Aquests es llisten, però encara no hi ha cap versió que s'executi en aquesta versió. Actualitza Termix per instal·lar-los.",
+      "unsupported": "Cal una versió més recent de Termix",
+      "unsupportedHint": "Cap versió d'aquest complement s'executa en aquesta versió de Termix. Actualitza Termix per instal·lar-lo.",
+      "needsTermix": "Cal Termix {{range}}",
       "showUnsupported": "Mostrar els no compatibles ({{count}})",
       "showMore": "Mostrar {{count}} més ({{total}} restants)"
     }

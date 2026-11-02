@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Žingsnis {{current}} iš {{total}}",
-    "stageLabel": "D.EX.T.E.R. nustatymas",
+    "stageLabel": "Termix nustatymas",
     "setupHeading": "Sukurkite savo darbo aplinką",
     "partialHeading": "Keletas naujų dalykų, kuriuos reikia nustatyti",
     "signOut": "Atsijungti",
@@ -207,7 +207,7 @@
     "pluginsChoice_enabled": "Įjungta",
     "pluginsChoice_disabled": "Išjungta",
     "pluginsChoice_remove": "Pašalinti",
-    "pluginsConsentTitle": "Padėkite tobulinti D.EX.T.E.R.",
+    "pluginsConsentTitle": "Padėkite tobulinti Termix",
     "pluginsConsentNote": "Tai galite išjungti bet kuriuo metu iš skirtuko „Priedai“.",
     "pluginsApplying": "Taikomi jūsų pasirinkimai",
     "pluginsSomeFailed": "Kai kurių priedų pakeisti nepavyko. Juos galite sutvarkyti vėliau iš skirtuko „Priedai“. Paspauskite „Toliau“, kad tęstumėte.",
@@ -226,14 +226,14 @@
     "neverBody": "Neieškoti atnaujinimų. Visada galite patikrinti rankiniu būdu skiltyje Nustatymai.",
     "onboardingTitle": "Programėlės atnaujinimai",
     "onboardingBody": "Dabar darbalaukio programėlė gali atnaujinti pati. Pasirinkite, kaip norite gauti naujas versijas. Vėliau tai galite pakeisti skiltyje Nustatymai, Atnaujinimai.",
-    "onboardingManual": "Ši programėlės kopija buvo įdiegta taip, kad negali atnaujinti pati, todėl D.EX.T.E.R. praneš, kai bus išleista nauja versija, ir pateiks nuorodą ją atsisiųsti.",
+    "onboardingManual": "Ši programėlės kopija buvo įdiegta taip, kad negali atnaujinti pati, todėl Termix praneš, kai bus išleista nauja versija, ir pateiks nuorodą ją atsisiųsti.",
     "download": "Atsisiųsti",
     "restart": "Paleisti iš naujo dabar",
     "later": "Vėliau",
-    "available": "Prieinama D.EX.T.E.R. {{version}}",
+    "available": "Prieinama Termix {{version}}",
     "manualHint": "Atsisiųskite iš išleidimų puslapio ir įdiekite virš šios versijos.",
-    "ready": "D.EX.T.E.R. {{version}} paruošta įdiegimui",
-    "readyHint": "Ji bus įdiegta kitą kartą paleidus D.EX.T.E.R. iš naujo."
+    "ready": "Termix {{version}} paruošta įdiegimui",
+    "readyHint": "Ji bus įdiegta kitą kartą paleidus Termix iš naujo."
   },
   "safeMode": {
     "title": "Saugus režimas",
@@ -395,7 +395,7 @@
     "sshPort": "SSH portas",
     "authMethod": "Autentifikavimo būdas",
     "authenticationMethod": "Autentifikavimo būdas",
-    "authenticationMethodDesc": "Pasirinkite vieną būdą, kurį D.EX.T.E.R. naudos šiam SSH ryšiui autentifikuoti. Kiti būdai automatiškai nėra bandomi.",
+    "authenticationMethodDesc": "Pasirinkite vieną būdą, kurį Termix naudos šiam SSH ryšiui autentifikuoti. Kiti būdai automatiškai nėra bandomi.",
     "storedCredential": "Išsaugota prisijungimo informacija",
     "selectACredential": "Pasirinkite prisijungimo informaciją...",
     "keyTypeLabel": "Rakto tipas",
@@ -411,7 +411,7 @@
     "replaceKey": "Pakeisti raktą",
     "docsLink": "Peržiūrėti dokumentaciją",
     "agentLabel": "SSH Agent",
-    "agentDesc": "Autentifikuokite naudodami SSH agentą, veikiančią D.EX.T.E.R. serveryje (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agentas turi veikti mašinoje, kurioje veikia D.EX.T.E.R.",
+    "agentDesc": "Autentifikuokite naudodami SSH agentą, veikiančią Termix serveryje (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agentas turi veikti mašinoje, kurioje veikia Termix.",
     "agentAuthenticationDesc": "Naudokite raktais iš SSH agento šiam ryšiui autentifikuoti. Palikite lizdo kelią tuščią, kad naudotumėte SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Agento lizdo kelias",
     "agentSocketPathPlaceholder": "Palikite tuščią, kad naudotumėte SSH_AUTH_SOCK",
@@ -828,8 +828,8 @@
     "arrangeUnlockedSwitchedToManual": "Perjungta į rankinę rūšiavimą, kad jūsų tvarka išliktų",
     "dragToRearrange": "Vilkite, kad pakeistumėte tvarką",
     "arrangeUnlocked": "Atrakinti vilkimą, kad pakeistumėte tvarką",
-    "webUiBindHostUnreachable": "Jūsų naršyklė negali pasiekti 127.0.0.1 mašinoje, kurioje veikia D.EX.T.E.R., todėl šis galinis taškas neįkels. Naudokite adresą, kurį ta mašina atsako, pvz., 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Iš šios naršyklės persiuntimas būtų pasiekiamas tuo pačiu pavadinimu, iš kurio teikiamas D.EX.T.E.R., todėl tunelinė paslauga gautų jūsų D.EX.T.E.R. sesiją. Slapukai ignoruoja prievadą. Šis galinis taškas atsisakys atidaryti čia; jis veikia iš D.EX.T.E.R. darbalaukio programos arba kai D.EX.T.E.R. atidaromas localhost.",
+    "webUiBindHostUnreachable": "Jūsų naršyklė negali pasiekti 127.0.0.1 mašinoje, kurioje veikia Termix, todėl šis galinis taškas neįkels. Naudokite adresą, kurį ta mašina atsako, pvz., 0.0.0.0.",
+    "webUiBindHostSharesSessionCookie": "Iš šios naršyklės persiuntimas būtų pasiekiamas tuo pačiu pavadinimu, iš kurio teikiamas Termix, todėl tunelinė paslauga gautų jūsų Termix sesiją. Slapukai ignoruoja prievadą. Šis galinis taškas atsisakys atidaryti čia; jis veikia iš Termix darbalaukio programos arba kai Termix atidaromas localhost.",
     "webUiErrorLabelRequired": "Galiniam taškui {{row}} reikia etiketės.",
     "webUiErrorLabelDuplicate": "Kiekvienas galinis taškas turi turėti skirtingą pavadinimą.",
     "webUiErrorPortRange": "Galiniam taškui {{row}} reikia prievado nuo 1 iki 65535.",
@@ -977,8 +977,8 @@
     "retrySecondFactorUI": "Perkrauti patvirtinimo būdus",
     "localDesktopSignedOut": "Vietinė darbalaukio sesija baigta",
     "localDesktopUnavailable": "Vietinė darbalaukio sesija nepasiekiama",
-    "localDesktopSignedOutDesc": "Atsijungėte nuo vietinės darbalaukio sesijos. Tęskite vietinai, kad vėl naudotumėte šio įrenginio integruotą D.EX.T.E.R. serverį.",
-    "localDesktopUnavailableDesc": "D.EX.T.E.R. nepavyko paleisti vietinės darbalaukio sesijos. Pabandykite dar kartą, o ne registruoti naują paskyrą.",
+    "localDesktopSignedOutDesc": "Atsijungėte nuo vietinės darbalaukio sesijos. Tęskite vietinai, kad vėl naudotumėte šio įrenginio integruotą Termix serverį.",
+    "localDesktopUnavailableDesc": "Termix nepavyko paleisti vietinės darbalaukio sesijos. Pabandykite dar kartą, o ne registruoti naują paskyrą.",
     "continueLocalDesktop": "Tęsti su vietiniu darbalaukiu",
     "retryLocalDesktop": "Pabandyti vietinę darbalaukio sesiją dar kartą"
   },
@@ -997,8 +997,8 @@
     "acceptNewKey": "Priimti naują raktą ir tęsti"
   },
   "errors": {
-    "databaseConnection": "D.EX.T.E.R. serveris neatsako",
-    "embeddedServerFailed": "Nepavyko paleisti D.EX.T.E.R. vietinio serverio",
+    "databaseConnection": "Termix serveris neatsako",
+    "embeddedServerFailed": "Nepavyko paleisti Termix vietinio serverio",
     "unknownError": "Nežinoma klaida",
     "syncedHostMissing": "Sinchronizuotas serveris nesusietame serveryje neegzistuoja",
     "linkedServerUnreachable": "Susietas serveris nepasiekiamas",
@@ -1022,13 +1022,13 @@
     "sessionExpiredLogin": "Sesija pasibaigė. Prisijunkite iš naujo."
   },
   "messages": {
-    "registrationDisabled": "Dar neturite D.EX.T.E.R. paskyros. Paprašykite administratoriaus įjungti funkciją „Automatiškai kurti išorines paskyras“.",
+    "registrationDisabled": "Dar neturite Termix paskyros. Paprašykite administratoriaus įjungti funkciją „Automatiškai kurti išorines paskyras“.",
     "userNotAllowed": "Jūsų paskyra neturi teisės registruotis. Susisiekite su administratoriumi.",
     "databaseConnectionFailed": "Jis gali vis dar paleidžiamas arba sustojo. Šis puslapis nuolat bando prisijungti ir automatiškai atsinaujins, kai serveris vėl bus pasiekiamas.",
-    "embeddedServerPortInUse": "Prievadas {{port}} jau naudojamas kitos programos. Dažniausiai tai yra D.EX.T.E.R. Docker konteineris arba ankstesnės sesijos D.EX.T.E.R. procesas. Uždarykite jį ir paleiskite D.EX.T.E.R. iš naujo.",
-    "embeddedServerPortInUseUnknownPort": "Viena iš prievadų, kurių D.EX.T.E.R. reikia, jau naudojama kitos programos. Uždarykite programą, kurią naudoja, ir paleiskite D.EX.T.E.R. iš naujo.",
+    "embeddedServerPortInUse": "Prievadas {{port}} jau naudojamas kitos programos. Dažniausiai tai yra Termix Docker konteineris arba ankstesnės sesijos Termix procesas. Uždarykite jį ir paleiskite Termix iš naujo.",
+    "embeddedServerPortInUseUnknownPort": "Viena iš prievadų, kurių Termix reikia, jau naudojama kitos programos. Uždarykite programą, kurią naudoja, ir paleiskite Termix iš naujo.",
     "embeddedServerOldDatabase": "Jūsų vietiniai duomenys yra iš Termix 2.8 arba senesnės versijos, todėl pirmiausia juos reikia atnaujinti per 2.9 versiją. Įdiekite Termix 2.9.1, atidarykite ją vieną kartą, kad duomenys būtų perkelti, tada vėl atnaujinkite į šią versiją.",
-    "embeddedServerCrashed": "Vietinis serveris netikėtai sustojo. Paleiskite D.EX.T.E.R. iš naujo ir, jei tai kartosis, patikrinkite darbalaužio žurnalą.",
+    "embeddedServerCrashed": "Vietinis serveris netikėtai sustojo. Paleiskite Termix iš naujo ir, jei tai kartosis, patikrinkite darbalaužio žurnalą.",
     "resetCodeSent": "Atstatymo kodas išsiųstas į Docker žurnalus",
     "codeVerified": "Kodas sėkmingai patvirtintas",
     "passwordResetSuccess": "Slaptažodis sėkmingai atstatytas",
@@ -1157,7 +1157,7 @@
         "missing": "Nėra įdiegto priedo, kuris teiktų šį išdėstymą.",
         "disabled": "Priedas, teikiantis šį išdėstymą, yra išjungtas.",
         "blocked": "Priedas, teikiantis šį išdėstymą, laukia kažko, ko jam reikia.",
-        "incompatible": "Priedas, teikiantis šį išdėstymą, neveikia su šia D.EX.T.E.R. versija.",
+        "incompatible": "Priedas, teikiantis šį išdėstymą, neveikia su šia Termix versija.",
         "failed": "Išdėstymui nepavyko paleisti.",
         "crashed": "Išdėstymas sugedo du kartus piešiant programą."
       },
@@ -1178,7 +1178,7 @@
       },
       "process:spawn": {
         "title": "Vykdyti programas šiame kompiuteryje",
-        "consequence": "Programos vykdomos pačiame D.EX.T.E.R. serveryje, o ne jūsų serveriuose."
+        "consequence": "Programos vykdomos pačiame Termix serveryje, o ne jūsų serveriuose."
       },
       "users:write": {
         "title": "Kurti ir keisti vartotojų paskyras",
@@ -1202,11 +1202,11 @@
       },
       "system:tls": {
         "title": "Valdyti sertifikatus",
-        "consequence": "Jis gali pakeisti sertifikatą, kurį D.EX.T.E.R. naudoja HTTPS ryšiams, ir atsakyti į domenų patikrinimus iš sertifikavimo institucijų."
+        "consequence": "Jis gali pakeisti sertifikatą, kurį Termix naudoja HTTPS ryšiams, ir atsakyti į domenų patikrinimus iš sertifikavimo institucijų."
       },
       "device:serial": {
         "title": "Prieiga prie serijinių ir USB įrenginių",
-        "consequence": "Jis gali atidaryti fizinį serijinį prievadą kompiuteryje, kuriame veikia D.EX.T.E.R."
+        "consequence": "Jis gali atidaryti fizinį serijinį prievadą kompiuteryje, kuriame veikia Termix."
       },
       "hosts:export": {
         "title": "Eksportuoti serverius su jų slaptais",
@@ -1230,7 +1230,7 @@
       },
       "network:serve": {
         "title": "Priimti ryšius",
-        "consequence": "Jis atidaro prievadą D.EX.T.E.R. serveryje."
+        "consequence": "Jis atidaro prievadą Termix serveryje."
       },
       "network:broadcast": {
         "title": "Siųsti tinklo transliacijas",
@@ -1274,11 +1274,11 @@
       },
       "desktop:window": {
         "title": "Atidaryti darbalaukio langus",
-        "consequence": "Tik D.EX.T.E.R. darbalaukio programoje."
+        "consequence": "Tik Termix darbalaukio programoje."
       },
       "desktop:local": {
         "title": "Naudoti šį kompiuterį",
-        "consequence": "Gali skaityti ir keisti failus, vykdyti komandas bei atidaryti vietinius prievadus šiame kompiuteryje. Tik D.EX.T.E.R. darbalaukio programoje."
+        "consequence": "Gali skaityti ir keisti failus, vykdyti komandas bei atidaryti vietinius prievadus šiame kompiuteryje. Tik Termix darbalaukio programoje."
       },
       "users:impersonate": {
         "title": "Veikti kaip kiti vartotojai",
@@ -1306,10 +1306,10 @@
       },
       "secrets:own": {
         "title": "Saugoti savo slaptažodžius",
-        "consequence": "Šifruojama D.EX.T.E.R. Priedas niekada neturi rakto."
+        "consequence": "Šifruojama Termix. Priedas niekada neturi rakto."
       },
       "settings:read-core": {
-        "title": "Skaityti D.EX.T.E.R. nustatymus",
+        "title": "Skaityti Termix nustatymus",
         "consequence": "Serverio nustatymai, ne jūsų serveriai ar prisijungimo duomenys."
       },
       "plugins:read": {
@@ -1438,7 +1438,7 @@
         "minor": "Ji taip pat turi savo ekranus ir saugo savo duomenis, kurie yra atskirti nuo kitų priedų.",
         "none": "Ji nereikalauja jokių specialių prieigos teisių.",
         "uploadTitle": "Įdiegti „{{name}}“ iš failo",
-        "uploadWarning": "Šis failas nebuvo patikrintas ar pasirašytas „D.EX.T.E.R.“ registro. Įdiekite jį tik jei sukūrėte patys arba pasitikite jo kūrėju."
+        "uploadWarning": "Šis failas nebuvo patikrintas ar pasirašytas „Termix“ registro. Įdiekite jį tik jei sukūrėte patys arba pasitikite jo kūrėju."
       },
       "confirm": {
         "uninstallTitle": "Pašalinti „{{name}}“?",
@@ -1546,10 +1546,10 @@
         "security": "Saugumas"
       },
       "installedBadge": "Įdiegta",
-      "incompatible": "Reikia naujesnės D.EX.T.E.R. versijos",
+      "incompatible": "Reikia naujesnės Termix versijos",
       "features": "Funkcijos",
       "whatItCanDo": "Ką ji gali",
-      "addsToTermix": "Prideda prie D.EX.T.E.R.",
+      "addsToTermix": "Prideda prie Termix",
       "addsToTermixHint": "Atsisiuntus, visos šios funkcijos bus pašalintos.",
       "noServerAccess": "Nėra prieigos prie jūsų serverių",
       "searchInstalled": "Ieškoti įdiegtų",
@@ -1567,12 +1567,12 @@
         "hostYourOwn": "Sukurkite savo registratūrą",
         "add": "Pridėti registratūrą",
         "addTitle": "Pridėti registratūrą",
-        "addHint": "Įklijuokite nuorodą į registratūros index.json. D.EX.T.E.R. ją perskaitys ir parodys raktą, kuriuo pasirašomi priedai. Pridėkite tik registratūras, kurioms pasitikite.",
+        "addHint": "Įklijuokite nuorodą į registratūros index.json. Termix ją perskaitys ir parodys raktą, kuriuo pasirašomi priedai. Pridėkite tik registratūras, kurioms pasitikite.",
         "urlLabel": "Indekso URL",
         "check": "Patikrinti",
         "addConfirm": "Pasitikėti ir pridėti",
         "added": "Pridėta {{name}}",
-        "customWarning": "Šios registratūros priedai nėra peržiūrėti D.EX.T.E.R. komandos. Tik registratūros savininkas nusprendžia, kas joje bus. Kiekvienas atsisiuntimas turi būti pasirašytas aukščiau nurodytu raktu.",
+        "customWarning": "Šios registratūros priedai nėra peržiūrėti Termix komandos. Tik registratūros savininkas nusprendžia, kas joje bus. Kiekvienas atsisiuntimas turi būti pasirašytas aukščiau nurodytu raktu.",
         "keyFingerprint": "Raktas {{keyId}}",
         "pluginCount_one": "{{count}} priedas",
         "pluginCount_few": "{{count}} priedai",
@@ -1583,12 +1583,12 @@
         "alwaysOn": "Visada įjungta",
         "communityHint": "Priedus sukūrė kiti žmonės. Kiekviena versija patikrinama žmogaus ir automatinių tikrinimų prieš ją įtraukiant į sąrašą.",
         "communityConfirmTitle": "Įjungti bendruomenės priedus?",
-        "communityConfirmBody": "Bendruomenės priedus sukūrė kiti žmonės, ne D.EX.T.E.R. komanda. Kiekviena versija patikrinama žmogaus ir automatinių tikrinimų prieš ją įtraukiant į sąrašą, tačiau klaidos vis tiek gali prasiskverbti. Įdiekite tik priedus, kuriems pasitikite, ir patikrinkite, ko kiekvienas prašo.",
+        "communityConfirmBody": "Bendruomenės priedus sukūrė kiti žmonės, ne Termix komanda. Kiekviena versija patikrinama žmogaus ir automatinių tikrinimų prieš ją įtraukiant į sąrašą, tačiau klaidos vis tiek gali prasiskverbti. Įdiekite tik priedus, kuriems pasitikite, ir patikrinkite, ko kiekvienas prašo.",
         "communityConfirm": "Įjungti",
         "communityBadge": "Bendruomenė",
         "communityBadgeHint": "Iš bendruomenės registratūros. Sukūrė kiti žmonės ir buvo peržiūrėta prieš įtraukiant į sąrašą.",
         "customBadge": "Nestandartinė",
-        "customBadgeHint": "Iš {{name}}, registratūros, kurią pridėjo administratorius. Neperžiūrėta D.EX.T.E.R. komandos.",
+        "customBadgeHint": "Iš {{name}}, registratūros, kurią pridėjo administratorius. Neperžiūrėta Termix komandos.",
         "remove": "Pašalinti",
         "removeTitle": "Pašalinti „{{name}}“?",
         "removeBody": "Jo priedai nebebus rodomi skiltyje „Naršyti“. Vėliau galėsite jį pridėti iš naujo.",
@@ -1628,7 +1628,7 @@
         "downloadsHint": "Kiek kartų išleidimas buvo atsisiųstas. Tai nėra diegimų skaičius."
       },
       "unverified": "Patvirtintas",
-      "unverifiedHint": "Įdiegta iš failo. D.EX.T.E.R. jo nepatikrino ir nepasirašė.",
+      "unverifiedHint": "Įdiegta iš failo. Termix jo nepatikrino ir nepasirašė.",
       "reportIssue": "Pranešti apie problemą",
       "reportTo": "Pranešti {{author}}",
       "requestFeature": "Prašyti funkcijos",
@@ -1685,10 +1685,10 @@
         "perPage": "{{count}} puslapyje",
         "perPageLabel": "Priedų skaičius puslapyje"
       },
-      "showUnsupportedHint": "Šie yra išvardyti, tačiau šiai versijai dar nėra išleista. Atnaujinkite D.EX.T.E.R., kad galėtumėte juos įdiegti.",
-      "unsupported": "Reikia naujesnės D.EX.T.E.R. versijos",
-      "unsupportedHint": "Šio priedo nėra išleista šiai D.EX.T.E.R. versijai. Atnaujinkite D.EX.T.E.R., kad galėtumėte jį įdiegti.",
-      "needsTermix": "Reikia D.EX.T.E.R. {{range}}",
+      "showUnsupportedHint": "Šie yra išvardyti, tačiau šiai versijai dar nėra išleista. Atnaujinkite Termix, kad galėtumėte juos įdiegti.",
+      "unsupported": "Reikia naujesnės Termix versijos",
+      "unsupportedHint": "Šio priedo nėra išleista šiai Termix versijai. Atnaujinkite Termix, kad galėtumėte jį įdiegti.",
+      "needsTermix": "Reikia Termix {{range}}",
       "showUnsupported": "Rodyti nepalaikomus ({{count}})",
       "showMore": "Rodyti dar {{count}} (liko {{total}})"
     }
