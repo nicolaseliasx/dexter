@@ -20,7 +20,7 @@ This fork is upstream Termix **v26.10.6** with no patch in the core, plus own pl
 ## Plugins and state
 
 - Which plugins are on is **database** state of each instance, not part of the image. On a new instance repeat the onboarding. Current policy: **Off**, never Remove, until a period of use; see `docs/modernizacao/04-remocao-futura-plugins-off.md`.
-- On today: SSH Terminal, Proxmox (not configured), Host Status, TOTP, Workspaces, Classic Layout, Classic Themes, plus `sessions` and `dexter-ops` (own plugins, in `plugins/`).
+- On today: SSH Terminal, Proxmox (not configured), Host Status, TOTP, Workspaces, Classic Layout, Classic Themes, plus `sessions` (own plugin, in `plugins/sessions`).
 - `ssh-terminal` ships in the image. Do not install another copy in `data/plugins` (it logs "update ... not newer than the bundled").
 
 ## Testing without touching production

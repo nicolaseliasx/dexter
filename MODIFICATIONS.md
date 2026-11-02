@@ -4,7 +4,7 @@ Termix (ncls) is a derivative work of [Termix](https://github.com/Termix-SSH/Ter
 
 ## Changes
 
-1. **New `plugins/` directory.** `plugins/sessions` (persistent tmux sessions) and `plugins/dexter-ops` (control panel for the Dexter Ops bot) are own code, Apache-2.0, standalone npm packages that do not touch the Termix core.
+1. **New `plugins/sessions` directory.** The Sessions plugin (persistent tmux sessions) is own code, Apache-2.0, a standalone npm package that does not touch the Termix core.
 2. **`eslint.config.mjs`:** `plugins/**` added to the ignore list.
 3. **Documentation:** `AGENTS.md`, this file, `docs/modernizacao/` and a fork note at the top of `README.md`.
 

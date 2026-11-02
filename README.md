@@ -1,4 +1,4 @@
-> **Termix (ncls)** is a personal fork of [Termix](https://github.com/Termix-SSH/Termix) **v26.10.6** by Termix-SSH, licensed under Apache 2.0. The core is unmodified; fork additions live in [`plugins/`](./plugins) (`sessions`, `dexter-ops`) and deploy notes in [`docs/modernizacao`](./docs/modernizacao). See [`MODIFICATIONS.md`](./MODIFICATIONS.md).
+> **Termix (ncls)** is a personal fork of [Termix](https://github.com/Termix-SSH/Termix) **v26.10.6** by Termix-SSH, licensed under Apache 2.0. The core is unmodified; fork additions live in [`plugins/`](./plugins) (`sessions`) and deploy notes in [`docs/modernizacao`](./docs/modernizacao). See [`MODIFICATIONS.md`](./MODIFICATIONS.md).
 
 <div align="center">
 
