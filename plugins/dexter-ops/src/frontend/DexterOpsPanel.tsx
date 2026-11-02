@@ -140,33 +140,31 @@ export function DexterOpsPanel() {
               meta={`${op.host}${op.description ? ` · ${op.description}` : ""}`}
               dimmed={!op.enabled}
               trailing={
-                <Switch
-                  aria-label={op.name}
-                  checked={op.enabled}
-                  onCheckedChange={(checked: boolean) => void toggle(op, checked)}
-                />
-              }
-              actions={
-                <Button
-                  size="sm"
-                  variant="outline"
-                  disabled={!op.enabled}
-                  aria-label={t("ops.requestLabel", { name: op.name })}
-                  onClick={() => (op.destructive ? setAsking(op.id) : void request(op))}
-                >
-                  {t("ops.request")}
-                </Button>
+                <div className="flex items-center gap-2">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    disabled={!op.enabled}
+                    aria-label={t("ops.requestLabel", { name: op.name })}
+                    onClick={() => (op.destructive ? setAsking(op.id) : void request(op))}
+                  >
+                    {t("ops.request")}
+                  </Button>
+                  <Switch aria-label={op.name} checked={op.enabled} onCheckedChange={(checked: boolean) => void toggle(op, checked)} />
+                </div>
               }
             />
             {asking === op.id && (
-              <div className="flex items-center gap-2 px-3 py-2 text-xs">
+              <div className="flex flex-col gap-2 px-3 py-2 text-xs">
                 <span>{t("ops.confirmPrompt")}</span>
-                <Button size="sm" onClick={() => void request(op)}>
-                  {t("ops.send")}
-                </Button>
-                <Button size="sm" variant="ghost" onClick={() => setAsking(null)}>
-                  {t("common.cancel", { defaultValue: "Cancel" })}
-                </Button>
+                <div className="flex gap-2">
+                  <Button size="sm" onClick={() => void request(op)}>
+                    {t("ops.send")}
+                  </Button>
+                  <Button size="sm" variant="ghost" onClick={() => setAsking(null)}>
+                    {t("common.cancel", { defaultValue: "Cancel" })}
+                  </Button>
+                </div>
               </div>
             )}
           </div>
@@ -184,7 +182,7 @@ export function DexterOpsPanel() {
               badges={<ListBadge tone={a.severity === "crit" ? "destructive" : "warning"}>{t(`alerts.${a.severity}`)}</ListBadge>}
               meta={new Date(a.since * 1000).toLocaleString()}
               dimmed={a.acked}
-              actions={
+              trailing={
                 a.acked ? (
                   <span className="text-xs text-muted-foreground">{t("alerts.acked")}</span>
                 ) : (
