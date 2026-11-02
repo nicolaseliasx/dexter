@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Schritt {{current}} von {{total}}",
-    "stageLabel": "Termix-Einrichtung",
+    "stageLabel": "D.EX.T.E.R.-Einrichtung",
     "setupHeading": "Arbeitsbereich einrichten",
     "partialHeading": "Ein paar neue Dinge zum Einrichten",
     "signOut": "Abmelden",
@@ -403,7 +403,7 @@
     "replaceKey": "Schlüssel ersetzen",
     "docsLink": "Dokumentation anzeigen",
     "agentLabel": "SSH-Agent",
-    "agentDesc": "Authentifizierung mit einem SSH-Agenten, der auf dem Termix-Server läuft (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Der Agent muss auf dem Rechner laufen, auf dem D.EX.T.E.R. gehostet wird.",
+    "agentDesc": "Authentifizierung mit einem SSH-Agenten, der auf dem D.EX.T.E.R.-Server läuft (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Der Agent muss auf dem Rechner laufen, auf dem D.EX.T.E.R. gehostet wird.",
     "agentAuthenticationDesc": "Verwenden Sie Schlüssel von einem SSH-Agenten, um diese Verbindung zu authentifizieren. Lassen Sie den Socket-Pfad leer, um SSH_AUTH_SOCK zu verwenden.",
     "agentSocketPathLabel": "Agent-Socket-Pfad",
     "agentSocketPathPlaceholder": "Leer lassen, um SSH_AUTH_SOCK zu verwenden",
@@ -805,7 +805,7 @@
     "dragToRearrange": "Zum Neuordnen ziehen",
     "arrangeUnlocked": "Ziehen zum Neuordnen entsperren",
     "webUiBindHostUnreachable": "Ihr Browser kann 127.0.0.1 auf dem Computer, auf dem D.EX.T.E.R. läuft, nicht erreichen, daher wird dieser Endpunkt nicht geladen. Verwenden Sie eine Adresse, auf die dieser Computer reagiert, z. B. 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Von diesem Browser aus würde der Forward unter demselben Hostnamen erreicht werden, unter dem D.EX.T.E.R. bereitgestellt wird, sodass der getunnelte Dienst Ihre Termix-Sitzung erhalten würde. Cookies ignorieren den Port. Dieser Endpunkt verweigert das Öffnen hier; er funktioniert in der Termix-Desktop-App oder wenn D.EX.T.E.R. unter localhost geöffnet wird.",
+    "webUiBindHostSharesSessionCookie": "Von diesem Browser aus würde der Forward unter demselben Hostnamen erreicht werden, unter dem D.EX.T.E.R. bereitgestellt wird, sodass der getunnelte Dienst Ihre D.EX.T.E.R.-Sitzung erhalten würde. Cookies ignorieren den Port. Dieser Endpunkt verweigert das Öffnen hier; er funktioniert in der D.EX.T.E.R.-Desktop-App oder wenn D.EX.T.E.R. unter localhost geöffnet wird.",
     "webUiErrorLabelRequired": "Endpunkt {{row}} benötigt eine Bezeichnung.",
     "webUiErrorLabelDuplicate": "Jeder Endpunkt benötigt einen eindeutigen Namen.",
     "webUiErrorPortRange": "Endpunkt {{row}} benötigt einen Port zwischen 1 und 65535.",
@@ -951,7 +951,7 @@
     "retrySecondFactorUI": "Verifizierungsmethoden neu laden",
     "localDesktopSignedOut": "Lokale Desktop-Sitzung beendet",
     "localDesktopUnavailable": "Lokale Desktop-Sitzung nicht verfügbar",
-    "localDesktopSignedOutDesc": "Sie haben sich von der lokalen Desktop-Sitzung abgemeldet. Fahren Sie lokal fort, um den integrierten Termix-Server dieses Geräts erneut zu verwenden.",
+    "localDesktopSignedOutDesc": "Sie haben sich von der lokalen Desktop-Sitzung abgemeldet. Fahren Sie lokal fort, um den integrierten D.EX.T.E.R.-Server dieses Geräts erneut zu verwenden.",
     "localDesktopUnavailableDesc": "D.EX.T.E.R. konnte keine lokale Desktop-Sitzung starten. Versuchen Sie es erneut, anstatt ein neues Konto zu registrieren.",
     "continueLocalDesktop": "Mit lokalem Desktop fortfahren",
     "retryLocalDesktop": "Lokale Desktop-Sitzung wiederholen"
@@ -971,7 +971,7 @@
     "acceptNewKey": "Neuen Schlüssel akzeptieren & Fortfahren"
   },
   "errors": {
-    "databaseConnection": "Der Termix-Server antwortet nicht",
+    "databaseConnection": "Der D.EX.T.E.R.-Server antwortet nicht",
     "embeddedServerFailed": "Der lokale Server von D.EX.T.E.R. konnte nicht gestartet werden",
     "unknownError": "Unbekannter Fehler",
     "syncedHostMissing": "Der synchronisierte Host existiert nicht auf dem verknüpften Server",
@@ -996,10 +996,10 @@
     "sessionExpiredLogin": "Sitzung abgelaufen. Bitte melden Sie sich erneut an."
   },
   "messages": {
-    "registrationDisabled": "Sie haben noch kein Termix-Konto. Bitten Sie einen Administrator, die automatische Erstellung externer Konten zu aktivieren.",
+    "registrationDisabled": "Sie haben noch kein D.EX.T.E.R.-Konto. Bitten Sie einen Administrator, die automatische Erstellung externer Konten zu aktivieren.",
     "userNotAllowed": "Ihr Konto ist nicht zur Registrierung berechtigt. Bitte wenden Sie sich an einen Administrator.",
     "databaseConnectionFailed": "Er startet möglicherweise noch oder wurde gestoppt. Diese Seite versucht es weiterhin und geht automatisch weiter, sobald der Server wieder verfügbar ist.",
-    "embeddedServerPortInUse": "Der Port {{port}} wird bereits von einem anderen Programm verwendet. Dies ist in der Regel ein Termix-Docker-Container oder ein verbliebener Termix-Prozess aus einer früheren Sitzung. Schließen Sie dieses Programm und starten Sie D.EX.T.E.R. neu.",
+    "embeddedServerPortInUse": "Der Port {{port}} wird bereits von einem anderen Programm verwendet. Dies ist in der Regel ein D.EX.T.E.R.-Docker-Container oder ein verbliebener D.EX.T.E.R.-Prozess aus einer früheren Sitzung. Schließen Sie dieses Programm und starten Sie D.EX.T.E.R. neu.",
     "embeddedServerPortInUseUnknownPort": "Einer der von D.EX.T.E.R. benötigten Ports wird bereits von einem anderen Programm verwendet. Schließen Sie das entsprechende Programm und starten Sie D.EX.T.E.R. neu.",
     "embeddedServerOldDatabase": "Ihre lokalen Daten stammen von Termix 2.8 oder älter und müssen zuerst durch Version 2.9 migriert werden. Installieren Sie Termix 2.9.1, öffnen Sie es einmal, damit Ihre Daten verschoben werden können, und aktualisieren Sie anschließend erneut auf diese Version.",
     "embeddedServerCrashed": "Der lokale Server wurde unerwartet beendet. Starten Sie D.EX.T.E.R. neu und prüfen Sie das Desktop-Protokoll, falls dies weiterhin auftritt.",
@@ -1144,7 +1144,7 @@
       },
       "process:spawn": {
         "title": "Programme auf diesem Computer ausführen",
-        "consequence": "Programme werden auf dem Termix-Server selbst ausgeführt, nicht auf Ihren Hosts."
+        "consequence": "Programme werden auf dem D.EX.T.E.R.-Server selbst ausgeführt, nicht auf Ihren Hosts."
       },
       "users:write": {
         "title": "Benutzerkonten erstellen und ändern",
@@ -1196,7 +1196,7 @@
       },
       "network:serve": {
         "title": "Verbindungen akzeptieren",
-        "consequence": "Es öffnet einen Port auf dem Termix-Server."
+        "consequence": "Es öffnet einen Port auf dem D.EX.T.E.R.-Server."
       },
       "network:broadcast": {
         "title": "Netzwerk-Broadcasts senden",
@@ -1240,11 +1240,11 @@
       },
       "desktop:window": {
         "title": "Desktop-Fenster öffnen",
-        "consequence": "Nur in der Termix-Desktop-App."
+        "consequence": "Nur in der D.EX.T.E.R.-Desktop-App."
       },
       "desktop:local": {
         "title": "Diesen Computer verwenden",
-        "consequence": "Kann auf diesem Computer Dateien lesen und ändern, eine Shell ausführen und lokale Ports öffnen. Nur in der Termix-Desktop-App."
+        "consequence": "Kann auf diesem Computer Dateien lesen und ändern, eine Shell ausführen und lokale Ports öffnen. Nur in der D.EX.T.E.R.-Desktop-App."
       },
       "users:impersonate": {
         "title": "Als andere Benutzer handeln",
@@ -1275,7 +1275,7 @@
         "consequence": "Verschlüsselt von D.EX.T.E.R. Das Plugin hat nie Zugriff auf den Schlüssel."
       },
       "settings:read-core": {
-        "title": "Termix-Einstellungen lesen",
+        "title": "D.EX.T.E.R.-Einstellungen lesen",
         "consequence": "Servereinstellungen, nicht Ihre Hosts oder Anmeldeinformationen."
       },
       "plugins:read": {
@@ -1382,7 +1382,7 @@
         "minor": "Es fügt eigene Bildschirme hinzu und speichert eigene Daten, die von anderen Plugins getrennt gehalten werden.",
         "none": "Es fordert keine besonderen Zugriffsrechte an.",
         "uploadTitle": "{{name}} aus einer Datei installieren",
-        "uploadWarning": "Diese Datei wurde nicht vom Termix-Register überprüft oder signiert. Installiere sie nur, wenn du sie selbst erstellt hast oder der Person vertraust, die es getan hat."
+        "uploadWarning": "Diese Datei wurde nicht vom D.EX.T.E.R.-Register überprüft oder signiert. Installiere sie nur, wenn du sie selbst erstellt hast oder der Person vertraust, die es getan hat."
       },
       "confirm": {
         "uninstallTitle": "{{name}} deinstallieren?",
@@ -1480,7 +1480,7 @@
         "security": "Sicherheit"
       },
       "installedBadge": "Installiert",
-      "incompatible": "Benötigt eine neuere Termix-Version",
+      "incompatible": "Benötigt eine neuere D.EX.T.E.R.-Version",
       "features": "Funktionen",
       "whatItCanDo": "Was es kann",
       "addsToTermix": "Fügt D.EX.T.E.R. hinzu",
@@ -1506,7 +1506,7 @@
         "check": "Prüfen",
         "addConfirm": "Vertrauen und hinzufügen",
         "added": "{{name}} hinzugefügt",
-        "customWarning": "Plugins aus dieser Registry werden nicht vom Termix-Team überprüft. Nur der Besitzer der Registry entscheidet, was darin enthalten ist. Jeder Download muss mit dem oben genannten Schlüssel signiert sein.",
+        "customWarning": "Plugins aus dieser Registry werden nicht vom D.EX.T.E.R.-Team überprüft. Nur der Besitzer der Registry entscheidet, was darin enthalten ist. Jeder Download muss mit dem oben genannten Schlüssel signiert sein.",
         "keyFingerprint": "Schlüssel {{keyId}}",
         "pluginCount_one": "{{count}} Plugin",
         "pluginCount_other": "{{count}} Plugins",
@@ -1515,12 +1515,12 @@
         "alwaysOn": "Immer aktiv",
         "communityHint": "Plugins, die von anderen erstellt wurden. Jede Version wird vor der Aufnahme von einer Person und durch automatisierte Checks überprüft.",
         "communityConfirmTitle": "Community-Plugins aktivieren?",
-        "communityConfirmBody": "Community-Plugins werden von anderen Personen erstellt, nicht vom Termix-Team. Jede Version wird vor der Aufnahme von einer Person und durch automatisierte Checks überprüft, aber Fehler können dennoch passieren. Installiere nur Plugins, denen du vertraust, und prüfe, was jedes Plugin anfordert.",
+        "communityConfirmBody": "Community-Plugins werden von anderen Personen erstellt, nicht vom D.EX.T.E.R.-Team. Jede Version wird vor der Aufnahme von einer Person und durch automatisierte Checks überprüft, aber Fehler können dennoch passieren. Installiere nur Plugins, denen du vertraust, und prüfe, was jedes Plugin anfordert.",
         "communityConfirm": "Aktivieren",
         "communityBadge": "Community",
         "communityBadgeHint": "Aus der Community-Registry. Von anderen erstellt und vor der Aufnahme überprüft.",
         "customBadge": "Benutzerdefiniert",
-        "customBadgeHint": "Von {{name}}, einer Registry, die ein Administrator hinzugefügt hat. Nicht vom Termix-Team überprüft.",
+        "customBadgeHint": "Von {{name}}, einer Registry, die ein Administrator hinzugefügt hat. Nicht vom D.EX.T.E.R.-Team überprüft.",
         "remove": "Entfernen",
         "removeTitle": "{{name}} entfernen?",
         "removeBody": "Seine Plugins werden nicht mehr im Bereich „Durchsuchen“ angezeigt. Du kannst es später erneut hinzufügen.",
@@ -1610,7 +1610,7 @@
         "perPageLabel": "Plugins pro Seite"
       },
       "showUnsupportedHint": "Diese werden aufgelistet, aber es gibt noch keine Version, die mit dieser Version läuft. Aktualisieren Sie D.EX.T.E.R., um sie zu installieren.",
-      "unsupported": "Benötigt eine neuere Termix-Version",
+      "unsupported": "Benötigt eine neuere D.EX.T.E.R.-Version",
       "unsupportedHint": "Keine Version dieses Plugins läuft mit dieser Version von D.EX.T.E.R. Aktualisieren Sie D.EX.T.E.R., um es zu installieren.",
       "needsTermix": "Benötigt D.EX.T.E.R. {{range}}",
       "showUnsupported": "Nicht unterstützte anzeigen ({{count}})",

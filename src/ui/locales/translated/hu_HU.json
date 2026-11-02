@@ -996,10 +996,10 @@
     "sessionExpiredLogin": "A munkamenet lejárt. Kérjük, jelentkezzen be újra."
   },
   "messages": {
-    "registrationDisabled": "Még nincs Termix-fiókja. Kérjen meg egy rendszergazdát, hogy engedélyezze a külső fiókok automatikus létrehozását.",
+    "registrationDisabled": "Még nincs D.EX.T.E.R.-fiókja. Kérjen meg egy rendszergazdát, hogy engedélyezze a külső fiókok automatikus létrehozását.",
     "userNotAllowed": "A fiókja nem jogosult a regisztrációra. Kérjük, lépjen kapcsolatba egy rendszergazdával.",
     "databaseConnectionFailed": "Lehet, hogy még indul, vagy leállt. Ez az oldal folyamatosan próbálkozik, és automatikusan folytatja a munkát, amikor a szerver újra elérhető.",
-    "embeddedServerPortInUse": "A {{port}} portot már egy másik program használja. Ez általában egy D.EX.T.E.R. Docker-konténer vagy egy előző munkamenetből maradt Termix-folyamat. Zárja be, majd indítsa újra a Termixet.",
+    "embeddedServerPortInUse": "A {{port}} portot már egy másik program használja. Ez általában egy D.EX.T.E.R. Docker-konténer vagy egy előző munkamenetből maradt D.EX.T.E.R.-folyamat. Zárja be, majd indítsa újra a Termixet.",
     "embeddedServerPortInUseUnknownPort": "A D.EX.T.E.R. által szükséges portok egyikét már egy másik program használja. Zárja be azt, ami használja, majd indítsa újra a Termixet.",
     "embeddedServerOldDatabase": "A helyi adatai a Termix 2.8 vagy régebbi verzióból származnak, és először át kell futniuk a 2.9-es verzió migrációján. Telepítse a Termix 2.9.1 verzióját, nyissa meg egyszer, hogy az adatok átkerüljenek, majd frissítsen újra erre a verzióra.",
     "embeddedServerCrashed": "A helyi szerver váratlanul leállt. Indítsa újra a Termixet, és ellenőrizze az asztali naplót, ha ez továbbra is előfordul.",
@@ -1123,7 +1123,7 @@
         "missing": "Nincs telepített bővítmény, amely ezt az elrendezést biztosítaná.",
         "disabled": "A bővítmény, amely ezt az elrendezést biztosítja, kikapcsolva van.",
         "blocked": "A bővítmény, amely ezt az elrendezést biztosítja, valami szükséges dologra vár.",
-        "incompatible": "A bővítmény, amely ezt az elrendezést biztosítja, nem működik ezzel a Termix-verzióval.",
+        "incompatible": "A bővítmény, amely ezt az elrendezést biztosítja, nem működik ezzel a D.EX.T.E.R.-verzióval.",
         "failed": "Az elrendezés indítása sikertelen volt.",
         "crashed": "Az elrendezés kétszer összeomlott az alkalmazás rajzolása közben."
       },
@@ -1275,7 +1275,7 @@
         "consequence": "A D.EX.T.E.R. titkosítja. A bővítmény sosem tárolja a kulcsot."
       },
       "settings:read-core": {
-        "title": "Termix-beállítások olvasása",
+        "title": "D.EX.T.E.R.-beállítások olvasása",
         "consequence": "Szerverbeállítások, nem a gazdagépeid vagy hitelesítő adataid."
       },
       "plugins:read": {

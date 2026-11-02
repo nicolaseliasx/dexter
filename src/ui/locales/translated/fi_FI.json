@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Vaihe {{current}} / {{total}}",
-    "stageLabel": "Termix-asetukset",
+    "stageLabel": "D.EX.T.E.R.-asetukset",
     "setupHeading": "Työtilan määritys",
     "partialHeading": "Muutama uusi asia määritettävänä",
     "signOut": "Kirjaudu ulos",
@@ -403,7 +403,7 @@
     "replaceKey": "Korvaa avain",
     "docsLink": "Näytä dokumentaatio",
     "agentLabel": "SSH Agent",
-    "agentDesc": "Todenna SSH-agentin avulla, joka on käynnissä Termix-palvelimella (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agentin on oltava käynnissä koneella, jossa D.EX.T.E.R. on isännöity.",
+    "agentDesc": "Todenna SSH-agentin avulla, joka on käynnissä D.EX.T.E.R.-palvelimella (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agentin on oltava käynnissä koneella, jossa D.EX.T.E.R. on isännöity.",
     "agentAuthenticationDesc": "Käytä SSH-agentin avaimia tämän yhteyden todentamiseen. Jätä socket-polku tyhjäksi käyttääksesi SSH_AUTH_SOCKia.",
     "agentSocketPathLabel": "Agentin socket-polku",
     "agentSocketPathPlaceholder": "Jätä tyhjäksi käyttääksesi SSH_AUTH_SOCKia",
@@ -805,7 +805,7 @@
     "dragToRearrange": "Vedä järjestääksesi uudelleen",
     "arrangeUnlocked": "Avaa lukitus vedon avulla uudelleenjärjestelyyn",
     "webUiBindHostUnreachable": "Selaimesi ei pääse yhteyteen osoitteeseen 127.0.0.1 Termiä ajavalla koneella, joten tämä päätepiste ei lataudu. Käytä osoitetta, johon kone vastaa, kuten 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Tästä selaimesta eteenpäin ohjattava palvelu olisi saavutettavissa samassa isäntänimessä, josta D.EX.T.E.R. palvelee, joten tunneloitunut palvelu saisi Termix-istuntosi. Evästeet eivät huomioi porttia. Tämä päätepiste kieltäytyy avaamasta täällä; se toimii Termix-työpöytäsovelluksessa tai kun D.EX.T.E.R. avataan localhost-osoitteesta.",
+    "webUiBindHostSharesSessionCookie": "Tästä selaimesta eteenpäin ohjattava palvelu olisi saavutettavissa samassa isäntänimessä, josta D.EX.T.E.R. palvelee, joten tunneloitunut palvelu saisi D.EX.T.E.R.-istuntosi. Evästeet eivät huomioi porttia. Tämä päätepiste kieltäytyy avaamasta täällä; se toimii D.EX.T.E.R.-työpöytäsovelluksessa tai kun D.EX.T.E.R. avataan localhost-osoitteesta.",
     "webUiErrorLabelRequired": "Päätepisteen {{row}} tarvitsee nimen.",
     "webUiErrorLabelDuplicate": "Jokaisen päätepisteen tarvitsee eri nimen.",
     "webUiErrorPortRange": "Päätepisteen {{row}} tarvitsee portin väliltä 1–65535.",
@@ -951,7 +951,7 @@
     "retrySecondFactorUI": "Lataa vahvistustavat uudelleen",
     "localDesktopSignedOut": "Paikallisesta työpöydältä kirjautuminen ulos",
     "localDesktopUnavailable": "Paikallinen työpöytäistunto ei ole saatavilla",
-    "localDesktopSignedOutDesc": "Kirjauduit ulos paikallisesta työpöytäistunnosta. Jatka paikallisesti käyttääksesi tämän laitteen sisäänrakennettua Termix-palvelinta uudelleen.",
+    "localDesktopSignedOutDesc": "Kirjauduit ulos paikallisesta työpöytäistunnosta. Jatka paikallisesti käyttääksesi tämän laitteen sisäänrakennettua D.EX.T.E.R.-palvelinta uudelleen.",
     "localDesktopUnavailableDesc": "D.EX.T.E.R. ei voinut aloittaa paikallista työpöytäistuntoa. Yritä uudelleen sen sijaan, että rekisteröisit uuden tilin.",
     "continueLocalDesktop": "Jatka paikallisella työpöydällä",
     "retryLocalDesktop": "Yritä paikallista työpöytäistuntoa uudelleen"
@@ -971,7 +971,7 @@
     "acceptNewKey": "Hyväksy uusi avain ja jatka"
   },
   "errors": {
-    "databaseConnection": "Termix-palvelin ei vastaa",
+    "databaseConnection": "D.EX.T.E.R.-palvelin ei vastaa",
     "embeddedServerFailed": "Termixin paikallinen palvelin ei voinut käynnistyä",
     "unknownError": "Tuntematon virhe",
     "syncedHostMissing": "Synkronoitu palvelin ei ole olemassa linkitettyä palvelinta",
@@ -996,10 +996,10 @@
     "sessionExpiredLogin": "Istunto on vanhentunut. Kirjaudu sisään uudelleen."
   },
   "messages": {
-    "registrationDisabled": "Sinulla ei vielä ole Termix-tiliä. Pyydä järjestelmänvalvojaa ottamaan käyttöön ulkoisten tilien automaattinen luonti.",
+    "registrationDisabled": "Sinulla ei vielä ole D.EX.T.E.R.-tiliä. Pyydä järjestelmänvalvojaa ottamaan käyttöön ulkoisten tilien automaattinen luonti.",
     "userNotAllowed": "Tiliäsi ei ole valtuutettu rekisteröitymään. Ota yhteyttä järjestelmänvalvojaan.",
     "databaseConnectionFailed": "Se saattaa olla vielä käynnistymässä tai se on pysähtynyt. Tämä sivu yrittää uudelleen ja jatkaa automaattisesti, kun palvelin on takaisin.",
-    "embeddedServerPortInUse": "Porttia {{port}} käyttää jo toinen ohjelma. Kyseessä on yleensä Termixin Docker-kontti tai edellisestä istunnosta jäänyt Termix-prosessi. Sulje se ja käynnistä D.EX.T.E.R. uudelleen.",
+    "embeddedServerPortInUse": "Porttia {{port}} käyttää jo toinen ohjelma. Kyseessä on yleensä Termixin Docker-kontti tai edellisestä istunnosta jäänyt D.EX.T.E.R.-prosessi. Sulje se ja käynnistä D.EX.T.E.R. uudelleen.",
     "embeddedServerPortInUseUnknownPort": "Termixin tarvitsema portti on jo toisen ohjelman käytössä. Sulje porttia käyttävä ohjelma ja käynnistä D.EX.T.E.R. uudelleen.",
     "embeddedServerOldDatabase": "Paikalliset tietosi ovat peräisin Termix 2.8 tai vanhemmasta versiosta, ja niiden on käyty ensin versiota 2.9. Asenna Termix 2.9.1, avaa se kerran, jotta se voi siirtää tietosi, ja päivitä sitten uudelleen tähän versioon.",
     "embeddedServerCrashed": "Paikallinen palvelin pysähtyi odottamatta. Käynnistä D.EX.T.E.R. uudelleen ja tarkista työpöytäloki, jos ongelma toistuu.",
@@ -1123,7 +1123,7 @@
         "missing": "Yksikään asennettu lisäosa ei tarjoa tätä asettelua.",
         "disabled": "Tätä asettelua tarjoava lisäosa on sammutettu.",
         "blocked": "Tätä asettelua tarjoava lisäosa odottaa jotain, mitä se tarvitsee.",
-        "incompatible": "Tätä asettelua tarjoava lisäosa ei toimi tämän Termix-version kanssa.",
+        "incompatible": "Tätä asettelua tarjoava lisäosa ei toimi tämän D.EX.T.E.R.-version kanssa.",
         "failed": "Asettelun käynnistyminen epäonnistui.",
         "crashed": "Asettelo kaatui kaksi kertaa sovellusta piirtäessä."
       },
@@ -1144,7 +1144,7 @@
       },
       "process:spawn": {
         "title": "Suorittaa ohjelmia tässä laitteessa",
-        "consequence": "Ohjelmat suoritetaan Termix-palvelimella itsessään, ei isäntäpalvelimillasi."
+        "consequence": "Ohjelmat suoritetaan D.EX.T.E.R.-palvelimella itsessään, ei isäntäpalvelimillasi."
       },
       "users:write": {
         "title": "Luoda ja muuttaa käyttäjätiliä",
@@ -1196,7 +1196,7 @@
       },
       "network:serve": {
         "title": "Hyväksyä yhteyksiä",
-        "consequence": "Se avaa portin Termix-palvelimella."
+        "consequence": "Se avaa portin D.EX.T.E.R.-palvelimella."
       },
       "network:broadcast": {
         "title": "Lähettää verkon laajalle lähetysviestejä",
@@ -1240,11 +1240,11 @@
       },
       "desktop:window": {
         "title": "Avata työpöytäikkunoita",
-        "consequence": "Vain Termix-työpöytäsovelluksessa."
+        "consequence": "Vain D.EX.T.E.R.-työpöytäsovelluksessa."
       },
       "desktop:local": {
         "title": "Käytä tätä tietokonetta",
-        "consequence": "Voi lukea ja muuttaa tiedostoja, suorittaa komentoriviä ja avata paikallisia portteja tässä tietokoneessa. Vain Termix-työpöytäsovelluksessa."
+        "consequence": "Voi lukea ja muuttaa tiedostoja, suorittaa komentoriviä ja avata paikallisia portteja tässä tietokoneessa. Vain D.EX.T.E.R.-työpöytäsovelluksessa."
       },
       "users:impersonate": {
         "title": "Toimia muiden käyttäjien puolesta",
@@ -1611,7 +1611,7 @@
       },
       "showUnsupportedHint": "Nämä on listattu, mutta mikään julkaisu ei vielä toimi tässä versiossa. Päivitä D.EX.T.E.R. asentamaan ne.",
       "unsupported": "Vaatii uudemman Termixin",
-      "unsupportedHint": "Tämän lisäosan mikään julkaisu ei toimi tässä Termix-versiossa. Päivitä D.EX.T.E.R. asentamaan se.",
+      "unsupportedHint": "Tämän lisäosan mikään julkaisu ei toimi tässä D.EX.T.E.R.-versiossa. Päivitä D.EX.T.E.R. asentamaan se.",
       "needsTermix": "Vaatii D.EX.T.E.R. {{range}}",
       "showUnsupported": "Näytä tukevat ({{count}})",
       "showMore": "Näytä {{count}} lisää ({{total}} jäljellä)"

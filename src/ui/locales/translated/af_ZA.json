@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Stap {{current}} van {{total}}",
-    "stageLabel": "Termix-instelling",
+    "stageLabel": "D.EX.T.E.R.-instelling",
     "setupHeading": "Stel jou werkarea op",
     "partialHeading": "N paar nuwe dinge om op te stel",
     "signOut": "Teken uit",
@@ -805,7 +805,7 @@
     "dragToRearrange": "Sleep om te herrangskik",
     "arrangeUnlocked": "Ontsluit sleep om te herrangskik",
     "webUiBindHostUnreachable": "Jou blaaier kan nie 127.0.0.1 op die masjien bereik waar D.EX.T.E.R. loop nie, dus sal hierdie eindpunt nie laai nie. Gebruik 'n adres wat daardie masjien antwoord op, soos 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Vanaf hierdie blaaier sou die vorentoe-verbinding bereik word by dieselfde gasheernaam waar D.EX.T.E.R. bedien word, dus sou die getunneld diens jou Termix-sessie ontvang. Koekies ignoreer die poort. Hierdie eindpunt sal weier om hier oop te maak; dit werk vanaf die Termix-bureaublad-toepassing, of wanneer D.EX.T.E.R. by localhost oopgemaak word.",
+    "webUiBindHostSharesSessionCookie": "Vanaf hierdie blaaier sou die vorentoe-verbinding bereik word by dieselfde gasheernaam waar D.EX.T.E.R. bedien word, dus sou die getunneld diens jou D.EX.T.E.R.-sessie ontvang. Koekies ignoreer die poort. Hierdie eindpunt sal weier om hier oop te maak; dit werk vanaf die D.EX.T.E.R.-bureaublad-toepassing, of wanneer D.EX.T.E.R. by localhost oopgemaak word.",
     "webUiErrorLabelRequired": "Eindpunt {{row}} benodig 'n etiket.",
     "webUiErrorLabelDuplicate": "Elke eindpunt benodig 'n ander naam.",
     "webUiErrorPortRange": "Eindpunt {{row}} benodig 'n poort tussen 1 en 65535.",
@@ -951,7 +951,7 @@
     "retrySecondFactorUI": "Herlaai verifikasietegnieke",
     "localDesktopSignedOut": "Plaaslike werkskerm is afgemeld",
     "localDesktopUnavailable": "Plaaslike werkskerm-sessie is nie beskikbaar nie",
-    "localDesktopSignedOutDesc": "Jy het afgemeld van die plaaslike werkskerm-sessie. Gaan plaaslik voort om hierdie toestel se ingeboude Termix-bediener weer te gebruik.",
+    "localDesktopSignedOutDesc": "Jy het afgemeld van die plaaslike werkskerm-sessie. Gaan plaaslik voort om hierdie toestel se ingeboude D.EX.T.E.R.-bediener weer te gebruik.",
     "localDesktopUnavailableDesc": "D.EX.T.E.R. kon nie 'n plaaslike werkskerm-sessie begin nie. Probeer dit weer in plaas daarvan om 'n nuwe rekening te registreer.",
     "continueLocalDesktop": "Gaan voort met plaaslike werkskerm",
     "retryLocalDesktop": "Probeer plaaslike werkskerm-sessie weer"
@@ -971,7 +971,7 @@
     "acceptNewKey": "Aanvaar Nuwe Sleutel & Gaan Voort"
   },
   "errors": {
-    "databaseConnection": "Die Termix-bedienaar reageer nie",
+    "databaseConnection": "Die D.EX.T.E.R.-bedienaar reageer nie",
     "embeddedServerFailed": "D.EX.T.E.R. se plaaslike bediener kon nie begin nie",
     "unknownError": "Onbekende fout",
     "syncedHostMissing": "Die gesinkroniseerde gasheer bestaan nie op die gekoppelde bediener nie",
@@ -996,10 +996,10 @@
     "sessionExpiredLogin": "Sessie het verval. Teken asseblief weer aan."
   },
   "messages": {
-    "registrationDisabled": "Jy het nog nie 'n Termix-rekening nie. Vra 'n admin om Eksterne rekenings outomaties skep aan te skakel.",
+    "registrationDisabled": "Jy het nog nie 'n D.EX.T.E.R.-rekening nie. Vra 'n admin om Eksterne rekenings outomaties skep aan te skakel.",
     "userNotAllowed": "Jou rekening is nie gemagtig om te registreer nie. Kontak asseblief 'n administrateur.",
     "databaseConnectionFailed": "Dit is dalk nog besig om te begin, of dit het gestop. Hierdie bladsy gaan voortdurend probeer en sal outomaties hervat sodra die bedienaar weer beskikbaar is.",
-    "embeddedServerPortInUse": "Poort {{port}} word reeds deur 'n ander program gebruik. Dit is gewoonlik 'n D.EX.T.E.R. Docker-houer of 'n oorblywende Termix-proses van 'n vorige sessie. Maak dit toe en herbegin dan D.EX.T.E.R.",
+    "embeddedServerPortInUse": "Poort {{port}} word reeds deur 'n ander program gebruik. Dit is gewoonlik 'n D.EX.T.E.R. Docker-houer of 'n oorblywende D.EX.T.E.R.-proses van 'n vorige sessie. Maak dit toe en herbegin dan D.EX.T.E.R.",
     "embeddedServerPortInUseUnknownPort": "Een van die poorte wat D.EX.T.E.R. benodig, word reeds deur 'n ander program gebruik. Maak wat dit gebruik toe en herbegin dan D.EX.T.E.R.",
     "embeddedServerOldDatabase": "U plaaslike data is van Termix 2.8 of ouer en moet eers deur 2.9 gaan. Installeer Termix 2.9.1, open dit een keer sodat dit u data kan verskuif, en dateer dan weer na hierdie weergawe op.",
     "embeddedServerCrashed": "Die plaaslike bediener het onverwags gestop. Herbegin D.EX.T.E.R. en kyk na die skryfstoeljoernaal as dit voortduur.",
@@ -1144,7 +1144,7 @@
       },
       "process:spawn": {
         "title": "Voer programme op hierdie masjien uit",
-        "consequence": "Programme word op die Termix-bedieners self uitgevoer, nie op jou bedieners nie."
+        "consequence": "Programme word op die D.EX.T.E.R.-bedieners self uitgevoer, nie op jou bedieners nie."
       },
       "users:write": {
         "title": "Skep en verander gebruikersrekeninge",
@@ -1196,7 +1196,7 @@
       },
       "network:serve": {
         "title": "Aanvaar verbindinge",
-        "consequence": "Dit maak 'n poort op die Termix-bedieners oop."
+        "consequence": "Dit maak 'n poort op die D.EX.T.E.R.-bedieners oop."
       },
       "network:broadcast": {
         "title": "Stuur netwerkuitstortings",
@@ -1240,11 +1240,11 @@
       },
       "desktop:window": {
         "title": "Maak burebladvensters oop",
-        "consequence": "Slegs in die Termix-burebladtoepassing."
+        "consequence": "Slegs in die D.EX.T.E.R.-burebladtoepassing."
       },
       "desktop:local": {
         "title": "Gebruik hierdie rekenaar",
-        "consequence": "Kan lêers lees en verander, 'n skul uitvoer en plaaslike poorte op hierdie rekenaar oopmaak. Slegs in die Termix-bureaubladprogram."
+        "consequence": "Kan lêers lees en verander, 'n skul uitvoer en plaaslike poorte op hierdie rekenaar oopmaak. Slegs in die D.EX.T.E.R.-bureaubladprogram."
       },
       "users:impersonate": {
         "title": "Tree op as ander gebruikers",
@@ -1275,7 +1275,7 @@
         "consequence": "Versleutel deur D.EX.T.E.R. Die plugin hou nooit die sleutel nie."
       },
       "settings:read-core": {
-        "title": "Lees Termix-instellings",
+        "title": "Lees D.EX.T.E.R.-instellings",
         "consequence": "Bedienerinstellings, nie jou gasheer of inlogbesonderhede nie."
       },
       "plugins:read": {
@@ -1382,7 +1382,7 @@
         "minor": "Dit voeg ook sy eie skerms by en stoor sy eie data, wat geskei van ander plugins gehou word.",
         "none": "Dit vra om geen spesiale toegang nie.",
         "uploadTitle": "Installeer {{name}} vanaf 'n lêer",
-        "uploadWarning": "Hierdie lêer is nie deur die Termix-register gecontroleer of geteken nie. Installeer dit slegs as jy dit self gebou het of vertroue het in die persoon wat dit gedoen het."
+        "uploadWarning": "Hierdie lêer is nie deur die D.EX.T.E.R.-register gecontroleer of geteken nie. Installeer dit slegs as jy dit self gebou het of vertroue het in die persoon wat dit gedoen het."
       },
       "confirm": {
         "uninstallTitle": "Deïnstalleer {{name}}?",
@@ -1506,7 +1506,7 @@
         "check": "Kontroleer",
         "addConfirm": "Vertrou en voeg by",
         "added": "Het {{name}} bygevoeg",
-        "customWarning": "Invoegtoepassings uit hierdie register word nie deur die Termix-span hersien nie. Slegs die eienaar van die register besluit wat daarin is. Elke aflaai moet onderteken word deur die sleutel hierbo.",
+        "customWarning": "Invoegtoepassings uit hierdie register word nie deur die D.EX.T.E.R.-span hersien nie. Slegs die eienaar van die register besluit wat daarin is. Elke aflaai moet onderteken word deur die sleutel hierbo.",
         "keyFingerprint": "Sleutel {{keyId}}",
         "pluginCount_one": "{{count}} invoegtoepassing",
         "pluginCount_other": "{{count}} invoegtoepassings",
@@ -1515,12 +1515,12 @@
         "alwaysOn": "Altyd aan",
         "communityHint": "Invoegtoepassings gemaak deur ander mense. Elke weergawe word deur 'n persoon en outomatiese kontroles nagegaan voordat dit gelys word.",
         "communityConfirmTitle": "Skakel gemeenskapsinvoegtoepassings aan?",
-        "communityConfirmBody": "Gemeenskapsinvoegtoepassings word deur ander mense gemaak, nie die Termix-span nie. Elke weergawe word deur 'n persoon en outomatiese kontroles nagegaan voordat dit gelys word, maar foute kan steeds deurskiet. Installeer slegs invoegtoepassings wat jy vertrou en kyk wat elkeen vra.",
+        "communityConfirmBody": "Gemeenskapsinvoegtoepassings word deur ander mense gemaak, nie die D.EX.T.E.R.-span nie. Elke weergawe word deur 'n persoon en outomatiese kontroles nagegaan voordat dit gelys word, maar foute kan steeds deurskiet. Installeer slegs invoegtoepassings wat jy vertrou en kyk wat elkeen vra.",
         "communityConfirm": "Skakel aan",
         "communityBadge": "Gemeenskap",
         "communityBadgeHint": "Van die gemeenskapsregister. Gemaak deur ander mense en hersien voordat dit gelys is.",
         "customBadge": "Aangepas",
-        "customBadgeHint": "Van {{name}}, 'n register wat 'n admin bygevoeg het. Nie deur die Termix-span hersien nie.",
+        "customBadgeHint": "Van {{name}}, 'n register wat 'n admin bygevoeg het. Nie deur die D.EX.T.E.R.-span hersien nie.",
         "remove": "Verwyder",
         "removeTitle": "Verwyder {{name}}?",
         "removeBody": "Sy plugins sal nie meer in Blaaie verskyn nie. Jy kan dit later weer byvoeg.",

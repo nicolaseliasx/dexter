@@ -226,14 +226,14 @@
     "neverBody": "업데이트 확인을 하지 않습니다. 설정에서 수동으로 확인할 수 있습니다.",
     "onboardingTitle": "앱 업데이트",
     "onboardingBody": "이제 데스크톱 앱이 자체 업데이트를 지원합니다. 새 버전이 도착하는 방식을 선택하세요. 나중에 설정 > 업데이트에서 변경할 수 있습니다.",
-    "onboardingManual": "이 앱 복사본은 자체 업데이트가 불가능한 방식으로 설치되었으므로, Termix는 새 버전이 출시되면 다운로드 링크와 함께 알려드립니다.",
+    "onboardingManual": "이 앱 복사본은 자체 업데이트가 불가능한 방식으로 설치되었으므로, D.EX.T.E.R.는 새 버전이 출시되면 다운로드 링크와 함께 알려드립니다.",
     "download": "다운로드",
     "restart": "지금 재시작",
     "later": "나중에",
     "available": "D.EX.T.E.R. {{version}} 사용 가능",
     "manualHint": "릴리스 페이지에서 다운로드하여 현재 버전 위에 설치하세요.",
     "ready": "D.EX.T.E.R. {{version}} 설치 준비 완료",
-    "readyHint": "Termix가 다음에 재시작될 때 설치됩니다."
+    "readyHint": "D.EX.T.E.R.가 다음에 재시작될 때 설치됩니다."
   },
   "safeMode": {
     "title": "안전 모드",
@@ -383,7 +383,7 @@
     "sshPort": "SSH 포트",
     "authMethod": "인증 방법",
     "authenticationMethod": "인증 방법",
-    "authenticationMethodDesc": "Termix가 이 SSH 연결에 인증하는 데 사용할 하나의 방법을 선택하세요. 다른 방법은 자동으로 시도되지 않습니다.",
+    "authenticationMethodDesc": "D.EX.T.E.R.가 이 SSH 연결에 인증하는 데 사용할 하나의 방법을 선택하세요. 다른 방법은 자동으로 시도되지 않습니다.",
     "storedCredential": "저장된 자격 증명",
     "selectACredential": "자격 증명 선택...",
     "keyTypeLabel": "키 유형",
@@ -399,7 +399,7 @@
     "replaceKey": "키 교체",
     "docsLink": "문서 보기",
     "agentLabel": "SSH 에이전트",
-    "agentDesc": "D.EX.T.E.R. 서버에서 실행 중인 SSH 에이전트(Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent)를 사용하여 인증합니다. 에이전트는 Termix가 호스팅되는 머신에서 실행 중이어야 합니다.",
+    "agentDesc": "D.EX.T.E.R. 서버에서 실행 중인 SSH 에이전트(Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent)를 사용하여 인증합니다. 에이전트는 D.EX.T.E.R.가 호스팅되는 머신에서 실행 중이어야 합니다.",
     "agentAuthenticationDesc": "SSH 에이전트의 키를 사용하여 이 연결을 인증합니다. 소켓 경로를 비워두면 SSH_AUTH_SOCK을(를) 사용합니다.",
     "agentSocketPathLabel": "에이전트 소켓 경로",
     "agentSocketPathPlaceholder": "SSH_AUTH_SOCK을(를) 사용하려면 비워두세요",
@@ -792,8 +792,8 @@
     "arrangeUnlockedSwitchedToManual": "순서가 유지되도록 수동 정렬로 전환했습니다",
     "dragToRearrange": "드래그하여 순서 변경",
     "arrangeUnlocked": "드래그 순서 변경 잠금 해제",
-    "webUiBindHostUnreachable": "Termix가 실행 중인 기기의 127.0.0.1에 브라우저가 접근할 수 없으므로 이 엔드포인트가 로드되지 않습니다. 0.0.0.0과 같이 해당 기기가 응답하는 주소를 사용하세요.",
-    "webUiBindHostSharesSessionCookie": "이 브라우저에서 포워딩은 Termix가 제공되는 것과 동일한 호스트명으로 접근하게 되므로, 터널링된 서비스는 D.EX.T.E.R. 세션을 받게 됩니다. 쿠키는 포트를 무시합니다. 이 엔드포인트는 여기서 열기를 거부합니다; D.EX.T.E.R. 데스크톱 앱이나 localhost에서 Termix를 열 때 작동합니다.",
+    "webUiBindHostUnreachable": "D.EX.T.E.R.가 실행 중인 기기의 127.0.0.1에 브라우저가 접근할 수 없으므로 이 엔드포인트가 로드되지 않습니다. 0.0.0.0과 같이 해당 기기가 응답하는 주소를 사용하세요.",
+    "webUiBindHostSharesSessionCookie": "이 브라우저에서 포워딩은 D.EX.T.E.R.가 제공되는 것과 동일한 호스트명으로 접근하게 되므로, 터널링된 서비스는 D.EX.T.E.R. 세션을 받게 됩니다. 쿠키는 포트를 무시합니다. 이 엔드포인트는 여기서 열기를 거부합니다; D.EX.T.E.R. 데스크톱 앱이나 localhost에서 D.EX.T.E.R.를 열 때 작동합니다.",
     "webUiErrorLabelRequired": "엔드포인트 {{row}}에는 라벨이 필요합니다.",
     "webUiErrorLabelDuplicate": "각 엔드포인트는 고유한 이름이 필요합니다.",
     "webUiErrorPortRange": "엔드포인트 {{row}}에는 1에서 65535 사이의 포트가 필요합니다.",
@@ -939,7 +939,7 @@
     "localDesktopSignedOut": "로컬 데스크톱 로그아웃됨",
     "localDesktopUnavailable": "로컬 데스크톱 세션 사용 불가",
     "localDesktopSignedOutDesc": "로컬 데스크톱 세션에서 로그아웃했습니다. 이 장치의 기본 D.EX.T.E.R. 서버를 다시 사용하려면 로컬로 계속하세요.",
-    "localDesktopUnavailableDesc": "Termix에서 로컬 데스크톱 세션을 시작할 수 없습니다. 새 계정을 등록하는 대신 다시 시도하세요.",
+    "localDesktopUnavailableDesc": "D.EX.T.E.R.에서 로컬 데스크톱 세션을 시작할 수 없습니다. 새 계정을 등록하는 대신 다시 시도하세요.",
     "continueLocalDesktop": "로컬 데스크톱으로 계속",
     "retryLocalDesktop": "로컬 데스크톱 세션 재시도"
   },
@@ -959,7 +959,7 @@
   },
   "errors": {
     "databaseConnection": "D.EX.T.E.R. 서버가 응답하지 않습니다",
-    "embeddedServerFailed": "Termix의 로컬 서버를 시작할 수 없습니다",
+    "embeddedServerFailed": "D.EX.T.E.R.의 로컬 서버를 시작할 수 없습니다",
     "unknownError": "알 수 없는 오류",
     "syncedHostMissing": "동기화된 호스트가 연결된 서버에 존재하지 않습니다",
     "linkedServerUnreachable": "연결된 서버에 도달할 수 없습니다",
@@ -986,10 +986,10 @@
     "registrationDisabled": "아직 D.EX.T.E.R. 계정이 없습니다. 관리자에게 외부 계정 자동 생성을 활성화해 달라고 요청하세요.",
     "userNotAllowed": "귀하의 계정은 등록이 허용되지 않았습니다. 관리자에게 문의해 주세요.",
     "databaseConnectionFailed": "서버가 아직 시작 중이거나 중지되었을 수 있습니다. 이 페이지는 계속 시도하다가 서버가 다시 연결되면 자동으로 계속됩니다.",
-    "embeddedServerPortInUse": "포트 {{port}}는 이미 다른 프로그램에서 사용 중입니다. 일반적으로 D.EX.T.E.R. Docker 컨테이너나 이전 세션의 D.EX.T.E.R. 프로세스가 원인입니다. 해당 프로그램을 닫은 후 Termix를 다시 시작하세요.",
-    "embeddedServerPortInUseUnknownPort": "Termix가 필요로 하는 포트 중 하나가 이미 다른 프로그램에서 사용 중입니다. 해당 포트를 사용하는 프로그램을 닫은 후 Termix를 다시 시작하세요.",
+    "embeddedServerPortInUse": "포트 {{port}}는 이미 다른 프로그램에서 사용 중입니다. 일반적으로 D.EX.T.E.R. Docker 컨테이너나 이전 세션의 D.EX.T.E.R. 프로세스가 원인입니다. 해당 프로그램을 닫은 후 D.EX.T.E.R.를 다시 시작하세요.",
+    "embeddedServerPortInUseUnknownPort": "D.EX.T.E.R.가 필요로 하는 포트 중 하나가 이미 다른 프로그램에서 사용 중입니다. 해당 포트를 사용하는 프로그램을 닫은 후 D.EX.T.E.R.를 다시 시작하세요.",
     "embeddedServerOldDatabase": "로컬 데이터가 Termix 2.8 이하 버전에서 생성된 것으로, 먼저 2.9 버전을 거쳐야 합니다. Termix 2.9.1을 설치하고 한 번 실행하여 데이터를 마이그레이션한 후, 다시 이 버전으로 업데이트하세요.",
-    "embeddedServerCrashed": "로컬 서버가 예기치 않게 중지되었습니다. Termix를 다시 시작하고, 이 문제가 계속 발생하면 데스크톱 로그를 확인하세요.",
+    "embeddedServerCrashed": "로컬 서버가 예기치 않게 중지되었습니다. D.EX.T.E.R.를 다시 시작하고, 이 문제가 계속 발생하면 데스크톱 로그를 확인하세요.",
     "resetCodeSent": "리셋 코드가 Docker 로그로 전송되었습니다",
     "codeVerified": "코드가 성공적으로 확인되었습니다",
     "passwordResetSuccess": "비밀번호가 성공적으로 재설정되었습니다",
@@ -1106,7 +1106,7 @@
         "missing": "이 레이아웃을 제공하는 설치된 플러그인이 없습니다.",
         "disabled": "이 레이아웃을 제공하는 플러그인이 꺼져 있습니다.",
         "blocked": "이 레이아웃을 제공하는 플러그인이 필요한 항목을 기다리고 있습니다.",
-        "incompatible": "이 레이아웃을 제공하는 플러그인이 이 버전의 Termix와 호환되지 않습니다.",
+        "incompatible": "이 레이아웃을 제공하는 플러그인이 이 버전의 D.EX.T.E.R.와 호환되지 않습니다.",
         "failed": "레이아웃 시작에 실패했습니다.",
         "crashed": "앱을 렌더링하는 동안 레이아웃이 두 번 충돌했습니다."
       },
@@ -1151,11 +1151,11 @@
       },
       "system:tls": {
         "title": "인증서 관리",
-        "consequence": "Termix가 HTTPS로 제공하는 인증서를 교체하고 인증 기관의 도메인 확인에 응답할 수 있습니다."
+        "consequence": "D.EX.T.E.R.가 HTTPS로 제공하는 인증서를 교체하고 인증 기관의 도메인 확인에 응답할 수 있습니다."
       },
       "device:serial": {
         "title": "시리얼 및 USB 장치 접근",
-        "consequence": "Termix가 실행되는 기계의 물리적 시리얼 포트를 열 수 있습니다."
+        "consequence": "D.EX.T.E.R.가 실행되는 기계의 물리적 시리얼 포트를 열 수 있습니다."
       },
       "hosts:export": {
         "title": "비밀번호 포함 호스트 내보내기",
@@ -1255,7 +1255,7 @@
       },
       "secrets:own": {
         "title": "자체 암호 저장소 사용",
-        "consequence": "Termix에서 암호화합니다. 플러그인은 키를 보유하지 않습니다."
+        "consequence": "D.EX.T.E.R.에서 암호화합니다. 플러그인은 키를 보유하지 않습니다."
       },
       "settings:read-core": {
         "title": "D.EX.T.E.R. 설정 읽기",
@@ -1450,7 +1450,7 @@
       "incompatible": "더 새로운 D.EX.T.E.R. 버전 필요",
       "features": "기능",
       "whatItCanDo": "주요 기능",
-      "addsToTermix": "Termix에 추가되는 기능",
+      "addsToTermix": "D.EX.T.E.R.에 추가되는 기능",
       "addsToTermixHint": "설치 제거 시 이 모든 기능이 사라집니다.",
       "noServerAccess": "서버에 대한 접근 권한 없음",
       "searchInstalled": "설치된 플러그인 검색",
@@ -1468,7 +1468,7 @@
         "hostYourOwn": "자신의 레지스트리 호스팅하기",
         "add": "레지스트리 추가",
         "addTitle": "레지스트리 추가",
-        "addHint": "레지스트리의 index.json 링크를 붙여넣으세요. Termix는 이를 읽고 플러그인에 서명하는 키를 표시합니다. 신뢰할 수 있는 사람만 추가하세요.",
+        "addHint": "레지스트리의 index.json 링크를 붙여넣으세요. D.EX.T.E.R.는 이를 읽고 플러그인에 서명하는 키를 표시합니다. 신뢰할 수 있는 사람만 추가하세요.",
         "urlLabel": "인덱스 URL",
         "check": "확인",
         "addConfirm": "신뢰하고 추가",
@@ -1517,7 +1517,7 @@
         "downloadsHint": "릴리스가 다운로드된 횟수입니다. 이는 설치 횟수가 아닙니다."
       },
       "unverified": "미검증",
-      "unverifiedHint": "파일에서 설치되었습니다. Termix에서 이를 확인하거나 서명하지 않았습니다.",
+      "unverifiedHint": "파일에서 설치되었습니다. D.EX.T.E.R.에서 이를 확인하거나 서명하지 않았습니다.",
       "reportIssue": "문제 신고",
       "reportTo": "{{author}}에게 신고",
       "requestFeature": "기능 요청",
@@ -1571,9 +1571,9 @@
         "perPage": "페이지당 {{count}}개",
         "perPageLabel": "페이지당 플러그인 수"
       },
-      "showUnsupportedHint": "이 플러그인들은 목록에 있지만, 현재 버전에서는 아직 릴리스가 실행되지 않습니다. 설치하려면 Termix를 업데이트하세요.",
+      "showUnsupportedHint": "이 플러그인들은 목록에 있지만, 현재 버전에서는 아직 릴리스가 실행되지 않습니다. 설치하려면 D.EX.T.E.R.를 업데이트하세요.",
       "unsupported": "더 새로운 D.EX.T.E.R. 필요",
-      "unsupportedHint": "이 플러그인의 릴리스는 현재 D.EX.T.E.R. 버전에서 실행되지 않습니다. 설치하려면 Termix를 업데이트하세요.",
+      "unsupportedHint": "이 플러그인의 릴리스는 현재 D.EX.T.E.R. 버전에서 실행되지 않습니다. 설치하려면 D.EX.T.E.R.를 업데이트하세요.",
       "needsTermix": "D.EX.T.E.R. {{range}} 필요",
       "showUnsupported": "지원되지 않는 항목 표시 ({{count}})",
       "showMore": "더 보기 {{count}}개 (남은 {{total}}개)"

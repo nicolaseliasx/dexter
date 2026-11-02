@@ -13,6 +13,12 @@ D.EX.T.E.R. is a derivative work of [Termix](https://github.com/Termix-SSH/Termi
 
 Package and SDK names (`@termix-ssh/*`), `TERMIX_*` environment variables, browser storage keys, HTTP headers and user agents, API paths, database tables and migrations, plugin ids, Electron `appId`/`productName`/`executableName`, container, volume and network names in the docker example, and the upstream repository used by the update check. The `LICENSE` file is unchanged.
 
+## Known limitations
+
+- Six translations (Czech, Estonian, Croatian, Finnish, Slovenian, Slovak) inflect the product name (for example "Termixin"). Those forms were left as in the original rather than guessed, so a few sentences in those languages still say "Termix".
+- Plugins signed and published by the Termix project (SSH Terminal, Proxmox and others) keep their own text and authorship; their strings may still say "Termix".
+- References to upstream releases ("Termix 2.8", "Termix 2.9.1") and to the Termix registry are intentional.
+
 ## Files changed
 
 77 files differ from the original at the time this file was generated. Regenerate with `git diff --name-only v26.10.6`. Full patch: `git diff v26.10.6`.

@@ -186,7 +186,7 @@
   },
   "onboarding": {
     "stepCounter": "Steg {{current}} av {{total}}",
-    "stageLabel": "Termix-inställningar",
+    "stageLabel": "D.EX.T.E.R.-inställningar",
     "setupHeading": "Ställ in ditt arbetsområde",
     "partialHeading": "Några nya saker att ställa in",
     "signOut": "Logga ut",
@@ -403,7 +403,7 @@
     "replaceKey": "Byt ut nyckel",
     "docsLink": "Visa dokumentation",
     "agentLabel": "SSH-agent",
-    "agentDesc": "Autentisera med en SSH-agent som körs på Termix-servern (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agenten måste köras på den maskin där D.EX.T.E.R. är värd.",
+    "agentDesc": "Autentisera med en SSH-agent som körs på D.EX.T.E.R.-servern (Bitwarden, 1Password, gpg-agent, KeeAgent, ssh-agent). Agenten måste köras på den maskin där D.EX.T.E.R. är värd.",
     "agentAuthenticationDesc": "Använd nycklar från en SSH-agent för att autentisera denna anslutning. Lämna socket-sökvägen tom för att använda SSH_AUTH_SOCK.",
     "agentSocketPathLabel": "Agentens socket-sökväg",
     "agentSocketPathPlaceholder": "Lämna tom för att använda SSH_AUTH_SOCK",
@@ -805,7 +805,7 @@
     "dragToRearrange": "Dra för att ordna om",
     "arrangeUnlocked": "Lås upp dragning för att ordna om",
     "webUiBindHostUnreachable": "Din webbläsare kan inte nå 127.0.0.1 på den dator som kör D.EX.T.E.R., så denna slutpunkt kommer inte att laddas. Använd en adress som den datorn svarar på, till exempel 0.0.0.0.",
-    "webUiBindHostSharesSessionCookie": "Från denna webbläsare skulle framåtportningen nås på samma värdnamn som D.EX.T.E.R. serveras från, så den tunnelade tjänsten skulle ta emot din Termix-session. Cookies ignorerar porten. Denna slutpunkt vägrar att öppnas här; den fungerar från Termix-skrivbordsappen, eller när D.EX.T.E.R. öppnas på localhost.",
+    "webUiBindHostSharesSessionCookie": "Från denna webbläsare skulle framåtportningen nås på samma värdnamn som D.EX.T.E.R. serveras från, så den tunnelade tjänsten skulle ta emot din D.EX.T.E.R.-session. Cookies ignorerar porten. Denna slutpunkt vägrar att öppnas här; den fungerar från D.EX.T.E.R.-skrivbordsappen, eller när D.EX.T.E.R. öppnas på localhost.",
     "webUiErrorLabelRequired": "Slutpunkt {{row}} behöver en etikett.",
     "webUiErrorLabelDuplicate": "Varje slutpunkt behöver ett unikt namn.",
     "webUiErrorPortRange": "Slutpunkt {{row}} behöver en port mellan 1 och 65535.",
@@ -951,7 +951,7 @@
     "retrySecondFactorUI": "Ladda om verifieringsmetoder",
     "localDesktopSignedOut": "Inloggad från lokal skrivbordssession",
     "localDesktopUnavailable": "Lokal skrivbordssession inte tillgänglig",
-    "localDesktopSignedOutDesc": "Du loggade ut från den lokala skrivbordssessionen. Fortsätt lokalt för att använda denna enhets inbyggda Termix-server igen.",
+    "localDesktopSignedOutDesc": "Du loggade ut från den lokala skrivbordssessionen. Fortsätt lokalt för att använda denna enhets inbyggda D.EX.T.E.R.-server igen.",
     "localDesktopUnavailableDesc": "D.EX.T.E.R. kunde inte starta en lokal skrivbordssession. Försök igen istället för att registrera ett nytt konto.",
     "continueLocalDesktop": "Fortsätt med lokalt skrivbord",
     "retryLocalDesktop": "Försök igen med lokal skrivbordssession"
@@ -971,7 +971,7 @@
     "acceptNewKey": "Acceptera ny nyckel & Fortsätt"
   },
   "errors": {
-    "databaseConnection": "Termix-servern svarar inte",
+    "databaseConnection": "D.EX.T.E.R.-servern svarar inte",
     "embeddedServerFailed": "D.EX.T.E.R. lokala server kunde inte startas",
     "unknownError": "Okänt fel",
     "syncedHostMissing": "Den synkroniserade värden finns inte på den länkade servern",
@@ -996,10 +996,10 @@
     "sessionExpiredLogin": "Sessionen har löpt ut. Logga in igen."
   },
   "messages": {
-    "registrationDisabled": "Du har inget Termix-konto ännu. Be en administratör att aktivera \"Skapa externa konton automatiskt\".",
+    "registrationDisabled": "Du har inget D.EX.T.E.R.-konto ännu. Be en administratör att aktivera \"Skapa externa konton automatiskt\".",
     "userNotAllowed": "Ditt konto är inte behörigt att registrera sig. Kontakta en administratör.",
     "databaseConnectionFailed": "Den kanske fortfarande startar, eller så har den stoppats. Denna sida fortsätter att försöka och återgår till normalt läge automatiskt när servern är tillbaka.",
-    "embeddedServerPortInUse": "Port {{port}} används redan av ett annat program. Detta är oftast en D.EX.T.E.R. Docker-container eller en kvarvarande Termix-process från en tidigare session. Stäng den och starta om D.EX.T.E.R.",
+    "embeddedServerPortInUse": "Port {{port}} används redan av ett annat program. Detta är oftast en D.EX.T.E.R. Docker-container eller en kvarvarande D.EX.T.E.R.-process från en tidigare session. Stäng den och starta om D.EX.T.E.R.",
     "embeddedServerPortInUseUnknownPort": "En av portarna som D.EX.T.E.R. behöver används redan av ett annat program. Stäng det som använder porten och starta om D.EX.T.E.R.",
     "embeddedServerOldDatabase": "Din lokala data är från Termix 2.8 eller äldre och måste först migreras via version 2.9. Installera Termix 2.9.1, öppna den en gång så att den kan flytta dina data, och uppgradera sedan till denna version igen.",
     "embeddedServerCrashed": "Den lokala servern stoppade oväntat. Starta om D.EX.T.E.R. och kontrollera skrivbordsloggen om detta fortsätter att hända.",
@@ -1144,7 +1144,7 @@
       },
       "process:spawn": {
         "title": "Kör program på den här maskinen",
-        "consequence": "Program körs på Termix-servern själv, inte på dina värdar."
+        "consequence": "Program körs på D.EX.T.E.R.-servern själv, inte på dina värdar."
       },
       "users:write": {
         "title": "Skapa och ändra användarkonton",
@@ -1196,7 +1196,7 @@
       },
       "network:serve": {
         "title": "Acceptera anslutningar",
-        "consequence": "Den öppnar en port på Termix-servern."
+        "consequence": "Den öppnar en port på D.EX.T.E.R.-servern."
       },
       "network:broadcast": {
         "title": "Skicka nätverksbroadcaster",
@@ -1240,11 +1240,11 @@
       },
       "desktop:window": {
         "title": "Öppna skrivbordsfönster",
-        "consequence": "Endast i Termix-skrivbordsappen."
+        "consequence": "Endast i D.EX.T.E.R.-skrivbordsappen."
       },
       "desktop:local": {
         "title": "Använd denna dator",
-        "consequence": "Kan läsa och ändra filer, köra ett skal och öppna lokala portar på denna dator. Endast i Termix-skrivbordsappen."
+        "consequence": "Kan läsa och ändra filer, köra ett skal och öppna lokala portar på denna dator. Endast i D.EX.T.E.R.-skrivbordsappen."
       },
       "users:impersonate": {
         "title": "Handla som andra användare",
@@ -1275,7 +1275,7 @@
         "consequence": "Krypterat av D.EX.T.E.R. Pluginet har aldrig nyckeln."
       },
       "settings:read-core": {
-        "title": "Läs Termix-inställningar",
+        "title": "Läs D.EX.T.E.R.-inställningar",
         "consequence": "Serverinställningar, inte dina värdar eller inloggningsuppgifter."
       },
       "plugins:read": {
@@ -1382,7 +1382,7 @@
         "minor": "Den lägger också till egna skärmar och lagrar egna data, som hålls åtskilda från andra plugins.",
         "none": "Den begär inget särskilt åtkomst.",
         "uploadTitle": "Installera {{name}} från en fil",
-        "uploadWarning": "Denna fil har inte kontrollerats eller signerats av Termix-registret. Installera den bara om du byggde den själv eller litar på den som gjorde det."
+        "uploadWarning": "Denna fil har inte kontrollerats eller signerats av D.EX.T.E.R.-registret. Installera den bara om du byggde den själv eller litar på den som gjorde det."
       },
       "confirm": {
         "uninstallTitle": "Avinstallera {{name}}?",
@@ -1506,7 +1506,7 @@
         "check": "Kontrollera",
         "addConfirm": "Lita på och lägg till",
         "added": "Lade till {{name}}",
-        "customWarning": "Tillägg från detta register granskas inte av Termix-teamet. Endast ägaren av registret bestämmer vad som finns i det. Varje nedladdning måste signeras med nyckeln ovan.",
+        "customWarning": "Tillägg från detta register granskas inte av D.EX.T.E.R.-teamet. Endast ägaren av registret bestämmer vad som finns i det. Varje nedladdning måste signeras med nyckeln ovan.",
         "keyFingerprint": "Nyckel {{keyId}}",
         "pluginCount_one": "{{count}} tillägg",
         "pluginCount_other": "{{count}} tillägg",
@@ -1515,12 +1515,12 @@
         "alwaysOn": "Alltid på",
         "communityHint": "Tillägg skapade av andra personer. Varje version kontrolleras av en person och av automatiserade kontroller innan den listas.",
         "communityConfirmTitle": "Vill du aktivera community-tillägg?",
-        "communityConfirmBody": "Community-tillägg skapas av andra personer, inte av Termix-teamet. Varje version kontrolleras av en person och av automatiserade kontroller innan den listas, men misstag kan fortfarande smyga igenom. Installera bara tillägg du litar på och kontrollera vad varje tillägg begär.",
+        "communityConfirmBody": "Community-tillägg skapas av andra personer, inte av D.EX.T.E.R.-teamet. Varje version kontrolleras av en person och av automatiserade kontroller innan den listas, men misstag kan fortfarande smyga igenom. Installera bara tillägg du litar på och kontrollera vad varje tillägg begär.",
         "communityConfirm": "Aktivera",
         "communityBadge": "Community",
         "communityBadgeHint": "Från community-registret. Skapad av andra personer och granskad innan den lades till.",
         "customBadge": "Anpassad",
-        "customBadgeHint": "Från {{name}}, ett register som en administratör har lagt till. Inte granskad av Termix-teamet.",
+        "customBadgeHint": "Från {{name}}, ett register som en administratör har lagt till. Inte granskad av D.EX.T.E.R.-teamet.",
         "remove": "Ta bort",
         "removeTitle": "Ta bort {{name}}?",
         "removeBody": "Dess plugins visas inte längre i Bläddra. Du kan lägga till den igen senare.",
