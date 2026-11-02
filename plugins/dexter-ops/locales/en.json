@@ -3,7 +3,9 @@
     "name": "Dexter Ops",
     "description": "See and restrict what the Dexter Ops Telegram bot may do, and acknowledge its alerts."
   },
-  "panel": { "title": "Dexter Ops" },
+  "panel": {
+    "title": "Dexter Ops"
+  },
   "permissions": {
     "manage": {
       "title": "Manage the Dexter Ops bot",
@@ -35,11 +37,16 @@
     "hosts": "{{down}} of {{total}} hosts down",
     "alerts_one": "{{count}} active alert",
     "alerts_other": "{{count}} active alerts",
-    "incompatible": "This bot (v{{version}}, API {{api}}) is not compatible with this plugin. Update the bot or the plugin."
+    "incompatible": "This bot (v{{version}}, API {{api}}) is not compatible with this plugin. Update the bot to v0.6.1 or newer, or the plugin."
   },
   "mute": {
     "label": "Mute notifications",
-    "description": "Stop the bot from sending alerts to Telegram. Alerts are still recorded."
+    "description": "Stop the bot from sending alerts to Telegram for a while. Alerts are still recorded and are sent when the mute ends.",
+    "hour": "Mute for 1 hour",
+    "hours8": "Mute for 8 hours",
+    "day": "Mute for 24 hours",
+    "until": "Muted until {{time}}",
+    "end": "Unmute"
   },
   "ops": {
     "title": "Operations",
@@ -58,13 +65,21 @@
     "ack": "Acknowledge",
     "acked": "acknowledged"
   },
-  "hosts": { "title": "Hosts", "up": "up", "down": "down", "unknown": "unknown" },
+  "hosts": {
+    "title": "Hosts",
+    "up": "up",
+    "down": "down",
+    "unknown": "unknown"
+  },
   "policy": {
     "title": "What the bot may do",
     "hint": "Read-only. This comes from the bot's configuration file; the plugin can only turn things off.",
     "summary": "read: {{read}} · logs: {{logs}} · services: {{services}} · sudo: {{sudo}}"
   },
-  "history": { "title": "Recent activity", "empty": "Nothing yet." },
+  "history": {
+    "title": "Recent activity",
+    "empty": "Nothing yet."
+  },
   "toast": {
     "enabled": "Operation turned on",
     "disabled": "Operation turned off",
@@ -82,6 +97,7 @@
     "NOT_FOUND": "Not found",
     "OPERATION_DISABLED": "That operation is turned off",
     "NOT_CONFIGURED": "Not configured",
-    "INVALID_BOT_URL": "The bot address is not valid"
+    "INVALID_BOT_URL": "The bot address is not valid",
+    "TOO_MANY_REQUESTS": "Too many requests for that operation. Wait a few seconds."
   }
 }

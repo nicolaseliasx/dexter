@@ -12,6 +12,7 @@ const status = (over: Record<string, unknown> = {}) => ({
   uptime_secs: 3700,
   watch_enabled: true,
   notifications_muted: false,
+  muted_until: null,
   last_collect_at: 1000,
   hosts_total: 1,
   hosts_down: 0,
@@ -94,11 +95,32 @@ describe("dexter-ops frontend", () => {
     await waitFor(() => expect(stub.post).toHaveBeenCalledWith("/alerts/7/ack"));
   });
 
-  it("mutes notifications", async () => {
+  it("mutes notifications for a chosen time, never indefinitely", async () => {
     const stub = api();
     await boot(stub);
-    fireEvent.click(await screen.findByRole("switch", { name: /mute notifications/i }));
-    await waitFor(() => expect(stub.put).toHaveBeenCalledWith("/notifications", { muted: true }));
+    fireEvent.click(await screen.findByRole("button", { name: /mute for 8 hours/i }));
+    await waitFor(() => expect(stub.put).toHaveBeenCalledWith("/notifications", { muted: true, minutes: 480 }));
+    expect(screen.queryByRole("switch", { name: /mute notifications/i })).toBeNull();
+  });
+
+  it("shows when a mute ends and lets you end it early", async () => {
+    const stub = api(data({ "/status": status({ notifications_muted: true, muted_until: 4_000_000_000 }) }));
+    await boot(stub);
+    expect(await screen.findByText(/muted until/i)).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: /unmute/i }));
+    await waitFor(() => expect(stub.put).toHaveBeenCalledWith("/notifications", { muted: false }));
+  });
+
+  it("does not send the same request twice on a double click", async () => {
+    const stub = api();
+    let release!: () => void;
+    stub.post.mockImplementation(() => new Promise((resolve) => (release = () => resolve({ data: { status: "started" } }))));
+    await boot(stub);
+    const button = await screen.findByRole("button", { name: /request list backups/i });
+    fireEvent.click(button);
+    fireEvent.click(button);
+    await waitFor(() => expect(stub.post).toHaveBeenCalledTimes(1));
+    release();
   });
 
   it("warns about an incompatible bot and offers no controls", async () => {

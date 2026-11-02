@@ -2,10 +2,10 @@
 
 Control panel for the [Dexter Ops](https://github.com/nicolaseliasx/dexter-ops) Telegram bot, inside D.EX.T.E.R.
 
-The bot stays a separate Rust service. This plugin only talks to its optional local API (`[api]`, bot v0.6.0+):
+The bot stays a separate Rust service. This plugin only talks to its optional local API (`[api]`, bot v0.6.1+):
 
 - **See**: status, hosts, active alerts, recent activity, and (read-only) what the bot may read and restart.
-- **Restrict**: turn a registered operation off or on, mute notifications, acknowledge alerts. The plugin can never add permissions: the bot's TOML stays the ceiling.
+- **Restrict**: turn a registered operation off or on, mute notifications for 1, 8 or 24 hours, acknowledge alerts. The plugin can never add permissions: the bot's TOML stays the ceiling.
 - **Request**: ask for a registered operation. Safe ones run; destructive ones send a preview to Telegram and wait for the confirmation tap there. Nothing runs from this plugin on its own.
 
 ## Set up

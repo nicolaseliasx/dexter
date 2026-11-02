@@ -7,7 +7,7 @@ import { registerRoutes } from "../../src/backend/routes.js";
 type Audit = { action: string; resourceId?: string; success: boolean };
 let server: ReturnType<express.Express["listen"]>;
 let base = "";
-let botCalls: { method: string; path: string; body?: unknown }[] = [];
+let botCalls: { method: string; path: string; body?: unknown; actor?: string }[] = [];
 let audits: Audit[] = [];
 let guarded = 0;
 let botReply: (method: string, path: string) => unknown = () => ({ ok: true });
@@ -21,13 +21,14 @@ beforeEach(async () => {
   app.use(express.json());
   const router = express.Router();
   registerRoutes(router, {
-    bot: (async (method: string, path: string, body?: unknown) => {
-      botCalls.push({ method, path, body });
+    bot: (async (method: string, path: string, body?: unknown, actor?: string) => {
+      botCalls.push({ method, path, body, ...(actor === undefined ? {} : { actor }) });
       const out = botReply(method, path);
       if (out instanceof BotError) throw out;
       return out;
     }) as never,
     audit: async (entry) => void audits.push(entry),
+    actor: () => "user-1",
     guard: () => (_req, _res, next) => {
       guarded += 1;
       next();
@@ -70,8 +71,12 @@ describe("read routes", () => {
   });
 
   it("marks the bot as compatible only when it speaks API version 1", async () => {
-    botReply = () => ({ api_version: 1, bot_version: "0.6.0" });
+    botReply = () => ({ api_version: 1, api_revision: 2, bot_version: "0.6.1" });
     expect(await (await send("GET", "/status")).json()).toMatchObject({ compatible: true, api_version: 1 });
+    botReply = () => ({ api_version: 1, api_revision: 1, bot_version: "0.6.0" });
+    expect(await (await send("GET", "/status")).json()).toMatchObject({ compatible: false });
+    botReply = () => ({ api_version: 1, bot_version: "0.6.0" });
+    expect(await (await send("GET", "/status")).json()).toMatchObject({ compatible: false });
     botReply = () => ({ api_version: 2 });
     expect(await (await send("GET", "/status")).json()).toMatchObject({ compatible: false });
     botReply = () => ({ bot_version: "0.5.3" });
@@ -96,7 +101,7 @@ describe("write routes", () => {
   it("toggles an operation, validates the input and audits the change", async () => {
     const ok = await send("PUT", "/ops/restart-nginx", { enabled: false });
     expect(ok.status).toBe(200);
-    expect(botCalls).toEqual([{ method: "PUT", path: "/v1/ops/restart-nginx", body: { enabled: false } }]);
+    expect(botCalls).toEqual([{ method: "PUT", path: "/v1/ops/restart-nginx", body: { enabled: false }, actor: "user-1" }]);
     expect(audits).toEqual([expect.objectContaining({ action: "dexter-ops.op.disable", resourceId: "restart-nginx", success: true })]);
 
     botCalls = [];
@@ -125,8 +130,26 @@ describe("write routes", () => {
     const res = await send("POST", "/ops/restart-nginx/request");
     expect(res.status).toBe(202);
     expect(await res.json()).toMatchObject({ status: "awaiting_confirmation" });
-    expect(botCalls).toEqual([{ method: "POST", path: "/v1/ops/restart-nginx/request", body: undefined }]);
+    expect(botCalls).toEqual([{ method: "POST", path: "/v1/ops/restart-nginx/request", body: undefined, actor: "user-1" }]);
     expect(audits[0]).toMatchObject({ action: "dexter-ops.op.request", resourceId: "restart-nginx", success: true });
+  });
+
+  it("mutes for a bounded time and refuses nonsense durations", async () => {
+    expect((await send("PUT", "/notifications", { muted: true, minutes: 30 })).status).toBe(200);
+    expect(botCalls[0]).toMatchObject({ path: "/v1/notifications", body: { muted: true, minutes: 30 }, actor: "user-1" });
+    expect(audits[0]).toMatchObject({ action: "dexter-ops.notifications.mute" });
+    botCalls = [];
+    for (const body of [
+      { muted: true, minutes: 0 },
+      { muted: true, minutes: 1441 },
+      { muted: true, minutes: 1.5 },
+      { muted: true, minutes: "5" },
+      { muted: false, minutes: 5 },
+      { muted: true, other: 1 },
+    ]) {
+      expect((await send("PUT", "/notifications", body)).status, JSON.stringify(body)).toBe(400);
+    }
+    expect(botCalls).toHaveLength(0);
   });
 
   it("mutes notifications and acknowledges alerts with strict input", async () => {
@@ -136,6 +159,7 @@ describe("write routes", () => {
     expect((await send("POST", "/alerts/abc/ack")).status).toBe(400);
     expect((await send("POST", "/alerts/1.5/ack")).status).toBe(400);
     expect(botCalls.map((c) => `${c.method} ${c.path}`)).toEqual(["PUT /v1/notifications", "POST /v1/alerts/7/ack"]);
+    expect(botCalls.every((c) => c.actor === "user-1")).toBe(true);
     expect(audits.map((a) => a.action)).toEqual(["dexter-ops.notifications.mute", "dexter-ops.alert.ack"]);
   });
 
