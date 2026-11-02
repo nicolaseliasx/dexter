@@ -7,6 +7,7 @@
     "name": "nicolaseliasx"
   },
   "license": "Apache-2.0",
+  "repository": "https://github.com/nicolaseliasx/dexter/tree/main/plugins/sessions",
   "category": "Terminal",
   "icon": "SquareTerminal",
   "features": [

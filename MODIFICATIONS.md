@@ -9,7 +9,8 @@ D.EX.T.E.R. is a derivative work of [Termix](https://github.com/Termix-SSH/Termi
 3. **Documentation.** New `README.md`, `NOTICE`, this file and `AGENTS.md`. The original README was moved, unmodified apart from a note at the top, to `docs/TERMIX_README.md`.
 4. **Package description** in `package.json`.
 5. **Branding resolution.** `src/backend/database/routes/branding-settings.ts` shows the D.EX.T.E.R. name when the bundled default-look plugin reports the upstream default name "Termix"; any name chosen by an admin is kept.
-6. **No functional change** to the core, apart from the language and branding handling above. Product behavior is otherwise the same as Termix v26.10.6.
+6. **New `plugins/` directory.** `plugins/sessions` is the Sessions plugin (own code, Apache-2.0, standalone npm package) merged from its former repository with history. It does not touch the Termix core.
+7. **No functional change** to the core, apart from the language and branding handling above. Product behavior is otherwise the same as Termix v26.10.6.
 
 ## Kept as in the original (compatibility)
 
@@ -22,10 +23,11 @@ Package and SDK names (`@termix-ssh/*`), `TERMIX_*` environment variables, brows
 
 ## Files changed
 
-83 files differ from the original at the time this file was generated (deleted files included). Regenerate with `git diff --name-only v26.10.6`. Full patch: `git diff v26.10.6`.
+85 files outside `plugins/` differ from the original at the time this file was generated (deleted files included), plus the new `plugins/` directory. Regenerate with `git diff --name-only f90621a5 -- . ':!plugins'` (`f90621a5` is the upstream v26.10.6 commit). Full patch: `git diff f90621a5`.
 
 ```
 AGENTS.md
+MODIFICATIONS.md
 NOTICE
 README.md
 docker/entrypoint.sh
@@ -34,6 +36,7 @@ docker/nginx.conf
 docs/TERMIX_README.md
 electron-builder.json
 electron/main.cjs
+eslint.config.mjs
 index.html
 package.json
 public/manifest.json
@@ -108,4 +111,5 @@ src/ui/locales/translations-lock.json
 src/ui/main-axios.ts
 src/ui/tests/i18n/i18n.test.ts
 src/ui/tests/plugins/PluginsTab.test.tsx
+plugins/ (new: plugins/sessions)
 ```

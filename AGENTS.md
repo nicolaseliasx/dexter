@@ -4,7 +4,7 @@ This fork is upstream Termix **v26.10.6** with the D.EX.T.E.R. brand, English on
 
 ## Main rule: module work ships as a plugin
 
-- Any new feature or behavior change of a module (terminal, sessions, panels, tabs, integrations) **becomes a plugin** in its own repository, in the shape of `termix-plugin-sessions` (`/home/admin/termix-plugin-sessions`). Do not edit the core `src/` for that.
+- Any new feature or behavior change of a module (terminal, sessions, panels, tabs, integrations) **becomes a plugin**, living in `plugins/<id>/` of this repository as a standalone npm package (own `package.json` and lock, not a root workspace). `plugins/sessions` is the reference. Do not edit the core `src/` for that.
 - Plugins are TypeScript on `@termix-ssh/plugin-sdk` (backend `activate(ctx)`, frontend `activate(app)`). Rust only as WebAssembly in a worker, and only for heavy work; there is none today.
 - Reuse what Termix already has before writing code: the official `ssh-terminal` already pastes images (Ctrl+V, SFTP) and opens `terminal` attached to tmux with `openTab(host, "terminal", { data: { tmuxSession } })`. Pasting images into Claude/Codex running on a host builds on that.
 - Install with **Install from file** of the `.tmxplug`, with Plugin developer mode on. No signing, no registry submission. When a plugin changes, bump the version in `manifest.json`, `package.json` and `CHANGELOG.md` (a section with `### Fixed/Added`).
