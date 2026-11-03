@@ -53,5 +53,8 @@
     "create": "Could not create the session",
     "rename": "Could not rename the session",
     "terminate": "Could not terminate the session"
+  },
+  "recovery": {
+    "failed": "Tabs could not be saved or restored. The exit confirmation remains enabled."
   }
 }

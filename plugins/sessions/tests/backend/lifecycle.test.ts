@@ -53,6 +53,20 @@ function fixtures(
 }
 
 describe("PersistentSessionLifecycleService kill", () => {
+  it("resolves only the marked remote identity, refusing a reused name", async () => {
+    const { service, gateway } = fixtures([
+      { name: "codex", tmuxId: "$7", marker: { id: "session-id" } },
+    ]);
+    await expect(service.attachment("session-id", "u")).resolves.toMatchObject({
+      tmuxTarget: "$7",
+    });
+    gateway.list.mockResolvedValue([
+      { name: "codex", tmuxId: "$8", marker: { id: "replacement" } },
+    ]);
+    await expect(service.attachment("session-id", "u")).rejects.toMatchObject({
+      code: "PERSISTENT_SESSION_MARKER_MISMATCH",
+    });
+  });
   it("ends the local record with force when the host is unreachable", async () => {
     const { repository, gateway, service } = fixtures();
     gateway.list.mockRejectedValue(
@@ -115,10 +129,13 @@ describe("PersistentSessionLifecycleService kill", () => {
   });
   it("passes the acting user to SSH operations on shared hosts", async () => {
     const { gateway, service } = fixtures();
-    gateway.list.mockResolvedValueOnce([{ name: "codex" }]).mockResolvedValueOnce([]);
+    gateway.list
+      .mockResolvedValueOnce([{ name: "codex" }])
+      .mockResolvedValueOnce([]);
     await service.kill("session-id", "u");
     expect(gateway.killUnguarded).toHaveBeenCalledWith(
-      expect.objectContaining({ actingUserId: "u" }), "codex",
+      expect.objectContaining({ actingUserId: "u" }),
+      "codex",
     );
   });
 

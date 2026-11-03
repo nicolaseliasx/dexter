@@ -278,6 +278,8 @@ export interface SplitState {
 }
 
 export type WorkspaceTabSnapshot = {
+  /** Capture-time identity, for partial restores reusing an already restored tab. */
+  sourceInstanceId?: string;
   /** Stable key within the saved tab list, not the live Tab.id (which is regenerated on every open). */
   slotId: string;
   type: TabType;
@@ -311,6 +313,8 @@ export type WorkspaceSplitSnapshot = {
 };
 
 export type WorkspacePayload = {
+  /** Top-level order includes split containers as well as standalone tabs. */
+  topLevelSlotIds?: string[];
   version: 1 | 2;
   tabs: WorkspaceTabSnapshot[];
   /** A tab's slotId, or a split's. */

@@ -205,6 +205,7 @@ export async function startPluginFrame(
       if (id) embedder.connectHost(id, type);
     },
     closeTab: () => embedder.closeTab(),
+    updateTabData: () => {},
     renameTab: (_id, label) => embedder.renameTab(label),
     openRailView: (id) => embedder.openSingletonTab(id),
     closeRailView: () => {},

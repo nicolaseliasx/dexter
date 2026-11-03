@@ -5,6 +5,9 @@ import {
   setShellHosts,
   shell,
   withShellHost,
+  tabsApi,
+  runBeforeReady,
+  isTabRecoverable,
 } from "@/plugin-host/shell-bridge";
 import type { Host } from "@/types/ui-types";
 
@@ -48,5 +51,29 @@ describe("withShellHost", () => {
     setShellCallbacks({ openTab } as never);
     shell.openTab({ id: "5", name: "db" } as unknown as Host, "terminal");
     expect(openTab.mock.calls[0][0]).toMatchObject({ socks5Host: "proxy" });
+  });
+});
+
+describe("plugin recovery lifecycle", () => {
+  it("awaits restore before ready and releases initialization on errors", async () => {
+    const calls: string[] = [];
+    tabsApi.onBeforeReady(async () => {
+      await Promise.resolve();
+      calls.push("restore");
+    });
+    tabsApi.onBeforeReady(async () => {
+      throw new Error("storage unavailable");
+    });
+    await runBeforeReady();
+    expect(calls).toEqual(["restore"]);
+  });
+
+  it("only exempts a saved tab until its disposer runs", () => {
+    expect(isTabRecoverable("a")).toBe(false);
+    const dispose = tabsApi.markRecoverable("a");
+    expect(isTabRecoverable("a")).toBe(true);
+    expect(isTabRecoverable("b")).toBe(false);
+    dispose();
+    expect(isTabRecoverable("a")).toBe(false);
   });
 });

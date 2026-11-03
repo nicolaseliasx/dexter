@@ -1,6 +1,7 @@
 import { useSyncExternalStore } from "react";
 import type { Host } from "@/types/ui-types";
 import type { TabShellCallbacks } from "@/shell/tab-registry";
+import type { ApplyLayoutOptions } from "@termix-ssh/plugin-sdk/frontend";
 
 /**
  * The live shell, as plugins see it.
@@ -13,10 +14,10 @@ import type { TabShellCallbacks } from "@/shell/tab-registry";
 type Layout = { version: number; [key: string]: unknown };
 
 export interface ShellLayoutProvider {
-  getLayout: () => Layout | null;
+  getLayout: (options?: { tabIds?: string[] }) => Layout | null;
   applyLayout: (
     layout: Layout,
-    options?: { name?: string },
+    options?: ApplyLayoutOptions,
   ) => Promise<{ skipped: string[] }>;
 }
 
@@ -29,6 +30,24 @@ let ready = false;
 const hostListeners = new Set<() => void>();
 const changeListeners = new Set<() => void>();
 const readyListeners = new Set<() => void>();
+const restoreListeners = new Set<() => Promise<void>>();
+const recoverableTabs = new Map<string, Set<symbol>>();
+
+export function isTabRecoverable(id: string): boolean {
+  return (recoverableTabs.get(id)?.size ?? 0) > 0;
+}
+
+export async function runBeforeReady(): Promise<void> {
+  for (const restore of [...restoreListeners]) {
+    if (!restoreListeners.has(restore)) continue;
+    // An unavailable plugin must never prevent login or disable the default warning.
+    try {
+      await restore();
+    } catch {
+      /* The plugin reports its own recovery error. */
+    }
+  }
+}
 
 export function setShellCallbacks(next: TabShellCallbacks | null): void {
   callbacks = next;
@@ -111,6 +130,7 @@ export const shell: TabShellCallbacks = {
     callbacks?.connectHost(withShellHost(host), ...rest),
   closeTab: (...args) => callbacks?.closeTab(...args),
   renameTab: (...args) => callbacks?.renameTab(...args),
+  updateTabData: (...args) => callbacks?.updateTabData(...args),
   openRailView: (...args) => callbacks?.openRailView(...args),
   closeRailView: (...args) => callbacks?.closeRailView(...args),
   openHostEditor: (...args) => callbacks?.openHostEditor?.(...args),
@@ -131,13 +151,32 @@ export const tabsApi = {
   openSingletonTab: shell.openSingletonTab,
   connectHost: shell.connectHost,
   closeTab: shell.closeTab,
+  renameTab: shell.renameTab,
+  updateTabData: shell.updateTabData,
   openRailView: shell.openRailView,
-  getLayout: () => layoutProvider?.getLayout() ?? null,
-  applyLayout: (layout: Layout, options?: { name?: string }) =>
+  getLayout: (options?: { tabIds?: string[] }) =>
+    layoutProvider?.getLayout(options) ?? null,
+  applyLayout: (layout: Layout, options?: ApplyLayoutOptions) =>
     layoutProvider
       ? layoutProvider.applyLayout(layout, options)
       : Promise.resolve({ skipped: [] as string[] }),
   onChange: (listener: () => void) => subscribe(changeListeners, listener),
+  onBeforeReady: (listener: () => Promise<void>) => {
+    restoreListeners.add(listener);
+    return () => {
+      restoreListeners.delete(listener);
+    };
+  },
+  markRecoverable: (tabId: string) => {
+    const token = Symbol();
+    const tokens = recoverableTabs.get(tabId) ?? new Set<symbol>();
+    tokens.add(token);
+    recoverableTabs.set(tabId, tokens);
+    return () => {
+      tokens.delete(token);
+      if (!tokens.size) recoverableTabs.delete(tabId);
+    };
+  },
   onReady: (listener: () => void) => {
     if (ready) {
       listener();
@@ -152,5 +191,7 @@ export function resetShellBridge(): void {
   callbacks = null;
   layoutProvider = null;
   ready = false;
+  restoreListeners.clear();
+  recoverableTabs.clear();
   setShellHosts([], false);
 }

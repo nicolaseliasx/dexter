@@ -11,6 +11,7 @@ export interface PersistentSessionMarker {
 
 export interface RemotePersistentSession {
   name: string;
+  tmuxId?: string;
   createdAt?: string;
   activityAt?: string;
   attachedClients: number;

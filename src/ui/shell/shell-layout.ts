@@ -65,6 +65,7 @@ export function buildLayoutTabSnapshots(
 
   const snapshots: WorkspaceTabSnapshot[] = capturable.map((tab) => ({
     slotId: slotIdByTabId.get(tab.id)!,
+    sourceInstanceId: tab.instanceId,
     type: tab.type,
     hostSyncId: tab.host?.syncId ?? null,
     hostNameSnapshot: tab.host?.name ?? null,
@@ -129,10 +130,13 @@ export function buildLayoutPayload(input: {
   activeTabId: string;
   genSlotId?: () => string;
   sidebar?: WorkspacePayload["sidebar"];
+  tabIds?: string[];
 }): WorkspacePayload {
   const genSlotId = input.genSlotId ?? createId;
   const { snapshots, slotIdByTabId } = buildLayoutTabSnapshots(
-    input.tabs,
+    input.tabIds
+      ? input.tabs.filter((tab) => input.tabIds!.includes(tab.id))
+      : input.tabs,
     genSlotId,
   );
 
@@ -158,6 +162,12 @@ export function buildLayoutPayload(input: {
   return {
     version: 2,
     tabs: snapshots,
+    topLevelSlotIds: input.tabs
+      .filter((tab) => !tab.parentSplitTabId)
+      .flatMap((tab) => {
+        const slot = slotIdByTabId.get(tab.id);
+        return slot ? [slot] : [];
+      }),
     activeSlotId: slotIdByTabId.get(input.activeTabId) ?? null,
     splits,
     ...(input.sidebar ? { sidebar: input.sidebar } : {}),

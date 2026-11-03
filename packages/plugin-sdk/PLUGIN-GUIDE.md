@@ -1,6 +1,6 @@
 # Termix plugin guide
 
-SDK 1.0.22 | Plugin API 1.13.0
+SDK 1.0.23 | Plugin API 1.14.0
 
 This guide is for anyone, person or AI coding tool, building a Termix plugin. It ships inside
 `@termix-ssh/plugin-sdk`, so the copy in your `node_modules` always matches the SDK you have installed.
@@ -1046,3 +1046,26 @@ An update that adds a capability waits for an admin to approve it.
   Plugin-Remote-Desktop adds a protocol. All at https://github.com/Termix-SSH.
 - Help: the Discord at https://discord.gg/jVQGdvHDrf. SDK bugs go in
   https://github.com/Termix-SSH/Termix/issues.
+
+## Recoverable tabs (Plugin API 1.14)
+
+`app.tabs.onBeforeReady(async () => ...)` runs after basic tab restoration, before
+terminal components mount and before `onReady`. Failure releases initialization.
+Use `getLayout({ tabIds })` for a scoped snapshot (including split geometry), then
+`applyLayout(snapshot, { mode: "merge", existingTabs })` to restore without closing
+unrelated tabs. `existingTabs` maps snapshot slot ids to validated live tab ids;
+`sourceInstanceId` in a snapshot identifies the capture-time tab instance. Empty
+merge snapshots do not erase other tabs. Existing `applyLayout` calls still replace
+the arrangement, for explicit workspace application.
+
+`updateTabData(tabId, data)` replaces a tab's payload without reconnecting it.
+`renameTab` updates its title. After an explicitly confirmed session termination,
+`closeTab(tabId, { connectionAlreadyConfirmed: true })` skips only the redundant
+connection confirmation; all other guards remain.
+
+Only after saving a recoverable tab, call `markRecoverable(tabId)`. Dispose the
+returned function immediately on an unsaved layout change or storage failure.
+The host removes registrations when the plugin is disabled. A connected tab
+without a live recovery registration continues to trigger the unload warning.
+
+`closeTab(..., { preserveSavedRecord: true })` drops an unmounted restored view from this window without deleting the other window's server-side tab record.

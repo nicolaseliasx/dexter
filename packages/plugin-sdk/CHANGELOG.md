@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.23
+
+Plugin API 1.14.0.
+
+### Added
+
+- Scoped layout capture and merge restoration, a pre-mount recovery lifecycle, tab payload updates and disposable per-tab recovery registrations.
+- A confirmed-connection option for closing an ended connection without a second connection confirmation; other close guards remain active.
+
 ## 1.0.22
 
 Plugin API 1.13.0.

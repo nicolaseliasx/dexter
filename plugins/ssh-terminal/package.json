@@ -1,0 +1,80 @@
+{
+  "name": "@termix-plugin/ssh-terminal",
+  "private": true,
+  "version": "1.2.1-ncls.1",
+  "type": "module",
+  "scripts": {
+    "build": "termix-plugin build",
+    "test": "termix-plugin test",
+    "typecheck": "tsc -p .",
+    "validate": "termix-plugin validate",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky || true",
+    "postinstall": "node scripts/patch-ssh2-agent.cjs"
+  },
+  "dependencies": {
+    "@xterm/addon-clipboard": "^0.2.0",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/addon-search": "^0.16.0",
+    "@xterm/addon-unicode11": "^0.9.0",
+    "@xterm/addon-web-links": "^0.12.0",
+    "@xterm/xterm": "^6.0.0",
+    "lucide-react": "^1.33.0",
+    "react-xtermjs": "^1.0.10",
+    "zmodem.js": "^0.1.10"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@termix-ssh/plugin-sdk": "file:../../packages/plugin-sdk",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "better-sqlite3": "^13.0.3",
+    "husky": "^9.1.7",
+    "i18next": "^26.4.2",
+    "jsdom": "^30.0.1",
+    "lint-staged": "^17.2.0",
+    "prettier": "3.9.9",
+    "react-i18next": "^17.0.16",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.4",
+    "vitest": "^4.1.11"
+  },
+  "peerDependencies": {
+    "@termix-ssh/plugin-sdk": "^1.0.19",
+    "drizzle-orm": "^0.45.2",
+    "express": "^5.2.1",
+    "multer": "^2.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "sharp": "^0.35.4",
+    "sonner": "^2.0.8",
+    "ssh2": "^1.17.0",
+    "ws": "^8.21.3"
+  },
+  "termix": {
+    "patches": [
+      "xterm-android-ime"
+    ]
+  },
+  "overrides": {
+    "react-xtermjs": {
+      "@xterm/xterm": "$@xterm/xterm"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,mjs,cjs,json,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

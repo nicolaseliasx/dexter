@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { act, cleanup, render, screen, waitFor } from "@testing-library/react";
 import { useEffect, useState } from "react";
 
@@ -25,6 +25,9 @@ import {
 import type { ShellController } from "@/shell/controller/types";
 import { TabPortals } from "@/shell/stage/TabPortals";
 import { TabStage } from "@/shell/stage/TabStage";
+import { markPluginsSettled } from "@/plugin-host/plugin-store";
+
+beforeEach(() => markPluginsSettled());
 
 afterEach(cleanup);
 

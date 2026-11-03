@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import type { ApplyLayoutOptions } from "@termix-ssh/plugin-sdk/frontend";
+import { useLayoutEffect } from "react";
 import type { WorkspacePayload } from "@/types/ui-types";
 import { createId } from "@/lib/create-id";
 import { rightDockableIds } from "@/sidebar/rail-items";
@@ -8,7 +9,11 @@ import {
   resolveLayoutTabTarget,
   snapshotData,
 } from "@/shell/shell-layout";
-import { addSplitTab, makeSplitTab } from "@/shell/split/split-tabs";
+import {
+  addSplitTab,
+  isSplitTab,
+  makeSplitTab,
+} from "@/shell/split/split-tabs";
 import { listPanes } from "@/shell/split/split-tree";
 import { setShellLayoutProvider } from "@/plugin-host/shell-bridge";
 import { useSplitLabel, type TabsState } from "./use-tabs";
@@ -21,9 +26,7 @@ export function useWorkspaceLayout(
 ) {
   const splitLabel = useSplitLabel();
   const {
-    tabs,
-    activeTabId,
-    tabsReady,
+    baseTabsReady,
     tabsRef,
     hostsRef,
     setTabs,
@@ -32,10 +35,13 @@ export function useWorkspaceLayout(
     pendingPaneTargetRef,
   } = tabsState;
 
-  function buildWorkspacePayload(): WorkspacePayload {
+  function buildWorkspacePayload(options?: {
+    tabIds?: string[];
+  }): WorkspacePayload {
     return buildLayoutPayload({
-      tabs,
-      activeTabId,
+      tabs: tabsRef.current,
+      activeTabId: tabsState.activeTabIdRef.current,
+      tabIds: options?.tabIds,
       sidebar: {
         left: {
           view: regions.left.view,
@@ -54,9 +60,10 @@ export function useWorkspaceLayout(
   async function applyLayout(
     payload: WorkspacePayload,
     name: string,
+    options?: ApplyLayoutOptions,
   ): Promise<{ skipped: string[] }> {
     // Tear down the current arrangement the same way an individual tab close does.
-    for (const tab of [...tabsRef.current]) {
+    for (const tab of options?.mode === "merge" ? [] : [...tabsRef.current]) {
       tabsState.doCloseTab(tab.id);
     }
     // Tabs reopened here must not be pulled into a pane of the old layout.
@@ -67,6 +74,17 @@ export function useWorkspaceLayout(
       const skippedTabs: string[] = [];
 
       for (const snapshot of payload.tabs) {
+        const existing = options?.existingTabs?.[snapshot.slotId];
+        if (
+          options?.mode === "merge" &&
+          existing &&
+          tabsRef.current.some((tab) => tab.id === existing)
+        ) {
+          tabsState.updateTabData(existing, snapshotData(snapshot) ?? {});
+          tabsState.renameTab(existing, snapshot.customLabel ?? snapshot.label);
+          slotIdToNewTabId.set(snapshot.slotId, existing);
+          continue;
+        }
         const target = resolveLayoutTabTarget(snapshot, hostsRef.current);
 
         if (target.kind === "skip") {
@@ -104,8 +122,27 @@ export function useWorkspaceLayout(
       const splitIdByTabId = new Map<string, string>();
       let firstSplitId: string | null = null;
       resolveLayoutSplits(payload, slotIdToNewTabId).forEach((saved, index) => {
+        const children = new Set(
+          listPanes(saved.split.root).flatMap((pane) =>
+            pane.tabId ? [pane.tabId] : [],
+          ),
+        );
+        const existing =
+          options?.mode === "merge"
+            ? tabsRef.current.find((tab) => {
+                if (!isSplitTab(tab)) return false;
+                const ids = listPanes(tab.split.root).flatMap((pane) =>
+                  pane.tabId ? [pane.tabId] : [],
+                );
+                return (
+                  ids.length > 0 &&
+                  ids.every((id) => children.has(id)) &&
+                  children.size === new Set(ids).size
+                );
+              })
+            : undefined;
         const splitTab = makeSplitTab(
-          createId(),
+          existing?.instanceId ?? createId(),
           saved.label || name || splitLabel(index + 1),
           saved.split,
         );
@@ -114,8 +151,35 @@ export function useWorkspaceLayout(
           if (pane.tabId) splitIdByTabId.set(pane.tabId, splitTab.id);
         }
         firstSplitId ??= splitTab.id;
-        setTabs((prev) => addSplitTab(prev, splitTab));
+        setTabs((prev) =>
+          addSplitTab(
+            existing ? prev.filter((tab) => tab.id !== existing.id) : prev,
+            splitTab,
+          ),
+        );
       });
+
+      if (Array.isArray(payload.topLevelSlotIds)) {
+        const desiredIds = payload.topLevelSlotIds.flatMap((slot) => {
+          const id = splitIdBySlotId.get(slot) ?? slotIdToNewTabId.get(slot);
+          return id ? [id] : [];
+        });
+        setTabs((prev) => {
+          const topById = new Map(
+            prev
+              .filter((tab) => !tab.parentSplitTabId)
+              .map((tab) => [tab.id, tab]),
+          );
+          const ids = [...new Set(desiredIds.filter((id) => topById.has(id)))];
+          const selected = new Set(ids);
+          let next = 0;
+          return prev.map((tab) =>
+            !tab.parentSplitTabId && selected.has(tab.id)
+              ? topById.get(ids[next++])!
+              : tab,
+          );
+        });
+      }
 
       // A tab that now sits in a split is shown through its split.
       const activeSlot = payload.activeSlotId;
@@ -132,7 +196,7 @@ export function useWorkspaceLayout(
       setActiveTabId(activeId);
 
       // Older payloads predate the sidebar field, so leave the docks alone then.
-      const sidebar = payload.sidebar;
+      const sidebar = options?.mode === "merge" ? undefined : payload.sidebar;
       if (sidebar) {
         if (sidebar.left.view) {
           regions.left.setView(
@@ -155,11 +219,12 @@ export function useWorkspaceLayout(
     }
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setShellLayoutProvider({
-      getLayout: () => (tabsReady ? buildWorkspacePayload() : null),
+      getLayout: (options) =>
+        baseTabsReady ? buildWorkspacePayload(options) : null,
       applyLayout: (layout, options) =>
-        applyLayout(layout as WorkspacePayload, options?.name ?? ""),
+        applyLayout(layout as WorkspacePayload, options?.name ?? "", options),
     });
   });
 }

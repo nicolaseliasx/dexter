@@ -25,6 +25,7 @@ const shell = {
   openSingletonTab: () => {},
   closeTab: () => {},
   renameTab: () => {},
+  updateTabData: () => {},
   connectHost: () => {},
   openRailView: () => {},
   closeRailView: () => {},

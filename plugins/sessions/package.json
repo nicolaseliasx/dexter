@@ -1,6 +1,6 @@
 {
   "name": "termix-plugin-sessions",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "description": "Persistent tmux sessions for Termix.",
@@ -25,7 +25,7 @@
     "ssh2": "*"
   },
   "devDependencies": {
-    "@termix-ssh/plugin-sdk": "^1.0.22",
+    "@termix-ssh/plugin-sdk": "file:../../packages/plugin-sdk",
     "@testing-library/react": "^16.3.3",
     "@types/express": "^5.0.0",
     "@types/node": "^24.0.0",
