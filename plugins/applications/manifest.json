@@ -1,0 +1,82 @@
+{
+  "id": "applications",
+  "name": "Applications",
+  "version": "0.5.1",
+  "description": "A customizable shared application catalog.",
+  "author": {
+    "name": "nicolaseliasx"
+  },
+  "license": "Apache-2.0",
+  "category": "Productivity",
+  "icon": "LayoutGrid",
+  "engine": {
+    "termix": ">=26.10.6",
+    "api": "^1.14"
+  },
+  "capabilities": ["db:own", "network:serve", "network:outbound", "ui:surface"],
+  "contributes": {
+    "tabs": [
+      {
+        "id": "applications",
+        "titleKey": "tab.title",
+        "icon": "LayoutGrid",
+        "openFrom": ["palette"]
+      }
+    ],
+    "settings": {
+      "admin": [
+        {
+          "key": "collectorToken",
+          "type": "secret",
+          "labelKey": "settings.token",
+          "descriptionKey": "settings.tokenDescription"
+        },
+        {
+          "key": "collectorCa",
+          "type": "textarea",
+          "labelKey": "settings.ca",
+          "descriptionKey": "settings.caDescription"
+        }
+      ]
+    },
+    "permissions": [
+      {
+        "name": "view",
+        "titleKey": "permissions.view.title",
+        "descriptionKey": "permissions.view.description",
+        "defaultRoles": ["admin", "user"]
+      },
+      {
+        "name": "manage",
+        "titleKey": "permissions.manage.title",
+        "descriptionKey": "permissions.manage.description",
+        "defaultRoles": ["admin"]
+      }
+    ],
+    "uiPresets": {
+      "simple": {
+        "viewMode": "grid",
+        "density": "comfortable",
+        "columns": "auto"
+      },
+      "balanced": {
+        "viewMode": "grid",
+        "density": "comfortable",
+        "columns": "auto"
+      },
+      "advanced": {
+        "viewMode": "grid",
+        "density": "compact",
+        "columns": "auto"
+      }
+    },
+    "dashboardCards": [
+      {
+        "id": "apps",
+        "titleKey": "dashboard.apps"
+      }
+    ]
+  },
+  "locales": "locales",
+  "platforms": ["linux", "darwin", "win32"]
+}

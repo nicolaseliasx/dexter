@@ -1,0 +1,96 @@
+{
+  "panel": {
+    "title": "Applications"
+  },
+  "settings": {
+    "token": "Collector token",
+    "tokenDescription": "Bearer token for the devhub collector.",
+    "ca": "Collector CA certificate",
+    "caDescription": "PEM certificate used to verify the devhub collector."
+  },
+  "permissions": {
+    "view": {
+      "title": "View applications",
+      "description": "View the application catalog."
+    },
+    "manage": {
+      "title": "Manage applications",
+      "description": "Manage the application catalog."
+    }
+  },
+  "status": {
+    "count_one": "{{count}} app",
+    "count_other": "{{count}} apps"
+  },
+  "toolbar": {
+    "search": "Search applications...",
+    "add": "Add application",
+    "scan": "Scan for suggestions",
+    "import": "Import from devhub",
+    "refresh": "Refresh",
+    "openCatalog": "Open catalog"
+  },
+  "list": {
+    "name": "Application",
+    "address": "Address",
+    "description": "Description"
+  },
+  "card": {
+    "edit": "Edit {{name}}",
+    "delete": "Delete {{name}}"
+  },
+  "empty": {
+    "title": "No applications found",
+    "hint": "Add one, or scan the server for suggestions."
+  },
+  "suggestions": {
+    "title": "Suggestions",
+    "notice": "Services and routes found do not guarantee that the application is reachable.",
+    "unavailable": "Unavailable sources: {{sources}}",
+    "none": "Nothing new was found.",
+    "review": "Review {{name}}",
+    "dismiss": "Hide suggestions"
+  },
+  "form": {
+    "addTitle": "Add application",
+    "editTitle": "Edit {{name}}",
+    "name": "Name",
+    "url": "URL",
+    "urlHint": "Full address, starting with http:// or https://",
+    "description": "Description",
+    "icon": "Initials",
+    "iconHint": "Up to 8 characters shown on the card tile.",
+    "color": "Color",
+    "order": "Order",
+    "save": "Save",
+    "cancel": "Cancel",
+    "nameRequired": "Enter a name.",
+    "urlInvalid": "Enter a valid http:// or https:// address."
+  },
+  "delete": {
+    "title": "Delete {{name}}?",
+    "description": "The card is removed from the catalog. The application itself is not touched.",
+    "confirm": "Delete"
+  },
+  "errors": {
+    "load": "Could not load the applications.",
+    "retry": "Try again",
+    "save": "Could not save. Check the data and try again.",
+    "delete": "Could not delete.",
+    "import": "Could not import the applications.",
+    "scan": "Could not get suggestions. Check the collector configuration."
+  },
+  "imported": "Applications imported.",
+  "tab": {
+    "title": ""
+  },
+  "nav": {
+    "applications": "Applications"
+  },
+  "dashboard": {
+    "apps": "Applications",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied",
+    "openFull": "Open full view"
+  }
+}
