@@ -1,7 +1,7 @@
 {
   "id": "applications",
   "name": "Applications",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "A customizable shared application catalog.",
   "author": {
     "name": "nicolaseliasx"
@@ -25,6 +25,13 @@
     ],
     "settings": {
       "admin": [
+        {
+          "key": "collectorUrl",
+          "type": "string",
+          "labelKey": "settings.url",
+          "descriptionKey": "settings.urlDescription",
+          "placeholderKey": "settings.urlPlaceholder"
+        },
         {
           "key": "collectorToken",
           "type": "secret",

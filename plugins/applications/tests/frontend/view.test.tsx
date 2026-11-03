@@ -125,10 +125,10 @@ describe("applications tab", () => {
     expect(stub.post).not.toHaveBeenCalled();
   });
 
-  it("offers readers no scan or import", async () => {
+  it("offers readers no scan", async () => {
     await open(["applications.view"]);
     await screen.findByRole("link", { name: /cinema/i });
-    for (const name of [/scan for suggestions/i, /import from devhub/i])
+    for (const name of [/scan for suggestions/i])
       expect(screen.queryByRole("button", { name })).toBeNull();
   });
 
@@ -147,19 +147,6 @@ describe("applications tab", () => {
     expect(field("Name").value).toBe("service");
     expect(field("URL").value).toBe("");
     expect(stub.post).not.toHaveBeenCalled();
-  });
-
-  it("imports the old hub on request", async () => {
-    const { stub } = await open(
-      ["applications.view", "applications.manage"],
-      api([]),
-    );
-    fireEvent.click(
-      await screen.findByRole("button", { name: /import from devhub/i }),
-    );
-    await waitFor(() =>
-      expect(stub.post).toHaveBeenCalledWith("/import-app-hub"),
-    );
   });
 
   it("asks before deleting", async () => {

@@ -6,7 +6,6 @@ import {
   RefreshCw,
   ScanSearch,
   Trash2,
-  Upload,
   X,
 } from "lucide-react";
 import {
@@ -45,7 +44,6 @@ type Props = {
   embedded?: boolean;
   refresh?: () => Promise<void>;
   discover?: () => Promise<Inventory>;
-  importHub?: () => Promise<void>;
 };
 
 function CardActions({
@@ -88,7 +86,6 @@ export function CatalogView({
   embedded,
   refresh,
   discover,
-  importHub,
 }: Props) {
   const { t } = useTranslation();
   const toast = useToast();
@@ -100,7 +97,7 @@ export function CatalogView({
     id?: string;
     form: CardInput;
   } | null>(null);
-  const [busy, setBusy] = useState<"scan" | "import" | "refresh" | null>(null);
+  const [busy, setBusy] = useState<"scan" | "refresh" | null>(null);
 
   const visible = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -113,7 +110,7 @@ export function CatalogView({
 
   const open = (form: CardInput, id?: string) => setEditing({ id, form });
   const run = async (
-    kind: "scan" | "import" | "refresh",
+    kind: "scan" | "refresh",
     job: () => Promise<void>,
     failure: string,
   ) => {
@@ -290,22 +287,6 @@ export function CatalogView({
               fill
             />
             <div className="ml-auto flex items-center gap-2">
-              {canManage &&
-                importHub &&
-                iconButton(
-                  t("toolbar.import"),
-                  <Upload className="size-3.5" />,
-                  () =>
-                    void run(
-                      "import",
-                      async () => {
-                        await importHub();
-                        toast.success(t("imported"));
-                      },
-                      t("errors.import"),
-                    ),
-                  busy === "import",
-                )}
               {canManage &&
                 discover &&
                 iconButton(

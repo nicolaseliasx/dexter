@@ -50,29 +50,49 @@ it("marks stale or missing snapshots as unavailable", () => {
   ).toContain("stale");
 });
 
-it("uses pinned CA and bearer token for the fixed private collector", async () => {
-  const fetch = vi
-    .fn()
-    .mockResolvedValue(
-      new Response(
-        JSON.stringify({
-          items: [
-            { name: "A", source: "cloudflare", url: "https://example.com" },
-          ],
-          unavailable: [],
-          collected_at: Math.floor(Date.now() / 1000),
-        }),
-      ),
-    );
-  const result = await fetchInventory(fetch, "token-value", "certificate", []);
+const collector = {
+  url: "https://collector.example.test:18443",
+  token: "token-value",
+  ca: "certificate",
+};
+const snapshot = () =>
+  new Response(
+    JSON.stringify({
+      items: [{ name: "A", source: "cloudflare", url: "https://example.com" }],
+      unavailable: [],
+      collected_at: Math.floor(Date.now() / 1000),
+    }),
+  );
+
+it("uses the configured collector with the pinned CA and bearer token", async () => {
+  const fetch = vi.fn().mockResolvedValue(snapshot());
+  const result = await fetchInventory(fetch, collector, []);
   expect(fetch).toHaveBeenCalledWith(
-    "https://192.168.15.40:18443/inventory",
+    "https://collector.example.test:18443/inventory",
     expect.objectContaining({
       headers: { Authorization: "Bearer token-value" },
-      allowPrivateHosts: ["192.168.15.40"],
+      allowPrivateHosts: ["collector.example.test"],
       tls: { ca: "certificate" },
     }),
   );
   expect(result.items).toHaveLength(1);
-  await expect(fetchInventory(fetch, "", "certificate", [])).rejects.toThrow();
+});
+
+it.each([
+  ["no token", { ...collector, token: "" }],
+  ["no CA", { ...collector, ca: "" }],
+  ["no URL", { ...collector, url: "" }],
+  [
+    "a plain http URL",
+    { ...collector, url: "http://collector.example.test:18443" },
+  ],
+  [
+    "credentials in the URL",
+    { ...collector, url: "https://user:pass@collector.example.test" },
+  ],
+  ["a URL that is not a URL", { ...collector, url: "collector" }],
+])("refuses to call the collector with %s", async (_label, config) => {
+  const fetch = vi.fn().mockResolvedValue(snapshot());
+  await expect(fetchInventory(fetch, config, [])).rejects.toThrow();
+  expect(fetch).not.toHaveBeenCalled();
 });

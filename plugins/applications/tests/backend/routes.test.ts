@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { registerRoutes } from "../../src/routes";
 
 describe("catalog routes", () => {
-  it("imports old app-hub links only once", async () => {
+  it("does not ship the old hub import", () => {
     const routes: Record<string, Function[]> = {};
     const router = Object.fromEntries(
       ["get", "post", "put", "delete"].map((method) => [
@@ -12,30 +12,18 @@ describe("catalog routes", () => {
         },
       ]),
     );
-    const cards: any[] = [];
-    const repository = {
-      list: vi.fn(async () => cards),
-      create: vi.fn(async (card) => {
-        cards.push(card);
-        return card;
-      }),
-      update: vi.fn(),
-      remove: vi.fn(),
-    };
     registerRoutes(router as never, {
-      repository,
+      repository: {
+        list: vi.fn(),
+        create: vi.fn(),
+        update: vi.fn(),
+        remove: vi.fn(),
+      },
       view: (() => {}) as never,
       manage: (() => {}) as never,
       isAdmin: async () => true,
     });
-    const res = {
-      status: vi.fn().mockReturnThis(),
-      json: vi.fn().mockReturnThis(),
-    };
-    await routes["post /import-app-hub"][1]({}, res);
-    expect(cards.length).toBe(6);
-    await routes["post /import-app-hub"][1]({}, res);
-    expect(cards.length).toBe(6);
+    expect(routes["post /import-app-hub"]).toBeUndefined();
   });
   it("returns discovery only to administrators", async () => {
     const routes: Record<string, Function[]> = {};

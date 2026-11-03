@@ -1,23 +1,39 @@
 import { normalizeUrl } from "./catalog.js";
 import type { PluginFetch } from "@termix-ssh/plugin-sdk/backend";
 export type Suggestion = { name: string; source: string; url: string | null };
+export type CollectorConfig = { url?: string; token?: string; ca?: string };
+
+function collectorOrigin(url: string | undefined): URL {
+  let parsed: URL;
+  try {
+    parsed = new URL(url ?? "");
+  } catch {
+    throw new Error("Collector not configured");
+  }
+  if (parsed.protocol !== "https:" || parsed.username || parsed.password) {
+    throw new Error("Collector must be an https address without credentials");
+  }
+  return parsed;
+}
+
 export async function fetchInventory(
   fetch: PluginFetch,
-  token: string | undefined,
-  ca: string | undefined,
+  config: CollectorConfig,
   saved: string[],
 ) {
-  if (!token || !ca) throw new Error("Collector not configured");
-  const response = await fetch("https://192.168.15.40:18443/inventory", {
-    headers: { Authorization: `Bearer ${token}` },
-    allowPrivateHosts: ["192.168.15.40"],
-    tls: { ca },
+  if (!config.token || !config.ca) throw new Error("Collector not configured");
+  const origin = collectorOrigin(config.url);
+  const response = await fetch(new URL("/inventory", origin).href, {
+    headers: { Authorization: `Bearer ${config.token}` },
+    allowPrivateHosts: [origin.hostname],
+    tls: { ca: config.ca },
     timeoutMs: 5000,
     signal: AbortSignal.timeout(10000),
   });
   if (!response.ok) throw new Error("Collector unavailable");
   return filterInventory(await readLimitedJson(response), saved);
 }
+
 export async function readLimitedJson(
   response: Response,
   limit = 1_000_000,

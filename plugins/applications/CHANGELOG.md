@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.6.0
+
+### Added
+
+- `collectorUrl` admin setting: the collector address is configured in Termix instead of being written in the code. Without it, suggestions stay off.
+
+### Removed
+
+- The one-time "Import from devhub" button and route, and the hub links they carried. The old hub is retired and its cards live in the catalog.
+- Private addresses from the repository: the collector unit is now `applications-collector.service.example` with placeholders, and real `collector/*.service` files are git-ignored.
+
 ## 0.5.1
 
 ### Changed

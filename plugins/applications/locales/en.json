@@ -6,7 +6,10 @@
     "token": "Collector token",
     "tokenDescription": "Bearer token for the devhub collector.",
     "ca": "Collector CA certificate",
-    "caDescription": "PEM certificate used to verify the devhub collector."
+    "caDescription": "PEM certificate used to verify the devhub collector.",
+    "url": "Collector address",
+    "urlDescription": "HTTPS address of the inventory collector, for example https://collector.example:18443. Leave empty to turn suggestions off.",
+    "urlPlaceholder": "https://collector.example:18443"
   },
   "permissions": {
     "view": {
@@ -26,7 +29,6 @@
     "search": "Search applications...",
     "add": "Add application",
     "scan": "Scan for suggestions",
-    "import": "Import from devhub",
     "refresh": "Refresh",
     "openCatalog": "Open catalog"
   },
@@ -77,10 +79,8 @@
     "retry": "Try again",
     "save": "Could not save. Check the data and try again.",
     "delete": "Could not delete.",
-    "import": "Could not import the applications.",
     "scan": "Could not get suggestions. Check the collector configuration."
   },
-  "imported": "Applications imported.",
   "tab": {
     "title": ""
   },

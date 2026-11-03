@@ -15,13 +15,13 @@ export async function activate(ctx: PluginContext): Promise<void> {
     manage: ctx.rbac.require("applications.manage") as never,
     isAdmin: () => ctx.rbac.has("admin.plugins.manage"),
     discover: async () => {
+      const url = await ctx.settings.get<string>("collectorUrl");
       const token = await ctx.settings.get<string>("collectorToken");
       const ca = await ctx.settings.get<string>("collectorCa");
       const saved = await repository.list();
       return fetchInventory(
         ctx.fetch,
-        token,
-        ca,
+        { url, token, ca },
         saved.map((card) => card.url),
       );
     },

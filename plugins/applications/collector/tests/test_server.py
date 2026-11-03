@@ -13,10 +13,10 @@ from server import authorized, SecureInventoryServer
 
 class AuthorizationTest(unittest.TestCase):
     def test_requires_matching_source_and_bearer(self):
-        self.assertTrue(authorized('192.168.15.41', 'Bearer correct', '192.168.15.41', 'correct'))
-        self.assertFalse(authorized('192.168.15.42', 'Bearer correct', '192.168.15.41', 'correct'))
-        self.assertFalse(authorized('192.168.15.41', 'Bearer wrong', '192.168.15.41', 'correct'))
-        self.assertFalse(authorized('192.168.15.41', '', '192.168.15.41', 'correct'))
+        self.assertTrue(authorized('192.0.2.11', 'Bearer correct', '192.0.2.11', 'correct'))
+        self.assertFalse(authorized('192.0.2.12', 'Bearer correct', '192.0.2.11', 'correct'))
+        self.assertFalse(authorized('192.0.2.11', 'Bearer wrong', '192.0.2.11', 'correct'))
+        self.assertFalse(authorized('192.0.2.11', '', '192.0.2.11', 'correct'))
 
     def test_stalled_tls_client_does_not_block_other_clients(self):
         with tempfile.TemporaryDirectory() as directory:

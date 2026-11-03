@@ -35,10 +35,6 @@ function Catalog({ embedded = false }: { embedded?: boolean }) {
         "/suggestions",
       )
     ).data.data;
-  const importHub = async () => {
-    await api.post("/import-app-hub");
-    announceChange();
-  };
   if (error)
     return (
       <PanelShell
@@ -66,7 +62,6 @@ function Catalog({ embedded = false }: { embedded?: boolean }) {
       save={save}
       remove={remove}
       discover={discover}
-      importHub={importHub}
     />
   );
 }
