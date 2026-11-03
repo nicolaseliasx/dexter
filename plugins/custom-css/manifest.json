@@ -1,0 +1,35 @@
+{
+  "id": "custom-css",
+  "name": "Custom CSS",
+  "version": "0.1.0",
+  "description": "Customize the Termix interface with your own CSS, saved per user.",
+  "author": { "name": "nicolaseliasx" },
+  "license": "Apache-2.0",
+  "category": "Productivity",
+  "icon": "Paintbrush",
+  "engine": { "termix": ">=26.10.6", "api": "^1.11" },
+  "capabilities": ["ui:surface"],
+  "contributes": {
+    "settings": {
+      "user": [
+        {
+          "key": "enabled",
+          "type": "boolean",
+          "labelKey": "settings.enabled.label",
+          "descriptionKey": "settings.enabled.description",
+          "default": true
+        },
+        {
+          "key": "css",
+          "type": "textarea",
+          "labelKey": "settings.css.label",
+          "descriptionKey": "settings.css.description",
+          "placeholderKey": "settings.css.placeholder",
+          "default": ""
+        }
+      ]
+    }
+  },
+  "locales": "locales",
+  "platforms": ["linux", "darwin", "win32"]
+}

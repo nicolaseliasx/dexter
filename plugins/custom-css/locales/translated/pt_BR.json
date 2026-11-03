@@ -1,0 +1,17 @@
+{
+  "plugin": {
+    "name": "Custom CSS",
+    "description": "Personalize a interface do Termix com seu próprio CSS, salvo por usuário."
+  },
+  "settings": {
+    "enabled": {
+      "label": "Aplicar CSS personalizado",
+      "description": "Desative para restaurar a interface normal sem apagar seu CSS."
+    },
+    "css": {
+      "label": "CSS personalizado",
+      "description": "Cole seu CSS e salve para aplicar à sua interface. Se perder acesso à interface, reabra este endereço com ?custom-css=off para suspender os estilos e editá-los.",
+      "placeholder": "/* Escreva seu CSS aqui. */"
+    }
+  }
+}
