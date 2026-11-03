@@ -172,6 +172,20 @@ export interface ShellLayout {
   [key: string]: unknown;
 }
 
+/** Partial restoration never closes unrelated tabs. existingTabs maps saved slots to live ids. */
+export interface ApplyLayoutOptions {
+  name?: string;
+  mode?: "replace" | "merge";
+  existingTabs?: Record<string, string>;
+}
+
+export interface CloseTabOptions {
+  /** Only after the connection's termination was explicitly confirmed. Other guards still run. */
+  connectionAlreadyConfirmed?: boolean;
+  /** Drop an unmounted restored view from this window without deleting another window's saved record. */
+  preserveSavedRecord?: boolean;
+}
+
 /** What a plugin may ask of the shell. */
 /** Fields a plugin can fill in when it opens the host editor. */
 export interface HostDraft {
@@ -194,8 +208,10 @@ export interface ShellApi {
    * default connection, or `type` when given.
    */
   connectHost: (host: PluginHostRecord, type?: string) => void;
-  closeTab: (tabId: string) => void;
+  closeTab: (tabId: string, options?: CloseTabOptions) => void;
   renameTab: (tabId: string, label: string) => void;
+  /** Updates the next connection without remounting the current one. */
+  updateTabData: (tabId: string, data: Record<string, unknown>) => void;
   /** Saves a quick-connect tab's host as a real host. Absent in some shells. */
   saveQuickConnect?: (
     tab: PluginTabRecord,
@@ -231,10 +247,16 @@ export interface ConfirmRequest {
 
 export interface TabsApi extends Pick<
   ShellApi,
-  "openTab" | "openSingletonTab" | "connectHost" | "closeTab" | "openRailView"
+  | "openTab"
+  | "openSingletonTab"
+  | "connectHost"
+  | "closeTab"
+  | "openRailView"
+  | "renameTab"
+  | "updateTabData"
 > {
   /** The current tabs and split layout, or null before the shell mounts. */
-  getLayout: () => ShellLayout | null;
+  getLayout: (options?: { tabIds?: string[] }) => ShellLayout | null;
   /**
    * Replaces the open tabs with a saved layout. `name` labels a restored
    * split. Resolves with the tabs that could not be reopened, e.g. because
@@ -242,12 +264,16 @@ export interface TabsApi extends Pick<
    */
   applyLayout: (
     layout: ShellLayout,
-    options?: { name?: string },
+    options?: ApplyLayoutOptions,
   ) => Promise<{ skipped: string[] }>;
   /** Called whenever tabs open, close or move. */
   onChange: (listener: () => void) => Disposer;
   /** Called once the shell has restored its tabs after login. */
   onReady: (listener: () => void) => Disposer;
+  /** Runs after basic restoration, before terminals mount and before onReady. */
+  onBeforeReady: (listener: () => Promise<void>) => Disposer;
+  /** Exempts only this saved, recoverable tab from the connection unload warning. Dispose on save failure. */
+  markRecoverable: (tabId: string) => Disposer;
 }
 
 // ---------------------------------------------------------------------------

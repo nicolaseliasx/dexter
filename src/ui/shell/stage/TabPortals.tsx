@@ -33,7 +33,7 @@ export function TabPortals() {
 
   return (
     <>
-      {store.portalOrder(tabs).map((tab) => {
+      {store.portalOrder(shell.tabs.ready ? tabs : []).map((tab) => {
         const paneId = paneIdByTabId.get(tab.id);
         const inPane = !!paneId;
         const activeInline = !inPane && tab.id === activeId;

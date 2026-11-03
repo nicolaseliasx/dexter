@@ -242,6 +242,41 @@ function splitOf(id: string, tabIds: (string | null)[]): Tab {
 }
 
 describe("buildWorkspacePayload", () => {
+  it("retains the order of split tabs relative to standalone tabs", () => {
+    const split = splitOf("a", ["t1"]);
+    const payload = buildWorkspacePayload({
+      tabs: [
+        split,
+        makeTab({ id: "t2", host: makeHost() }),
+        makeTab({ id: "t1", host: makeHost(), parentSplitTabId: split.id }),
+      ],
+      activeTabId: split.id,
+    });
+    expect(payload.topLevelSlotIds).toEqual([
+      payload.splits![0].slotId,
+      payload.tabs[0].slotId,
+    ]);
+  });
+  it("filters tabs without losing split geometry or its focused pane", () => {
+    const split = splitOf("a", ["t1", "t2"]);
+    const payload = buildWorkspacePayload({
+      tabs: [
+        makeTab({ id: "t1", host: makeHost() }),
+        makeTab({ id: "t2", host: makeHost() }),
+        split,
+      ],
+      activeTabId: split.id,
+      tabIds: ["t1"],
+    });
+    expect(payload.tabs).toHaveLength(1);
+    expect(payload.splits).toHaveLength(1);
+    expect(listPanes(payload.splits![0].root).map((p) => p.tabId)).toEqual([
+      payload.tabs[0].slotId,
+      null,
+    ]);
+    expect(payload.splits![0].focusedPaneId).toBe(split.split.focusedPaneId);
+    expect(payload.activeSlotId).toBe(payload.splits![0].slotId);
+  });
   it("saves every split with its pane tabs swapped for slot ids", () => {
     let counter = 0;
     const genSlotId = () => `slot-${counter++}`;

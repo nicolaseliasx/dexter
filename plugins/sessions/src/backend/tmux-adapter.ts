@@ -147,7 +147,7 @@ export function buildPersistentTmuxRenameCommand(input: {
 }
 
 export function buildPersistentTmuxListCommand(): string {
-  return "command -v tmux >/dev/null 2>&1 || exit 127; tmux -u list-sessions -F '#{session_name}\t#{session_created}\t#{session_activity}\t#{session_attached}\t#{@termix_session_id}\t#{@termix_created_at}\t#{@termix_expiry_mode}\t#{@termix_expiry_seconds}' 2>/dev/null || true";
+  return "command -v tmux >/dev/null 2>&1 || exit 127; tmux -u list-sessions -F '#{session_name}\t#{session_created}\t#{session_activity}\t#{session_attached}\t#{@termix_session_id}\t#{@termix_created_at}\t#{@termix_expiry_mode}\t#{@termix_expiry_seconds}	#{session_id}' 2>/dev/null || true";
 }
 
 export function parsePersistentTmuxList(
@@ -165,6 +165,7 @@ export function parsePersistentTmuxList(
       markedAt,
       expiryMode,
       expirySeconds,
+      tmuxId,
     ] = line.split("\t");
     if (!validatePersistentSessionName(name) || names.has(name)) return [];
     names.add(name);
@@ -183,6 +184,7 @@ export function parsePersistentTmuxList(
     return [
       {
         name,
+        ...(tmuxId && /^\$\d+$/.test(tmuxId) ? { tmuxId } : {}),
         createdAt: createdAt || undefined,
         activityAt: activityAt || undefined,
         attachedClients: Number.isInteger(count) && count >= 0 ? count : 0,

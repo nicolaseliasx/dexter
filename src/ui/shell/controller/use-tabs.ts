@@ -9,7 +9,10 @@ import {
 } from "react";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
-import type { TabHandle } from "@termix-ssh/plugin-sdk/frontend";
+import type {
+  CloseTabOptions,
+  TabHandle,
+} from "@termix-ssh/plugin-sdk/frontend";
 import type { ConfirmOptions } from "@/components/surface/surface-scope";
 import type { Host, Tab, TabType } from "@/types/ui-types";
 import {
@@ -56,6 +59,8 @@ import {
 import { fromLegacyConfig } from "@/shell/split/split-presets";
 import {
   notifyShellReady,
+  runBeforeReady,
+  isTabRecoverable,
   notifyTabsChanged,
 } from "@/plugin-host/shell-bridge";
 import {
@@ -117,6 +122,8 @@ export function useTabs({
   const [activeTabId, setActiveTabId] = useState("dashboard");
   // Flips to true once the initial DB read (restore or skip) is done. Sync must not fire before this
   const [tabsReady, setTabsReady] = useState(false);
+  const [baseTabsReady, setBaseTabsReady] = useState(false);
+  const recoveryStarted = useRef(false);
   const [backgroundTabRecords, setBackgroundTabRecords] = useState<
     OpenTabRecord[]
   >([]);
@@ -334,9 +341,7 @@ export function useTabs({
               if (!canRestoreTabType(saved.tabType, host)) continue;
 
               // Singleton tabs use their type as the stable ID; host-bound tabs get a unique ID
-              const tabId = host
-                ? `${host.name}-${saved.tabType}-${Date.now()}-${saved.tabOrder}`
-                : saved.id;
+              const tabId = host ? `${saved.tabType}-${createId()}` : saved.id;
               const liveSession = sessionByInstanceId.get(saved.id);
               const restoredSessionId =
                 liveSession?.sessionId ?? saved.backendSessionId ?? null;
@@ -380,7 +385,7 @@ export function useTabs({
       } catch {
         // silently fail
       } finally {
-        setTabsReady(true);
+        setBaseTabsReady(true);
       }
     }
 
@@ -396,7 +401,7 @@ export function useTabs({
   // Restore split tabs once their child sessions have stable live ids. The
   // oldest single-split keys are migrated once into a first split.
   useEffect(() => {
-    if (!tabsReady || paneLayoutRestoredRef.current) return;
+    if (!baseTabsReady || paneLayoutRestoredRef.current) return;
     paneLayoutRestoredRef.current = true;
 
     try {
@@ -446,7 +451,7 @@ export function useTabs({
       localStorage.removeItem("termix_paneInstanceIds");
       localStorage.removeItem("termix_paneSizes");
     }
-  }, [tabsReady, tabs]);
+  }, [baseTabsReady, tabs]);
 
   // Debounced tab-order sync: when tab order changes, patch each persistent tab's tabOrder in DB.
   const orderSyncTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(
@@ -478,6 +483,22 @@ export function useTabs({
   useEffect(() => {
     if (tabsReady) notifyTabsChanged();
   }, [tabs, tabsReady, ...layoutDeps]);
+
+  useEffect(() => {
+    if (!baseTabsReady || recoveryStarted.current) return;
+    recoveryStarted.current = true;
+    // Let restored split state and plugin bridges commit before recovery starts.
+    void (async () => {
+      await new Promise<void>((resolve) =>
+        requestAnimationFrame(() => resolve()),
+      );
+      await runBeforeReady();
+      await new Promise<void>((resolve) =>
+        requestAnimationFrame(() => resolve()),
+      );
+      setTabsReady(true);
+    })();
+  }, [baseTabsReady]);
 
   // ─── Tab management ──────────────────────────────────────────────────────
 
@@ -764,7 +785,9 @@ export function useTabs({
   }, []);
 
   const hasActiveConnection = useCallback(() => {
-    return tabsRef.current.some(isActiveConnectionTab);
+    return tabsRef.current.some(
+      (tab) => isActiveConnectionTab(tab) && !isTabRecoverable(tab.id),
+    );
   }, [isActiveConnectionTab]);
 
   useEffect(() => {
@@ -782,14 +805,20 @@ export function useTabs({
     };
   }, [hasActiveConnection]);
 
-  const doCloseTabRef = useRef<(id: string) => void>(() => {});
+  const doCloseTabRef = useRef<(id: string, options?: CloseTabOptions) => void>(
+    () => {},
+  );
   doCloseTabRef.current = doCloseTab;
-  function doCloseTab(id: string) {
+  function doCloseTab(id: string, options?: CloseTabOptions) {
     const tabToClose = tabs.find((t) => t.id === id);
     if (tabToClose?.terminalRef?.current?.disconnect) {
       tabToClose.terminalRef.current.disconnect();
     }
-    if (tabToClose?.instanceId && isPersistentTabType(tabToClose.type)) {
+    if (
+      !options?.preserveSavedRecord &&
+      tabToClose?.instanceId &&
+      isPersistentTabType(tabToClose.type)
+    ) {
       deleteOpenTab(tabToClose.instanceId).catch(() => {});
     }
 
@@ -840,13 +869,18 @@ export function useTabs({
     else handle.refresh?.();
   }
 
-  async function closeTab(id: string) {
+  async function closeTab(id: string, options?: CloseTabOptions) {
     const tab = tabsRef.current.find((t) => t.id === id);
     const guard = tab?.terminalRef?.current?.confirmClose;
     if (guard && !(await guard())) return;
     if (!(await canCloseTab(id))) return;
     const confirmEnabled = localStorage.getItem("confirmTabClose") === "true";
-    if (tab && confirmEnabled && isActiveConnectionTab(tab)) {
+    if (
+      tab &&
+      confirmEnabled &&
+      !options?.connectionAlreadyConfirmed &&
+      isActiveConnectionTab(tab)
+    ) {
       const ask = confirmRef.current;
       const ok = ask
         ? await ask({
@@ -856,7 +890,7 @@ export function useTabs({
         : true;
       if (!ok) return;
     }
-    doCloseTabRef.current(id);
+    doCloseTabRef.current(id, options);
   }
 
   // In a split, closing acts on the focused pane: its session, or the pane
@@ -873,6 +907,14 @@ export function useTabs({
     }
     if (id !== "dashboard") closeTab(id);
   };
+
+  function updateTabData(tabId: string, data: Record<string, unknown>) {
+    setTabs((prev) =>
+      prev.map((tab) =>
+        tab.id === tabId ? { ...tab, data: { ...data } } : tab,
+      ),
+    );
+  }
 
   function renameTab(tabId: string, newLabel: string) {
     setTabs((prev) =>
@@ -908,6 +950,7 @@ export function useTabs({
     activeTabId,
     setActiveTabId,
     tabsReady,
+    baseTabsReady,
     backgroundTabRecords,
     setBackgroundTabRecords,
     tabsRef,
@@ -930,6 +973,7 @@ export function useTabs({
     doCloseTab,
     closeTab,
     renameTab,
+    updateTabData,
     refreshTab,
     reconnectAllDisconnected,
     reorderTopLevelTabs,

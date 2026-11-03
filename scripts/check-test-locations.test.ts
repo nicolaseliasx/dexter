@@ -32,6 +32,8 @@ describe("misplaced", () => {
       "src/backend/tests/utils/a.test.ts",
       "src/ui/tests/lib/b.test.tsx",
       "scripts/c.test.ts",
+      "plugins/sessions/tests/frontend/panel.test.tsx",
+      "plugins/ssh-terminal/tests/backend/socket.test.ts",
       "node_modules/pkg/e.test.ts",
       "dist/f.test.ts",
     ]);
@@ -44,9 +46,11 @@ describe("misplaced", () => {
       "src/ui/lib/b.test.tsx",
       "packages/plugin-sdk/src/d.test.ts",
       "src/backend/utils/not-a-test.ts",
+      "plugins/sessions/src/frontend/panel.test.tsx",
     ]);
     expect(misplaced(dir)).toEqual([
       "packages/plugin-sdk/src/d.test.ts",
+      "plugins/sessions/src/frontend/panel.test.tsx",
       "src/backend/utils/a.test.ts",
       "src/ui/lib/b.test.tsx",
     ]);

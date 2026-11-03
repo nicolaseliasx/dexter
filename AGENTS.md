@@ -1,6 +1,6 @@
 # Termix (ncls) (personal fork of Termix)
 
-This fork is upstream Termix **v26.10.6** with no patch in the core, plus own plugins in `plugins/`, deploy configuration and documentation. The user's global instructions live in `~/.claude/CLAUDE.md`; these project rules take precedence.
+This fork is upstream Termix **v26.10.6** with the explicitly approved recovery SDK extension described below, plus own plugins in `plugins/`, deploy configuration and documentation. The user's global instructions live in `~/.claude/CLAUDE.md`; these project rules take precedence.
 
 ## Main rule: module work ships as a plugin
 
@@ -36,3 +36,13 @@ This fork is upstream Termix **v26.10.6** with no patch in the core, plus own pl
 - Timer work needs `ctx.asUser(userId, fn)`; inside a route the actor is already the caller.
 - Plugin tests need the native `better-sqlite3` binary (`npm rebuild better-sqlite3`); `termix-plugin validate` rejects `$schema` and a `CHANGELOG` section without a type heading.
 - `useShell().split.handleAction` acts on a tab by id in the shell's internal state: after `openTab`, wait a moment before splitting.
+
+## Approved recovery SDK exception (2026-11-02)
+
+The user explicitly approved the minimum core/SDK changes for Sessions browser recovery:
+pre-mount restoration, scoped layout capture/merge, live tab payload updates, and
+disposable per-tab unload exemptions. Connection-confirmed close skips only the
+connection prompt; other guards remain. Policy, browser cache and tmux lifecycle
+stay in `plugins/sessions`; transport and clipboard work stay in the standalone
+`plugins/ssh-terminal` fork. Do not add Sessions-specific rules to core.
+See [recovery design and verification](./plugins/sessions/docs/recovery.md).

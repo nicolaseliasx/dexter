@@ -160,7 +160,8 @@ export function ShellControllerProvider({
     openSingletonTab: (type, options) =>
       tabsState.openSingletonTab(type, undefined, undefined, options?.data),
     connectHost: (host, type) => tabsState.connectHost(host, type as TabType),
-    closeTab: (tabId) => tabsState.closeTab(tabId),
+    closeTab: (tabId, options) => tabsState.closeTab(tabId, options),
+    updateTabData: (tabId, data) => tabsState.updateTabData(tabId, data),
     renameTab: (tabId, label) => tabsState.renameTab(tabId, label),
 
     openRailView: (id) => {
@@ -196,6 +197,7 @@ export function ShellControllerProvider({
       connectHost: (...args) => shellImplRef.current.connectHost(...args),
       closeTab: (...args) => shellImplRef.current.closeTab(...args),
       renameTab: (...args) => shellImplRef.current.renameTab(...args),
+      updateTabData: (...args) => shellImplRef.current.updateTabData(...args),
       openRailView: (...args) => shellImplRef.current.openRailView(...args),
       closeRailView: (...args) => shellImplRef.current.closeRailView(...args),
       openHostEditor: (...args) =>

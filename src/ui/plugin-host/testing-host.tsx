@@ -89,6 +89,7 @@ function recordingShell(calls: ShellCall[]): TabShellCallbacks {
     connectHost: record("connectHost"),
     closeTab: record("closeTab"),
     renameTab: record("renameTab"),
+    updateTabData: record("updateTabData"),
     openRailView: record("openRailView"),
     closeRailView: record("closeRailView"),
     openHostEditor: record("openHostEditor"),

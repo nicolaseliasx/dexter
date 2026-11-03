@@ -19,7 +19,11 @@ export interface RouteDeps {
 function fail(res: Response, error: unknown): void {
   const typed = asPersistentSessionError(error);
   res.status(typed.status).json({
-    error: { code: typed.code, message: typed.message, ...(typed.details ? { details: typed.details } : {}) },
+    error: {
+      code: typed.code,
+      message: typed.message,
+      ...(typed.details ? { details: typed.details } : {}),
+    },
   });
 }
 function page(value: unknown, fallback: number, max: number): number {
@@ -68,8 +72,16 @@ export function registerRoutes(router: Router, deps: RouteDeps): void {
     try {
       const limit = Math.max(1, page(req.query.limit, 50, 100));
       const offset = page(req.query.offset, 0, Number.MAX_SAFE_INTEGER);
-      const result = await deps.lifecycle.list(userId(), limit, offset, req.query.includeEnded === "true");
-      res.json({ data: result.data, meta: { total: result.total, limit, offset } });
+      const result = await deps.lifecycle.list(
+        userId(),
+        limit,
+        offset,
+        req.query.includeEnded === "true",
+      );
+      res.json({
+        data: result.data,
+        meta: { total: result.total, limit, offset },
+      });
     } catch (error) {
       fail(res, error);
     }
@@ -85,7 +97,9 @@ export function registerRoutes(router: Router, deps: RouteDeps): void {
    */
   router.post("/", guard, async (req: Request, res: Response) => {
     try {
-      res.status(201).json({ data: await deps.lifecycle.create(userId(), req.body ?? {}) });
+      res
+        .status(201)
+        .json({ data: await deps.lifecycle.create(userId(), req.body ?? {}) });
     } catch (error) {
       fail(res, error);
     }
@@ -102,7 +116,9 @@ export function registerRoutes(router: Router, deps: RouteDeps): void {
   router.post("/import", guard, async (req: Request, res: Response) => {
     try {
       const owner = userId();
-      const rows: ImportRow[] = Array.isArray(req.body?.sessions) ? req.body.sessions : [];
+      const rows: ImportRow[] = Array.isArray(req.body?.sessions)
+        ? req.body.sessions
+        : [];
       const counts = { imported: 0, skipped: 0, rejected: 0 };
       for (const row of rows.slice(0, 1000)) {
         if (!validImport(row) || !(await deps.canAccessHost(row.hostId))) {
@@ -110,7 +126,10 @@ export function registerRoutes(router: Router, deps: RouteDeps): void {
           continue;
         }
         // Rows always belong to the caller, whatever the file says.
-        const outcome = await deps.repository.importRow({ ...row, userId: owner });
+        const outcome = await deps.repository.importRow({
+          ...row,
+          userId: owner,
+        });
         counts[outcome === "imported" ? "imported" : "skipped"]++;
       }
       res.json({ data: counts });
@@ -127,13 +146,17 @@ export function registerRoutes(router: Router, deps: RouteDeps): void {
    *     responses:
    *       "200": { description: Per host results }
    */
-  router.post("/reconciliations", guard, async (_req: Request, res: Response) => {
-    try {
-      res.json({ data: await deps.reconcile(userId()) });
-    } catch (error) {
-      fail(res, error);
-    }
-  });
+  router.post(
+    "/reconciliations",
+    guard,
+    async (_req: Request, res: Response) => {
+      try {
+        res.json({ data: await deps.reconcile(userId()) });
+      } catch (error) {
+        fail(res, error);
+      }
+    },
+  );
 
   /**
    * @openapi
@@ -145,7 +168,9 @@ export function registerRoutes(router: Router, deps: RouteDeps): void {
    */
   router.post("/adoptions", guard, async (req: Request, res: Response) => {
     try {
-      res.status(201).json({ data: await deps.lifecycle.adopt(userId(), req.body ?? {}) });
+      res
+        .status(201)
+        .json({ data: await deps.lifecycle.adopt(userId(), req.body ?? {}) });
     } catch (error) {
       fail(res, error);
     }
@@ -161,7 +186,27 @@ export function registerRoutes(router: Router, deps: RouteDeps): void {
    */
   router.get("/:id", guard, async (req: Request, res: Response) => {
     try {
-      res.json({ data: await deps.lifecycle.get(param(req.params.id), userId()) });
+      res.json({
+        data: await deps.lifecycle.get(param(req.params.id), userId()),
+      });
+    } catch (error) {
+      fail(res, error);
+    }
+  });
+
+  /**
+   * @openapi
+   * /{id}/attachment:
+   *   get:
+   *     summary: Validate the remote marker and resolve an immutable tmux target before attachment
+   *     responses:
+   *       "200": { description: Current session and validated tmux target }
+   */
+  router.get("/:id/attachment", guard, async (req: Request, res: Response) => {
+    try {
+      res.json({
+        data: await deps.lifecycle.attachment(param(req.params.id), userId()),
+      });
     } catch (error) {
       fail(res, error);
     }
@@ -177,7 +222,13 @@ export function registerRoutes(router: Router, deps: RouteDeps): void {
    */
   router.patch("/:id", guard, async (req: Request, res: Response) => {
     try {
-      res.json({ data: await deps.lifecycle.patch(param(req.params.id), userId(), req.body ?? {}) });
+      res.json({
+        data: await deps.lifecycle.patch(
+          param(req.params.id),
+          userId(),
+          req.body ?? {},
+        ),
+      });
     } catch (error) {
       fail(res, error);
     }
@@ -196,7 +247,9 @@ export function registerRoutes(router: Router, deps: RouteDeps): void {
   router.delete("/:id", guard, async (req: Request, res: Response) => {
     try {
       res.json({
-        data: await deps.lifecycle.kill(param(req.params.id), userId(), { force: req.query.force === "true" }),
+        data: await deps.lifecycle.kill(param(req.params.id), userId(), {
+          force: req.query.force === "true",
+        }),
       });
     } catch (error) {
       fail(res, error);

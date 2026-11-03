@@ -1,5 +1,9 @@
 import { randomUUID } from "node:crypto";
-import type { SessionPatch, SessionRecord, SessionRepository } from "./repository.js";
+import type {
+  SessionPatch,
+  SessionRecord,
+  SessionRepository,
+} from "./repository.js";
 import { PersistentSessionError } from "./errors.js";
 import type { PersistentSessionGateway, SessionHost } from "./gateway.js";
 import type { RemotePersistentSession } from "./types.js";
@@ -50,6 +54,22 @@ export class PersistentSessionLifecycleService {
     if (!record)
       throw new PersistentSessionError("PERSISTENT_SESSION_NOT_FOUND");
     return record;
+  }
+  async attachment(
+    id: string,
+    userId: string,
+  ): Promise<SessionRecord & { tmuxTarget: string }> {
+    const record = await this.get(id, userId);
+    if (record.endedAt)
+      throw new PersistentSessionError("PERSISTENT_SESSION_NOT_FOUND");
+    const host = await this.host(record.hostId, userId);
+    const remote = (await this.gateway.list(host, { timeoutMs: 10_000 })).find(
+      (session) => session.name === record.tmuxSessionName,
+    );
+    this.marker(remote, id);
+    if (!remote?.tmuxId || !/^\$\d+$/.test(remote.tmuxId))
+      throw new PersistentSessionError("PERSISTENT_SESSION_REMOTE_FAILED");
+    return { ...record, tmuxTarget: remote.tmuxId };
   }
   async create(
     userId: string,
@@ -239,19 +259,17 @@ export class PersistentSessionLifecycleService {
       ),
       id,
     );
-    return this.repository.create(
-      {
-        id,
-        userId,
-        hostId: input.hostId,
-        displayName: input.displayName?.trim() || input.tmuxSessionName,
-        tmuxSessionName: input.tmuxSessionName,
-        managementState: "managed",
-        expiryMode: NEVER_EXPIRES,
-        expirySeconds: null,
-        remoteCreatedAt: remote.createdAt ?? createdAt,
-      },
-    );
+    return this.repository.create({
+      id,
+      userId,
+      hostId: input.hostId,
+      displayName: input.displayName?.trim() || input.tmuxSessionName,
+      tmuxSessionName: input.tmuxSessionName,
+      managementState: "managed",
+      expiryMode: NEVER_EXPIRES,
+      expirySeconds: null,
+      remoteCreatedAt: remote.createdAt ?? createdAt,
+    });
   }
   async refresh(
     hostId: number,

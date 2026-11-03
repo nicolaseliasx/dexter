@@ -722,6 +722,8 @@ export function createPluginApp(
       closeTab: shell.closeTab,
       onChange: (listener) => track(tabsApi.onChange(listener)),
       onReady: (listener) => track(tabsApi.onReady(listener)),
+      onBeforeReady: (listener) => track(tabsApi.onBeforeReady(listener)),
+      markRecoverable: (tabId) => track(tabsApi.markRecoverable(tabId)),
     },
 
     confirm: (options) => shell.confirm!(options),

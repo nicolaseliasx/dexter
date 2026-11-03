@@ -1,6 +1,9 @@
 import type { ConfirmOptions } from "@/components/surface/surface-scope";
 import type { ComponentType, Ref } from "react";
-import type { HostDraft } from "@termix-ssh/plugin-sdk/frontend";
+import type {
+  HostDraft,
+  CloseTabOptions,
+} from "@termix-ssh/plugin-sdk/frontend";
 import type { Host, Tab } from "@/types/ui-types";
 import { createRegistry } from "@/lib/registry";
 import { viewOwner } from "@/plugin-host/view-ownership";
@@ -25,8 +28,9 @@ export interface TabShellCallbacks {
   ) => void;
   /** Connects the way clicking the host in the host list does. */
   connectHost: (host: Host, type?: string) => void;
-  closeTab: (tabId: string) => void;
+  closeTab: (tabId: string, options?: CloseTabOptions) => void;
   renameTab: (tabId: string, label: string) => void;
+  updateTabData: (tabId: string, data: Record<string, unknown>) => void;
 
   openRailView: (id: string) => void;
   /** Closes a rail view wherever it is shown, e.g. when its feature goes away. */

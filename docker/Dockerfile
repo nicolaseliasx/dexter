@@ -36,6 +36,16 @@ COPY . .
 
 RUN npm run build:backend:core
 
+# The local SSH Terminal fork stays a bundled plugin: unsigned uploads must not
+# bypass the installer's protection for bundled IDs. Build its standalone package
+# against this checkout's SDK, without running install hooks or native tests.
+FROM deps AS local-plugins-builder
+WORKDIR /app
+COPY . .
+RUN npm run build:sdk && \
+    cd plugins/ssh-terminal && npm ci --install-links --ignore-scripts && npm run build && \
+    node -e "require('/app/scripts/lib/bundled-plugins.cjs').copyLocalBuild('/app/plugins/ssh-terminal', '/app/local-ssh-terminal')"
+
 # Stage 3b: Stage the bundled plugins for one profile (minimal, standard or
 # full, see docker/bundled-plugins.json). Only this stage and the final one
 # differ between profiles, so the other stages are built once.
@@ -48,6 +58,7 @@ COPY docker/bundled-plugins.json ./docker/bundled-plugins.json
 # Bundled plugin downloads show in the plugin store, so keep them between builds.
 RUN --mount=type=cache,target=/app/node_modules/.cache/termix-bundled-plugins \
     node scripts/build-plugins.cjs --profile "$PLUGIN_PROFILE"
+COPY --from=local-plugins-builder /app/local-ssh-terminal/ /app/dist/plugins/ssh-terminal/
 
 # Stage 4: Download OPKSSH binary for the target platform so the image works offline
 FROM node:24-slim AS opkssh-downloader

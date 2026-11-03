@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0
+
+### Added
+
+- Browser restoration of per-window tabs and splits, stable session identity, validated reconnects, and synchronized rename/termination across all session views.
+
 ## 0.1.4
 
 ### Changed
