@@ -1,4 +1,4 @@
-> **Termix (ncls)** is a personal fork of [Termix](https://github.com/Termix-SSH/Termix) **v26.10.6** by Termix-SSH, licensed under Apache 2.0. The core includes the explicitly approved recovery SDK extension; module behavior lives in [`plugins/`](./plugins) (`sessions`, `ssh-terminal`) and deploy notes in [`docs/modernizacao`](./docs/modernizacao). See [`MODIFICATIONS.md`](./MODIFICATIONS.md).
+> **Termix (ncls)** is a personal fork of [Termix](https://github.com/Termix-SSH/Termix) **v26.10.6** by Termix-SSH, licensed under Apache 2.0. The core includes the explicitly approved recovery SDK extension; module behavior lives in [`plugins/`](./plugins) (`sessions`, `ssh-terminal`) and deploy notes in [`docs/modernizacao`](./docs/modernizacao). See [`MODIFICATIONS.md`](./MODIFICATIONS.md) and [power-loss recovery](./docs/modernizacao/05-boot-recovery.md).
 
 <div align="center">
 

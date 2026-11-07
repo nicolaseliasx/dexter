@@ -2,6 +2,29 @@
 
 Production is a single container and a data volume. A new image is promoted only with the owner's authorization, in a maintenance window.
 
+## Current deployment (2026-11-04)
+
+Production runs on LXC 101 (`192.168.15.41:8443`) with image
+`termix:resilience-20261104` and compose file
+`/home/admin/termix-migration/docker-compose.lxc.yml`.
+This image retains the exact previous production layers and adds only the
+tested frontend with the generic health-monitor correction. Its service-worker
+cache version is `26-10-6-resilience-20261104`.
+
+The stopped-service backup is
+`/home/admin/termix-migration/resilience-20261104/data-cold.tar.gz` in the LXC,
+with SHA-256 verification beside it. `compose-before.yml` and `previous-image-id`
+in that directory identify the rollback. To revert this frontend-only release,
+restore that compose file and run `docker compose up -d --no-deps termix` using
+the production compose path; no schema migration was introduced.
+
+Container recreation can spend several minutes in the entrypoint's recursive
+ownership preparation on this LXC. Observe that process and allow up to ten
+minutes for health during deployment; a two-minute deadline caused an early
+rollback before the application started. A subsequent healthy state alone is
+insufficient: verify the active image, published bundle, inventory and attaches.
+See [power-loss recovery](./05-boot-recovery.md) for the tmux integration.
+
 ## Before
 
 1. Build the image from `docker/Dockerfile` and test it on an `--internal` Docker network, with a **copy** of the data volume and a throwaway sshd/tmux (see [AGENTS.md](../../AGENTS.md)). Never point a test instance at real hosts.
@@ -28,7 +51,7 @@ The 26.10.6 image refuses a database from 2.8 or older ("Upgrade to Termix 2.9.1
 
 ## State after the 2026-11-02 cutover
 
-Production runs `termix:26.10.6-ncls.1`. The cold backup of the 2.8 data and the saved 2.8 image are kept outside the repository (`~/_tmp/20261102-cutover`). Because the migration is one-way, a rollback means restoring that backup into the volume and loading the saved image.
+At this original cutover production ran `termix:26.10.6-ncls.1`. The cold backup of the 2.8 data and the saved 2.8 image are kept outside the repository (`~/_tmp/20261102-cutover`). Because the migration is one-way, a rollback to 2.8 means restoring that backup into the volume and loading the saved image.
 
 ## Plugin-only updates (no new image)
 

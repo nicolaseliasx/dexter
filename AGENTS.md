@@ -27,9 +27,11 @@ This fork is upstream Termix **v26.10.6** with the explicitly approved recovery 
 
 - Run the image on an `--internal` Docker network with a **copy** of the volume (`PUID=0 PGID=0`) and a throwaway sshd/tmux (`ListenAddress` off loopback, or share the network namespace). Never point it at `termix.ncls.cc` or at real hosts.
 - Browser: `playwright-core` with `/usr/bin/chromium`, in a directory outside the repository. Rail items: `button:has(span:text-is("Sessions"))`.
-- Production today is `termix:26.10.6-ncls.1` (built from this repository's `docker/Dockerfile`) with the `termix-data` volume, started by `/srv/apps/termix/docker-compose.yml`; the container listens on `127.0.0.1:8443` in the `termix-net` network next to `termix-guacd`. Promote only with authorization, a backup taken with the service stopped, and the steps and rollback in `docs/modernizacao/PRODUCTION.md`.
+- Production is on LXC 101 (`192.168.15.41:8443`), image `termix:resilience-20261104`, compose `/home/admin/termix-migration/docker-compose.lxc.yml`, next to `termix-guacd`. The devhub containers remain stopped as an older rollback. Promote only with authorization, a backup taken with the service stopped, and the steps and rollback in `docs/modernizacao/PRODUCTION.md`.
 
 ## Gotchas
+
+- tmux-resurrect must preserve `@termix_*` ownership markers as well as layout/processes. The authorized local patch and helper are documented in [power-loss recovery](./docs/modernizacao/05-boot-recovery.md). Recheck this integration after upgrading resurrect. Never recover identity solely by session name or loosen the attachment UUID check.
 
 - `applications` is installed on the LXC 101 instance; `homepage` is off. Its read-only inventory collector runs as the devhub user service `applications-collector`, with a TLS endpoint restricted to the LXC and an admin-configured secret in Termix. Source and tests are in `plugins/applications/collector/`; deployment is `/srv/apps/applications-collector/current`. The retired app-hub backup is in `~/_releases/app-hub/retired-20261103/`. Never print or commit the collector token or private key.
 - Plugins cannot read legacy core tables (`ctx.db` only sees its own tables): migrate data through an import route (`POST /plugin-api/sessions/import`), not SQL.
@@ -37,6 +39,8 @@ This fork is upstream Termix **v26.10.6** with the explicitly approved recovery 
 - Timer work needs `ctx.asUser(userId, fn)`; inside a route the actor is already the caller.
 - Plugin tests need the native `better-sqlite3` binary (`npm rebuild better-sqlite3`); `termix-plugin validate` rejects `$schema` and a `CHANGELOG` section without a type heading.
 - `termix-plugin pack` packs the existing `dist/` and does not rebuild: run `build` first and inspect the `.tmxplug`. Builds and tests need Node 24 (`.nvmrc`).
+- tmux tests: inside a tmux session `$TMUX` outranks `TMUX_TMPDIR`, so an "isolated" test server is silently the real one and `kill-server` kills the user's sessions (happened 2026-11-06). Delete `TMUX` from the child env, assert `#{socket_path}` is inside the temp dir, and only then `kill-server`.
+- tmux drops DECSET 2026 (synchronized output) unless the client's `terminal-features` include `sync`; Codex wraps every frame in it, so menus repaint half-drawn in xterm.js. Sessions 0.2.6 enables it in `lifecycle.attachment` (idempotent, best effort; needs tmux >= 3.4). Verified on tmux 3.5a only; the browser effect was not measured.
 - `useShell().split.handleAction` acts on a tab by id in the shell's internal state: after `openTab`, wait a moment before splitting.
 
 ## Approved recovery SDK exception (2026-11-02)
@@ -48,3 +52,9 @@ connection prompt; other guards remain. Policy, browser cache and tmux lifecycle
 stay in `plugins/sessions`; transport and clipboard work stay in the standalone
 `plugins/ssh-terminal` fork. Do not add Sessions-specific rules to core.
 See [recovery design and verification](./plugins/sessions/docs/recovery.md).
+
+## Approved health monitor exception (2026-11-04)
+
+The user explicitly authorized correcting the core database health monitor to
+accept structured plugin errors without throwing or masking the original error.
+This is a generic error-handling fix, not a relaxation of Sessions identity checks.
