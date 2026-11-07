@@ -36,6 +36,7 @@ This fork is upstream Termix **v26.10.6** with the explicitly approved recovery 
 - `ctx.db` has no partial indexes: enforce conditional uniqueness in code.
 - Timer work needs `ctx.asUser(userId, fn)`; inside a route the actor is already the caller.
 - Plugin tests need the native `better-sqlite3` binary (`npm rebuild better-sqlite3`); `termix-plugin validate` rejects `$schema` and a `CHANGELOG` section without a type heading.
+- `termix-plugin pack` packs the existing `dist/` and does not rebuild: run `build` first and inspect the `.tmxplug`. Builds and tests need Node 24 (`.nvmrc`).
 - `useShell().split.handleAction` acts on a tab by id in the shell's internal state: after `openTab`, wait a moment before splitting.
 
 ## Approved recovery SDK exception (2026-11-02)
