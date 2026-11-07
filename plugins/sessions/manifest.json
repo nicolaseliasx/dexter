@@ -1,7 +1,7 @@
 {
   "id": "sessions",
   "name": "Sessions",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Persistent tmux sessions per host: create, rename, hibernate and reattach from one list.",
   "author": {
     "name": "nicolaseliasx"
@@ -29,7 +29,7 @@
     "ui:surface"
   ],
   "dependencies": {
-    "ssh-terminal": "1.2.1-ncls.1 || 1.2.1-ncls.2 || 1.2.1-ncls.3 || 1.2.1-ncls.4"
+    "ssh-terminal": "1.2.1-ncls.1 || 1.2.1-ncls.2 || 1.2.1-ncls.3 || 1.2.1-ncls.4 || 1.2.1-ncls.5"
   },
   "contributes": {
     "panels": [

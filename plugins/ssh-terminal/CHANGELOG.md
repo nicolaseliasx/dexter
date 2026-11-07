@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1-ncls.5
+
+### Fixed
+
+- Refit the terminal when its container is resized even if the tab was hidden when the terminal was created (the resize observer used a stale visibility value and never fitted).
+
 ## 1.2.1-ncls.4
 
 ### Fixed
