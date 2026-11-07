@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.7
+
+### Fixed
+
+- Accept SSH Terminal 1.2.1-ncls.4. Sessions 0.2.6 was blocked ("requires ssh-terminal ... ncls.3, but ncls.4 is installed") once the image bundling ncls.4 was promoted. A test now checks that the dependency range includes the SSH Terminal version in this repository.
+
 ## 0.2.6
 
 ### Fixed

@@ -27,7 +27,7 @@ This fork is upstream Termix **v26.10.6** with the explicitly approved recovery 
 
 - Run the image on an `--internal` Docker network with a **copy** of the volume (`PUID=0 PGID=0`) and a throwaway sshd/tmux (`ListenAddress` off loopback, or share the network namespace). Never point it at `termix.ncls.cc` or at real hosts.
 - Browser: `playwright-core` with `/usr/bin/chromium`, in a directory outside the repository. Rail items: `button:has(span:text-is("Sessions"))`.
-- Production is on LXC 101 (`192.168.15.41:8443`), image `termix:resilience-20261104`, compose `/home/admin/termix-migration/docker-compose.lxc.yml`, next to `termix-guacd`. The devhub containers remain stopped as an older rollback. Promote only with authorization, a backup taken with the service stopped, and the steps and rollback in `docs/modernizacao/PRODUCTION.md`.
+- Production is on LXC 101 (`192.168.15.41:8443`), image `termix:26.10.6-ncls.4` (previous `termix:resilience-20261104` kept as rollback), compose `/home/admin/termix-migration/docker-compose.lxc.yml`, next to `termix-guacd`. The devhub containers remain stopped as an older rollback. Promote only with authorization, a backup taken with the service stopped, and the steps and rollback in `docs/modernizacao/PRODUCTION.md`.
 
 ## Gotchas
 

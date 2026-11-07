@@ -2,21 +2,24 @@
 
 Production is a single container and a data volume. A new image is promoted only with the owner's authorization, in a maintenance window.
 
-## Current deployment (2026-11-04)
+## Current deployment (2026-11-07)
 
 Production runs on LXC 101 (`192.168.15.41:8443`) with image
-`termix:resilience-20261104` and compose file
+`termix:26.10.6-ncls.4` and compose file
 `/home/admin/termix-migration/docker-compose.lxc.yml`.
-This image retains the exact previous production layers and adds only the
-tested frontend with the generic health-monitor correction. Its service-worker
-cache version is `26-10-6-resilience-20261104`.
+It is built from `docker/Dockerfile` at `main` (PR #11) and bundles `ssh-terminal`
+1.2.1-ncls.4 and the generic health-monitor correction.
 
 The stopped-service backup is
-`/home/admin/termix-migration/resilience-20261104/data-cold.tar.gz` in the LXC,
+`/home/admin/termix-migration/ncls4-20261107/data-cold.tar.gz` in the LXC,
 with SHA-256 verification beside it. `compose-before.yml` and `previous-image-id`
-in that directory identify the rollback. To revert this frontend-only release,
-restore that compose file and run `docker compose up -d --no-deps termix` using
-the production compose path; no schema migration was introduced.
+in that directory identify the rollback (`termix:resilience-20261104`, which is
+still loaded on the LXC). To revert, restore that compose file and run
+`docker compose up -d --no-deps termix` using the production compose path; no
+schema migration was introduced. Sessions 0.2.7 stays compatible with the
+rollback image (it accepts ssh-terminal ncls.1 to ncls.4).
+The previous deployment (2026-11-04, `termix:resilience-20261104`) used
+`resilience-20261104/` in the same directory.
 
 Container recreation can spend several minutes in the entrypoint's recursive
 ownership preparation on this LXC. Observe that process and allow up to ten
@@ -65,6 +68,7 @@ A plugin that is not bundled (Sessions, Applications, Custom CSS) is updated fro
 
 ## State on 2026-11-07
 
-- Sessions **0.2.6** runs in production (installed from `sessions-0.2.6.tmxplug`); release [`sessions-v0.2.6`](https://github.com/nicolaseliasx/termix/releases/tag/sessions-v0.2.6) carries it with Applications 0.6.0 and Custom CSS 0.1.0 and a `SHA256SUMS`.
-- The bundled `ssh-terminal` in production is still **1.2.1-ncls.1**. Version **1.2.1-ncls.3** (URLs wrapped by Codex tables, coalesced autosuggestion) is on `main` but only reaches production with the next image, following the procedure above. Sessions 0.2.6 accepts ncls.1, ncls.2 and ncls.3.
+- Image `termix:26.10.6-ncls.4` (release [`v26.10.6-ncls.4`](https://github.com/nicolaseliasx/termix/releases/tag/v26.10.6-ncls.4)) was promoted on LXC 101 with `ncls4-promote-20261107.sh`, run as root through `pct exec 101` on the Proxmox host (the LXC `admin` has no root or Docker). It bundles `ssh-terminal` **1.2.1-ncls.4** and the health-monitor fix. The cold backup, `previous-image-id` and `compose-before.yml` are in `/home/admin/termix-migration/ncls4-20261107`; rollback is the previous image `termix:resilience-20261104`.
+- Sessions **0.2.7** runs in production; release [`sessions-v0.2.7`](https://github.com/nicolaseliasx/termix/releases/tag/sessions-v0.2.7) carries it with Applications 0.6.0 and Custom CSS 0.1.0 and a `SHA256SUMS`.
+- **Incident:** right after the promotion Sessions 0.2.6 went `blocked` (`requires "ssh-terminal" ... ncls.3, but 1.2.1-ncls.4 is installed`) and disappeared from the UI, because its manifest pins the exact `ssh-terminal` versions it accepts. Fixed by Sessions 0.2.7 (installed by upload, data intact). Before promoting an image that changes the bundled `ssh-terminal` version, check that `plugins/sessions/manifest.json` `dependencies` accepts it; a test now enforces this.
 - Not measured: the browser effect of the tmux `sync` feature on Codex repaint, and the Sessions backend tests on this machine (they need `better-sqlite3` built for Node 24).

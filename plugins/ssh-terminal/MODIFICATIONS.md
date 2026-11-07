@@ -16,11 +16,12 @@ Version 1.2.1-ncls.1 changes these upstream files:
 - `manifest.json`, package metadata/lock and CHANGELOG: identify the local fork
   and SDK compatibility.
 
-Version 1.2.1-ncls.2 and 1.2.1-ncls.3 change:
+Version 1.2.1-ncls.2, 1.2.1-ncls.3 and 1.2.1-ncls.4 change:
 
 - `src/frontend/terminal/Terminal.tsx`: autosuggestion refreshes are coalesced to one
   pending animation frame (ncls.2); a link provider for URLs that a TUI table wrapped
   onto the next row is registered before the web-links addon (ncls.3).
+- `src/frontend/look/terminal-theme.ts`: the `oled` UI theme maps to a pure black terminal background (ncls.4).
 - `src/frontend/terminal/split-url-links.ts` (new): the heuristic. The URL must end its
   cell, another cell must follow on the row, and the next row must continue at the
   cell's start column. Prose that ends in a URL is left alone; wide characters are not
