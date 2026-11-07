@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.8
+
+### Fixed
+
+- Accept SSH Terminal 1.2.1-ncls.5, so Sessions is not blocked once the image bundling it is promoted.
+
 ## 0.2.7
 
 ### Fixed

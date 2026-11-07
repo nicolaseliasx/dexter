@@ -1021,7 +1021,7 @@ const TerminalInner = forwardRef<TerminalHandle, SSHTerminalProps>(
       if (
         !fitAddonRef.current ||
         !terminal ||
-        !isVisible ||
+        !isVisibleRef.current ||
         isFittingRef.current
       ) {
         return;
