@@ -29,3 +29,19 @@ The 26.10.6 image refuses a database from 2.8 or older ("Upgrade to Termix 2.9.1
 ## State after the 2026-11-02 cutover
 
 Production runs `termix:26.10.6-ncls.1`. The cold backup of the 2.8 data and the saved 2.8 image are kept outside the repository (`~/_tmp/20261102-cutover`). Because the migration is one-way, a rollback means restoring that backup into the volume and loading the saved image.
+
+## Plugin-only updates (no new image)
+
+A plugin that is not bundled (Sessions, Applications, Custom CSS) is updated from its `.tmxplug`, without touching the container. `ssh-terminal` is bundled, so it only changes with a new image.
+
+1. `npm run build` then `npm run pack` in the plugin directory; unpack the `.tmxplug` and check that `manifest.json` has the version and `dist/` has the new code. Note the printed sha256.
+2. Take a baseline (sessions list and hosts with auth type) through the API. Keep the previous `.tmxplug` for rollback.
+3. Install with the `termix-manager` upload flow (`POST /plugins/upload`, check id, version and capabilities, then `POST /plugins/upload/<token>/install`). Plugin developer mode must be on.
+4. Check `GET /plugins` (new version, `active`), `termix-manager health`, and the baseline again; a plugin update does not touch its data.
+5. Roll back by installing the previous `.tmxplug` the same way.
+
+## State on 2026-11-07
+
+- Sessions **0.2.6** runs in production (installed from `sessions-0.2.6.tmxplug`); release [`sessions-v0.2.6`](https://github.com/nicolaseliasx/termix/releases/tag/sessions-v0.2.6) carries it with Applications 0.6.0 and Custom CSS 0.1.0 and a `SHA256SUMS`.
+- The bundled `ssh-terminal` in production is still **1.2.1-ncls.1**. Version **1.2.1-ncls.3** (URLs wrapped by Codex tables, coalesced autosuggestion) is on `main` but only reaches production with the next image, following the procedure above. Sessions 0.2.6 accepts ncls.1, ncls.2 and ncls.3.
+- Not measured: the browser effect of the tmux `sync` feature on Codex repaint, and the Sessions backend tests on this machine (they need `better-sqlite3` built for Node 24).
