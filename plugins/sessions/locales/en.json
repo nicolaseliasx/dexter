@@ -18,8 +18,11 @@
       "description": "Freeze the processes of a session with no attached client after this many idle hours. 0 turns hibernation off."
     }
   },
-  "attach": "Attach",
-  "split": "Split",
+  "menu": {
+    "more": "More actions",
+    "split": "Open in split",
+    "rename": "Rename"
+  },
   "splitHint": "Attach in a split next to the current tab",
   "standby": "standby",
   "created": "Session created",
@@ -27,6 +30,7 @@
   "create": {
     "host": "Host",
     "name": "Name",
+    "placeholder": "e.g. codex-termix",
     "button": "Create session"
   },
   "rename": {
@@ -38,7 +42,8 @@
   "terminate": {
     "title": "Terminate {{name}}?",
     "description": "The remote tmux process will be stopped.",
-    "confirm": "Terminate"
+    "confirm": "Terminate",
+    "cancel": "Cancel"
   },
   "force": {
     "title": "Force remove?",

@@ -43,6 +43,7 @@ function fixtures(
     list: vi.fn(async () => remote),
     kill: vi.fn(async () => undefined),
     killUnguarded: vi.fn(async () => undefined),
+    enableSyncOutput: vi.fn(async () => undefined),
   };
   const service = new PersistentSessionLifecycleService(
     repository as never,
@@ -65,6 +66,17 @@ describe("PersistentSessionLifecycleService kill", () => {
     ]);
     await expect(service.attachment("session-id", "u")).rejects.toMatchObject({
       code: "PERSISTENT_SESSION_MARKER_MISMATCH",
+    });
+  });
+  it("forwards synchronized output before attach, and a failure there never blocks the attach", async () => {
+    const { service, gateway } = fixtures([
+      { name: "codex", tmuxId: "$7", marker: { id: "session-id" } },
+    ]);
+    await service.attachment("session-id", "u");
+    expect(gateway.enableSyncOutput).toHaveBeenCalledTimes(1);
+    gateway.enableSyncOutput.mockRejectedValue(new Error("tmux too old"));
+    await expect(service.attachment("session-id", "u")).resolves.toMatchObject({
+      tmuxTarget: "$7",
     });
   });
   it("ends the local record with force when the host is unreachable", async () => {

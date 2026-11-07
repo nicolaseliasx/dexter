@@ -69,6 +69,8 @@ export class PersistentSessionLifecycleService {
     this.marker(remote, id);
     if (!remote?.tmuxId || !/^\$\d+$/.test(remote.tmuxId))
       throw new PersistentSessionError("PERSISTENT_SESSION_REMOTE_FAILED");
+    // Best effort: a host whose tmux lacks the feature must still attach.
+    await this.gateway.enableSyncOutput(host).catch(() => undefined);
     return { ...record, tmuxTarget: remote.tmuxId };
   }
   async create(

@@ -89,6 +89,16 @@ export function buildPersistentTmuxAttachCommand(
   return `${buildPersistentTmuxPaneSignalScript(name, "CONT")}; ${resetShellMouse}; tmux -u attach-session ${readOnly ? "-r " : ""}-t ${target(name)}`;
 }
 
+/**
+ * tmux drops the synchronized-output markers (DECSET 2026) a TUI such as Codex
+ * wraps around each frame unless the client terminal-features include sync, so
+ * xterm.js paints half-drawn frames. Idempotent: `-a` appends on every call.
+ * tmux older than 3.4 does not know the feature; the command never fails.
+ */
+export function buildPersistentTmuxSyncOutputCommand(): string {
+  return `tmux show-options -s terminal-features 2>/dev/null | grep -q ':sync' || tmux set-option -s -a terminal-features ',xterm*:sync' 2>/dev/null || true`;
+}
+
 export function buildPersistentTmuxHasSessionCommand(name: string): string {
   return `tmux has-session -t ${target(name)}`;
 }
