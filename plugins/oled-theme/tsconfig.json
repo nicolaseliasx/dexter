@@ -1,0 +1,5 @@
+{
+  "extends": "./node_modules/@termix-ssh/plugin-sdk/tsconfig.plugin.json",
+  "compilerOptions": { "strict": true },
+  "include": ["tests", "vitest.config.ts"]
+}

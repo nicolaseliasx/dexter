@@ -18,4 +18,13 @@ describe("resolveTermixThemeColors", () => {
       TERMINAL_THEMES.termixDark.colors.selectionBackground,
     );
   });
+
+  it("paints the terminal pure black with the OLED UI theme", () => {
+    const colors = resolveTermixThemeColors("termix", "oled");
+    expect(colors.background).toBe("#000000");
+    expect(colors.cursorAccent).toBe("#000000");
+    expect(colors.selectionBackground).toBe(
+      TERMINAL_THEMES.termixDark.colors.selectionBackground,
+    );
+  });
 });

@@ -8,6 +8,7 @@ const TERMIX_DEFAULT_COLORS: Record<
 > = {
   dark: { background: "#0c0d0b", foreground: "#fafafa" },
   light: { background: "#ffffff", foreground: "#111210" },
+  oled: { background: "#000000", foreground: "#ededed" },
   dracula: { background: "#282a36", foreground: "#f8f8f2" },
   catppuccin: { background: "#1e1e2e", foreground: "#cdd6f4" },
   nord: { background: "#2e3440", foreground: "#eceff4" },

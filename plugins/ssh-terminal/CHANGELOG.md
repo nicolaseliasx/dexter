@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1-ncls.4
+
+### Fixed
+
+- Paint the terminal pure black (`#000000`) with the OLED UI theme instead of falling back to the Dark theme background.
+
 ## 1.2.1-ncls.3
 
 ### Fixed

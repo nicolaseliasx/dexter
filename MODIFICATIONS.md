@@ -4,6 +4,10 @@ Termix (ncls) is a derivative work of [Termix](https://github.com/Termix-SSH/Ter
 
 ## Changes
 
+- **Health monitor (authorized 2026-11-04):** `src/ui/lib/db-health-monitor.ts`
+  accepts structured plugin errors and malformed error values while preserving
+  database/network degradation reporting; regression tests cover these paths.
+
 1. **New `plugins/sessions` directory.** The Sessions plugin (persistent tmux sessions) is own code, Apache-2.0, a standalone npm package that does not touch the Termix core.
 2. **`eslint.config.mjs`:** `plugins/**` added to the ignore list.
 3. **Documentation:** `AGENTS.md`, this file, `docs/modernizacao/` and a fork note at the top of `README.md`.

@@ -1,0 +1,6 @@
+{
+  "plugin": {
+    "name": "OLED Theme",
+    "description": "True black theme for OLED screens: pure #000000 workspace and terminal, near-black panels with subtle borders."
+  }
+}
