@@ -103,6 +103,7 @@ import {
   getUseRightClickCopyPaste,
 } from "./terminal-clipboard.ts";
 import { quoteTerminalImagePath } from "./terminal-image-path.ts";
+import { createSplitUrlLinkProvider } from "./split-url-links";
 import {
   dispatchKeybindingAction,
   isTerminalKeybindingAction,
@@ -769,11 +770,26 @@ const TerminalInner = forwardRef<TerminalHandle, SSHTerminalProps>(
       setAutosuggestionStyle(position.style);
     }, [clearAutosuggestion, getCursorScreenPosition, isAutocompleteEnabled]);
 
+    const autosuggestionFrameRef = useRef<number | null>(null);
     const scheduleAutosuggestionUpdate = useCallback(() => {
-      window.requestAnimationFrame(() => {
+      // Output can keep arriving while a hidden tab's frames are suspended.
+      // Only the latest terminal state needs an autosuggestion update.
+      if (autosuggestionFrameRef.current !== null) return;
+      autosuggestionFrameRef.current = window.requestAnimationFrame(() => {
+        autosuggestionFrameRef.current = null;
         updateAutosuggestion();
       });
     }, [updateAutosuggestion]);
+
+    useEffect(
+      () => () => {
+        if (autosuggestionFrameRef.current !== null) {
+          window.cancelAnimationFrame(autosuggestionFrameRef.current);
+          autosuggestionFrameRef.current = null;
+        }
+      },
+      [],
+    );
 
     const acceptAutosuggestion = useCallback(() => {
       const suffix = autosuggestionRef.current;
@@ -2878,7 +2894,7 @@ const TerminalInner = forwardRef<TerminalHandle, SSHTerminalProps>(
       const clipboardAddon = new ClipboardAddon(undefined, clipboardProvider);
       const unicode11Addon = new Unicode11Addon();
       const searchAddon = new SearchAddon();
-      const webLinksAddon = new WebLinksAddon((event, uri) => {
+      const openLink = (event: MouseEvent, uri: string) => {
         const url =
           uri.startsWith("http://") || uri.startsWith("https://")
             ? uri
@@ -2894,13 +2910,18 @@ const TerminalInner = forwardRef<TerminalHandle, SSHTerminalProps>(
         } else {
           setLinkClickDialog({ url });
         }
-      });
+      };
+      const webLinksAddon = new WebLinksAddon(openLink);
 
       fitAddonRef.current = fitAddon;
       searchAddonRef.current = searchAddon;
       terminal.loadAddon(fitAddon);
       terminal.loadAddon(clipboardAddon);
       terminal.loadAddon(unicode11Addon);
+      // Before the addon: it wins on URLs a table wrapped onto two rows.
+      terminal.registerLinkProvider(
+        createSplitUrlLinkProvider(terminal, openLink),
+      );
       terminal.loadAddon(webLinksAddon);
       terminal.loadAddon(searchAddon);
 

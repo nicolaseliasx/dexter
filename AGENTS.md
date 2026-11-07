@@ -31,6 +31,7 @@ This fork is upstream Termix **v26.10.6** with the explicitly approved recovery 
 
 ## Gotchas
 
+- `applications` is installed on the LXC 101 instance; `homepage` is off. Its read-only inventory collector runs as the devhub user service `applications-collector`, with a TLS endpoint restricted to the LXC and an admin-configured secret in Termix. Source and tests are in `plugins/applications/collector/`; deployment is `/srv/apps/applications-collector/current`. The retired app-hub backup is in `~/_releases/app-hub/retired-20261103/`. Never print or commit the collector token or private key.
 - Plugins cannot read legacy core tables (`ctx.db` only sees its own tables): migrate data through an import route (`POST /plugin-api/sessions/import`), not SQL.
 - `ctx.db` has no partial indexes: enforce conditional uniqueness in code.
 - Timer work needs `ctx.asUser(userId, fn)`; inside a route the actor is already the caller.

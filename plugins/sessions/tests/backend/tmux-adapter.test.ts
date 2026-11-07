@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { execFileSync } from "node:child_process";
+import { mkdtempSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import {
   buildPersistentTmuxAttachCommand,
   buildPersistentTmuxCreateCommand,
@@ -8,6 +11,7 @@ import {
   buildPersistentTmuxKillByNameCommand,
   buildPersistentTmuxKillCommand,
   buildPersistentTmuxListCommand,
+  buildPersistentTmuxSyncOutputCommand,
   buildPersistentTmuxThawCommand,
   parsePersistentTmuxList,
   shellQuote,
@@ -16,7 +20,11 @@ import {
 describe("persistent tmux adapter", () => {
   it("round-trips apostrophes and shell metacharacters across a POSIX shell", () => {
     const value = "a'b $HOME; $(echo unsafe)\nline";
-    expect(execFileSync("sh", ["-c", `printf %s ${shellQuote(value)}`], { encoding: "utf8" })).toBe(value);
+    expect(
+      execFileSync("sh", ["-c", `printf %s ${shellQuote(value)}`], {
+        encoding: "utf8",
+      }),
+    ).toBe(value);
   });
   const input = {
     name: "safe-session",
@@ -96,5 +104,53 @@ describe("persistent tmux adapter", () => {
       name: "safe-session",
       marker: { id: "session-id", expirySeconds: 300 },
     });
+  });
+});
+
+describe("tmux synchronized output forwarding", () => {
+  // tmux drops the DECSET 2026 frame markers a TUI such as Codex emits unless
+  // the client's terminal-features include sync, so xterm.js paints half frames.
+  const hasTmux = (() => {
+    try {
+      execFileSync("tmux", ["-V"]);
+      return true;
+    } catch {
+      return false;
+    }
+  })();
+  it.runIf(hasTmux)("enables sync once, however many times it runs", () => {
+    const dir = mkdtempSync(join(tmpdir(), "sessions-sync-"));
+    // Inside tmux, $TMUX outranks TMUX_TMPDIR and would aim every command, and
+    // the kill-server below, at the developer's real server. Drop it.
+    const env: NodeJS.ProcessEnv = { ...process.env, TMUX_TMPDIR: dir };
+    delete env.TMUX;
+    const tmux = (...args: string[]) =>
+      execFileSync("tmux", args, { env, encoding: "utf8" });
+    let isolated = false;
+    try {
+      tmux("-f", "/dev/null", "new-session", "-d", "-s", "t", "sleep 30");
+      // Never continue (nor kill-server) unless this is the throwaway server.
+      expect(tmux("display-message", "-p", "#{socket_path}").trim()).toMatch(
+        new RegExp(`^${dir}/`),
+      );
+      isolated = true;
+      const command = buildPersistentTmuxSyncOutputCommand();
+      for (let i = 0; i < 3; i += 1)
+        execFileSync("sh", ["-c", command], { env });
+      const features = tmux("show-options", "-s", "terminal-features");
+      expect(features.match(/:sync/g)).toHaveLength(1);
+    } finally {
+      if (isolated) {
+        try {
+          tmux("kill-server");
+        } catch {
+          /* already gone */
+        }
+      }
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+  it("never fails the shell when tmux rejects the option", () => {
+    expect(buildPersistentTmuxSyncOutputCommand()).toMatch(/\|\| true$/);
   });
 });

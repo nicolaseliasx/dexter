@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2.1-ncls.3
+
+### Fixed
+
+- Make a URL that a TUI table (such as Codex) wrapped onto the next row clickable as one link instead of only its first half.
+
+## 1.2.1-ncls.2
+
+### Fixed
+
+- Coalesce autosuggestion refreshes to one pending animation frame during terminal output, including background tabs, and cancel pending refreshes on terminal unmount.
+
 ## 1.2.1-ncls.1
 
 ### Added

@@ -1,5 +1,45 @@
 # Changelog
 
+## 0.2.6
+
+### Fixed
+
+- Terminal TUIs such as Codex no longer repaint half-drawn frames when selecting from a menu: before each attach the plugin lets tmux forward synchronized-output markers (`terminal-features` `sync`) to the browser. It is idempotent, never blocks the attach, and does nothing on a tmux without the feature (older than 3.4).
+
+## 0.2.5
+
+### Changed
+
+- The terminate question opens right under the card being ended, full width, instead of at the bottom of the panel.
+
+## 0.2.4
+
+### Changed
+
+- Row actions are a three-dot menu (Open in split, Rename) plus the trash button, following the Termix menu pattern.
+
+## 0.2.3
+
+### Changed
+
+- The terminate question is pinned to the bottom of the panel, full width, instead of squeezed into the row.
+- The session name field shows its placeholder as an example ("e.g. codex-termix").
+
+## 0.2.2
+
+### Changed
+
+- Row actions (split, rename, terminate) are always visible instead of appearing on hover, and clicking a row attaches the session.
+- Host status uses a fixed green for online and red for offline, whatever the theme accent is.
+- Terminating a session asks inside its row instead of in a centered dialog, including the force-remove question.
+- The sidebar opens on Sessions when the shell is ready.
+
+## 0.2.1
+
+### Fixed
+
+- Accept SSH Terminal 1.2.1-ncls.2 as well as 1.2.1-ncls.1 so the background output scheduling fix can be installed without disabling Sessions.
+
 ## 0.2.0
 
 ### Added

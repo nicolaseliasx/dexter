@@ -1,5 +1,19 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Columns2, Moon, Pencil, SquareTerminal, Trash2 } from "lucide-react";
+import {
+  Fragment,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import {
+  Columns2,
+  MoreHorizontal,
+  Moon,
+  Pencil,
+  SquareTerminal,
+  Trash2,
+} from "lucide-react";
 import {
   useHostStatus,
   useHosts,
@@ -12,13 +26,16 @@ import {
 import {
   AddButton,
   Button,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
   EmptyState,
   ListRow,
   PanelList,
   PanelShell,
   SelectField,
   TextField,
-  useConfirm,
 } from "@termix-ssh/plugin-sdk/ui";
 import {
   announceSession,
@@ -27,6 +44,7 @@ import {
   writeCache,
   SESSION_CHANGED,
 } from "./recovery.js";
+import { hostStatusView } from "./host-status.js";
 import { planSplit } from "./split-plan.js";
 import { SESSION_NAME_PATTERN, type SessionRow } from "./types.js";
 
@@ -39,14 +57,18 @@ function errorCode(error: unknown): string | undefined {
 
 function HostBadge({ hostId }: { hostId: number }) {
   const status = useHostStatus(hostId);
-  if (!status || status.status === "unknown") return null;
-  const online = status.status === "online" || status.status === "reachable";
+  const view = status ? hostStatusView(status.status) : null;
+  if (!view) return null;
   return (
-    <span className={online ? "text-accent-brand" : "text-muted-foreground"}>
-      {status.status}
+    <span className={`inline-flex items-center gap-1 ${view.className}`}>
+      <span className={`size-1.5 rounded-full ${view.dotClassName}`} />
+      {view.label}
     </span>
   );
 }
+
+/** The question a row asks before it ends a session. */
+type Pending = { id: string; step: "terminate" | "unreachable" | "mismatch" };
 
 export function SessionsPanel({
   getUserId,
@@ -57,7 +79,6 @@ export function SessionsPanel({
   const userId = getUserId?.();
   const shell = useShell();
   const toast = useToast();
-  const confirm = useConfirm();
   const { hosts } = useHosts();
   const refreshGeneration = useRef(0);
   const [rows, setRows] = useState<SessionRow[]>([]);
@@ -65,6 +86,7 @@ export function SessionsPanel({
   const [hostId, setHostId] = useState("");
   const [name, setName] = useState("");
   const [creating, setCreating] = useState(false);
+  const [pending, setPending] = useState<Pending | null>(null);
   const [renaming, setRenaming] = useState<{
     id: string;
     value: string;
@@ -205,38 +227,24 @@ export function SessionsPanel({
     }
   };
 
-  const terminate = async (row: SessionRow) => {
-    const ok = await confirm({
-      title: t("terminate.title", { name: row.displayName }),
-      description: t("terminate.description"),
-      confirmLabel: t("terminate.confirm"),
-    });
-    if (!ok) return;
+  const terminate = async (row: SessionRow, force = false) => {
+    setPending(null);
     let ended: SessionRow;
     try {
-      const res = await api.delete<{ data: SessionRow }>(`/${row.id}`);
+      const res = await api.delete<{ data: SessionRow }>(
+        force ? `/${row.id}?force=true` : `/${row.id}`,
+      );
       ended = res.data.data;
     } catch (error) {
-      const code = errorCode(error);
-      const force = await confirm({
-        title: t("force.title"),
-        description: t(
-          code === "PERSISTENT_SESSION_MARKER_MISMATCH"
-            ? "force.mismatch"
-            : "force.unreachable",
-        ),
-        confirmLabel: t("force.confirm"),
+      if (force) return toast.error(t("errors.terminate"));
+      setPending({
+        id: row.id,
+        step:
+          errorCode(error) === "PERSISTENT_SESSION_MARKER_MISMATCH"
+            ? "mismatch"
+            : "unreachable",
       });
-      if (!force) return;
-      try {
-        const res = await api.delete<{ data: SessionRow }>(
-          `/${row.id}?force=true`,
-        );
-        ended = res.data.data;
-      } catch {
-        toast.error(t("errors.terminate"));
-        return;
-      }
+      return;
     }
     refreshGeneration.current++;
     setRows((current) => current.filter((row) => row.id !== ended.id));
@@ -268,7 +276,7 @@ export function SessionsPanel({
           label={t("create.name")}
           value={name}
           onChange={setName}
-          placeholder="codex-termix"
+          placeholder={t("create.placeholder")}
         />
         <AddButton
           label={t("create.button")}
@@ -287,92 +295,142 @@ export function SessionsPanel({
           const host = hostById.get(row.hostId);
           const edit = renaming?.id === row.id;
           return (
-            <ListRow
-              key={row.id}
-              title={
-                edit ? (
-                  <TextField
-                    label={t("rename.label")}
-                    value={renaming!.value}
-                    onChange={(value) => setRenaming({ id: row.id, value })}
-                  />
-                ) : (
-                  row.displayName
-                )
-              }
-              meta={
-                <span className="flex items-center gap-2 text-xs">
-                  {host?.name ?? `#${row.hostId}`}
-                  <HostBadge hostId={row.hostId} />
-                  {row.hibernatedAt && (
-                    <span className="inline-flex items-center gap-1">
-                      <Moon className="size-3" />
-                      {t("standby")}
-                    </span>
-                  )}
-                </span>
-              }
-              actions={
-                <span className="flex items-center gap-1">
-                  {edit ? (
-                    <>
-                      <Button
-                        size="sm"
-                        onClick={() => void rename(row, renaming!.value)}
-                      >
-                        {t("rename.save")}
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        onClick={() => setRenaming(null)}
-                      >
-                        {t("rename.cancel")}
-                      </Button>
-                    </>
+            <Fragment key={row.id}>
+              <ListRow
+                title={
+                  edit ? (
+                    <TextField
+                      label={t("rename.label")}
+                      value={renaming!.value}
+                      onChange={(value) => setRenaming({ id: row.id, value })}
+                    />
                   ) : (
-                    <>
-                      <Button
-                        size="sm"
-                        disabled={!host}
-                        onClick={() => attach(row, false)}
-                      >
-                        <SquareTerminal className="mr-1 size-4" />
-                        {t("attach")}
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        disabled={!host}
-                        title={t("splitHint")}
-                        onClick={() => attach(row, true)}
-                      >
-                        <Columns2 className="mr-1 size-4" />
-                        {t("split")}
-                      </Button>
-                      <Button
-                        size="icon"
-                        variant="ghost"
-                        title={t("rename.title")}
-                        onClick={() =>
-                          setRenaming({ id: row.id, value: row.displayName })
-                        }
-                      >
-                        <Pencil className="size-4" />
-                      </Button>
-                      <Button
-                        size="icon"
-                        variant="ghost"
-                        title={t("terminate.title", { name: row.displayName })}
-                        onClick={() => void terminate(row)}
-                      >
-                        <Trash2 className="size-4" />
-                      </Button>
-                    </>
-                  )}
-                </span>
-              }
-            />
+                    row.displayName
+                  )
+                }
+                meta={
+                  <span className="flex items-center gap-2 text-xs">
+                    {host?.name ?? `#${row.hostId}`}
+                    <HostBadge hostId={row.hostId} />
+                    {row.hibernatedAt && (
+                      <span className="inline-flex items-center gap-1">
+                        <Moon className="size-3" />
+                        {t("standby")}
+                      </span>
+                    )}
+                  </span>
+                }
+                onClick={edit || !host ? undefined : () => attach(row, false)}
+                trailing={
+                  <span
+                    className="flex items-center gap-0.5"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {edit ? (
+                      <>
+                        <Button
+                          size="sm"
+                          onClick={() => void rename(row, renaming!.value)}
+                        >
+                          {t("rename.save")}
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          onClick={() => setRenaming(null)}
+                        >
+                          {t("rename.cancel")}
+                        </Button>
+                      </>
+                    ) : (
+                      <>
+                        <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                            <Button
+                              size="icon"
+                              variant="ghost"
+                              title={t("menu.more")}
+                              aria-label={t("menu.more")}
+                            >
+                              <MoreHorizontal className="size-4" />
+                            </Button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent align="end">
+                            <DropdownMenuItem
+                              disabled={!host}
+                              title={t("splitHint")}
+                              onSelect={() => attach(row, true)}
+                            >
+                              <Columns2 className="size-4" />
+                              {t("menu.split")}
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
+                              onSelect={() =>
+                                setRenaming({
+                                  id: row.id,
+                                  value: row.displayName,
+                                })
+                              }
+                            >
+                              <Pencil className="size-4" />
+                              {t("menu.rename")}
+                            </DropdownMenuItem>
+                          </DropdownMenuContent>
+                        </DropdownMenu>
+                        <Button
+                          size="icon"
+                          variant="ghost"
+                          title={t("terminate.title", {
+                            name: row.displayName,
+                          })}
+                          aria-label={t("terminate.title", {
+                            name: row.displayName,
+                          })}
+                          onClick={() =>
+                            setPending({ id: row.id, step: "terminate" })
+                          }
+                        >
+                          <Trash2 className="size-4" />
+                        </Button>
+                      </>
+                    )}
+                  </span>
+                }
+              />
+              {pending?.id === row.id && (
+                <div
+                  role="group"
+                  aria-label={t("terminate.title", { name: row.displayName })}
+                  className="flex flex-col gap-2 border-b border-l-2 border-b-border/40 border-l-destructive bg-destructive/5 p-3 text-sm"
+                >
+                  <p className="font-medium">
+                    {pending.step === "terminate"
+                      ? t("terminate.title", { name: row.displayName })
+                      : t("force.title")}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {pending.step === "terminate"
+                      ? t("terminate.description")
+                      : t(`force.${pending.step}`)}
+                  </p>
+                  <span className="flex justify-end gap-2">
+                    <Button variant="outline" onClick={() => setPending(null)}>
+                      {t("terminate.cancel")}
+                    </Button>
+                    <Button
+                      variant="destructive"
+                      onClick={() =>
+                        void terminate(row, pending.step !== "terminate")
+                      }
+                    >
+                      {pending.step === "terminate"
+                        ? t("terminate.confirm")
+                        : t("force.confirm")}
+                    </Button>
+                  </span>
+                </div>
+              )}
+            </Fragment>
           );
         })}
       </PanelList>

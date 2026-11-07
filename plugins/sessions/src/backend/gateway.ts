@@ -8,11 +8,15 @@ import {
   buildPersistentTmuxListCommand,
   buildPersistentTmuxMarkCommand,
   buildPersistentTmuxRenameCommand,
+  buildPersistentTmuxSyncOutputCommand,
   buildPersistentTmuxThawCommand,
   parsePersistentTmuxList,
   shellQuote,
 } from "./tmux-adapter.js";
-import type { PersistentSessionExpiryMode, RemotePersistentSession } from "./types.js";
+import type {
+  PersistentSessionExpiryMode,
+  RemotePersistentSession,
+} from "./types.js";
 
 /** A host the lifecycle can reach, with the user it acts for. */
 export type SessionHost = { id: number; actingUserId: string };
@@ -26,15 +30,23 @@ type SessionMarkInput = {
 };
 
 export interface PersistentSessionGateway {
-  list(host: SessionHost, options?: { timeoutMs?: number }): Promise<RemotePersistentSession[]>;
+  list(
+    host: SessionHost,
+    options?: { timeoutMs?: number },
+  ): Promise<RemotePersistentSession[]>;
   create(host: SessionHost, input: SessionMarkInput): Promise<void>;
   mark(host: SessionHost, input: SessionMarkInput): Promise<void>;
-  rename(host: SessionHost, input: { oldName: string; newName: string; id: string }): Promise<void>;
+  rename(
+    host: SessionHost,
+    input: { oldName: string; newName: string; id: string },
+  ): Promise<void>;
   kill(host: SessionHost, name: string, id: string): Promise<void>;
   /** Kills by name only while the remote session has no ownership marker. */
   killUnguarded(host: SessionHost, name: string): Promise<void>;
   freeze(host: SessionHost, name: string): Promise<void>;
   thaw(host: SessionHost, name: string): Promise<void>;
+  /** Lets tmux forward synchronized-output markers to the browser terminal. */
+  enableSyncOutput(host: SessionHost): Promise<void>;
 }
 
 const DEFAULT_TIMEOUT_MS = 30_000;
@@ -50,7 +62,11 @@ export class SshSessionGateway implements PersistentSessionGateway {
     private readonly runAs: RunAs = runAsSelf,
   ) {}
 
-  private async execute(host: SessionHost, command: string, timeoutMs = DEFAULT_TIMEOUT_MS): Promise<string> {
+  private async execute(
+    host: SessionHost,
+    command: string,
+    timeoutMs = DEFAULT_TIMEOUT_MS,
+  ): Promise<string> {
     const script = `PATH=/opt/homebrew/bin:/usr/local/bin:/opt/bin:/usr/pkg/bin:"$PATH"; export PATH; ${command}`;
     let result;
     try {
@@ -64,14 +80,25 @@ export class SshSessionGateway implements PersistentSessionGateway {
     } catch {
       throw new PersistentSessionError("PERSISTENT_SESSION_REMOTE_UNAVAILABLE");
     }
-    if (result.timedOut) throw new PersistentSessionError("PERSISTENT_SESSION_REMOTE_UNAVAILABLE");
+    if (result.timedOut)
+      throw new PersistentSessionError("PERSISTENT_SESSION_REMOTE_UNAVAILABLE");
     const stdout = result.stdout.trim();
-    if (result.code !== 0 && !stdout) throw new PersistentSessionError("PERSISTENT_SESSION_REMOTE_UNAVAILABLE");
+    if (result.code !== 0 && !stdout)
+      throw new PersistentSessionError("PERSISTENT_SESSION_REMOTE_UNAVAILABLE");
     return stdout;
   }
 
-  async list(host: SessionHost, options?: { timeoutMs?: number }): Promise<RemotePersistentSession[]> {
-    return parsePersistentTmuxList(await this.execute(host, buildPersistentTmuxListCommand(), options?.timeoutMs));
+  async list(
+    host: SessionHost,
+    options?: { timeoutMs?: number },
+  ): Promise<RemotePersistentSession[]> {
+    return parsePersistentTmuxList(
+      await this.execute(
+        host,
+        buildPersistentTmuxListCommand(),
+        options?.timeoutMs,
+      ),
+    );
   }
   async create(host: SessionHost, input: SessionMarkInput): Promise<void> {
     await this.execute(host, buildPersistentTmuxCreateCommand(input));
@@ -79,7 +106,10 @@ export class SshSessionGateway implements PersistentSessionGateway {
   async mark(host: SessionHost, input: SessionMarkInput): Promise<void> {
     await this.execute(host, buildPersistentTmuxMarkCommand(input));
   }
-  async rename(host: SessionHost, input: { oldName: string; newName: string; id: string }): Promise<void> {
+  async rename(
+    host: SessionHost,
+    input: { oldName: string; newName: string; id: string },
+  ): Promise<void> {
     await this.execute(host, buildPersistentTmuxRenameCommand(input));
   }
   async kill(host: SessionHost, name: string, id: string): Promise<void> {
@@ -93,5 +123,8 @@ export class SshSessionGateway implements PersistentSessionGateway {
   }
   async thaw(host: SessionHost, name: string): Promise<void> {
     await this.execute(host, buildPersistentTmuxThawCommand(name));
+  }
+  async enableSyncOutput(host: SessionHost): Promise<void> {
+    await this.execute(host, buildPersistentTmuxSyncOutputCommand());
   }
 }

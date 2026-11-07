@@ -11,6 +11,8 @@ export function activate(app: TermixApp) {
     titleKey: "panel.title",
     permission: "use",
   });
+  // The sidebar opens on Hosts by default; this is the panel used most.
+  app.tabs.onReady(() => app.tabs.openRailView("sessions"));
   app.registerPanel(
     "sessions",
     () => <SessionsPanel getUserId={recovery.getUserId} />,
