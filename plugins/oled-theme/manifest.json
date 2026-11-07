@@ -1,0 +1,28 @@
+{
+  "id": "oled-theme",
+  "name": "OLED Theme",
+  "version": "0.1.0",
+  "description": "True black theme for OLED screens: pure #000000 workspace and terminal, near-black panels with subtle borders.",
+  "author": { "name": "nicolaseliasx" },
+  "license": "Apache-2.0",
+  "category": "Productivity",
+  "icon": "Moon",
+  "engine": { "termix": ">=26.10.6", "api": "^1.11" },
+  "capabilities": ["ui:theme"],
+  "contributes": {
+    "themes": [
+      {
+        "id": "oled",
+        "label": "OLED",
+        "mode": "dark",
+        "css": "themes/oled.css",
+        "swatch": {
+          "background": "#000000",
+          "panel": "#0a0a0a",
+          "text": "#ededed"
+        }
+      }
+    ]
+  },
+  "platforms": ["linux", "darwin", "win32"]
+}

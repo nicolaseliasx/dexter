@@ -1,0 +1,22 @@
+{
+  "name": "termix-plugin-oled-theme",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "True black (OLED) theme for Termix.",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "validate": "termix-plugin validate",
+    "pack": "termix-plugin pack"
+  },
+  "devDependencies": {
+    "@termix-ssh/plugin-sdk": "1.0.22",
+    "@types/node": "26.2.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.11"
+  }
+}

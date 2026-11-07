@@ -1,0 +1,43 @@
+/*
+ * OLED (true black). Same token set as core's .dark, with the workspace and
+ * terminal at #000000 so the pixels switch off. Panels are one step above
+ * black and separated by borders, since shadows do not read on black.
+ */
+.oled {
+  color-scheme: dark;
+  --background: #000000;
+  --foreground: #ededed;
+  --card: #0a0a0a;
+  --card-foreground: #ededed;
+  --popover: #0a0a0a;
+  --popover-foreground: #ededed;
+  --primary: #e5e5e5;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #ededed;
+  --surface: #050505;
+  --surface-dim: #030303;
+  --muted: #161616;
+  --muted-foreground: #a3a3a3;
+  --accent: #1f1f1f;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #1f1f1f;
+  --input: #262626;
+  --ring: #6b6b6b;
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: #080808;
+  --sidebar-foreground: #ededed;
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1f1f1f;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #1f1f1f;
+  --sidebar-ring: #6b6b6b;
+  --warning: oklch(0.852 0.156 91.94);
+  --terminal-bg: #000000;
+}
