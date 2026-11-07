@@ -17,11 +17,11 @@
 type EventListener = (...args: unknown[]) => void;
 
 interface HttpLikeError {
-  message?: string;
+  message?: unknown;
   code?: string;
   response?: {
     data?: {
-      error?: string;
+      error?: unknown;
       code?: string;
     };
   };
@@ -70,10 +70,24 @@ class DatabaseHealthMonitor {
   }
 
   reportDatabaseError(error: unknown) {
-    const errorLike = error as HttpLikeError;
+    const errorLike = (
+      error && typeof error === "object" ? error : {}
+    ) as HttpLikeError;
+    const apiError = errorLike.response?.data?.error;
+    const structuredError =
+      apiError && typeof apiError === "object"
+        ? (apiError as { message?: unknown; code?: unknown })
+        : undefined;
     const errorMessage =
-      errorLike.response?.data?.error || errorLike.message || "";
-    const errorCode = errorLike.response?.data?.code || errorLike.code;
+      typeof apiError === "string"
+        ? apiError
+        : typeof structuredError?.message === "string"
+          ? structuredError.message
+          : typeof errorLike.message === "string"
+            ? errorLike.message
+            : "";
+    const errorCode =
+      errorLike.response?.data?.code || structuredError?.code || errorLike.code;
     const lowerMessage = errorMessage.toLowerCase();
 
     const isDatabaseError =
